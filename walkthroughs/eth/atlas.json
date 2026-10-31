@@ -1,0 +1,223 @@
+{
+  "format": "glitnir.proof-atlas/v1",
+  "commit": "16a5ce41304fcdaea4e0be7c132e1c361dc26da5",
+  "nodes": [
+    {
+      "id": "eth",
+      "label": "ETH is false",
+      "statement": "eth",
+      "declarations": [
+        "MainResults.ETH",
+        "MainResults.ETHIsFalse",
+        "MainResults.ethIsFalse",
+        "Wrap.countingBoundImpliesFailureOfETH"
+      ],
+      "goal": "The formalization states the negation of ETH, with ETH expressed using its Turing-machine model.",
+      "scope": "The walkthrough describes a specific input encoding and finite-alphabet Mathlib Turing machines. It has not been checked by Glitnir.",
+      "role": "This is the destination: connect a counting-time bound to arbitrarily small exponential decision-time bounds.",
+      "idea": "Turn a counting algorithm into a decider by testing whether its count is positive, and control its running time.",
+      "difference": "The paper uses Theorem 2 here. The walkthrough records that Lean instead goes through the Main Theorem and a machine wrapper."
+    },
+    {
+      "id": "wrap",
+      "label": "From counting to deciding",
+      "statement": "eth",
+      "declarations": [
+        "Wrap.countingBoundImpliesFailureOfETH"
+      ],
+      "goal": "Convert the counting bound into a failure of the formal ETH statement.",
+      "scope": "The particular counting bound, input encodings and time model matter. This explanation is a summary from the walkthrough, not the complete Lean statement.",
+      "role": "This is the bridge between the counting theorem and the decision problem in ETH.",
+      "idea": "The walkthrough names a variable-renaming bridge and Wrap.countingBoundImpliesFailureOfETH to obtain a decider for each positive exponent.",
+      "difference": "This intermediate step is made explicit in the Lean reading route; the paper-level overview abbreviates it."
+    },
+    {
+      "id": "thm1",
+      "label": "The Main Theorem",
+      "statement": "thm1",
+      "declarations": [
+        "MainResults.MainTheorem",
+        "MainResults.mainTheorem",
+        "CountedRoute.mainTheoremHolds"
+      ],
+      "goal": "One deterministic machine counts satisfying assignments with a running-time bound using the minimum of a clause-based bound and a variable-based bound.",
+      "scope": "The recorded Lean statement requires k ≥ 1, n ≥ 4, m ≥ 2, every variable to occur, and no duplicate clauses; it fixes the input encoding and counts Turing-machine steps.",
+      "role": "It supplies the counting guarantee used on the Lean route to ETH’s failure.",
+      "idea": "Develop both counting algorithms, combine their guarantees, then transfer the result to the declared Main Theorem.",
+      "difference": "The paper uses word-RAM time; the recorded Lean theorem counts steps of a particular Turing machine. The walkthrough documents further differences."
+    },
+    {
+      "id": "combine",
+      "label": "Combine the two counting bounds",
+      "statement": "appD",
+      "declarations": [
+        "CountedRoute.corMinHolds"
+      ],
+      "goal": "Obtain the Main Theorem’s minimum of the clause-based and variable-based bounds.",
+      "scope": "Both component algorithms must count the same quantity under their stated conditions. The walkthrough records polynomial simulation overhead in Lean.",
+      "role": "This explains why the headline result contains two expressions inside a minimum.",
+      "idea": "Run the two algorithms in alternation and use the first answer. The source mapping names CountedRoute.corMinHolds.",
+      "difference": "The walkthrough notes that Lean’s alternation costs a constant power, rather than the constant factor described in the printed argument."
+    },
+    {
+      "id": "appA",
+      "label": "The clause-based bound",
+      "statement": "appA",
+      "declarations": [
+        "FixedWidth.RunningTimesFromPieces",
+        "FixedWidth.runningTimesFromPieces"
+      ],
+      "goal": "Use suitable pieces and a hierarchy of clique algorithms to obtain a counting-time bound in the number of clauses.",
+      "scope": "The choice of pieces, their cost model, and the hierarchy of levels are part of the argument. The paper statement mapped here is not itself the exact form used by the Main Theorem.",
+      "role": "This supplies the clause-based side of the combined estimate.",
+      "idea": "Let the clique size grow with the input; translate improved clique exponents into a counting algorithm for formulas.",
+      "difference": "The walkthrough says the Main Theorem uses a counted form of this construction. Following that exact internal chain is outside this atlas."
+    },
+    {
+      "id": "appB",
+      "label": "Construct the improved pieces",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.HalfPiecesExist",
+        "PiecesCounted.halfPiecesExist",
+        "PiecesCounted.halfPieces"
+      ],
+      "goal": "Construct pieces with parameter ρ = 1/√2, giving the improved exponent in the logarithmic savings.",
+      "scope": "The cost of constructing pieces must be interpreted in the formalization’s time model.",
+      "role": "These pieces improve the running-time guarantees used by the Main Theorem.",
+      "idea": "Use operators on weighted polynomials, with partition-number bounds controlling the size of their matrix entries.",
+      "difference": "The walkthrough flags a step-machine construction that writes exponentially many symbols before a polynomial-time step; translating its cost needs care."
+    },
+    {
+      "id": "appD",
+      "label": "The variable-based bound",
+      "statement": "appD",
+      "declarations": [
+        "MainTheoremForms.ThmVariablesB",
+        "CountedRoute.ThmVariablesBHolds",
+        "CountedRoute.thmVariablesBHolds",
+        "ThmVariables.partA",
+        "CountedRoute.corMinHolds"
+      ],
+      "goal": "Bound counting time in terms of n, the number of variables, using the improved clique hierarchy.",
+      "scope": "The mapped statement has k ≥ 1 and n ≥ 4. Precise machine encodings and the counted version of the construction matter.",
+      "role": "This supplies the variable-based side of the combined estimate.",
+      "idea": "Use a variable-based network, truncated inclusion–exclusion, sparse parity checks, and a sparsification argument.",
+      "difference": "The walkthrough says Lean uses its own analysis of the sparsification procedure, and a padded-machine form rather than the standalone Theorem D(a)."
+    },
+    {
+      "id": "appC",
+      "label": "Counting sparsification",
+      "statement": "appC",
+      "declarations": [
+        "PrintedOrder.CountRateFromBoundInN",
+        "PrintedOrder.countRateFromBoundInN"
+      ],
+      "goal": "Arrange a sparsification whose outputs do not share satisfying assignments, so counts can be added.",
+      "scope": "Disjointness is essential: overlapping outputs would overcount. This node is explanatory, not an assertion of an extracted direct dependency.",
+      "role": "It supplies the counting-compatible sparsification discussed in the variable-bound argument.",
+      "idea": "Carry additional unit clauses along the branching process to partition the satisfying assignments.",
+      "difference": "The walkthrough says the standalone Lean counterpart of Theorem C is derived by a different route; its procedure is analyzed separately inside the Main Theorem development."
+    },
+    {
+      "id": "thm2",
+      "label": "Arbitrarily small exponential time",
+      "statement": "thm2",
+      "declarations": [
+        "Sat3.ThmEveryDelta",
+        "Given.threeSat_through_eStar",
+        "Printed.threeSat_through_eStar"
+      ],
+      "goal": "The paper gives a counting algorithm within O(2^(δn)) for every positive δ.",
+      "scope": "The parameter δ is fixed before selecting the algorithm. Counting and deciding are different claims.",
+      "role": "A positive count decides satisfiability, yielding the paper’s route to ETH’s failure.",
+      "idea": "Sparsify the formula and choose a sufficiently improved clique algorithm from the hierarchy.",
+      "difference": "The mapped Lean statement is decision-only. This is not an exact formal counterpart of the paper’s counting sentence."
+    },
+    {
+      "id": "prop3",
+      "label": "Improve the clique exponent",
+      "statement": "prop3",
+      "declarations": [
+        "Printed.LevelProposition",
+        "Printed.EStarZero",
+        "Given.levelProposition",
+        "Printed.levelProposition",
+        "Given.eStarZero"
+      ],
+      "goal": "Transform an achievable clique exponent into a smaller one at a larger clique size.",
+      "scope": "The network grouping guarantee and the decomposition into pieces carry the needed bounds.",
+      "role": "Repeated improvement makes the infimum of achievable exponents zero in the paper argument.",
+      "idea": "Arrange clique vertices on a grid; select the row or column grouping with the smaller cost.",
+      "difference": "This is a paper-level explanation. Its displayed supporting steps are not extracted Lean proof dependencies."
+    },
+    {
+      "id": "lem2",
+      "label": "Split equality tests into pieces",
+      "statement": "lem2",
+      "declarations": [
+        "Eight.LemPieces",
+        "Eight.lemPieces"
+      ],
+      "goal": "Produce a decomposition where row or column merging is cheaper.",
+      "scope": "The decomposition controls both the number of pieces and their factoring costs.",
+      "role": "This supplies the saving that makes exponent improvement possible.",
+      "idea": "Apply the eight-square identity to rectangle diagonals and group the resulting terms.",
+      "difference": "This atlas stops at this mathematical step. The underlying algebra and Lean declarations remain linked through the source references."
+    }
+  ],
+  "routes": [
+    {
+      "id": "lean",
+      "label": "Lean argument (curated)",
+      "root": "eth",
+      "supports": {
+        "eth": [
+          "wrap"
+        ],
+        "wrap": [
+          "thm1"
+        ],
+        "thm1": [
+          "combine"
+        ],
+        "combine": [
+          "appA",
+          "appD"
+        ],
+        "appA": [
+          "appB"
+        ],
+        "appD": [
+          "appB",
+          "appC"
+        ]
+      }
+    },
+    {
+      "id": "paper",
+      "label": "Paper argument (curated)",
+      "root": "eth",
+      "supports": {
+        "eth": [
+          "thm2",
+          "thm1"
+        ],
+        "thm2": [
+          "prop3"
+        ],
+        "prop3": [
+          "lem2"
+        ],
+        "thm1": [
+          "appA",
+          "appB",
+          "appD"
+        ],
+        "appD": [
+          "appC"
+        ]
+      }
+    }
+  ]
+}

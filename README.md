@@ -101,3 +101,11 @@ opening for attribution and licences.
 
 This repository is maintained by its authors and does not accept external contributions.
 Licensed under the [MIT License](LICENSE).
+
+
+The ETH/3SAT walkthrough includes the first curated proof atlas in
+`walkthroughs/eth/atlas.json`. With an atlas-capable Glitnir runtime, its Graph view
+offers Reading-first and Map-first exploration of separate paper and Lean routes.
+The formalization remains unchecked by Glitnir; the atlas grants no proof status.
+Validate the sidecar with the installed notebook skill’s `scripts/proof_atlas.py`
+against `walkthroughs/eth/outline.json`, in addition to the existing walkthrough checks.
