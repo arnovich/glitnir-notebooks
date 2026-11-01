@@ -37,6 +37,8 @@ EVERYTHING = frozenset(
         "scripts/glitnir_release.py",
         "scripts/recheck-requirements.txt",
         "scripts/recheck.py",
+        "scripts/decision_refresh.py",
+        "scripts/decision_source.lark",
         "scripts/select_recheck.py",
         ".github/workflows/recheck.yml",
     }

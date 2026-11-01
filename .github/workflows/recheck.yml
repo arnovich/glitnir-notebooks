@@ -38,6 +38,8 @@ on:
       - 'examples/**/*.lean'
       - scripts/select_recheck.py
       - scripts/recheck.py
+      - scripts/decision_refresh.py
+      - scripts/decision_source.lark
       - scripts/recheck-requirements.txt
       - scripts/gallery/requirements.txt
       - scripts/glitnir_release.py

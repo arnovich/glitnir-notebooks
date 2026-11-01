@@ -8,6 +8,40 @@ from pathlib import Path
 SOURCE = "theorem example_claim : True := True.intro\n"
 
 
+def curated_decision(shared: bool = True) -> tuple[str, str]:
+    """Return curated source and a fresh candidate with the same definitions."""
+    definitions = "\n\n".join(
+        f"def {name} : Nat := {index}"
+        for index, name in enumerate(
+            ("forsetiTime", "forsetiInitial", "forsetiObservation", "forsetiIdentities")
+        )
+    )
+    shared_name = "DecidedShared_fixture"
+    prelude = f"namespace {shared_name}\n\n{definitions}\n\nend {shared_name}\n\n"
+    identities = "\n".join(
+        f"example : @{name} = @{shared_name}.{name} := rfl"
+        for name in ("forsetiTime", "forsetiInitial", "forsetiObservation", "forsetiIdentities")
+    )
+    context = f"open {shared_name}\n\n{identities}" if shared else definitions
+    old = (
+        "-- @decide bound : goal\n\n"
+        + (prelude if shared else "")
+        + f"namespace Decided_bound\n\n{context}\n\n"
+        + "def forsetiPost : Prop := True\n\n"
+        + "/-- Author's description. -/\n"
+        + "theorem bound : True := by\n  trivial\n\n"
+        + "/-! ### Keep this section {fold}\nAuthored prose. -/\n\n"
+        + "end Decided_bound\n\n-- Following source stays put.\n"
+    )
+    candidate = (
+        f"namespace Decided_bound\n\n{definitions}\n\n"
+        + "def forsetiPost : Prop := True\n\n"
+        + "/-- New generated description. -/\n"
+        + "theorem bound : True := by\n  exact True.intro\n\nend Decided_bound"
+    )
+    return old, candidate
+
+
 def _sha(text: str) -> str:
     return hashlib.sha256(text.encode()).hexdigest()
 

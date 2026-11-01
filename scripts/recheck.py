@@ -7,8 +7,9 @@ editor does, so that ``<Notebook>.glitnir.json`` ends up current:
 1. Every decision whose saved entry is out of date is decided again. When the
    directive is followed by the block an earlier decision inserted
    (``namespace Decided_<name>`` ... ``end Decided_<name>``), that block is
-   taken out first and the new checked block is inserted in its place, exactly
-   as the editor's Accept inserts it. Decisions never accepted get only their
+   taken out while the provider runs. Only its generated theorem is refreshed;
+   prose, shared definitions and identity examples stay in place. A changed
+   supporting definition refuses replacement. Decisions never accepted get only their
    saved entry refreshed: no new source is added.
 2. Every evidence card whose saved run is out of date is run again.
 3. The saved notebook is checked; the check saves its claim results.
@@ -36,10 +37,13 @@ import sys
 import time
 from collections import Counter
 from collections.abc import Callable, Iterable
+from copy import deepcopy
 from pathlib import Path
+from threading import Event
 from typing import Any
 
 from scripts.check_bundles import notebook_paths, results_path
+from scripts.decision_refresh import PreservationError, refresh_decision, source_lines
 
 #: Seconds between polls of a running check, decision, evidence run or view.
 POLL_SECONDS = 15.0
@@ -132,6 +136,7 @@ def decided_block(lines: list[str], end_line: int, name: str) -> tuple[int, int]
         lines and an older generated ``DecidedShared_*`` prelude may appear
         between the directive and its decision namespace.
     """
+    lines = source_lines("\n".join(lines))
     opening, closing = f"namespace Decided_{name}", f"end Decided_{name}"
     start = end_line
     while start < len(lines) and not lines[start].strip():
@@ -289,10 +294,16 @@ class Recheck:
         ):
             card = self._card("decisions", key)
             original = normal_text(self.path)
+            previous_entry = deepcopy(
+                (read_records(self.path) or {}).get("decisions", {}).get(key)
+            )
+            owned_entry = None
             span = decided_block(original.split("\n"), card["end_line"], card["name"])
+            temporary = without_lines(original, span) if span is not None else original
             if span is not None:
-                self.path.write_text(without_lines(original, span), encoding="utf-8")
+                self.path.write_text(temporary, encoding="utf-8")
             accepted = False
+            owned_text = temporary
             try:
                 finished = self._run_card("decisions", card)
                 result = finished["status"]
@@ -301,25 +312,110 @@ class Recheck:
                 elif span is not None and finished["status"] == "candidate":
                     candidate = self.service.decision_candidate(key)
                     text = normal_text(self.path)
-                    if candidate["sha256"] != text_sha256(text):
+                    if text != temporary or candidate["sha256"] != text_sha256(text):
                         raise RuntimeError("the notebook changed during the decision")
-                    self.path.write_text(
-                        with_block(
-                            text, candidate["insert_after_line"], candidate["block"]
-                        ),
-                        encoding="utf-8",
+                    entry = (read_records(self.path) or {}).get("decisions", {}).get(key)
+                    if (
+                        entry is None or entry["outcome"]["block"] != candidate["block"]
+                        or entry["outcome"] != finished.get("outcome")
+                        or entry.get("verification") != finished.get("verification")
+                    ):
+                        raise PreservationError("The saved decision changed during refresh.")
+                    owned_entry = deepcopy(entry)
+                    refreshed = refresh_decision(original, card["name"], candidate["block"])
+                    # Include the original whitespace and any shared prelude
+                    # between the directive and the decision namespace. This
+                    # exact block must both check and follow the directive.
+                    tail_lines = len(original.split("\n")) - span[1]
+                    end = len(refreshed.split("\n")) - tail_lines
+                    block = "\n".join(refreshed.split("\n")[card["end_line"]:end])
+                    verification = self._check_refresh(
+                        text_sha256(temporary), card["end_line"], block,
+                        entry["outcome"]["theorem"],
                     )
+                    if normal_text(self.path) != temporary:
+                        raise RuntimeError("the notebook changed during verification")
+                    self.path.write_text(refreshed, encoding="utf-8")
+                    owned_text = refreshed
+                    self._save_refresh(key, entry, block, verification)
                     accepted = True
                     result = "accepted again"
+            except PreservationError as error:
+                result = f"preservation refused: {error}"
             finally:
                 if span is not None and not accepted:
-                    self.path.write_text(original, encoding="utf-8")
+                    if normal_text(self.path) == owned_text:
+                        self.path.write_text(original, encoding="utf-8")
+                    elif normal_text(self.path) != original:
+                        self.problems.append(
+                            f"decision {card['name']}: source changed externally; not overwritten"
+                        )
+                    if owned_entry is not None and normal_text(self.path) == original:
+                        try:
+                            self._restore_refresh(key, previous_entry, owned_entry)
+                        except (ValueError, OSError) as error:
+                            self.problems.append(
+                                f"decision {card['name']}: receipt rollback refused: {error}"
+                            )
             log(f"decision {card['name']}: {result}")
             self.done.append({"kind": "decision", "name": card["name"], "result": result})
             if span is not None and not accepted:
                 self.problems.append(f"decision {card['name']} kept its old block: {result}")
             elif result.startswith("failed"):
                 self.problems.append(f"decision {card['name']} {result}")
+
+    def _check_refresh(
+        self, sha256: str, end_line: int, block: str, theorem: str
+    ) -> dict[str, Any]:
+        """Kernel-check the exact preserved block through Glitnir's checker."""
+        from glitnir.lean.project_checking import check_candidate
+
+        verdict = self._retrying(lambda: check_candidate(
+            self.path, expected_sha256=sha256, insert_after_line=end_line,
+            block=block, theorem=theorem, cancel=Event(),
+        ))
+        if verdict["status"] != "checked":
+            raise PreservationError(f"Preserved block did not check: {verdict['message']}")
+        return verdict
+
+    def _save_refresh(
+        self, key: str, previous: dict[str, Any], block: str, verification: dict[str, Any]
+    ) -> None:
+        """Save the checked preserved receipt through Glitnir's records API."""
+        from glitnir.notebook.check_records import (
+            load_records, save_records, saved_decisions, with_decision,
+        )
+
+        records = load_records(self.path)
+        decisions = saved_decisions(records)
+        if decisions.get(key) != previous:
+            raise PreservationError("The saved decision changed during verification.")
+        entry = deepcopy(previous)
+        entry["outcome"]["block"] = block
+        entry["verification"] = verification
+        save_records(self.path, with_decision(
+            records, key, entry, keep=decisions, notebook=self.path,
+        ))
+
+    def _restore_refresh(
+        self, key: str, previous: dict[str, Any] | None, owned: dict[str, Any]
+    ) -> None:
+        """Restore only this run's receipt, retaining unrelated/external changes."""
+        from glitnir.notebook.check_records import (
+            load_records, save_records, saved_decisions, with_decision, without_decision,
+        )
+
+        records = load_records(self.path)
+        decisions = saved_decisions(records)
+        if decisions.get(key) != owned:
+            raise PreservationError("The saved decision changed externally; not overwritten.")
+        if previous == owned:
+            return
+        restored = (
+            with_decision(records, key, previous, keep=decisions, notebook=self.path)
+            if previous is not None else without_decision(records, key, notebook=self.path)
+        )
+        save_records(self.path, restored)
 
     def evidence(self) -> None:
         """Run every out-of-date evidence card again."""

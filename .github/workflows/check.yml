@@ -13,7 +13,9 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test bundle validation
-        run: python3 -m unittest discover -s tests -v
+        run: |
+          python3 -m pip install --require-hashes --only-binary=:all: -r scripts/gallery/requirements.txt
+          python3 -m unittest discover -s tests -v
       - name: Check portable pins and saved Glitnir results
         run: |
           python3 scripts/check_bundles.py
