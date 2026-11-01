@@ -15,10 +15,10 @@
   },
   "format": "glitnir.triptych-release/v1",
   "glitnir_tag": "v0.1.10",
-  "lake_manifest_sha256": "e11f1c59bf756299ac5ec68bf0c8912d95ed83590bc742ce1c9a86e579626d60",
+  "lake_manifest_sha256": "46d41f5dfa32e63de3f3d395f9ab103af704c5b1c72e82ef7374f4aa489d0f62",
   "lake_pins": {
-    "asgard": "fb826ea5e538d2732a48741d6f268887950375d0",
-    "forseti": "f1a84124ad7cca473fe13929d814801bd6a1452c"
+    "asgard": "e5e098d5bce80c3907a6acd4e2beb904309a1709",
+    "forseti": "36304c70fd2372fc1aa9b1e74643d0d0a516de3a"
   },
   "lean_toolchain": "leanprover/lean4:v4.35.0",
   "notebooks": [

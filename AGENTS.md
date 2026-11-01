@@ -109,6 +109,15 @@ The maps must stay byte-identical to the helper's output, so this is a Glitnir
 follow-up. The gallery's browser check loads each map with scripts on and the
 network blocked, and fails on a script error or on any other request.
 
+## Certificate libraries
+
+A notebook may cite a proof too large for a notebook check. Put it in an opt-in
+library under `certificates/` (`srcDir = "certificates"`), never in
+`defaultTargets`; it has no Glitnir results. When a notebook imports one of its
+modules, prebuild that module's heavy imports one at a time in
+`.github/workflows/check.yml` and the README's getting-started step;
+`tests/test_certificates.py` checks the CI list against the notebook's imports.
+
 ## Gallery maintenance
 
 The canonical repository is `arnovich/glitnir-notebooks`; the public gallery is

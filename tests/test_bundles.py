@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from conftest import make_corpus, results_for
+from conftest import add_certificate_library, make_corpus, results_for
 
 from scripts.check_bundles import check_bundles
 
@@ -153,6 +153,33 @@ class BundleTests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         text = (root / "lakefile.toml").read_text()
         self.assertNotIn("walkthroughs", text)
+
+    def test_certificate_library_is_not_a_notebook(self) -> None:
+        """An opt-in certificate library is accepted and not taken for a notebook."""
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            make_corpus(root)
+            add_certificate_library(root)
+            self.assertEqual(check_bundles(root), (1, 1))
+
+    def test_certificate_library_is_not_a_default_target(self) -> None:
+        """A certificate library must stay opt-in."""
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            make_corpus(root)
+            add_certificate_library(root, default=True)
+            with self.assertRaises(ValueError):
+                check_bundles(root)
+
+    def test_certificate_library_needs_its_root(self) -> None:
+        """A certificate library without its root module is refused."""
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            make_corpus(root)
+            add_certificate_library(root)
+            (root / "certificates/Certified.lean").unlink()
+            with self.assertRaises(ValueError):
+                check_bundles(root)
 
     def test_internal_symlink_is_rejected(self) -> None:
         """Match the runtime's refusal of linked sources, even inside the repo."""

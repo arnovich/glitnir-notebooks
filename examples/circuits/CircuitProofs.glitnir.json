@@ -19,7 +19,7 @@
       "end_line": 28,
       "name": "Notebook.CircuitProofs.first",
       "prefix_sha256": "e26518e985b2c297a31cd664a765378cb4fb831756bec6a6ba6d45a5f6e8597a",
-      "proposition_sha256": "0b977947f3547b6ba1e2d5825457d5d9b7248f8a05d9ca9992ef4e3e75abc5f6",
+      "proposition_sha256": "ecd17d96d7c2a42508aaf97a067888328208d41fb3262fd906f5dad7776ab4ab",
       "start_line": 23,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 35,
       "name": "Notebook.CircuitProofs.second",
       "prefix_sha256": "0fc409e139ee4cf6186b51fe353eedb708f961a3c83ff4164a433e58201b96af",
-      "proposition_sha256": "c35f184e226209be0ec3e5d27cc54abcb345bf091ccde5258089e1d45d43081a",
+      "proposition_sha256": "56a1fa19e92866d38cb6c48fdc39bf3cc881f4dbfa1f2742ea8ca81b614fb104",
       "start_line": 30,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 39,
       "name": "Notebook.CircuitProofs.whole",
       "prefix_sha256": "40d0613d68cb193c5e5b1d4cfe65d1780ba13637da0ec87ca6ad0a6c24250548",
-      "proposition_sha256": "1df409b53414978540d47701f70729e817559128844c8a7f2546397458f1725f",
+      "proposition_sha256": "c4ff3cdcd4d2120d673ba928d80353a3a1f2aaaf0557acb028700bdada6c0db4",
       "start_line": 37,
       "status": "checked",
       "uses": [
@@ -102,21 +102,21 @@
       "end_line": 59,
       "name": "Notebook.CircuitProofs.exchange_preserves",
       "prefix_sha256": "86af53fb61718ece0c896962187bbbe596ef3bc78dd5a46fb31c3f5f7dab5ba6",
-      "proposition_sha256": "a3a3e82e1852d326c9c1f6d5defb67805bb7772cee97f83e8c3b3678bc357cf5",
+      "proposition_sha256": "83b10d245d0700db6357684a8f634dbb142a51e08a141ddccf653fd74db6f2c7",
       "start_line": 54,
       "status": "checked",
       "uses": []
     }
   ],
   "environment": {
-    "check": "b29106dd813f45570f37222c7ac7696cc8e28e02281651ba42de877d617fb259",
-    "fingerprint": "270ad8ce5f55844e89739bb9ccfe0e204c5c8234fbab3f910bc4c34a7e3c7a61"
+    "check": "5af35b171b1b4565d3d36579b3b0fd9b2b8780cf1ed27f2bad712fd79708fe43",
+    "fingerprint": "922a5735718789b053e6c921af802142b8f829115c4d1fb4a6b2f0a7bdb24967"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "b63362090205432edb452733fc4b5471a4123ef60723d8e6c5a96674472c5675",
   "views": {
     "749161c33c135b902c73acc1d191ea8ec7a63e2179d0211923f2311e9ef409c8": {
-      "created": "2026-10-28T13:36:51+00:00",
+      "created": "2026-10-29T19:36:58+00:00",
       "drawing": {
         "contracts": [
           {
@@ -188,13 +188,13 @@
         },
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 260\" width=\"640\" height=\"260\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,130 80,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,130 73,126 73,134\" fill=\"#476579\"></polygon><text x=\"20\" y=\"122\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"240,90 300,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"300,90 293,86 293,94\" fill=\"#476579\"></polygon><text x=\"265\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><polyline points=\"240,130 300,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"300,130 293,126 293,134\" fill=\"#476579\"></polygon><text x=\"265\" y=\"122\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 1</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"31\" lengthAdjust=\"spacingAndGlyphs\">swap</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"85\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><path d=\"M 105 130 L 210 90\" stroke=\"#edf5f8\" stroke-width=\"7\"></path><polyline points=\"105,130 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><text x=\"20\" y=\"210\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"232\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
-      "fingerprint": "bd3d789647de2c39f1a94b1467a289f75ddb1d39f831319958a573359176e162",
+      "fingerprint": "aea0a60432f1d65cc7f3e37bb4f1a92c575874cd87ee010aae257b9fdfa2068e",
       "prefix_sha256": "43888faf34870590e11ff728e887a4b6a9e5637098acde2e99790dd5332197e6",
       "provider": "forseti",
       "provider_sha256": "d5dcd9b27b65450f8f3a398b46d97cec4dca0f76a8bfee4b123a2f6c149736b5"
     },
     "ae86bd2211561c0bb251c0e2c585f56e2290be677ab20e6fcd90b5d3b184edfd": {
-      "created": "2026-10-28T13:36:51+00:00",
+      "created": "2026-10-29T19:36:58+00:00",
       "drawing": {
         "contracts": [
           {
@@ -321,7 +321,7 @@
         },
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 640 220\" width=\"640\" height=\"220\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 312 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"312,90 305,86 305,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"472,90 532,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"532,90 525,86 525,94\" fill=\"#476579\"></polygon><text x=\"497\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (2)</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"312\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"347\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (3)</text><text x=\"317\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"452\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"170\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"192\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
-      "fingerprint": "bd3d789647de2c39f1a94b1467a289f75ddb1d39f831319958a573359176e162",
+      "fingerprint": "aea0a60432f1d65cc7f3e37bb4f1a92c575874cd87ee010aae257b9fdfa2068e",
       "prefix_sha256": "a08d47c90205ed7b42cf2d5d127f746664b28fe0234f2a25f68d50d57ecd82b6",
       "provider": "forseti",
       "provider_sha256": "f16be7170bbb18da28615f3c68782da837028aa5ffd368023304a838fca872fb"

@@ -19,7 +19,7 @@
       "end_line": 68,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_scaled_prefix",
       "prefix_sha256": "94aa792048b2c03eb73279055a880dca4cae32d27b5f5d6a517bfd34f07367ca",
-      "proposition_sha256": "144392917d936fa6000c83e747e6dccc8e507608ef028681403e3f157d47f4ea",
+      "proposition_sha256": "9ceb9c2d22c13dfa7c3f03f5f2f6f12ba30b454d4fca32965547bd83644214ea",
       "start_line": 58,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 92,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_scaled_equivalent",
       "prefix_sha256": "4ba3cbaf54024269c7f7ee6363e3418d11b9cfefdcc366ea6a87765e2dc32887",
-      "proposition_sha256": "d007b9dd33423d974504e60c207c428779f400c86748a96c04f42019cc465917",
+      "proposition_sha256": "22b2c710327fda63fb080230113a5b049dcb8480e0c66df37c2c89b64b8d9b41",
       "start_line": 89,
       "status": "checked",
       "uses": [
@@ -73,7 +73,7 @@
       "end_line": 97,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_prefix",
       "prefix_sha256": "8f7746fb915a9313d2f8b56976e3a9714a8d3de8095002ce7d10a31ec91f1a52",
-      "proposition_sha256": "67f9cbec2f68bcf2656c274a67fc5589d7fa268d27596561181c40817e838417",
+      "proposition_sha256": "00c7612515ffc1a05481b9e6937131f0eaa6cde0c4ed1add734bb502af52482f",
       "start_line": 94,
       "status": "checked",
       "uses": [
@@ -103,7 +103,7 @@
       "end_line": 106,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_equivalent",
       "prefix_sha256": "a8aeb278c83db194f5f23c654cf4ccc109b07ee62ab387a927fbe814fdcc49f6",
-      "proposition_sha256": "186fa757b5b85138065d8768f3499c2c9d663899a0b25344364ec09d6d33282a",
+      "proposition_sha256": "fc8e1d45e2ed50990cf1a737c0026200a064b51667015abeb66a5c1c7ffd4436",
       "start_line": 99,
       "status": "checked",
       "uses": [
@@ -133,7 +133,7 @@
       "end_line": 125,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_hoare",
       "prefix_sha256": "931270b74342e10d8284458d8b015c140576e712f0d23d4445e1796798f4b5f8",
-      "proposition_sha256": "ae648f8cfdef18f237600ceb2817147a527b62033fb4ccfdb177dc649f171763",
+      "proposition_sha256": "37b6b6c9f26a209891ae3480d55fbe163fe66f7728cd61fd55fab50282f6192b",
       "start_line": 121,
       "status": "checked",
       "uses": []
@@ -157,7 +157,7 @@
       "end_line": 149,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.permutation_prefix",
       "prefix_sha256": "4cb33a3da687e6459d2950b4a34d7e7f230cfc699a14d8afa7bdefa79026a598",
-      "proposition_sha256": "9547a859495c53a3bbbddac3648cead97cf6ce28e2c99500e0283e7523c11efc",
+      "proposition_sha256": "f81c5411ddbf59e880c5966926fc43b2d552a92c8fcc0126ef12940ccd461f40",
       "start_line": 141,
       "status": "checked",
       "uses": []
@@ -181,7 +181,7 @@
       "end_line": 153,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.permutation_equivalent",
       "prefix_sha256": "e7a3c5c5c41d586c39dcf55a35a4802a02f84a1742c59fd3b24199312cd6047d",
-      "proposition_sha256": "d6248a86018784e716bf3ff6236abf204045aea1037a4e4bb8b145c87242f459",
+      "proposition_sha256": "f8ceee24d420251527cd1deb67e3d5c73b87d30967f4c993358636a5c4d687b3",
       "start_line": 151,
       "status": "checked",
       "uses": [
@@ -194,8 +194,8 @@
     }
   ],
   "environment": {
-    "check": "ef7a7bfbdaa51693f55d53579c0b62e201c100fd4d9880093ca9994240584210",
-    "fingerprint": "3d214a8778276f90b4f9331cdd76a6d9ddf18d8a40662d0b8a1dbee4f416207d"
+    "check": "3e00e7cc336cc8e22bc535809fd4cea2edec57102805c0a3db5bf7cbd5a545fa",
+    "fingerprint": "dbf978cd43481f8dd164d276d692875d094b8c05bfe2535274e7dc46f96ea479"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "0b16d785e83e8a595e2c40c7b778bc29fcba50c722cf271acb15cf126d33c202",

@@ -19,7 +19,7 @@
       "end_line": 131,
       "name": "_private.LinearCircuitJordan.0.Gimle.Forseti.Examples.LinearCircuitJordan.prefix_of_rational_prefix",
       "prefix_sha256": "a3b578bd8ba51563be0a8229c40483ef6ab82dec5192b7b61262a51f8b8b9054",
-      "proposition_sha256": "31a61e0ae9f160b0efcc926f2b2512da4eac4439ad0c9625534aba10506ce602",
+      "proposition_sha256": "535c7f4adf675250984d6a8c1c0e564becc9cab1774b633dda2c01aede18fbc4",
       "start_line": 117,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 153,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan1_prefix",
       "prefix_sha256": "2d184e080a28db53ea278963e1134c3fcf02cc56a033ed4b72838e562e4a3570",
-      "proposition_sha256": "b189a21fbc9c298bc6c8cd3b515247d483847ee458a8028302931df2125e6daf",
+      "proposition_sha256": "e843e02ff7ae04a14cf57137f42835c71ae92bb7d12c0fe16059fcb67186e7cd",
       "start_line": 148,
       "status": "checked",
       "uses": [
@@ -73,7 +73,7 @@
       "end_line": 158,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan1_equivalent",
       "prefix_sha256": "c6f0bbff31a38db698f618893e17c58e3773f0d7c8310ae0da52b5bb0c8f3243",
-      "proposition_sha256": "a4f97b38f210028c5287af1c485029409180ab1493c82b877192a82d576261a2",
+      "proposition_sha256": "757603cf3923c6f4e2382cccfc73f19c53d145683c824b009f18d64ba14de05a",
       "start_line": 155,
       "status": "checked",
       "uses": [
@@ -103,7 +103,7 @@
       "end_line": 165,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_prefix",
       "prefix_sha256": "94e4b75efedb7f0a7671e8347c132b33a6a0bfebc4181a9f44a537dbc5118b9c",
-      "proposition_sha256": "5664a81921c759b070be2e69593b617cff8782a194dd2fd33c6ca381a267f78e",
+      "proposition_sha256": "e156049dd923ee3e41b5c4f3e0d567b953e38c702ae0da83e9b8b0c146b6f9d1",
       "start_line": 160,
       "status": "checked",
       "uses": [
@@ -133,7 +133,7 @@
       "end_line": 170,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_equivalent",
       "prefix_sha256": "cec1714c2144f5ed2ffa6f0cd64ad116a0bd6518ae8fa36b0621f93e47b76a20",
-      "proposition_sha256": "a2e2e32bde96a869eb19de33ef930f53de0e5930b330a08a46a887406d00a485",
+      "proposition_sha256": "5dd5f3a44064d0f59ee911a06de84cbee1601f3622e74bd17699d04078c1b922",
       "start_line": 167,
       "status": "checked",
       "uses": [
@@ -163,7 +163,7 @@
       "end_line": 177,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_prefix",
       "prefix_sha256": "6ca61ca3d3d1c99a07c0c19bff7dda0d0e65c8a41149a1be08ac55e8be953f10",
-      "proposition_sha256": "da4a3b9f93400a18e11470c3ace3549abee923637d38ead3747250d60b71d8a7",
+      "proposition_sha256": "fe18de68213241dce7773aa8bbad689958cc08ff36e615b9240df116663ce482",
       "start_line": 172,
       "status": "checked",
       "uses": [
@@ -193,7 +193,7 @@
       "end_line": 182,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_equivalent",
       "prefix_sha256": "842f66011d5c2d742cebb7dbf4fa25154a80e03ab5502dcc439142ef5504ee8e",
-      "proposition_sha256": "9806e669263d87697374a1b4d57beba95de7956360a9c37d8b59885b8fd3da7b",
+      "proposition_sha256": "6ed44bbde5dffd8136c3392f8f5f6074055f7cc4bf1a48588dda091a35ed6749",
       "start_line": 179,
       "status": "checked",
       "uses": [
@@ -223,7 +223,7 @@
       "end_line": 205,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_expected",
       "prefix_sha256": "3eadfa0afe0c9694fbd683d11de994372329e2a18d44b2448d379a2481162d54",
-      "proposition_sha256": "fb502cf89ebf0a09e15eaf7a752371ed75ea87bfae20b81ccfb8539abb89382c",
+      "proposition_sha256": "1ff5424931ecf85616b2c57f39f6167c9b6b5e35425cbb36f74ea1c602108521",
       "start_line": 194,
       "status": "checked",
       "uses": []
@@ -247,7 +247,7 @@
       "end_line": 219,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_expected",
       "prefix_sha256": "6faedd1f5c76c7d8735f077c6f9b06788548eebc62b54d019fa66e0a531dc497",
-      "proposition_sha256": "6709a67cbfde00975b57242e01b1ed7ca1fcb45251ce60eeb06f74a788e5a7db",
+      "proposition_sha256": "cefc1e43fcff8dd0d4dba6151c147f292fb8368238039ea5807b056aae7fc477",
       "start_line": 207,
       "status": "checked",
       "uses": []
@@ -271,7 +271,7 @@
       "end_line": 224,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_different_updates",
       "prefix_sha256": "abe2bea31b53c5e2206a882d7aeb6d4cd8c6f0c8d27a4b2c75c7c6d7589618d7",
-      "proposition_sha256": "b0ae3d0af629cd4898c921f788bcf125652af9a45b8821f5bbbc853d49dc8706",
+      "proposition_sha256": "b815026379481e85a571c7e44116f329dd1d2eb799ccb471979c7331d16b6f7b",
       "start_line": 221,
       "status": "checked",
       "uses": []
@@ -295,15 +295,15 @@
       "end_line": 228,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_different_updates",
       "prefix_sha256": "f28309e3abb05acb077be9e161607bf19cdef2212b01eca01e6feb73e7cf6fff",
-      "proposition_sha256": "9b3828003baa00a0a36469080ae79a11a2daac15eea96ae8b610b56fc9f464fc",
+      "proposition_sha256": "59dced37fbca89b357e62a81592e52bde56fa1fdca17a290b855c877413ab3bf",
       "start_line": 226,
       "status": "checked",
       "uses": []
     }
   ],
   "environment": {
-    "check": "ef5cbef1b927e8abee46d2cad5568418aa018d0e94353cf0637a2d123191b50d",
-    "fingerprint": "a910248aa60ef55926175b4f64fb8b764b8618c6cee2ebc24133b62c2e7c5ab2"
+    "check": "44e26505b2d5d6f7838c5a591f13e9d10ee9eea618eb1cddbc299d33ca1ba17f",
+    "fingerprint": "79e533812fcfc51ca7520d7d8ce6da5a3b91014e170b202e1421eda689910e40"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "a6684acf9ddce44023fefef188a25ef848359e0b95c7b1cc6779342093fd81f6",

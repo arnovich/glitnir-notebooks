@@ -19,7 +19,7 @@
       "end_line": 120,
       "name": "Notebook.HedgedSpread.budget_rate",
       "prefix_sha256": "c677b7c4573b6fe466c870fde4dffb2e85416d44a9b34908c12c9bd66e78e535",
-      "proposition_sha256": "1d0b131e4949ff7c4079946bea9fcddcab3d3c0f50b1661a09a4deba21c20e52",
+      "proposition_sha256": "005191d34cd306e3a7b3d722cf4a55b3cb27b3bff9d7b0ed6738ba3f953bed64",
       "start_line": 112,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 138,
       "name": "Notebook.HedgedSpread.budget_leaf",
       "prefix_sha256": "96f0431db6da0803f0bc603b95583dadb6a2ca8f1d7372997bf7e8cb512363e1",
-      "proposition_sha256": "721feae4eebfe9da38740f14ef54b87f3f85a1acca77754905321ba09f5bed22",
+      "proposition_sha256": "5c0e8ed9beeac9c0fc7cbb7dd5a81d3156e6a915fe35ea4d6f6b82fee6830d54",
       "start_line": 135,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 248,
       "name": "Notebook.HedgedSpread.Decided_no_limit_breach.no_limit_breach",
       "prefix_sha256": "6a5b437affe1c43de8ef2bf25f612ddb72e2bad7a32f59415f403517ea646f21",
-      "proposition_sha256": "d5207b8f631991e22dd479557f9e73e4956770543b304cf5c08adc425867b645",
+      "proposition_sha256": "7f8be888a06b6e92702dc01ec508ccad2ed7209de1ad5c55d423755a239fb5d2",
       "start_line": 204,
       "status": "checked",
       "uses": []
@@ -91,7 +91,7 @@
       "end_line": 344,
       "name": "Notebook.HedgedSpread.Decided_budget_band.budget_band",
       "prefix_sha256": "cd859e59076394b5a8f212003e30b4cc96d0bf0843b9503a27996fc44cf04939",
-      "proposition_sha256": "245c92d42ce0d522c2c59fc289a1448323f1d5a76134c06d5e5f251889d3a800",
+      "proposition_sha256": "fcebba47021b77eea13c065d734695c025d9def5e44ee4664b8f1bd8a8fbb7b6",
       "start_line": 300,
       "status": "checked",
       "uses": []
@@ -115,7 +115,7 @@
       "end_line": 442,
       "name": "Notebook.HedgedSpread.Decided_calmer_market.calmer_market",
       "prefix_sha256": "8167dd65c58f4a86acc23b2620bd4e3c8987814e9e8e16f2d9dd58f6834ad344",
-      "proposition_sha256": "9751aabb9fab6a0c851e60a73af52599652e519fdbd4fbf4eec0eeb567d038e9",
+      "proposition_sha256": "500ea9b88a63e341b0440a811b1a88bb9f9b96667c18fbece76fedaf342bccfb",
       "start_line": 397,
       "status": "checked",
       "uses": []
@@ -139,7 +139,7 @@
       "end_line": 538,
       "name": "Notebook.HedgedSpread.Decided_budget_quarter.budget_quarter_refuted",
       "prefix_sha256": "a7ff8c6c7d508c1aa48dbe71f818c94083c6cbcb5fd3e599472a722bd049ebde",
-      "proposition_sha256": "cb7df7b2c82e752c9b333b2ebd9d8f3c56454d40bc609af389163cb8ca9e18d4",
+      "proposition_sha256": "0aa60bdf41305586e9e2ec74356448d83f104a2a09ad47b2d622c4021b629c2c",
       "start_line": 490,
       "status": "checked",
       "uses": []
@@ -163,7 +163,7 @@
       "end_line": 573,
       "name": "Notebook.HedgedSpread.unit_shock_realized",
       "prefix_sha256": "8ce9a53d1241dc847412fde5722bdf65a1629df391f0fe00af995da2c6831e82",
-      "proposition_sha256": "74f3bc6689267bf7212cc977b85c832faf58debe200a542c967787da70fdf1ca",
+      "proposition_sha256": "93af075551e7becc17879d80a643c0096b5a11a2ff30585849449838d5c00f48",
       "start_line": 569,
       "status": "checked",
       "uses": []
@@ -187,7 +187,7 @@
       "end_line": 582,
       "name": "Notebook.HedgedSpread.exposure_under_unit_shock",
       "prefix_sha256": "6839b4e5c5aef876bde2eeb6e550dd0b1ed7e111e084bbdf45a44954fcdbf575",
-      "proposition_sha256": "bcf8a90136fc0ebb6c106a0d53baa00df784657268e4cc6917244b69cc85b0f8",
+      "proposition_sha256": "13ae1cf5c4fdc53a1eb721aad3350550fb95b041b95a89306bf5ee6e93021691",
       "start_line": 575,
       "status": "checked",
       "uses": []
@@ -211,7 +211,7 @@
       "end_line": 601,
       "name": "Notebook.HedgedSpread.half_is_not_a_bound",
       "prefix_sha256": "c89039cf06992911da3949a3fe767d89790f196749ba387f9cd8d9c14450f035",
-      "proposition_sha256": "cd11412d7281e6473d7e78cb3e88d0a349b75b2bc92128c47d58334b896da8fe",
+      "proposition_sha256": "deef1e2b57566355d710ced6a8b1b70950ed37144947931b933593cffe6c3d0a",
       "start_line": 584,
       "status": "checked",
       "uses": [
@@ -246,7 +246,7 @@
       "end_line": 608,
       "name": "Notebook.HedgedSpread.band_needed",
       "prefix_sha256": "4b85412da04ebb4644e3c139fc2682971e06a8deb71c3be819f86f743ffa2b05",
-      "proposition_sha256": "7e33711b03c8100682a64b65513a3dcc905b41ebba049ba8a0a4c5b590b80bf3",
+      "proposition_sha256": "61fa1e44b231f57d85ed2a886dbe21fff7d5462a5e6b67fdeb9459c53d228d9a",
       "start_line": 603,
       "status": "checked",
       "uses": []
@@ -270,15 +270,15 @@
       "end_line": 626,
       "name": "Notebook.HedgedSpread.any_band",
       "prefix_sha256": "d060bb117ec4604c40e86c977fb050d43e2ea447abe1b849ce3e11067fa6a7f8",
-      "proposition_sha256": "58c730fb63c53b92678d12acbd3d13b8cdef4230674bc55f40d3e1f8b65c7ca6",
+      "proposition_sha256": "0d270f813dd9193b1caa1ea4aaa900da58562dc929658f335e1f3ff6374665d8",
       "start_line": 622,
       "status": "checked",
       "uses": []
     }
   ],
   "environment": {
-    "check": "fa53f1c5ace1ddd7ffe7b672d8f4c704e40eef8aabf985f31a0536bc7c468c01",
-    "fingerprint": "6ef1d663d70b12e4187dffd8df327625d3fa382aa1e55cb9aa4ac6f67a677da8"
+    "check": "1530916b39f649a96c05783e5aa5a501727f0f4e06bf2171fa714ff27a94377a",
+    "fingerprint": "c6436a7ab87078c01587f1e9e8b0022dbf3a9bed2f9779f25815bbdf54ccf369"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "f244d270b0fa031d208db37c95f7299733d59d6b67f836816f821a7699b6ab58",

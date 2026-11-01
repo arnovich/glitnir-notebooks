@@ -1,11 +1,15 @@
 name = "forseti_examples"
 version = "0.1.0"
-defaultTargets = ["Burgers", "BurgersFronts", "CircuitProofs", "EnergyOptimization", "Euler", "HedgedSpread", "HedgedSpreadRisk", "LinearCircuitFibonacci", "LinearCircuitJordan", "Lorenz", "NS_B2", "NS_K5", "NS_Laminar", "NS_T3", "NavierStokes", "ScalarDecay", "ThreeState"]
+defaultTargets = ["AntitheticFeedback", "Burgers", "BurgersFronts", "CircuitProofs", "EnergyOptimization", "Euler", "HedgedSpread", "HedgedSpreadRisk", "LinearCircuitFibonacci", "LinearCircuitJordan", "Lorenz", "NS_B2", "NS_K5", "NS_Laminar", "NS_T3", "NavierStokes", "ScalarDecay", "ThreeState"]
 
 [[require]]
 name = "forseti"
 git = "https://github.com/arnovich/forseti-lean.git"
-rev = "f1a84124ad7cca473fe13929d814801bd6a1452c"
+rev = "36304c70fd2372fc1aa9b1e74643d0d0a516de3a"
+
+[[lean_lib]]
+name = "AntitheticFeedback"
+srcDir = "examples/biochemistry"
 
 [[lean_lib]]
 name = "Burgers"
@@ -77,3 +81,12 @@ srcDir = "examples/basics"
 [[lean_lib]]
 name = "ThreeState"
 srcDir = "examples/basics"
+
+# The AIF safety certificates: every cell of the moving tube and the assembled
+# theorem. Opt-in, and not a default target: a full build takes about 30 hours
+# of processor time and over 7 GB of memory per cell. Build it with
+# `lake build AIFSafety`, or one module at a time (see certificates/README.md).
+[[lean_lib]]
+name = "AIFSafety"
+srcDir = "certificates"
+globs = ["AIFSafety.*"]

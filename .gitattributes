@@ -1,0 +1,6 @@
+certificates/AIFSafety/** linguist-generated=true
+certificates/AIFSafety/Cell.lean -linguist-generated
+certificates/AIFSafety/CompleteSafety*.lean -linguist-generated
+certificates/AIFSafety/NotebookStatements.lean -linguist-generated
+certificates/AIFSafety/SafetyComposition.lean -linguist-generated
+certificates/AIFSafety/TrajectoryContract*.lean -linguist-generated

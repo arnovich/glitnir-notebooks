@@ -64,5 +64,17 @@ jobs:
           sudo swapon "$RUNNER_TEMP/lean.swap"
           free -h
           df -h "$RUNNER_TEMP"
+      - name: Build the AIF certificate modules one at a time
+        run: |
+          # AntitheticFeedback imports one AIFSafety cell and forseti-lean's
+          # certified cell. The mesh modules under them need 4.3 to 5.8 GB each
+          # and each cell about 7 GB, and Lake would start them together, so
+          # build them first, one per step. tests/test_certificates.py keeps this
+          # list in step with the notebook's imports.
+          for module in AIFSafety.MeshGeometry AIFSafety.MeshBin{0..7} \
+              AIFSafety.CandidateMesh AIFSafety.Cell AIFSafety.Cells.Bin3.Slab100 \
+              Gimle.Forseti.Examples.AIFCertifiedCellData; do
+            /usr/bin/time -v lake build "$module"
+          done
       - name: Build all notebook modules
         run: /usr/bin/time -v lake build

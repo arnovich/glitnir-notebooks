@@ -13,6 +13,7 @@ const RECORDED = 'Saved results, shown as recorded';
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[char]));
 const TOPICS = {
   basics: ['Start here', 'Small models introduce claims, saved evidence and refutations.'],
+  biochemistry: ['Biochemistry', "A molecular controller's output bounded for all time: one certified cell checked, the full proof cited."],
   circuits: ['Circuits', 'Composition, contracts, rewrites and discrete dynamics.'],
   dynamics: ['Dynamical systems', 'Continuous trajectories and their bounds.'],
   finance: ['Finance', 'A hedged book bounded under every shock in a band, and bounds on the odds of its stop under random shocks, all as theorems.'],

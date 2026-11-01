@@ -19,7 +19,7 @@
       "end_line": 159,
       "name": "Notebook.Euler.circuit_contract",
       "prefix_sha256": "0265027e2b941b1f03bc642b0df779f0116f051719afe25366dd842c22337b79",
-      "proposition_sha256": "4d099e60a1acd55b95c0fb51ba51251ec0421dd175228e900658e02fbb6d6c4d",
+      "proposition_sha256": "a7843a69b30e6b0f59c1a975db5933447179bcc2fdc0469f9ef6f5367b798f33",
       "start_line": 154,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 174,
       "name": "Notebook.Euler.existence",
       "prefix_sha256": "ed607751483446d9cf87897c1a123d31daf19e321aefa088716dfcf206499206",
-      "proposition_sha256": "81cfb61c206ba53537405a818bd33481175d23d9e5ac4c026e17e8205afb6c04",
+      "proposition_sha256": "b8cb3ec0681fb063be9ce8c383e910610dfee3791f9095086e13d3c50e069e71",
       "start_line": 170,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 180,
       "name": "Notebook.Euler.uniqueness",
       "prefix_sha256": "b8fa414e7f1e2b8a03db49e0a13726a31c8ec2f19eb6ac84d7e1847ab17251bc",
-      "proposition_sha256": "e6820ff775a70b60ad6868112f0b163bac33f571cc4d993c6bfca5189079ca8c",
+      "proposition_sha256": "fbf1ccd104a000abfd1ad2a0d51bf6d11a63f2b2dc702ae444f660385c77531f",
       "start_line": 176,
       "status": "checked",
       "uses": []
@@ -91,7 +91,7 @@
       "end_line": 199,
       "name": "Notebook.Euler.coefficient_t_x",
       "prefix_sha256": "cc55307bb486e408dc511bbf02ca7675d89fab3f2bc9189287700504201328bd",
-      "proposition_sha256": "af9fc3484ee486990690248e11e219ce93d7448eae8aa74cbde6aa28ce33bf9d",
+      "proposition_sha256": "4efebbe9ebb9b3b3cc1ae189f71aee83eb7b5e12a5fa086cdb6b4ea8b50f7f27",
       "start_line": 197,
       "status": "checked",
       "uses": []
@@ -115,7 +115,7 @@
       "end_line": 205,
       "name": "Notebook.Euler.coefficient_t_y",
       "prefix_sha256": "b4e2e4899a9cb39473fb40d6d8aa022fc986b1848e48acc1dea754e2612096c3",
-      "proposition_sha256": "dd15150337b2296386f9e5879f7596e2233d6952b313988ed9759f287264dd4e",
+      "proposition_sha256": "9bd17798a7749fc5e8eb71d0ed4a4710687829a22940e30aff71c1c33249674e",
       "start_line": 201,
       "status": "checked",
       "uses": []
@@ -139,7 +139,7 @@
       "end_line": 211,
       "name": "Notebook.Euler.coefficients_t2",
       "prefix_sha256": "ce61ad1f44b157484141368d6601cda86f5ecf6f3520d77d4affcea756f6fd12",
-      "proposition_sha256": "2f9725a3b02b639fc983ab2ac7f7c75dc22f97acd1848e32003447a7f3f6cee9",
+      "proposition_sha256": "5cc48c06bca3989b37fe9d487daef75b74271a41fd52225326cc44c638ab66bf",
       "start_line": 207,
       "status": "checked",
       "uses": []
@@ -163,7 +163,7 @@
       "end_line": 215,
       "name": "Notebook.Euler.coefficient_t3_x",
       "prefix_sha256": "f8b2aa939db6256e6470efd4ba1468a59170ba9add6ca30e371080ab950ccc10",
-      "proposition_sha256": "0381f8bfbe7fa7e42a64207c016581d268ddce88bd8ad64b793a1c60b6ce09e1",
+      "proposition_sha256": "934b471b308dd1b0b70c7ceef55a5a46b57895129cae06ed972db39d84279000",
       "start_line": 213,
       "status": "checked",
       "uses": []
@@ -187,7 +187,7 @@
       "end_line": 223,
       "name": "Notebook.Euler.discarded_mode",
       "prefix_sha256": "bc254913c963a5bf5e54cd20ce7d5baa773f5016c49736e2c7198031c151dfbb",
-      "proposition_sha256": "15413a52843ee52613aa26ebb8f98a6322488ff93a5020932ab4e735ab655322",
+      "proposition_sha256": "5b37169cced4eccd3db3939d4c44986d8caa0b955db130e6d7113eb7a737d534",
       "start_line": 217,
       "status": "checked",
       "uses": []
@@ -211,7 +211,7 @@
       "end_line": 237,
       "name": "Notebook.Euler.wrong_coefficient",
       "prefix_sha256": "9d3e092f2bf345c4afb05a439d643b78adafa1e8168ce0622d981b1ced57b487",
-      "proposition_sha256": "1774a01a14278f299dc012974bdea9f7cd117d49c2a2bfdf827c53c095415794",
+      "proposition_sha256": "caab55153abea227f2d4bf0cf9e63f20e139c84cd39143bb2ca89a7355f47d29",
       "start_line": 234,
       "status": "checked",
       "uses": [
@@ -241,7 +241,7 @@
       "end_line": 251,
       "name": "Notebook.Euler.mean_zero",
       "prefix_sha256": "76ad74a622b6e2704022c171d63c49e478109cc1365df742e101f0879d1c0093",
-      "proposition_sha256": "49e5b1bf94bc6e3dccc5fe86419d08826c6c760a1e9b3fce7f194e3463b7b225",
+      "proposition_sha256": "fc54bc2da13f2a9bd888c22280e055955b95436049a0e41049453970a362ab8b",
       "start_line": 249,
       "status": "checked",
       "uses": []
@@ -265,7 +265,7 @@
       "end_line": 255,
       "name": "Notebook.Euler.even",
       "prefix_sha256": "aaea8832935558cf6de938309e29c877ac2d2132b4fbf73fb3670c02f03cd664",
-      "proposition_sha256": "43ad8d034ae951bcc92f509d1bead0cdec3b7dd76b0588abb71e4efbac74aef1",
+      "proposition_sha256": "be58ee03bf12c00cab808da96f68ae1c2f4d6ac596b774aeda1b8598e1a3cabf",
       "start_line": 253,
       "status": "checked",
       "uses": []
@@ -289,7 +289,7 @@
       "end_line": 318,
       "name": "Notebook.Euler.geometric_bound",
       "prefix_sha256": "7ada7f53f0b500bac914604a6bb7bde28f2733ad937a80b3b4ea4f9e76537599",
-      "proposition_sha256": "3fda88338416d227c917de63cb78ccc71f92eb134487952dff7a7ce782356c1f",
+      "proposition_sha256": "622b684118514b1bac5bcb54cf4bc078695c8c508d6747b6c5e0aea2d05d16f0",
       "start_line": 316,
       "status": "checked",
       "uses": []
@@ -313,7 +313,7 @@
       "end_line": 324,
       "name": "Notebook.Euler.first_norms",
       "prefix_sha256": "5c59add0d078b7a8709672e3b06e3763d9847517134c1b8983a0c6219d3d0755",
-      "proposition_sha256": "41b86d909ec4c212dfbba8a6026fb9641f267e185f772845a942d1c07aae1654",
+      "proposition_sha256": "71ea6cefd67c214a91653ccf46acbdff56dca940a2620a4ae24920a0229e4d2e",
       "start_line": 320,
       "status": "checked",
       "uses": []
@@ -337,7 +337,7 @@
       "end_line": 329,
       "name": "Notebook.Euler.converges",
       "prefix_sha256": "141f6abfa1909b738ffeb376a30d8b65cba642a6e9ef61e55f918acd74f2e5da",
-      "proposition_sha256": "ab65fb51b97e80aea73e01580cc0746e2f4ae9af53e58a83f0103eb58bc29021",
+      "proposition_sha256": "2ed97f0a80d4b50571864235cd50157b83d33c3196361bddbe7e3beca9f839f6",
       "start_line": 326,
       "status": "checked",
       "uses": []
@@ -361,7 +361,7 @@
       "end_line": 334,
       "name": "Notebook.Euler.truncation_through_t2",
       "prefix_sha256": "1d7f049cba2122c6fa1e25e31959e532ae15f1ad2f2d4c1c9ce1465380f233ca",
-      "proposition_sha256": "9201cd441afc9b63202093c37c04f9ea5fc6204bbbfc8f6eee5156d75d6c150d",
+      "proposition_sha256": "91360030c26fc1163d11dedd526652a48f162120d970b18b5f04a076e7dc4df5",
       "start_line": 331,
       "status": "checked",
       "uses": []
@@ -385,7 +385,7 @@
       "end_line": 341,
       "name": "Notebook.Euler.band_around_start",
       "prefix_sha256": "4e4753815fd1ee67d3ba46bf6ad11517bf8faa2cd97eba78b7404e5248056252",
-      "proposition_sha256": "fce4340ab9e8c2f91f261063713465ebee92a913bdacf03116db221e1eed1004",
+      "proposition_sha256": "c8baab693b83c65dd362f338eaaade00a96e1a95f5ec1eff6e2e1f6841492fca",
       "start_line": 336,
       "status": "checked",
       "uses": []
@@ -409,7 +409,7 @@
       "end_line": 369,
       "name": "Notebook.Euler.classical_solution",
       "prefix_sha256": "83550e1ce501d17c525e19e73aab96c66930096f18a13abd7da25f663b709a5c",
-      "proposition_sha256": "40992b133804b499e08e445c9e466a1dda893da41addcf0cdf3fb6e8f1cf527e",
+      "proposition_sha256": "dfba3d3acf978a88ce8d96b114caf24fd86a879af302986d7d33e17fe0ea3bab",
       "start_line": 365,
       "status": "checked",
       "uses": []
@@ -433,7 +433,7 @@
       "end_line": 376,
       "name": "Notebook.Euler.solves_vorticity_equation",
       "prefix_sha256": "5e2f6e80430f988238655d8b44b210c9a00a96703d25033b8deebd5994faa677",
-      "proposition_sha256": "00a061a20d45c5da3f46345a12abf8f781d0ff9837cb3c3bdd77ed8af8c5949a",
+      "proposition_sha256": "f3d99853e08b7fe321f225f725e2dfeff04606903ead259c8cc185b3a0afa0af",
       "start_line": 371,
       "status": "checked",
       "uses": []
@@ -457,7 +457,7 @@
       "end_line": 382,
       "name": "Notebook.Euler.stream_function",
       "prefix_sha256": "0a49946e0f18ff79ece0a134b01adc65cbeafbb0857ee1c54ca702d5278e00b5",
-      "proposition_sha256": "b110c2af9e26c54322316b0235b5689ffa58fece5ae9adbd4eb86deea1f1653f",
+      "proposition_sha256": "14d2ffccea5aaa08f7313ed8272b62471679b513a5ab9c52d0252ded81328c75",
       "start_line": 378,
       "status": "checked",
       "uses": []
@@ -481,7 +481,7 @@
       "end_line": 387,
       "name": "Notebook.Euler.initial_vorticity",
       "prefix_sha256": "73dbf3489f3159e5a223cb364dedc5b2f34d0ffe4844b5db8871de6b1a5a3c3c",
-      "proposition_sha256": "fd4dbab682276c763d970e3dfcb53ee85acfeb1b7ce76735aafa728654ca1e15",
+      "proposition_sha256": "00cf851842efa00498aa33ef91712714aece91bb71e60c5469da1edc98adad0d",
       "start_line": 384,
       "status": "checked",
       "uses": []
@@ -505,7 +505,7 @@
       "end_line": 498,
       "name": "Notebook.Euler.Decided_truncation_decided.truncation_decided",
       "prefix_sha256": "9604030352db1503fe50bb8b068004bae75711ba9d02275412658e1ab7aa9e4f",
-      "proposition_sha256": "d101e41b88901f652577489f680ce640571c89f24e3a9a4c2202cd10f2a2e8b4",
+      "proposition_sha256": "585886a11ba20461ddf789b4af81115435ccb0226b8e33d5473e3edf9af02849",
       "start_line": 452,
       "status": "checked",
       "uses": []
@@ -529,7 +529,7 @@
       "end_line": 595,
       "name": "Notebook.Euler.Decided_band_decided.band_decided",
       "prefix_sha256": "e31420d779aa03cd70d4427b733ccc383683a6648a4573965c82c95fc28e9366",
-      "proposition_sha256": "35f323daf982607edb071a44c919cf5fcbf5c65eb42fe5ba2fc5effd98962c09",
+      "proposition_sha256": "3816069ef813bcb7e41bc3841851266342299eeb537b556e3656ce7d47c50981",
       "start_line": 531,
       "status": "checked",
       "uses": []
@@ -553,7 +553,7 @@
       "end_line": 701,
       "name": "Notebook.Euler.Decided_classical_multimode_tail.classical_multimode_tail",
       "prefix_sha256": "e138c89cbb9915aed097d305d7328f4f4f2dc90134c2ae92442fe43a26e03e28",
-      "proposition_sha256": "801d1ae73e01f11c6033c556831eadb16059b6fec29bcefc436f8945e8abd86e",
+      "proposition_sha256": "5ac7eb8a5dcc60c908172890a98346862c81a0d528f2dfb86f7968d324b00b82",
       "start_line": 649,
       "status": "checked",
       "uses": []
@@ -577,7 +577,7 @@
       "end_line": 794,
       "name": "Notebook.Euler.Decided_classical_multimode_band.classical_multimode_band",
       "prefix_sha256": "ebb88b6376942cfbcf5d92d45af6701bbcd248f8ffa2884737f748b9227c9a28",
-      "proposition_sha256": "e5d2ad4791c614b31ddc29f2f33ce2d065e2b8bee20c3a0ee3c3cbfaefe938fc",
+      "proposition_sha256": "8a9815bda3422219ebd2e62f6f373651148f372dd17f1be0558e831d58a65255",
       "start_line": 730,
       "status": "checked",
       "uses": []
@@ -601,7 +601,7 @@
       "end_line": 880,
       "name": "Notebook.Euler.Decided_classical_zero_tail.classical_zero_tail",
       "prefix_sha256": "89d68659cfe0c29f2bc98c754c7b96353fd883dfe30ed3459477b9d39633dd4c",
-      "proposition_sha256": "77cd2f733fa0796a5d14db72b3d0e1f6d2d39d1c81ac49726b1b7d9bb3c83db9",
+      "proposition_sha256": "833f8636d5a674a3a81696a893207b69753a6a8e9e0349cc3285eacea0b5dc02",
       "start_line": 832,
       "status": "checked",
       "uses": []
@@ -625,7 +625,7 @@
       "end_line": 969,
       "name": "Notebook.Euler.Decided_classical_zero_band.classical_zero_band",
       "prefix_sha256": "f93e24c93abcad200f04baad725017eb11851605bf0555c8a521b3762bb9b062",
-      "proposition_sha256": "0a1b016c113ca3b5cb263a74e5421c418ac11a0e0566f4e5b0e981efe58761cc",
+      "proposition_sha256": "2e13d59ec2e39fc05ee00ae02d08c136f997b28d6d9902373a85517005f214ce",
       "start_line": 909,
       "status": "checked",
       "uses": []
@@ -649,7 +649,7 @@
       "end_line": 1028,
       "name": "Notebook.Euler.gevrey_viscous",
       "prefix_sha256": "cf1e6298316001ad6cf9eee5118b99245379e9e42bdc769454376246b65bbd0e",
-      "proposition_sha256": "d52f0bc4f068ec2ba5ccedbcfcba16c4302b8957b507d696bb23321f667a30c7",
+      "proposition_sha256": "dd6a50dca31dbe43e654bc34c1e351324ce480d667cd3f08e897e5020a679ecd",
       "start_line": 1025,
       "status": "checked",
       "uses": []
@@ -673,7 +673,7 @@
       "end_line": 1033,
       "name": "Notebook.Euler.viscous_differs",
       "prefix_sha256": "4038133e3bb4aae9494db21be4cc7ae1ce2f9d6996e19e11e7b1d67814eb4a1c",
-      "proposition_sha256": "65bae293c115e4570a0e15a97408f05931320ba1681f5be085be37c76f7bca35",
+      "proposition_sha256": "ff4cada999991f0556f20d1d685292d1b91c1e2b69d75388f3dd409654242c89",
       "start_line": 1030,
       "status": "checked",
       "uses": []
@@ -697,15 +697,15 @@
       "end_line": 1037,
       "name": "Notebook.Euler.viscous_created_same",
       "prefix_sha256": "f95e9a45058c309c24cc1eaa9ba9d9a80371f4afa4b678a61548abf872b92e70",
-      "proposition_sha256": "04f2ab44d51c5f77346651a66fc06f20b3f986647f2fcb5cff9c00246de5dacd",
+      "proposition_sha256": "7f6e934365a4334e24275a186c4548376f8dd9bb9f26d4fa08b38ce1f6373ad7",
       "start_line": 1035,
       "status": "checked",
       "uses": []
     }
   ],
   "environment": {
-    "check": "043238ca9ab8861e6118575b39222c50cb98146f1e6275995e71270f58143dba",
-    "fingerprint": "d05f2e8eb6264fd22cbb2c9c5c9c9f744fdca8d20462c9b83be5f52957927121"
+    "check": "ead2e95d7094984bc1bc052e72065047dc5766a8f9773ef03fbdf14471961ca2",
+    "fingerprint": "ec8fb311cd56ffce2401803ea60e9d48260b8a58a3138a1f2bb2db4d4aeac2be"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "70e7797c8ebc27acd96a68e3fca867b893f4cec4bf64953c490dbe229bf8e27a",

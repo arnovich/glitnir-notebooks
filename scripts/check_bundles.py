@@ -29,6 +29,8 @@ _NOT_A_NOTEBOOK = (
 )
 FORMATS = ("glitnir.project-checks/v1", "glitnir.project-checks/v2")
 MAX_RESULTS_BYTES = 16 * 1024 * 1024
+# Opt-in proof libraries, such as AIFSafety: built on request, never notebooks.
+CERTIFICATE_DIR = "certificates"
 _SHA256 = re.compile(r"[0-9a-f]{64}")
 _CLAIM_KEYS: dict[str, type] = {
     "name": str,
@@ -185,15 +187,20 @@ def notebook_paths(directory: Path) -> list[Path]:
         if Path(require.get("path", ".")).parts[:1] == (WALKTHROUGHS,):
             raise ValueError(_NOT_A_NOTEBOOK.format(f"Lake dependency {require.get('name')}"))
     configured = {}
+    certificates = set()
     for library in config["lean_lib"]:
         name = library["name"]
         if Path(library.get("srcDir", ".")).parts[:1] == (WALKTHROUGHS,):
             raise ValueError(_NOT_A_NOTEBOOK.format(f"Lake library {name}"))
-        if name in configured:
+        if name in configured or name in certificates:
             raise ValueError(f"Duplicate Lake library: {name}")
-        configured[name] = _file(
-            root, Path(library.get("srcDir", ".")) / f"{name}.lean"
-        )
+        source = _file(root, Path(library.get("srcDir", ".")) / f"{name}.lean")
+        if library.get("srcDir") == CERTIFICATE_DIR:
+            certificates.add(name)
+        else:
+            configured[name] = source
+    if certificates & set(config["defaultTargets"]):
+        raise ValueError("Certificate libraries must not be default targets")
     notebooks = [*root.glob("*.lean"), *root.glob("examples/*/*.lean")]
     if (
         not notebooks
