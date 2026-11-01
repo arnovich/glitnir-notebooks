@@ -676,6 +676,76 @@
           "line": 88,
           "type": ": HalfPieces",
           "note": "The form naming the functions of the proof; the proof of the Main Theorem uses this one."
+        },
+        {
+          "name": "PiecesCounted.halfPiecesFrom",
+          "file": "proof/rates/PiecesCounted/Half.lean",
+          "line": 47,
+          "type": ": HalfPiecesFrom",
+          "note": "An internal Lean bridge, not an additional numbered theorem in the paper. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "AppRunningTime.thmHalfPieces",
+          "file": "proof/rates/GeneralPieces/Main.lean",
+          "line": 99,
+          "type": ": ThmHalfPieces",
+          "note": "The map stops at that named application; the underlying algebra is not expanded here. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.fromPadded",
+          "file": "proof/rates/PiecesCounted/Padded.lean",
+          "line": 153,
+          "type": ": FromPadded",
+          "note": "Counted operations here are step-machine transitions. Polynomial work on an exponentially padded state is not a constant-cost Turing-machine step. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.algOf_polyT",
+          "file": "proof/rates/PiecesCounted/Padded.lean",
+          "line": 120,
+          "type": "{ρ : ℝ} {c : ℕ} {P : PiecesF} {A : (lam : ℕ) → ℕ → Pieces.Four lam} {val : AppRunningTime.ValQ → ℤ} {shift : ℕ → ℤ} (h : AppRunningTime.IsPieces ρ c P A val) (hs : PolyT fun u : List Unit => shift u.length) (k : ℕ) : Nonempty (IsPolyT (algOf P val k shift))",
+          "note": "Counted operations here are step-machine transitions. Polynomial work on an exponentially padded state is not a constant-cost Turing-machine step. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.answerOf_polyT",
+          "file": "proof/rates/PiecesCounted/Padded.lean",
+          "line": 57,
+          "type": "{ρ : ℝ} {c : ℕ} {P : PiecesF} {A : (lam : ℕ) → ℕ → Pieces.Four lam} {val : AppRunningTime.ValQ → ℤ} {shift : ℕ → ℤ} (h : AppRunningTime.IsPieces ρ c P A val) (hs : PolyT fun u : List Unit => shift u.length) : PolyT (answerOf P val shift)",
+          "note": "Polynomial in padded input length does not mean polynomial in $\\lambda$ alone. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.answerOf_eq",
+          "file": "proof/rates/PiecesCounted/Padded.lean",
+          "line": 63,
+          "type": "{ρ : ℝ} {c : ℕ} {P : PiecesF} {A : (lam : ℕ) → ℕ → Pieces.Four lam} {val : AppRunningTime.ValQ → ℤ} {shift : ℕ → ℤ} (h : AppRunningTime.IsPieces ρ c P A val) {g : List Unit × Question} {a : Answer} (hg : (ofPadded P A c shift).oracle g = some a) : answerOf P val shift (g, List.replicate (2 ^ (c * g.1.length)) ()) = a",
+          "note": "Polynomial in padded input length does not mean polynomial in $\\lambda$ alone. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.ofPadded_is",
+          "file": "proof/rates/PiecesCounted/PaddedData.lean",
+          "line": 58,
+          "type": "{ρ : ℝ} {c : ℕ} {P : PiecesF} {A : (lam : ℕ) → ℕ → Pieces.Four lam} {val : AppRunningTime.ValQ → ℤ} {shift : ℕ → ℤ} (h : AppRunningTime.IsPieces ρ c P A val) (hs : ∀ lam, 1 ≤ lam → |shift lam| + (2 * lam) ^ c < 2 ^ (2 * lam) ^ c) : (ofPadded P A c shift).Is ρ c",
+          "note": "This supplies data invariants separately from the algorithm’s counted execution. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.computes_of_answer",
+          "file": "proof/rates/PiecesCounted/Padded.lean",
+          "line": 126,
+          "type": "{D : Data} {ρ : ℝ} {c c' k : ℕ} (hD : D.Is ρ c) (hk : k ≤ c) (hc : c ≤ c') (hk' : k + 1 ≤ c') {f : (List Unit × Question) × List Unit → Answer} (hf : ∀ g a, D.oracle g = some a → f (g, List.replicate (2 ^ (k * g.1.length)) ()) = a) : Computes (padThen (fun g => 2 ^ (k * g.1.length)) f) D c'",
+          "note": "These are counted steps with bounded states, not a claim that each whole step takes constant Turing-machine time. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.padThen_runs",
+          "file": "proof/rates/PiecesCounted/PadThen.lean",
+          "line": 70,
+          "type": "[HasSize α] [HasSize β] (N : α → ℕ) (f : α × List Unit → β) (a : α) {S : ℕ} (h1 : size a + size (N a) + (2 * N a + 1) + 1 ≤ S) (h2 : size (f (a, List.replicate (N a) ())) + 1 ≤ S) : (padThen N f).Runs a (N a + 1) S (f (a, List.replicate (N a) ()))",
+          "note": "The final computation is one step in this model. Its cost on a lower-level machine requires the separate polynomial-step simulation argument. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
+        },
+        {
+          "name": "PiecesCounted.padThen_reaches",
+          "file": "proof/rates/PiecesCounted/PadThen.lean",
+          "line": 42,
+          "type": "[HasSize α] [HasSize β] (N : α → ℕ) (f : α × List Unit → β) (a : α) {S : ℕ} (h1 : size a + size (N a) + (2 * N a + 1) + 1 ≤ S) (h2 : size (f (a, List.replicate (N a) ())) + 1 ≤ S) (k : ℕ) : ∀ j, j + k = N a → (padThen N f).Reaches S (f (a, List.replicate (N a) ())) (.inl (a, N a, List.replicate j ())) (k + 1)",
+          "note": "The final computation is one step in this model. Its cost on a lower-level machine requires the separate polynomial-step simulation argument. This is an internal step in the counted-pieces construction; the Appendix B notebook observation is not a separate check of this step."
         }
       ],
       "claim": "appendixB"

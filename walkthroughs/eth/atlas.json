@@ -164,6 +164,100 @@
       "role": "This supplies the saving that makes exponent improvement possible.",
       "idea": "Apply the eight-square identity to rectangle diagonals and group the resulting terms.",
       "difference": "This atlas stops at this mathematical step. The underlying algebra and Lean declarations remain linked through the source references."
+    },
+    {
+      "id": "half_bridge",
+      "label": "Reindex the improved pieces",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.halfPiecesFrom"
+      ],
+      "goal": "Carry the padded construction to counted pieces with parameter $1/\\sqrt{2}$ and the specified functions.",
+      "scope": "The hypotheses supply the padded half-pieces theorem and a conversion FromPadded. The index shift must be polynomial-time and satisfy an explicit size bound.",
+      "role": "This is the bridge used by halfPieces; halfPiecesExist then forgets the extra facts naming the functions.",
+      "idea": "Compute the shift as minus half of the index-count minus one. Apply FromPadded, then show that the shifted indices, matrices and capacities agree with the half-pieces formulas.",
+      "difference": "An internal Lean bridge, not an additional numbered theorem in the paper."
+    },
+    {
+      "id": "padded_construction",
+      "label": "The padded half-pieces construction",
+      "statement": "appB",
+      "declarations": [
+        "AppRunningTime.thmHalfPieces"
+      ],
+      "goal": "Provide the functions of the improved-pieces construction together with its padded running-time contract.",
+      "scope": "This uses AppRunningTime.ThmHalfPieces, whose time contract supplies a padding string. It does not itself assert the final Turing-machine running time.",
+      "role": "This is the mathematical construction passed to halfPiecesFrom.",
+      "idea": "Apply GeneralPieces.thmHalfPieces to AppHalfPieces.pieceFacts. The polynomial-operator construction behind those facts is the next exploration boundary.",
+      "difference": "The map stops at that named application; the underlying algebra is not expanded here."
+    },
+    {
+      "id": "padded_bound",
+      "label": "Convert padding into counted operations",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.fromPadded",
+        "PiecesCounted.algOf_polyT"
+      ],
+      "goal": "Construct an algorithm computing the reindexed pieces, increasing the exponent constant from $c$ to $c+1$.",
+      "scope": "Requires the padded piece contract, a polynomial-time index shift and its size bound. Polynomial-time steps act on states that may be exponential in the original parameter.",
+      "role": "This discharges the FromPadded premise of halfPiecesFrom.",
+      "idea": "Combine the transported data invariants, a polynomial-time answering function, and a counted run of the pad-then-answer machine.",
+      "difference": "Counted operations here are step-machine transitions. Polynomial work on an exponentially padded state is not a constant-cost Turing-machine step."
+    },
+    {
+      "id": "answer_contract",
+      "label": "Answer each piece query correctly",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.answerOf_polyT",
+        "PiecesCounted.answerOf_eq"
+      ],
+      "goal": "Show that answerOf is polynomial-time in its inputs and returns the oracle answer with a padding string of length $2^{c\\lambda}$.",
+      "scope": "The correctness theorem assumes the pieces oracle returns some answer. The polynomial-time statement measures the question together with the padding string.",
+      "role": "This identifies the output of the counted machine with the desired piece data.",
+      "idea": "Dispatch the question to the dimension, index set, capacity, matrix-value or factor program; use each program’s correctness and reverse the index shift.",
+      "difference": "Polynomial in padded input length does not mean polynomial in $\\lambda$ alone."
+    },
+    {
+      "id": "data_transport",
+      "label": "Preserve the algebra and size bounds",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.ofPadded_is"
+      ],
+      "goal": "Transport the piece identities, row and column factorizations, and size bounds to the reindexed data.",
+      "scope": "Assumes AppRunningTime.IsPieces and a bound on the shift. The padding supplied to the factor programs has exactly $2^{c\\lambda}$ units.",
+      "role": "The running-time argument needs these bounds on valid questions, answers and machine states.",
+      "idea": "Undo the shift to recover each original index, transport sums and factorizations, then bound the shifted integer indices and stored values.",
+      "difference": "This supplies data invariants separately from the algorithm’s counted execution."
+    },
+    {
+      "id": "counted_cost",
+      "label": "Bound the counted execution",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.computes_of_answer"
+      ],
+      "goal": "From a correct answer function on $2^{k\\lambda}$ units, obtain a counted algorithm within $2^{c′\\lambda}$ steps.",
+      "scope": "Assumes valid piece data, $k \\le c \\le c′$ and $k+1 \\le c′$. The proof bounds states by room as well as bounding the number of transitions.",
+      "role": "This is the runtime obligation used by fromPadded, with $k=c$ and $c′=c+1$.",
+      "idea": "Use padThen_runs, bound the question and answer sizes, and absorb $2^{k\\lambda}+1$ into the larger exponential using $\\lambda \\ge 1$.",
+      "difference": "These are counted steps with bounded states, not a claim that each whole step takes constant Turing-machine time."
+    },
+    {
+      "id": "pad_machine",
+      "label": "Write the padding, then answer",
+      "statement": "appB",
+      "declarations": [
+        "PiecesCounted.padThen_runs",
+        "PiecesCounted.padThen_reaches"
+      ],
+      "goal": "Run the machine to the value of $f$ at exactly $N(a)$ padding units in $N(a)+1$ transitions.",
+      "scope": "The hypotheses bound the input, counter, padding and output within state bound $S$. The last transition applies $f$ to the padded input.",
+      "role": "This concrete execution lemma underlies the exponential counted bound.",
+      "idea": "Induct on the remaining number of padding units. Each transition writes one unit; once the target length is reached, one transition computes the answer.",
+      "difference": "The final computation is one step in this model. Its cost on a lower-level machine requires the separate polynomial-step simulation argument."
     }
   ],
   "routes": [
@@ -191,6 +285,21 @@
         "appD": [
           "appB",
           "appC"
+        ],
+        "appB": [
+          "half_bridge"
+        ],
+        "half_bridge": [
+          "padded_construction",
+          "padded_bound"
+        ],
+        "padded_bound": [
+          "data_transport",
+          "answer_contract",
+          "counted_cost"
+        ],
+        "counted_cost": [
+          "pad_machine"
         ]
       }
     },

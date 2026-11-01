@@ -36,5 +36,22 @@ class EthAtlasTests(unittest.TestCase):
         self.assertEqual(nodes["wrap"]["declarations"], ["Wrap.countingBoundImpliesFailureOfETH"])
 
 
+class EthAtlasDepthTests(unittest.TestCase):
+    """The counted-pieces route reaches actual intermediate source declarations."""
+
+    def test_counted_pieces_reaches_the_padding_machine(self) -> None:
+        """Several mathematical layers stay navigable and bound to exact names."""
+        atlas = json.loads((ROOT / "atlas.json").read_text())
+        nodes = {node["id"]: node for node in atlas["nodes"]}
+        route = next(r for r in atlas["routes"] if r["id"] == "lean")
+        path = ["appB", "half_bridge", "padded_bound", "counted_cost", "pad_machine"]
+        for parent, child in zip(path, path[1:]):
+            self.assertIn(child, route["supports"][parent])
+        self.assertIn("PiecesCounted.padThen_runs", nodes["pad_machine"]["declarations"])
+        self.assertIn("PiecesCounted.computes_of_answer", nodes["counted_cost"]["declarations"])
+        self.assertIn("state", nodes["pad_machine"]["scope"])
+        self.assertTrue(nodes["padded_bound"]["difference"])
+
+
 if __name__ == "__main__":
     unittest.main()
