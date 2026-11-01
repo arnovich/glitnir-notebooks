@@ -5,7 +5,7 @@ defaultTargets = ["AntitheticFeedback", "Burgers", "BurgersFronts", "CircuitProo
 [[require]]
 name = "forseti"
 git = "https://github.com/arnovich/forseti-lean.git"
-rev = "36304c70fd2372fc1aa9b1e74643d0d0a516de3a"
+rev = "0a81edc7fe82748af7c9b1139229c4d898f50c28"
 
 [[lean_lib]]
 name = "AntitheticFeedback"
