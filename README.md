@@ -128,6 +128,11 @@ Licensed under the [MIT License](LICENSE).
 The ETH/3SAT walkthrough includes the first curated proof atlas in
 `walkthroughs/eth/atlas.json`. With an atlas-capable Glitnir runtime, its Graph view
 offers Reading-first and Map-first exploration of separate paper and Lean routes.
+Its 18 arguments include a deeper Lean branch from improved pieces through the
+padded-to-counted conversion to the padding-machine execution lemma. Route
+overview and Used by expose shared steps; argument links work in the preview and
+HTML export. The added source notes distinguish counted transitions from
+Turing-machine time.
 The formalization remains unchecked by Glitnir; the atlas grants no proof status.
 Validate the sidecar with the installed notebook skill’s `scripts/proof_atlas.py`
 against `walkthroughs/eth/outline.json`, in addition to the existing walkthrough checks.
