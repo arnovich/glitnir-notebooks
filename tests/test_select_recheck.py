@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from scripts.select_recheck import ALL, imported_modules, select_notebooks
+from scripts.select_recheck import ALL, imported_modules, recheck_matrix, select_notebooks
 
 LAKEFILE = "".join(
     f'[[lean_lib]]\nname = "{name}"\nsrcDir = "examples/{folder}"\n'
@@ -28,6 +28,20 @@ class SelectTests(unittest.TestCase):
 
     def select(self, *paths: str) -> object:
         return select_notebooks(paths, self.root)
+
+    def test_matrix_covers_all_selected_notebooks_once(self) -> None:
+        """Serial full-suite time must not accumulate in one six-hour job."""
+        self.assertEqual(recheck_matrix(ALL, self.root), {"notebook": ["A", "B", "C", "D"]})
+        self.assertEqual(recheck_matrix("C A C", self.root), {"notebook": ["A", "C"]})
+        self.assertEqual(recheck_matrix("", self.root), {"notebook": []})
+
+    def test_matrix_refuses_unknown_names_and_excludes_certificate_libraries(self) -> None:
+        """A typo cannot silently skip checks; opt-in certificates are not notebooks."""
+        with (self.root / "lakefile.toml").open("a") as config:
+            config.write('[[lean_lib]]\nname = "Heavy"\nsrcDir = "certificates"\n')
+        self.assertEqual(recheck_matrix(ALL, self.root), {"notebook": ["A", "B", "C", "D"]})
+        with self.assertRaisesRegex(ValueError, "Unknown"):
+            recheck_matrix("Heavy", self.root)
 
     def test_results_and_docs_need_nothing(self) -> None:
         """Results files, docs and the gallery code trigger no recheck."""

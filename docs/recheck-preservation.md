@@ -34,3 +34,34 @@ examples and both folded prose sections, nested comments, string literals,
 proof-to-refutation changes, rejected verification, receipt-save failure and
 concurrent source edits. Tests of the real records API additionally run when
 Glitnir is installed; the pure source-edit tests need no Lean or Glitnir.
+
+## Bounded CI rechecks
+
+The 2026-11-01 serial full recheck exceeded GitHub's six-hour limit after 16 of
+18 notebooks. CI now expands the selected inventory into one job per notebook,
+with at most four jobs in parallel, independent six-hour bounds and no
+fail-fast cancellation. The selection job pins one published Glitnir tag for
+all shards, so a release during the run cannot mix backend/plugin versions. Every selected notebook still runs decisions, evidence,
+whole-notebook kernel replay and views. Each job uploads a separately named
+`notebook-recheck-<name>` artifact; review their reports and patches individually.
+No generated notebook patch is applied automatically.
+
+Euler's generated `noncomputable def` declarations are supported and compared
+including their modifier. When the generated theorem name changes (for example,
+a positive admitted claim gains a checked `_refuted` theorem), the original
+claim stays in place and the new theorem is added beside it. Later refreshes
+replace only the matching theorem. This preserves existing references such as
+EnergyOptimization's `#print axioms` and leaves admitted claims admitted. The
+new theorem is checked in the complete retained context; a proof depending on
+an admitted claim cannot acquire checked status.
+
+Validation plan: regression tests for matrix coverage, exact Euler definitions,
+outcome changes and repeated refreshes; full Python/bundle checks; independent
+correctness, proof-authority and CI reviews; then all PR CI gates before merge.
+
+Validation completed locally: 127 tests pass with Glitnir installed (two existing
+walkthrough-helper skips); the minimal pinned-Lark environment passes with
+those two plus two optional Glitnir API skips. Bundle validation passes for all
+18 notebooks and 276 saved claims. Correctness, proof-authority and CI judges
+found no remaining blockers after fixing the single-release pin across shards.
+The real Linux kernel recheck remains a CI merge gate.

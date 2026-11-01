@@ -38,7 +38,9 @@ on top of a source change rechecks that notebook again. `python -m scripts.reche
 through Glitnir's preview service, decides out-of-date decisions again
 (refreshing only the generated theorem after checking the preserved block), runs
 out-of-date evidence again and draws every view so its drawing is saved. The
-workflow never pushes: it uploads the results, `recheck.patch` and a
+workflow runs one job per selected notebook (at most four in parallel), with
+independent six-hour limits and no fail-fast cancellation. Each job uploads a
+`notebook-recheck-<name>` artifact. The workflow never pushes: it uploads the results, `recheck.patch` and a
 per-notebook report (`report.md`, also the job summary) that lists every claim
 whose status changed. Review the report, apply the patch and commit each file
 by its path. Results saved on one machine read as out of date in another

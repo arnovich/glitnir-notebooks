@@ -95,20 +95,33 @@ class PreservationTests(unittest.TestCase):
         with self.assertRaisesRegex(PreservationError, "forsetiTime"):
             refresh_decision(old, "bound", candidate)
 
-    def test_a_refutation_can_refresh_a_proof_without_losing_context(self) -> None:
-        """Changed outcomes still replace only the generated declaration."""
+    def test_a_refutation_preserves_the_original_claim_and_its_references(self) -> None:
+        """EnergyOptimization prints the axioms of its deliberately admitted claim."""
         old, candidate = curated_decision()
+        old += "#print axioms Decided_bound.bound\n"
         candidate = candidate.replace(
             "theorem bound : True := by\n  exact True.intro",
             "theorem bound_refuted : ¬ False := by\n  exact fun h => h",
         )
-        self.assertEqual(
-            refresh_decision(old, "bound", candidate),
-            old.replace(
-                "theorem bound : True := by\n  trivial",
-                "theorem bound_refuted : ¬ False := by\n  exact fun h => h",
-            ),
-        )
+        result = refresh_decision(old, "bound", candidate)
+        self.assertIn("theorem bound : True := by\n  trivial", result)
+        self.assertIn("theorem bound_refuted : ¬ False := by\n  exact fun h => h", result)
+        self.assertTrue(result.endswith("#print axioms Decided_bound.bound\n"))
+        # A subsequent refresh replaces that same refutation, without duplicates.
+        fresh = candidate.replace("exact fun h => h", "exact False.elim")
+        again = refresh_decision(result, "bound", fresh)
+        self.assertEqual(again.count("theorem bound_refuted :"), 1)
+        self.assertIn("theorem bound : True := by\n  trivial", again)
+
+    def test_real_euler_noncomputable_definitions_are_matched_conservatively(self) -> None:
+        """The actual Euler block includes a noncomputable supporting definition."""
+        source = (Path(__file__).resolve().parents[1] / "examples/pdes/Euler.lean").read_text()
+        opening, closing = "namespace Decided_truncation_decided", "end Decided_truncation_decided"
+        block = opening + source.split(opening, 1)[1].split(closing, 1)[0] + closing
+        candidate = block
+        self.assertEqual(refresh_decision(source, "truncation_decided", candidate), source)
+        with self.assertRaisesRegex(PreservationError, "forsetiStart"):
+            refresh_decision(source, "truncation_decided", candidate.replace("noncomputable def", "def"))
 
     def test_real_ns_t3_blocks_keep_all_twelve_identity_examples(self) -> None:
         """Use the actual issue #91 blocks, with a harmless new proof comment."""
@@ -137,6 +150,16 @@ class PreservationTests(unittest.TestCase):
 
 class RecheckPreservationTests(unittest.TestCase):
     """Exercise the source-writing path without running Lean or Glitnir."""
+
+    def test_refutation_is_kernel_checked_with_the_retained_positive_claim(self) -> None:
+        """Saving a new outcome must use the exact preserved two-theorem block."""
+        old, candidate = curated_decision()
+        old = old.replace("theorem bound : True := by\n  trivial", "theorem bound : False := by\n  sorry")
+        candidate = candidate.replace(
+            "theorem bound : True := by\n  exact True.intro",
+            "theorem bound_refuted : ¬ False := by\n  exact fun h => h",
+        )
+        self._run_refresh(old, candidate, refresh_decision(old, "bound", candidate))
 
     def test_refresh_keeps_shared_prelude_before_the_decision(self) -> None:
         """Accepting a fresh candidate restores the original source location."""
@@ -202,6 +225,10 @@ class RecheckPreservationTests(unittest.TestCase):
             def run_candidate(*args: object) -> dict:
                 """Emulate the provider replacing its saved decision entry."""
                 records["decisions"]["key"]["outcome"]["block"] = candidate
+                records["decisions"]["key"]["outcome"]["theorem"] = (
+                    "Decided_bound.bound_refuted" if "theorem bound_refuted :" in candidate
+                    else "Decided_bound.bound"
+                )
                 path.with_suffix(".glitnir.json").write_text(json.dumps(records))
                 return {
                     "status": "candidate",
@@ -245,6 +272,7 @@ class RecheckPreservationTests(unittest.TestCase):
                     self.assertEqual(block.count("example : @forseti"), 4)
                     self.assertIn("namespace DecidedShared_fixture", block)
                     self.assertEqual(save.call_args.args[2:], (block, verdict))
+                    self.assertEqual(verify.call_args.args[3], records["decisions"]["key"]["outcome"]["theorem"])
                     self.assertEqual(
                         expected.split("\n")[1:1 + len(block.split("\n"))],
                         block.split("\n"),

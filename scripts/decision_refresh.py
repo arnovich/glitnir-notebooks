@@ -19,7 +19,7 @@ _LEXER = Lark(
     parser="earley",
     propagate_positions=True,
 )
-_HEAD = re.compile(r"^(namespace|end|open|def|theorem|example)\b(?:\s+([\w'.]+))?")
+_HEAD = re.compile(r"^(?:(noncomputable)\s+)?(namespace|end|open|def|theorem|example)\b(?:\s+([\w'.]+))?")
 
 
 class PreservationError(ValueError):
@@ -81,7 +81,9 @@ def _commands(text: str) -> list[_Command]:
         limit = heads[index + 1].start() if index + 1 < len(heads) else len(text)
         end = head.start() + len(code_text[head.start():limit].rstrip())
         match = _HEAD.match(head.group())
-        kind, name = (match[1], match[2] or "") if match else ("unsupported", "")
+        kind, name = (match[2], match[3] or "") if match else ("unsupported", "")
+        if match and match[1] and kind != "def":
+            kind = "unsupported"
         commands.append(_Command(kind, name, head.start(), end, text[head.start():end]))
     return commands
 
@@ -166,11 +168,22 @@ def refresh_decision(original: str, name: str, candidate: str) -> str:
     new_theorems = [command for command in new if command.kind == "theorem"]
     expected = {name, f"{name}_refuted"}
     if (
-        len(old_theorems) != 1 or len(new_theorems) != 1
-        or old_theorems[0].name not in expected or new_theorems[0].name not in expected
+        not old_theorems or len(new_theorems) != 1
+        or any(command.name not in expected for command in old_theorems)
+        or len({command.name for command in old_theorems}) != len(old_theorems)
+        or new_theorems[0].name not in expected
     ):
-        raise PreservationError("Expected one generated decision theorem.")
-    before, after = old_theorems[0], new_theorems[0]
+        raise PreservationError("Expected unique generated decision theorem names.")
+    after = new_theorems[0]
+    matching = [command for command in old_theorems if command.name == after.name]
+    if not matching:
+        # A refutation is a different declaration, not a replacement for the
+        # author's positive claim (which may intentionally contain sorry).
+        # Keep that claim and all references to it. The caller kernel-checks
+        # the new theorem in this exact retained context before saving it.
+        insertion = old_theorems[-1].end
+        return original[:insertion] + "\n\n" + after.text + original[insertion:]
+    before = matching[0]
     def comments(text: str) -> Counter[str]:
         """Count actual comment atoms, excluding comment-shaped literal text."""
         return Counter(

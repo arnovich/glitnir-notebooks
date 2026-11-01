@@ -58,7 +58,8 @@ jobs:
     timeout-minutes: 10
     outputs:
       run: ${{ steps.select.outputs.run }}
-      only: ${{ steps.select.outputs.only }}
+      matrix: ${{ steps.select.outputs.matrix }}
+      glitnir_tag: ${{ steps.glitnir.outputs.tag }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -86,18 +87,33 @@ jobs:
             echo "Notebook recheck: no notebook source changed; nothing to recheck." | tee -a "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
+          matrix=$(python -m scripts.select_recheck --matrix --only "$selection")
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
           echo "run=true" >> "$GITHUB_OUTPUT"
           if [ "$selection" = all ]; then
-            echo "only=" >> "$GITHUB_OUTPUT"
             echo "Notebook recheck: rechecking all notebooks." | tee -a "$GITHUB_STEP_SUMMARY"
           else
-            echo "only=$selection" >> "$GITHUB_OUTPUT"
             echo "Notebook recheck: rechecking $selection." | tee -a "$GITHUB_STEP_SUMMARY"
           fi
+
+      - name: Pin one Glitnir release for every notebook
+        if: steps.select.outputs.run == 'true'
+        id: glitnir
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GLITNIR_TAG: ${{ inputs.glitnir_tag }}
+        run: |
+          tag=$(python -m scripts.glitnir_release --tag "$GLITNIR_TAG" --output "$RUNNER_TEMP/glitnir-requirements.txt")
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "All notebook jobs will use Glitnir $tag" >> "$GITHUB_STEP_SUMMARY"
 
   recheck:
     needs: select
     if: needs.select.outputs.run == 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.select.outputs.matrix) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 360
     steps:
@@ -111,7 +127,7 @@ jobs:
         id: glitnir
         env:
           GH_TOKEN: ${{ github.token }}
-          GLITNIR_TAG: ${{ inputs.glitnir_tag }}
+          GLITNIR_TAG: ${{ needs.select.outputs.glitnir_tag }}
         run: |
           tag=$(python -m scripts.glitnir_release --tag "$GLITNIR_TAG" --output "$RUNNER_TEMP/glitnir-requirements.txt")
           echo "tag=$tag" >> "$GITHUB_OUTPUT"
@@ -174,7 +190,7 @@ jobs:
           # Glitnir caps one check at 30 minutes; the first check also replays
           # Mathlib's kernel closure once, on a separate one-hour bound.
           GLITNIR_ELABORATION_TIMEOUT_MS: '1800000'
-          ONLY: ${{ needs.select.outputs.only }}
+          ONLY: ${{ matrix.notebook }}
           FORCE_DECISIONS: ${{ inputs.force_decisions }}
         run: |
           force=()
@@ -203,7 +219,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v6
         with:
-          name: notebook-recheck
+          name: notebook-recheck-${{ matrix.notebook }}
           path: |
             recheck-report
             examples/**/*.glitnir.json
