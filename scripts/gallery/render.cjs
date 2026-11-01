@@ -16,7 +16,7 @@ const TOPICS = {
   biochemistry: ['Biochemistry', "A molecular controller's output bounded for all time: one certified cell checked, the full proof cited."],
   circuits: ['Circuits', 'Composition, contracts, rewrites and discrete dynamics.'],
   dynamics: ['Dynamical systems', 'Continuous trajectories and their bounds.'],
-  finance: ['Finance', 'A hedged book bounded under every shock in a band, and bounds on the odds of its stop under random shocks, all as theorems.'],
+  finance: ['Finance', 'A hedged book bounded under every shock in a band, bounds on the odds of its stop under random shocks, and a hedge that covers an option on every path within a daily move band, all as theorems.'],
   galerkin: ['Galerkin models', 'Finite-dimensional fluid models, energy and enstrophy.'],
   pdes: ['Partial differential equations', 'Stream contracts, formal expansions and analytic certificates.'],
 };
