@@ -1,12 +1,18 @@
 """The recheck tool's source edits and summaries, without Lean or Glitnir."""
 
+import json
+import tempfile
 import unittest
+from pathlib import Path
+from types import SimpleNamespace
 
 from scripts.recheck import (
+    Recheck,
     busy,
     claim_counts,
     decided_block,
     markdown,
+    other_environment,
     status_changes,
     to_rerun,
     with_block,
@@ -104,6 +110,99 @@ class RerunTests(unittest.TestCase):
         self.assertTrue(busy("Another Lean run is in progress; retry when it finishes."))
         self.assertFalse(busy("Project check timed out."))
         self.assertFalse(busy(None))
+
+
+class EnvironmentTests(unittest.TestCase):
+    """Decide accepted decisions saved in another environment again."""
+
+    def records(self, *fingerprints: str) -> dict:
+        """Return results in environment "now" with one decision per fingerprint."""
+        return {
+            "environment": {"fingerprint": "now", "check": "c"},
+            "decisions": {
+                f"k{index}": {"fingerprint": fingerprint}
+                for index, fingerprint in enumerate(fingerprints)
+            },
+        }
+
+    def test_finds_decisions_saved_in_another_environment(self) -> None:
+        """Only decisions whose fingerprint differs from the check's are returned."""
+        self.assertEqual(other_environment(self.records("now", "old", "older")), {"k1", "k2"})
+        self.assertEqual(other_environment(self.records("now")), set())
+
+    def test_without_a_recorded_environment_nothing_is_outdated(self) -> None:
+        """Results that were never checked give no environment to compare with."""
+        self.assertEqual(other_environment(None), set())
+        self.assertEqual(other_environment({"decisions": {"k": {"fingerprint": "x"}}}), set())
+
+    def run_refresh(self, records: dict, refreshes: bool) -> tuple[Recheck, list, dict]:
+        """Drive `refresh_environment` with a fake service; return what it did."""
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "Example.lean"
+            path.write_text("-- @decide bound : goal\n")
+            results = path.with_suffix(".glitnir.json")
+            results.write_text(json.dumps(records))
+            checker = Recheck.__new__(Recheck)
+            checker.path, checker.problems, checker.done = path, [], []
+            cards = [
+                {"key": key, "name": f"name_{key}"} for key in records["decisions"]
+            ]
+            checker.service = SimpleNamespace(snapshot=lambda: {"decisions": cards})
+            decided: list = []
+
+            def decide(only: set[str] | None = None) -> None:
+                """Record the keys asked for and, if wanted, save them as current."""
+                decided.append(only)
+                if refreshes:
+                    for key in only or ():
+                        records["decisions"][key]["fingerprint"] = "now"
+                    results.write_text(json.dumps(records))
+
+            checks: list = []
+            checker.decide = decide  # type: ignore[method-assign]
+            checker.check = lambda: checks.append(1) or {"status": "checked_snapshot"}  # type: ignore[method-assign]
+            state = checker.refresh_environment({"status": "checked_snapshot", "first": True})
+            return checker, decided, {"checks": len(checks), "state": state}
+
+    def test_current_decisions_cost_nothing(self) -> None:
+        """No decision is run and the notebook is not checked again."""
+        checker, decided, result = self.run_refresh(self.records("now"), refreshes=True)
+        self.assertEqual(decided, [])
+        self.assertEqual(result["checks"], 0)
+        self.assertTrue(result["state"]["first"])
+        self.assertEqual(checker.problems, [])
+
+    def test_outdated_decisions_are_decided_and_checked_again(self) -> None:
+        """Exactly the outdated decisions run, then the notebook is checked again."""
+        checker, decided, result = self.run_refresh(
+            self.records("now", "old"), refreshes=True
+        )
+        self.assertEqual(decided, [{"k1"}])
+        self.assertEqual(result["checks"], 1)
+        self.assertNotIn("first", result["state"])
+        self.assertEqual(checker.problems, [])
+
+    def test_a_record_without_its_directive_is_left_alone(self) -> None:
+        """A saved decision whose directive is gone cannot be decided again."""
+        records = self.records("now", "old")
+        checker = Recheck.__new__(Recheck)
+        checker.problems = []
+        with tempfile.TemporaryDirectory() as directory:
+            checker.path = Path(directory) / "Example.lean"
+            checker.path.with_suffix(".glitnir.json").write_text(json.dumps(records))
+            checker.service = SimpleNamespace(
+                snapshot=lambda: {"decisions": [{"key": "k0", "name": "kept"}]}
+            )
+            state = {"status": "checked_snapshot"}
+            self.assertIs(checker.refresh_environment(state), state)
+        self.assertEqual(checker.problems, [])
+
+    def test_a_decision_left_in_another_environment_is_a_problem(self) -> None:
+        """A refresh that does not land is reported by the decision's name."""
+        checker, _, _ = self.run_refresh(self.records("now", "old"), refreshes=False)
+        self.assertEqual(
+            checker.problems, ["decision name_k1 is still saved in another environment"]
+        )
 
 
 class SummaryTests(unittest.TestCase):

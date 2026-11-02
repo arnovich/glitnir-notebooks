@@ -12,7 +12,11 @@ editor does, so that ``<Notebook>.glitnir.json`` ends up current:
    supporting definition refuses replacement. Decisions never accepted get only their
    saved entry refreshed: no new source is added.
 2. Every evidence card whose saved run is out of date is run again.
-3. The saved notebook is checked; the check saves its claim results.
+3. The saved notebook is checked; the check saves its claim results. Glitnir
+   counts a decision as accepted while its block follows its directive, even
+   when its saved entry was decided in another environment. Each such
+   decision is then decided again as in step 1, and the notebook checked once
+   more, so every saved decision ends up in the notebook's environment.
 4. Every ``-- @view`` is drawn; drawings made in a known environment are saved
    in the results, so the gallery shows them without Lean.
 
@@ -81,6 +85,22 @@ def read_records(path: Path) -> dict[str, Any] | None:
         return json.loads(results_path(path).read_text())
     except (OSError, ValueError):
         return None
+
+
+def other_environment(records: dict[str, Any] | None) -> set[str]:
+    """Return the keys of saved decisions decided in another environment.
+
+    The environment is the one the saved notebook check recorded, so this is
+    meaningful only after that check. Results without one return nothing.
+    """
+    environment = (records or {}).get("environment", {}).get("fingerprint")
+    if not environment:
+        return set()
+    return {
+        key
+        for key, entry in (records or {}).get("decisions", {}).items()
+        if entry.get("fingerprint") != environment
+    }
 
 
 def claim_counts(records: dict[str, Any] | None) -> dict[str, int]:
@@ -286,12 +306,18 @@ class Recheck:
             time.sleep(BUSY_SECONDS)
         raise RuntimeError("Lean stayed busy")
 
-    def decide(self) -> None:
-        """Decide every out-of-date decision again, replacing accepted blocks."""
+    def decide(self, only: set[str] | None = None) -> None:
+        """Decide every out-of-date decision again, replacing accepted blocks.
+
+        With ``only``, decide exactly the decisions with those keys instead.
+        """
         lines = normal_text(self.path).split("\n")
-        for key in to_rerun(
-            self.service.snapshot()["decisions"], lines, self.force_decisions
-        ):
+        cards = self.service.snapshot()["decisions"]
+        if only is None:
+            keys = to_rerun(cards, lines, self.force_decisions)
+        else:
+            keys = [card["key"] for card in cards if card["key"] in only]
+        for key in keys:
             card = self._card("decisions", key)
             original = normal_text(self.path)
             previous_entry = deepcopy(
@@ -455,6 +481,26 @@ class Recheck:
             )
         return state
 
+    def refresh_environment(self, state: dict[str, Any]) -> dict[str, Any]:
+        """Decide accepted decisions from another environment again, then recheck.
+
+        Returns the latest check state. Only decisions whose directive is in
+        the notebook are considered; one still saved in another environment
+        afterwards is reported as a problem.
+        """
+        names = {card["key"]: card["name"] for card in self.service.snapshot()["decisions"]}
+        outdated = other_environment(read_records(self.path)) & names.keys()
+        if not outdated:
+            return state
+        self.decide(outdated)
+        state = self.check()
+        if state.get("status") == "checked_snapshot":
+            for key in sorted(other_environment(read_records(self.path)) & names.keys()):
+                self.problems.append(
+                    f"decision {names.get(key, key)} is still saved in another environment"
+                )
+        return state
+
     def views(self) -> dict[str, int]:
         """Draw every view directive; count those whose drawing was saved."""
         from glitnir.notebook.check_records import load_records, saved_views
@@ -492,6 +538,8 @@ class Recheck:
                 self.decide()
                 self.evidence()
             state = self.check()
+            if self.runs and state.get("status") == "checked_snapshot":
+                state = self.refresh_environment(state)
             if state.get("status") == "checked_snapshot":
                 views = self.views()
         except Exception as error:  # noqa: BLE001 - reported per notebook

@@ -20,6 +20,15 @@ The normal whole-notebook check still follows the decision and evidence runs.
 A refusal is reported per notebook and needs manual reconciliation, not a forced
 rewrite.
 
+Glitnir counts a decision as accepted while its checked block follows its
+directive, even when its saved entry was decided in another environment, for
+example before a Lean pin move. Such an entry still names the old environment,
+which `scripts/check_triptych.py` rejects. So after the notebook check, the
+script decides every decision whose saved fingerprint differs from the check's
+again, through the same preserving refresh, and checks the notebook once more.
+A decision still saved in another environment afterwards is reported as a
+problem. `--force-decision` is needed only to rerun a current decision.
+
 The parser uses the Lark version already pinned for the gallery. Install that
 requirement before running the repository tests:
 
