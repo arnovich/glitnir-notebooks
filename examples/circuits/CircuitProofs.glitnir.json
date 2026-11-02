@@ -19,7 +19,7 @@
       "end_line": 28,
       "name": "Notebook.CircuitProofs.first",
       "prefix_sha256": "e26518e985b2c297a31cd664a765378cb4fb831756bec6a6ba6d45a5f6e8597a",
-      "proposition_sha256": "ecd17d96d7c2a42508aaf97a067888328208d41fb3262fd906f5dad7776ab4ab",
+      "proposition_sha256": "a4f59a099aec714376e697d303d463e7716395e181ec826fcf0798a9e4400d2e",
       "start_line": 23,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 35,
       "name": "Notebook.CircuitProofs.second",
       "prefix_sha256": "0fc409e139ee4cf6186b51fe353eedb708f961a3c83ff4164a433e58201b96af",
-      "proposition_sha256": "56a1fa19e92866d38cb6c48fdc39bf3cc881f4dbfa1f2742ea8ca81b614fb104",
+      "proposition_sha256": "42786eab06365412454ecd5f003b34be1cb20ba89088bb9d61a1721ebacf6da0",
       "start_line": 30,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 39,
       "name": "Notebook.CircuitProofs.whole",
       "prefix_sha256": "40d0613d68cb193c5e5b1d4cfe65d1780ba13637da0ec87ca6ad0a6c24250548",
-      "proposition_sha256": "c4ff3cdcd4d2120d673ba928d80353a3a1f2aaaf0557acb028700bdada6c0db4",
+      "proposition_sha256": "789c97737906d0d165a79ae44bfa0df92297378860c125c073b7e303ec5d288a",
       "start_line": 37,
       "status": "checked",
       "uses": [
@@ -102,14 +102,14 @@
       "end_line": 59,
       "name": "Notebook.CircuitProofs.exchange_preserves",
       "prefix_sha256": "86af53fb61718ece0c896962187bbbe596ef3bc78dd5a46fb31c3f5f7dab5ba6",
-      "proposition_sha256": "83b10d245d0700db6357684a8f634dbb142a51e08a141ddccf653fd74db6f2c7",
+      "proposition_sha256": "4777ac70f6281bf3e419037c12d534a13d38fc95884f75f5a2b90fd1220838f2",
       "start_line": 54,
       "status": "checked",
       "uses": []
     }
   ],
   "environment": {
-    "check": "5af35b171b1b4565d3d36579b3b0fd9b2b8780cf1ed27f2bad712fd79708fe43",
+    "check": "ed7894516689f80a3dfa78b4e7b5ff99f08ff162a0a8cc3feeda1e216971eade",
     "fingerprint": "922a5735718789b053e6c921af802142b8f829115c4d1fb4a6b2f0a7bdb24967"
   },
   "format": "glitnir.project-checks/v2",

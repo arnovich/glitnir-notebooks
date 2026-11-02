@@ -166,6 +166,23 @@ theorem energy_below_three :
     ∀ x y : ℝ, x ≥ -1 ∧ x ≤ 1 ∧ y ≥ -1 ∧ y ≤ 1 → 2 * (x * x) + 2 * (y * y) ≤ 3 := by
   sorry
 
+theorem energy_below_three_refuted : ¬ (∀ x y : ℝ, x ≥ -1 ∧ x ≤ 1 ∧ y ≥ -1 ∧ y ≤ 1 → 2 * (x * x) + 2 * (y * y) ≤ 3) := by
+  have refuted : ¬ Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent := by
+    exact Gimle.Forseti.Syntax.refutes_sound forsetiGoal [("x", (mkRat (-3) 4)), ("y", (mkRat (-31) 32))] (by decide +kernel)
+  intro claim
+  have forsetiSucc : ∀ {n : Nat} (k : Nat) (h : k + 1 < n + 1), (⟨k + 1, h⟩ : Fin (n + 1)) = Fin.succ ⟨k, Nat.lt_of_succ_lt_succ h⟩ := fun _ _ => rfl
+  have forsetiCast0 : (((mkRat (1) 1) : ℚ) : ℝ) = 1 := by norm_num [Rat.mkRat_eq_div]
+  have forsetiCast1 : (((mkRat (2) 1) : ℚ) : ℝ) = 2 := by norm_num [Rat.mkRat_eq_div]
+  have forsetiCast2 : (((mkRat (3) 1) : ℚ) : ℝ) = 3 := by norm_num [Rat.mkRat_eq_div]
+  refine (fun (bridge : _ ↔ Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent) => refuted (bridge.mp claim)) ?_
+  constructor
+  · intro claim
+    revert claim
+    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, ← sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]
+  · intro lane
+    revert lane
+    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, ← sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]
+
 end Decided_energy_below_three
 
 

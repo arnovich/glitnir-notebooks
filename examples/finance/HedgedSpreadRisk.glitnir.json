@@ -19,7 +19,7 @@
       "end_line": 185,
       "name": "Notebook.HedgedSpreadRisk.Decided_year_breach_bound.year_breach_bound",
       "prefix_sha256": "09156cfa7d8b10b8545976f1ca7e1c3b488ada288040d946be57069d00d2a158",
-      "proposition_sha256": "c09cae2d668298210be529f648dfe074bce86448a4df770964cc09ae95519c5b",
+      "proposition_sha256": "51299b91b4d8278793998e390967d4e2f307efb64f23f4f884a318d2d75488ad",
       "start_line": 173,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 203,
       "name": "Notebook.HedgedSpreadRisk.year_bound_any_variance_le",
       "prefix_sha256": "2acd1866612e217e1b4e242c688a3c189dbc3fa1a4c71b2bd677176386ef8225",
-      "proposition_sha256": "625b49703cf356d59f6f15e090c566e03af1967c791783917cdfebe0967b3649",
+      "proposition_sha256": "bd70dc6a179baa3f3e7f905c409c7f27e3d102f1d4aca75c3c2ac5dc1b53e06b",
       "start_line": 195,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 220,
       "name": "Notebook.HedgedSpreadRisk.gaussian_in_both",
       "prefix_sha256": "6f34a5d532221a780563f87c2a92908ce229ce3b4be553d697ce43f2235d23dd",
-      "proposition_sha256": "31cdf48741e40fe5b7df21249e2f5b297f5bc38c6c452167bb34f37ea8530f6c",
+      "proposition_sha256": "f6b546b3709334957608254757363d6223b43f2ef4b6ce919ed3c30bc6fb3020",
       "start_line": 214,
       "status": "checked",
       "uses": []
@@ -91,7 +91,7 @@
       "end_line": 253,
       "name": "Notebook.HedgedSpreadRisk.three_point_in_class",
       "prefix_sha256": "34dd11e2311064ccf0f0552a3929ccf5884d2b10a11ea0f089e6abb692c6ac93",
-      "proposition_sha256": "88684f4d9df53c3d3cb9e7bcabb8a8dc9c69cba15fcb712a419c932fd82dce7b",
+      "proposition_sha256": "6c41c6770b87a149df7aac856c2a22c1b186e9e2f2c3c0231eb7f06a43aff3c8",
       "start_line": 246,
       "status": "checked",
       "uses": []
@@ -115,7 +115,7 @@
       "end_line": 279,
       "name": "Notebook.HedgedSpreadRisk.three_point_breaches_often",
       "prefix_sha256": "de4b2ded532392027cd84c4aa68e9ed3c049f2df1c08176e345f9d4e92958c52",
-      "proposition_sha256": "7b9d913b3b3c3669fa3c173fb96199965b461dd3a8d2fc9ad93c32ab97c588da",
+      "proposition_sha256": "444e8c7d3c1a3a721e280bd22688182c3229ceed2c9e632d966561459960590b",
       "start_line": 271,
       "status": "checked",
       "uses": []
@@ -139,7 +139,7 @@
       "end_line": 285,
       "name": "Notebook.HedgedSpreadRisk.three_point_lower_bound_decimal",
       "prefix_sha256": "f44f1b895005cea49452deebf21f71d7e8c73482be19a888324967b4385cbc77",
-      "proposition_sha256": "3ec90b3f400ef996c3ffe3725bf526d6fc19c6ebbc06fb1a0fb69a8f0a39deea",
+      "proposition_sha256": "bf3b63e6d761be6849d9b262a3b4971a2439ab2cb6d8c474a6ac9c58e986416c",
       "start_line": 281,
       "status": "checked",
       "uses": []
@@ -163,7 +163,7 @@
       "end_line": 349,
       "name": "Notebook.HedgedSpreadRisk.Decided_tight_limit.tight_limit_refuted",
       "prefix_sha256": "a702251ed589db78484b4539265b775f3727cd41e6f5dbe4a679952a8c967b44",
-      "proposition_sha256": "3accb1b07aee5b1bf67b19cb0e327038f42b02343abeca7e813e7092866e620d",
+      "proposition_sha256": "59db5787d9ba11835e6d066b0489055a8c1f4d5f8b9467b45af6df1a6580b52e",
       "start_line": 331,
       "status": "checked",
       "uses": []
@@ -187,7 +187,7 @@
       "end_line": 439,
       "name": "Notebook.HedgedSpreadRisk.Decided_mark_on_any_date.mark_on_any_date",
       "prefix_sha256": "398e0b8acfb5e52a56d26b0b8395a8cf4b1045947bb3002a48b47061b78fca63",
-      "proposition_sha256": "1a515285ba362562295d8f8c9a68e97a5b6eefbd1201f14c8efe437d419459ab",
+      "proposition_sha256": "0e27183bcbd57c4f41d1ec728d6c88d6be60370daf259343301c3bd725ef5e57",
       "start_line": 390,
       "status": "checked",
       "uses": []
@@ -211,7 +211,7 @@
       "end_line": 468,
       "name": "Notebook.HedgedSpreadRisk.energy_step_identity",
       "prefix_sha256": "c6deb66f5fdc7f82638720f82094c3d5c499b0e1b7831425e726d6a9416f726e",
-      "proposition_sha256": "6e8a0f7271f8419d1aa76b6f5d85c6cf51584f5e7f54acac8c7e5d804a20f0a9",
+      "proposition_sha256": "f7a72b83202cf6d995e6b105aba72f53b94eacd521f82ece527293330d5a5b0e",
       "start_line": 460,
       "status": "checked",
       "uses": []
@@ -235,7 +235,7 @@
       "end_line": 483,
       "name": "Notebook.HedgedSpreadRisk.stationary_energy",
       "prefix_sha256": "e26e86ea16f0415849e14c0aef5ac8627d8490c369f25009ba188f233e90d10a",
-      "proposition_sha256": "7690a7416a4ee1357823bb3e69114d54b19cbb2dc2edac5eaaeb27bf8e99824e",
+      "proposition_sha256": "d46558b9bdff317d831dcccfaf3e06f251a37772128c9b0330a3093c03696fdc",
       "start_line": 481,
       "status": "checked",
       "uses": []
@@ -259,7 +259,7 @@
       "end_line": 491,
       "name": "Notebook.HedgedSpreadRisk.expected_gauge_every_mark",
       "prefix_sha256": "5298ea66688177c47ccbad6635c69de2f54a73065ed6c2499cdd55eba02f957f",
-      "proposition_sha256": "b3d2fb90f4c5857f2b91317eef2e062b968105cf25d65712dae8bd423d5eff12",
+      "proposition_sha256": "82e45bab0fd328eec7c1d672b879d33ff5e5a8bb4951916d08b3d9fc5bf0a337",
       "start_line": 485,
       "status": "checked",
       "uses": [
@@ -289,7 +289,7 @@
       "end_line": 534,
       "name": "Notebook.HedgedSpreadRisk.Decided_expected_gauge.expected_gauge",
       "prefix_sha256": "859b7b5de5e97be53cc6d863331620d45627efcfcf70b7066c903106d7b86f11",
-      "proposition_sha256": "58b832e31e67a4ad02c69b0b57f6d65ae4072ea22bb2289c9310d294ca072a56",
+      "proposition_sha256": "16d40ba40a86ba1bbd1090d8292d1537a697946cea69efb64b9002b3fcb5761a",
       "start_line": 516,
       "status": "checked",
       "uses": []
@@ -479,7 +479,7 @@
     }
   },
   "environment": {
-    "check": "af32d93a9894080969351f3d4b9f9efd60aa00cb6871c00e4dd30a056895882a",
+    "check": "c2f2ee1eb3233c18bbf2187331d02478470c1aabfcf91d918e1beea19ebc3bc1",
     "fingerprint": "46fc1ca39fa5281c523d0b4f088c701eb50039aedccbb857d5fd407e370edfa2"
   },
   "evidence": {

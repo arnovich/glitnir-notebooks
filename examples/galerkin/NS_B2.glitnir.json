@@ -19,7 +19,7 @@
       "end_line": 110,
       "name": "Notebook.NSB2.triad_lossless",
       "prefix_sha256": "c025cfecd6a404e1096c66ab4af3be891b94086e9a8526ad78d1243993fff74c",
-      "proposition_sha256": "a3f60d17e21de166b0f7ef9970181de196298d2c38c588ec22c8f8bd427d6a0b",
+      "proposition_sha256": "778e7f94fa77babc6a600d370a86360c2f101d655e26153aa564247ba555e895",
       "start_line": 105,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 125,
       "name": "Notebook.NSB2.energy_rate",
       "prefix_sha256": "623cda448c1a72c13973b5421c5b1bfe7b437480d18a33bd73ead695071bcc69",
-      "proposition_sha256": "9815173523c57c863a3038e7bbd453357db367da84ab8e205b517991d00c01d9",
+      "proposition_sha256": "8bfc0775d3bdab1cdf58baabd5a8c9321cd77be2d4da5f128df6f7cea5ab3300",
       "start_line": 120,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 149,
       "name": "Notebook.NSB2.laminar_energy",
       "prefix_sha256": "2fc1d5ec2b8ea95d39de7523fb592e9f3b3de4da3fca2be179f17016d784c395",
-      "proposition_sha256": "529f25dacd8cf947905489e6eb2d3b4356ea76557698a50f055e01600fb5100f",
+      "proposition_sha256": "5bd8b03c3b45b405b881a18ca06ff4e709fa03144a8e55465628c24db4ac0a96",
       "start_line": 147,
       "status": "checked",
       "uses": []
@@ -91,7 +91,7 @@
       "end_line": 155,
       "name": "Notebook.NSB2.certificate_here",
       "prefix_sha256": "e0b4c5f34c68ce1f2c1c8fc83a2aabe3981d97c275629e99e7da2f853cdf56dd",
-      "proposition_sha256": "0d3a13a9401cff5a3b3a127c60e2e700dbfb66cbd6c7c0fbf875b4fcc76c7fd5",
+      "proposition_sha256": "1ca239932d97e879a2e47d1e160a1c6c99ca01ef391b049eb8804c094f4c9eb4",
       "start_line": 151,
       "status": "checked",
       "uses": []
@@ -115,7 +115,7 @@
       "end_line": 176,
       "name": "Notebook.NSB2.is_family_member",
       "prefix_sha256": "a267f72aea8fce5099a30d842e6f1dd6eb46edb5c757deb134342998ce1008cc",
-      "proposition_sha256": "a5022a8d7161d5e010912dc1b07fcade80b50fc8c074ff50b59a267fc6639caa",
+      "proposition_sha256": "6c611aba6ba00232c275a2f9a2c1552d6b9543abebc375ede1c800259f70b193",
       "start_line": 172,
       "status": "checked",
       "uses": []
@@ -139,7 +139,7 @@
       "end_line": 191,
       "name": "Notebook.NSB2.every_member",
       "prefix_sha256": "14fee7ab20707008a951673171f3559926c4d4b445acde9c9c6b9426ca57471e",
-      "proposition_sha256": "0c89aee10cee84dee1e1c669c5d6800cee7cebd0435c63017bce51799b3a8001",
+      "proposition_sha256": "f1e5b229cde35b8a61525f2022154b3fae37f9f52a0a793fca28ed6e799e06bc",
       "start_line": 178,
       "status": "checked",
       "uses": []
@@ -163,7 +163,7 @@
       "end_line": 227,
       "name": "Notebook.NSB2.enstrophy_rate",
       "prefix_sha256": "d67cf5647c2799deef4287e39db5c146a768af04eb5677dd613e6e1998b4d78f",
-      "proposition_sha256": "4ccd3667f4bd6fe78b1d5c71c8ea414cebe6be817f7f5b6a9db34a694eec9395",
+      "proposition_sha256": "c884b54e87f5c30b1ce8f0f7a93c4c9aaaeba5d484888098d361f9379722aaf6",
       "start_line": 222,
       "status": "checked",
       "uses": []
@@ -187,7 +187,7 @@
       "end_line": 231,
       "name": "Notebook.NSB2.laminar_enstrophy",
       "prefix_sha256": "fb24d85ab1efc7a04000fd525cb2ef8ee4749466545bc33c24ee4958e40820c5",
-      "proposition_sha256": "c2d2339738eefd99aaa058d5229133a589dfbd6d94bdfe0ec1f07264d40e3de6",
+      "proposition_sha256": "0491a2815e774c708bd88463376cf57a206ba4e2cfc4b1e36f5bbcc47624d093",
       "start_line": 229,
       "status": "checked",
       "uses": []
@@ -211,7 +211,7 @@
       "end_line": 237,
       "name": "Notebook.NSB2.enstrophy_certificate_here",
       "prefix_sha256": "84af4be3583c9edb4ca0fbae5e5f5b7d91d260840b95740c36f2e86ebfa3e252",
-      "proposition_sha256": "c6f774ca95d8964fe9e1e781bfbebd93e4a240432a09eab932ad0182a026f51e",
+      "proposition_sha256": "d30884a9f4a293da450ba453bd26136db799366f76b7d9a2cf9a29f7457c25f8",
       "start_line": 233,
       "status": "checked",
       "uses": []
@@ -235,7 +235,7 @@
       "end_line": 245,
       "name": "Notebook.NSB2.amplitude_bound",
       "prefix_sha256": "810e835c3a048413b2edc9f8b4961bbfc953c95a42d5a34f53bf4b285b77f733",
-      "proposition_sha256": "56da05b2c54417547b4a2cd166652dc1d049327bb7588ccff4c1f48069cbab44",
+      "proposition_sha256": "91205a26a49e9b16ce295bc15ab53cb88786e0ade7c0a1c2a6bad1d834527fc9",
       "start_line": 239,
       "status": "checked",
       "uses": []
@@ -259,7 +259,7 @@
       "end_line": 298,
       "name": "Notebook.NSB2.only_two",
       "prefix_sha256": "c495cc69ae3f5b88b2c60575aa6a39b206d85f5752503b61933d81e176934e59",
-      "proposition_sha256": "30000f64699a3623ba1fbc65871d4cb19218bff57fb077c77c09e792af79030e",
+      "proposition_sha256": "edb481bed1ca8eb28c5922acb0591f40a9a08c5177ab082dee4a6bf18cc58759",
       "start_line": 261,
       "status": "checked",
       "uses": []
@@ -285,7 +285,7 @@
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiTime Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiTime",
       "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_ball._glitnir_example_18302",
       "prefix_sha256": "bb89101a3d3987fd24db400b546b76cac37d753be84042b29711b8e6e3dc5b5a",
-      "proposition_sha256": "8264fbe6924342c65520dafd6ea368ac0ac7dac12fc71944ec76d6dfdcd107ee",
+      "proposition_sha256": "d3304c529a61799e36b6d4a444221961ac8b80a5fbafa5e1df81bad720c4a433",
       "start_line": 348,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
@@ -312,7 +312,7 @@
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiInitial Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiInitial",
       "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_ball._glitnir_example_18374",
       "prefix_sha256": "498f00ef85f0af12f7efff8ef7a155d9ddd20127df0382e214adb6efe2a5f6cc",
-      "proposition_sha256": "d3f07c8387861970b35952839a57079eaa17a33a8a875b9a8b940de656b46ab1",
+      "proposition_sha256": "d80e625536c3b424ed3d02af8934bad0a9f4432e84132da10972d3cd2844ae4c",
       "start_line": 349,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
@@ -326,7 +326,7 @@
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiObservation\n  Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiObservation",
       "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_ball._glitnir_example_18452",
       "prefix_sha256": "27b3b08273520bb9083c94e93f16bf40b71cf9fd9353f56b3f58986946bcd202",
-      "proposition_sha256": "8b59702cf75190b7f72c6d253f8d2d7b3201aa59ca699599be5cd54d1de42e21",
+      "proposition_sha256": "d2edde3b12ba2b192d673e4b904898aca971821976cda5de9f630a69f0a04a90",
       "start_line": 350,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
@@ -353,7 +353,7 @@
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiIdentities Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiIdentities",
       "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_ball._glitnir_example_18538",
       "prefix_sha256": "5c0ce2fe023f53e0dcba692d61569c6c8d3cf0f56abd34778be24d311cebbff3",
-      "proposition_sha256": "b737f49920e1e3e1253f214a8de22c4813de92cf23216ebfa2ab2d476186a435",
+      "proposition_sha256": "15f5431d6a9dce4d5fc0953d870cc10fff2ff1c91076906f0ef61dae4f48c315",
       "start_line": 351,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
@@ -374,11 +374,11 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "1219122bfab94cb289364127ba3541042b836b58c00f1dcdd68da51a0e135974",
+      "declaration_sha256": "1d33c788e4ced77cb00d472c35672b28304f878c8fff295206fe971ead36e9c8",
       "end_line": 411,
       "name": "Notebook.NSB2.Decided_in_ball.in_ball",
-      "prefix_sha256": "63079eff585fcfc540b7928f7b272280709c72df6c887e3b373f141017359f7c",
-      "proposition_sha256": "f98c70e441d872a5b88b612b0cf9bc3c052989ee3d2a2fd342096c71fd374263",
+      "prefix_sha256": "c51b9eaecbf7e7a5bd462e29843362a3fdd7b43a789588729b290630449ff5c7",
+      "proposition_sha256": "65fde51c98a174cb882094c43ee30c9e3f84ca44f4d868f15b1ed4d6408429bf",
       "start_line": 370,
       "status": "checked",
       "uses": []
@@ -402,9 +402,9 @@
       "end_line": 430,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiTime Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiTime",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25362",
-      "prefix_sha256": "1ee31541c491ad74b764238cd4186adb12c9cdf3d020d94280a6cd021e21e464",
-      "proposition_sha256": "8264fbe6924342c65520dafd6ea368ac0ac7dac12fc71944ec76d6dfdcd107ee",
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25394",
+      "prefix_sha256": "13ce1e0401c288af8fd1807428c09bc7008ce2cee700fc875003db1fb3d9e94a",
+      "proposition_sha256": "d3304c529a61799e36b6d4a444221961ac8b80a5fbafa5e1df81bad720c4a433",
       "start_line": 430,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
@@ -429,9 +429,9 @@
       "end_line": 431,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiInitial Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiInitial",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25434",
-      "prefix_sha256": "544d5be367414a032105981054cd14547fa4912a5d045e4930a52de3e56d29e0",
-      "proposition_sha256": "d3f07c8387861970b35952839a57079eaa17a33a8a875b9a8b940de656b46ab1",
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25466",
+      "prefix_sha256": "cf3348d9ff58ea3d4b27b343d3bd6c55bc8576032ad8b6c5d05ad1dc2c36e511",
+      "proposition_sha256": "d80e625536c3b424ed3d02af8934bad0a9f4432e84132da10972d3cd2844ae4c",
       "start_line": 431,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
@@ -443,9 +443,9 @@
       "end_line": 432,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiObservation\n  Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiObservation",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25512",
-      "prefix_sha256": "94a3d9db5fbb5e69a20a949e805115058db875b442c380528b35fa825fb5a33a",
-      "proposition_sha256": "8b59702cf75190b7f72c6d253f8d2d7b3201aa59ca699599be5cd54d1de42e21",
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25544",
+      "prefix_sha256": "35d8ab42b856f56604a7bba3fe6cc6ab266d4e25470f975a70e5de9beb978c3f",
+      "proposition_sha256": "d2edde3b12ba2b192d673e4b904898aca971821976cda5de9f630a69f0a04a90",
       "start_line": 432,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
@@ -470,9 +470,9 @@
       "end_line": 433,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiIdentities Notebook.NSB2.DecidedShared_eb9ca2106187.forsetiIdentities",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25598",
-      "prefix_sha256": "c6f0757e1f958accc15223b99787169f33f28528010b0463160859d81ba7d916",
-      "proposition_sha256": "b737f49920e1e3e1253f214a8de22c4813de92cf23216ebfa2ab2d476186a435",
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_below_one._glitnir_example_25630",
+      "prefix_sha256": "d08ae8df84b8c8b1f5b71d7da563790e33c1cdc8b091d73e79649dca04cc7484",
+      "proposition_sha256": "15f5431d6a9dce4d5fc0953d870cc10fff2ff1c91076906f0ef61dae4f48c315",
       "start_line": 433,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
@@ -500,8 +500,8 @@
       "declaration_sha256": "adb4b61b42d85714ed4d7d779433fe5212decceec566b8165aee596ddee2550c",
       "end_line": 458,
       "name": "Notebook.NSB2.Decided_below_one.below_one",
-      "prefix_sha256": "b48db1e7b97d8a30eea14f38a36471e5e06522b425b117f7787ecce1ec56aafa",
-      "proposition_sha256": "0a865c2b3aa36f2437d1d62d19a34886f8b17ccadf47579b83518e62cedad584",
+      "prefix_sha256": "203956bbeb94b1c4d393e21d1e2f0f99f145660c7a27e070f28bafd0078216c1",
+      "proposition_sha256": "48bb56b82c6608c641408933cb2c88640f264b9dbfaed59a075932a3d90df918",
       "start_line": 447,
       "status": "admitted",
       "uses": []
@@ -521,14 +521,38 @@
           "name": "Quot.sound"
         }
       ],
+      "declaration_sha256": "bfdd0000d897389c711df0f54cb01f3b2e91fe9ea577f1f73a2941c4da10737b",
+      "end_line": 501,
+      "name": "Notebook.NSB2.Decided_below_one.below_one_refuted",
+      "prefix_sha256": "93bb70cf88857aa7f900035c2ee2386a80d662da2ce833b677c2f4a37e8957dc",
+      "proposition_sha256": "843a446b7583e05b750ccea587a336e26ad1bd943b916dc752fa52008804211b",
+      "start_line": 460,
+      "status": "checked",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
       "declaration_sha256": "2138fdc07da0b4684e2191101caee0e57d640706cf7c105c10a002add23801dc",
-      "end_line": 499,
+      "end_line": 542,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_2983651b73e2.forsetiTime Notebook.NSB2.DecidedShared_2983651b73e2.forsetiTime",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_29323",
-      "prefix_sha256": "91fd618ff5c491268880105039a5e8e5b32c6e018be5fbd00f3db3befc50a879",
-      "proposition_sha256": "39be496d09cdb271401be72aa9dd4c4567287a6c1ec9b6d007c125513af278a7",
-      "start_line": 499,
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_34523",
+      "prefix_sha256": "d7388ee53460673d6e3d7c50f2868377149d10fde05711b5cc5e2555609ac745",
+      "proposition_sha256": "9efb8f397349ebc5322f779c799f50861a60f0afc264f118720033d585f5a33f",
+      "start_line": 542,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
       "uses": []
@@ -549,13 +573,13 @@
         }
       ],
       "declaration_sha256": "43d410605b946fb0a53914c8023252d3525d1a45c31811633e699ae021047112",
-      "end_line": 500,
+      "end_line": 543,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_2983651b73e2.forsetiInitial Notebook.NSB2.DecidedShared_2983651b73e2.forsetiInitial",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_29395",
-      "prefix_sha256": "f22511231c68edbac9c323c04345eea7d373f7d506724a1d789ea4d354f3c8be",
-      "proposition_sha256": "44cd0a4024a22ca955d8bfb99a51ff16df19212ff736e9b6e295b5a0911daec2",
-      "start_line": 500,
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_34595",
+      "prefix_sha256": "5395b4f3c19dc0d3e32660df2327f0282d0067e5ba858c005a9d8d797283b1de",
+      "proposition_sha256": "277812597da1ec97b1dfecabba0e4e79104a66047a81d1a8c6ec901e6f9074f7",
+      "start_line": 543,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
       "uses": []
@@ -563,13 +587,13 @@
     {
       "axioms": [],
       "declaration_sha256": "6cde14e7a91de47911db71b67751fe0dbb1990eb350f6c6fc1ca2af2c54af791",
-      "end_line": 501,
+      "end_line": 544,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_2983651b73e2.forsetiObservation\n  Notebook.NSB2.DecidedShared_2983651b73e2.forsetiObservation",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_29473",
-      "prefix_sha256": "3dec51033d8ea8c6413218a29695bde1a00e98c71688fb47d08fcd115615cac9",
-      "proposition_sha256": "c079ac14538cbda11cb3bd82006b1b4c70173a05381bb2bcee355e66bbcc5357",
-      "start_line": 501,
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_34673",
+      "prefix_sha256": "d3aebdc74bb5fcee79bd61f19b01d99eabe65d582a848930fc3da5469dd46eba",
+      "proposition_sha256": "378ca86ec11f496276aa983499216989434e0d03ef536f68e3efea814f893d24",
+      "start_line": 544,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
       "uses": []
@@ -590,13 +614,13 @@
         }
       ],
       "declaration_sha256": "3ea8605541476ffc668f67b336e0cbb72877aa121026cc3c4390a64889f07523",
-      "end_line": 502,
+      "end_line": 545,
       "example": true,
       "kernel_statement": "Eq Notebook.NSB2.DecidedShared_2983651b73e2.forsetiIdentities Notebook.NSB2.DecidedShared_2983651b73e2.forsetiIdentities",
-      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_29559",
-      "prefix_sha256": "06c0059ad277faff4705a6504a818d825299c4576e9a000d0375738513004853",
-      "proposition_sha256": "ebc0d207da837bf6258cc6380fd964877fc861f74b92cd01cce2ed0c423335f9",
-      "start_line": 502,
+      "name": "_private.NS_B2.0.Notebook.NSB2.Decided_in_enstrophy_ball._glitnir_example_34759",
+      "prefix_sha256": "94368452c5a33a5a5b8905b100d9e8adf8fa0e882369dd89a86e625d41f501c5",
+      "proposition_sha256": "d9ba89bba92d8f395227266ac7c2b87395229166ca0765c56b481c05e5979988",
+      "start_line": 545,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
       "uses": []
@@ -616,22 +640,146 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "fc2776a3664e87d4af4846f854ebeb9e8c96da264c9bf00d6cdc050798b351f8",
-      "end_line": 562,
+      "declaration_sha256": "36f2a56b3199336c054168230bf31ad76f87b6c0840a82f4915cbf99f734c13f",
+      "end_line": 605,
       "name": "Notebook.NSB2.Decided_in_enstrophy_ball.in_enstrophy_ball",
-      "prefix_sha256": "95d5cb4aaf5465b5e25dd26b66a7d99562ca2b6bb80a8164462fee5a96a20e6c",
-      "proposition_sha256": "a218edcc336d1f9ebc8b78495a9e075057a12459339ce49ad7dbed50a1cd5e93",
-      "start_line": 521,
+      "prefix_sha256": "c1fea0af3075c37c493e1d7da31566a80ce1d29f440f5ddf35441f9d2b59edee",
+      "proposition_sha256": "81461a768079280fb2fbb2c1d03f548009558d91d78a53258b00980addedb16f",
+      "start_line": 564,
       "status": "checked",
       "uses": []
     }
   ],
+  "decisions": {
+    "8c4a4e2c0fde32acb718b28f7e6f872ed726b73f7667faeb63dee46a80297aa7": {
+      "created": "2026-11-02T01:37:14+00:00",
+      "fingerprint": "cc3f9b0b1f93d0644513a5e120167f9ea67ee4dbe04ed4862b62b5fcab636a38",
+      "outcome": {
+        "block": "\nnamespace DecidedShared_2983651b73e2\n\ndef forsetiTime : Gimle.Asgard.Dynamics.TimeDomain :=\n  \u27e8\"time\", (((mkRat (0) 1) : \u211a) : \u211d)\u27e9\n\ndef forsetiInitial : Gimle.Asgard.Point 12 :=\n  ![(((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d)]\n\ndef forsetiObservation : Fin 15 := \u27e813, by decide\u27e9\n\ndef forsetiIdentities : Prop :=\n  Gimle.Forseti.Examples.GalerkinNS.B2.evolution.states.map (\u00b7.initialId) = [\"initial-a01\", \"initial-a02\", \"initial-a1m2\", \"initial-a1m1\", \"initial-a10\", \"initial-a11\", \"initial-a12\", \"initial-a2m2\", \"initial-a2m1\", \"initial-a20\", \"initial-a21\", \"initial-a22\"] \u2227\n  (Gimle.Forseti.Examples.GalerkinNS.B2.body.observations.get forsetiObservation).port.id =\n    \"obs-z\" \u2227\n  Gimle.Forseti.Examples.GalerkinNS.B2.evolution.axis.id = \"time\"\n\nend DecidedShared_2983651b73e2\n\nnamespace Decided_in_enstrophy_ball\n\nopen DecidedShared_2983651b73e2\n\nexample : @forsetiTime = @DecidedShared_2983651b73e2.forsetiTime := rfl\nexample : @forsetiInitial = @DecidedShared_2983651b73e2.forsetiInitial := rfl\nexample : @forsetiObservation = @DecidedShared_2983651b73e2.forsetiObservation := rfl\nexample : @forsetiIdentities = @DecidedShared_2983651b73e2.forsetiIdentities := rfl\n\ndef forsetiPost : Gimle.Forseti.Syntax.Formula 1 :=\n  (.and (.atom .ge (.var \u27e80, by decide\u27e9)) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (626) 1))))))\n\ndef forsetiLeaf : Gimle.Forseti.Syntax.Goal :=\n  \u27e8\u27e8[\"Z\"], by decide, by decide, by decide\u27e9,\n    (.and (.atom .le (.neg (.var \u27e80, by decide\u27e9))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (626) 1)))))),\n    forsetiPost\u27e9\n\ndef forsetiContract : Prop :=\n  Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.GalerkinNS.B2.observed forsetiTime\n    (Gimle.Forseti.Trajectory.Initialized forsetiTime (fun _ => True)\n      (\u00b7 = forsetiInitial))\n    (Gimle.Forseti.Trajectory.Always forsetiTime\n      fun o => forsetiPost.holds (fun _ => o forsetiObservation))\n\ndef forsetiRoot : Prop := forsetiIdentities \u2227 forsetiContract\n\n/-- Z is output 13 of the compiled circuit, the port obs-z; the input's initial wires (initial-a01, initial-a02, initial-a1m2, initial-a1m1, initial-a10, initial-a11, initial-a12, initial-a2m2, initial-a2m1, initial-a20, initial-a21, initial-a22) start at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) at time = 0. The trajectory decider proved it. Goal (trajectory): trajectory ns-b2 interpretation continuous-real obligation contract start time = 0 initial initial-a01 = 1, initial-a02 = 1, initial-a10 = 1, initial-a11 = 1, initial-a12 = 1, initial-a1m1 = 1, initial-a1m2 = 1, initial-a20 = 1, initial-a21 = 1, initial-a22 = 1, initial-a2m1 = 1, initial-a2m2 = 1 observe obs-z as Z always : Z >= 0 and Z <= 626 -/\ntheorem in_enstrophy_ball :\n    have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 0\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 12),\n      Gimle.Asgard.Dynamics.signalRight u 0 = ![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 0, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192\n        \u2200 t \u2265 0, have Z := y t 13; Z \u2265 0 \u2227 Z \u2264 626) := by\n  have root : forsetiRoot := by\n    unfold forsetiRoot forsetiIdentities forsetiContract\n    refine \u27e8\u27e8by decide, by decide, by decide\u27e9, ?_\u27e9\n    have time : forsetiTime = Gimle.Forseti.Examples.GalerkinNS.B2.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Forseti.Examples.GalerkinNS.B2.evolution] <;> norm_num [Rat.mkRat_eq_div]\n    have init : forsetiInitial = Gimle.Forseti.Examples.GalerkinNS.B2.compiled.initial := by rw [Gimle.Forseti.Examples.GalerkinNS.B2.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]\n    have obs : forsetiObservation = Gimle.Forseti.Examples.GalerkinNS.B2.enstrophyIndex := rfl\n    rw [time, init, obs]\n    refine Gimle.Forseti.Trajectory.Contract.consequence Gimle.Forseti.Examples.GalerkinNS.B2.enstrophy_contract (fun _ admitted => admitted) ?_\n    intro o band t within\n    have leaf := Gimle.Forseti.Syntax.EntailmentCertificate.sound forsetiLeaf \u27e8[\u27e8\u27e8[]\u27e9, [\u27e8[((mkRat (1) 1), (.constant (mkRat (1) 1)))]\u27e9, \u27e8[]\u27e9]\u27e9, \u27e8\u27e8[]\u27e9, [\u27e8[]\u27e9, \u27e8[((mkRat (1) 1), (.constant (mkRat (1) 1)))]\u27e9]\u27e9]\u27e9 (by decide +kernel)\n    apply leaf\n    simp only [forsetiLeaf, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval]\n    obtain \u27e8low, high\u27e9 := band t within\n    refine \u27e8?_, ?_\u27e9 <;> norm_num [Rat.mkRat_eq_div] <;> linarith\n  have forsetiCast0 : (((mkRat (626) 1) : \u211a) : \u211d) = 626 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (0) 1) : \u211a) : \u211d) = 0 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiContract) => bridge.mpr (show forsetiIdentities \u2227 forsetiContract from root).2) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiContract\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at claim\n    refine \u27e8?_, ?_, ?_\u27e9 <;> set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc]\n    \u00b7 exact fun u start => (claim u start).1\n    \u00b7 exact fun u start => (claim u start).2.1\n    \u00b7 exact fun u start => (claim u start).2.2\n  \u00b7 intro lane\n    unfold forsetiContract at lane\n    obtain \u27e8realizable, unique, holds\u27e9 := lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at realizable unique holds \u22a2\n    exact fun u start => \u27e8realizable u start, unique u start, holds u start\u27e9\n\n\n/-!\n## Scope and unresolved bounds\n\nThese are statements about the compiled finite ODE at the stated viscosity,\nforcing and initial state. They establish no approximation or limiting\ntheorem for the Navier\u2013Stokes PDE. Simulations guide the questions but are\nnot proofs. The requests $E \\le 150$ and $Z \\le 600$ remain unknown;\ntheir absence from claim counts does not make them settled.\n-/\n\nend Decided_in_enstrophy_ball",
+        "reason": "Found by the certificate stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "ns-b2/obs-z"
+          ],
+          [
+            "certificate",
+            "found",
+            "z3 sat"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate\nimport Gimle.Forseti.Examples.GalerkinNS.B2"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "in_enstrophy_ball"
+      },
+      "prefix_sha256": "72c94a9a526ddfa021f9db55e6d273a818c55470c20566140fea566666fd1ee3",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.NSB2.Decided_in_enstrophy_ball.in_enstrophy_ball` as checked.",
+        "status": "checked",
+        "type": "have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed;\nhave time := { axis := \"time\", start := 0 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 12)),\n  Eq (Gimle.Asgard.Dynamics.signalRight u 0)\n      (Matrix.vecCons 1\n        (Matrix.vecCons 1\n          (Matrix.vecCons 1\n            (Matrix.vecCons 1\n              (Matrix.vecCons 1\n                (Matrix.vecCons 1\n                  (Matrix.vecCons 1\n                    (Matrix.vecCons 1\n                      (Matrix.vecCons 1\n                        (Matrix.vecCons 1 (Matrix.vecCons 1 (Matrix.vecCons 1 Matrix.vecEmpty)))))))))))) \u2192\n    And (Exists fun y => circuit.Rel time u y)\n      (And\n        (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 15),\n          circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n        (\u2200 (y : Gimle.Asgard.Dynamics.Signal 15),\n          circuit.Rel time u y \u2192\n            \u2200 (t : Real),\n              GE.ge t 0 \u2192\n                have Z := y t 13;\n                And (GE.ge Z 0) (Real.instLE.le Z 626)))"
+      }
+    },
+    "9d2c71e08d3bc67de11056b8146046a9aee5cb44d8c8a8758db5c6029258accf": {
+      "created": "2026-11-02T01:26:05+00:00",
+      "fingerprint": "cc3f9b0b1f93d0644513a5e120167f9ea67ee4dbe04ed4862b62b5fcab636a38",
+      "outcome": {
+        "block": "\nnamespace DecidedShared_eb9ca2106187\n\ndef forsetiTime : Gimle.Asgard.Dynamics.TimeDomain :=\n  \u27e8\"time\", (((mkRat (0) 1) : \u211a) : \u211d)\u27e9\n\ndef forsetiInitial : Gimle.Asgard.Point 12 :=\n  ![(((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (1) 1) : \u211a) : \u211d)]\n\ndef forsetiObservation : Fin 15 := \u27e812, by decide\u27e9\n\ndef forsetiIdentities : Prop :=\n  Gimle.Forseti.Examples.GalerkinNS.B2.evolution.states.map (\u00b7.initialId) = [\"initial-a01\", \"initial-a02\", \"initial-a1m2\", \"initial-a1m1\", \"initial-a10\", \"initial-a11\", \"initial-a12\", \"initial-a2m2\", \"initial-a2m1\", \"initial-a20\", \"initial-a21\", \"initial-a22\"] \u2227\n  (Gimle.Forseti.Examples.GalerkinNS.B2.body.observations.get forsetiObservation).port.id =\n    \"obs-e\" \u2227\n  Gimle.Forseti.Examples.GalerkinNS.B2.evolution.axis.id = \"time\"\n\nend DecidedShared_eb9ca2106187\n\nnamespace Decided_in_ball\n\nopen DecidedShared_eb9ca2106187\n\nexample : @forsetiTime = @DecidedShared_eb9ca2106187.forsetiTime := rfl\nexample : @forsetiInitial = @DecidedShared_eb9ca2106187.forsetiInitial := rfl\nexample : @forsetiObservation = @DecidedShared_eb9ca2106187.forsetiObservation := rfl\nexample : @forsetiIdentities = @DecidedShared_eb9ca2106187.forsetiIdentities := rfl\n\ndef forsetiPost : Gimle.Forseti.Syntax.Formula 1 :=\n  (.and (.atom .ge (.var \u27e80, by decide\u27e9)) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (313) 1))))))\n\ndef forsetiLeaf : Gimle.Forseti.Syntax.Goal :=\n  \u27e8\u27e8[\"E\"], by decide, by decide, by decide\u27e9,\n    (.and (.atom .le (.neg (.var \u27e80, by decide\u27e9))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (313) 1)))))),\n    forsetiPost\u27e9\n\ndef forsetiContract : Prop :=\n  Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.GalerkinNS.B2.observed forsetiTime\n    (Gimle.Forseti.Trajectory.Initialized forsetiTime (fun _ => True)\n      (\u00b7 = forsetiInitial))\n    (Gimle.Forseti.Trajectory.Always forsetiTime\n      fun o => forsetiPost.holds (fun _ => o forsetiObservation))\n\ndef forsetiRoot : Prop := forsetiIdentities \u2227 forsetiContract\n\n/-- E is output 12 of the compiled circuit, the port obs-e; the input's initial wires (initial-a01, initial-a02, initial-a1m2, initial-a1m1, initial-a10, initial-a11, initial-a12, initial-a2m2, initial-a2m1, initial-a20, initial-a21, initial-a22) start at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) at time = 0. The trajectory decider proved it. Goal (trajectory): trajectory ns-b2 interpretation continuous-real obligation contract start time = 0 initial initial-a01 = 1, initial-a02 = 1, initial-a10 = 1, initial-a11 = 1, initial-a12 = 1, initial-a1m1 = 1, initial-a1m2 = 1, initial-a20 = 1, initial-a21 = 1, initial-a22 = 1, initial-a2m1 = 1, initial-a2m2 = 1 observe obs-e as E always : E >= 0 and E <= 313 -/\ntheorem in_ball :\n    have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 0\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 12),\n      Gimle.Asgard.Dynamics.signalRight u 0 = ![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 0, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192\n        \u2200 t \u2265 0, have E := y t 12; E \u2265 0 \u2227 E \u2264 313) := by\n  have root : forsetiRoot := by\n    unfold forsetiRoot forsetiIdentities forsetiContract\n    refine \u27e8\u27e8by decide, by decide, by decide\u27e9, ?_\u27e9\n    have time : forsetiTime = Gimle.Forseti.Examples.GalerkinNS.B2.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Forseti.Examples.GalerkinNS.B2.evolution] <;> norm_num [Rat.mkRat_eq_div]\n    have init : forsetiInitial = Gimle.Forseti.Examples.GalerkinNS.B2.compiled.initial := by rw [Gimle.Forseti.Examples.GalerkinNS.B2.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]\n    have obs : forsetiObservation = Gimle.Forseti.Examples.GalerkinNS.B2.energyIndex := rfl\n    rw [time, init, obs]\n    refine Gimle.Forseti.Trajectory.Contract.consequence Gimle.Forseti.Examples.GalerkinNS.B2.energy_contract (fun _ admitted => admitted) ?_\n    intro o band t within\n    have leaf := Gimle.Forseti.Syntax.EntailmentCertificate.sound forsetiLeaf \u27e8[\u27e8\u27e8[]\u27e9, [\u27e8[((mkRat (1) 1), (.constant (mkRat (1) 1)))]\u27e9, \u27e8[]\u27e9]\u27e9, \u27e8\u27e8[]\u27e9, [\u27e8[]\u27e9, \u27e8[((mkRat (1) 1), (.constant (mkRat (1) 1)))]\u27e9]\u27e9]\u27e9 (by decide +kernel)\n    apply leaf\n    simp only [forsetiLeaf, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval]\n    obtain \u27e8low, high\u27e9 := band t within\n    refine \u27e8?_, ?_\u27e9 <;> norm_num [Rat.mkRat_eq_div] <;> linarith\n  have forsetiCast0 : (((mkRat (313) 1) : \u211a) : \u211d) = 313 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (0) 1) : \u211a) : \u211d) = 0 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiContract) => bridge.mpr (show forsetiIdentities \u2227 forsetiContract from root).2) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiContract\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at claim\n    refine \u27e8?_, ?_, ?_\u27e9 <;> set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc]\n    \u00b7 exact fun u start => (claim u start).1\n    \u00b7 exact fun u start => (claim u start).2.1\n    \u00b7 exact fun u start => (claim u start).2.2\n  \u00b7 intro lane\n    unfold forsetiContract at lane\n    obtain \u27e8realizable, unique, holds\u27e9 := lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at realizable unique holds \u22a2\n    exact fun u start => \u27e8realizable u start, unique u start, holds u start\u27e9\n\n\n/-!\n### Inspect the refuted energy bound of one {fold}\n\nThe initial energy is $91/20>1$. A checked refutation is retained\nbeside the notebook; the false positive claim deliberately uses `sorry`.\n-/\n\nend Decided_in_ball",
+        "reason": "Found by the certificate stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "ns-b2/obs-e"
+          ],
+          [
+            "certificate",
+            "found",
+            "z3 sat"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate\nimport Gimle.Forseti.Examples.GalerkinNS.B2"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "in_ball"
+      },
+      "prefix_sha256": "df9f41f9c3895dafd0590d39197e6438699ad9d8fd66d13784d5dbfc55b6cac7",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.NSB2.Decided_in_ball.in_ball` as checked.",
+        "status": "checked",
+        "type": "have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed;\nhave time := { axis := \"time\", start := 0 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 12)),\n  Eq (Gimle.Asgard.Dynamics.signalRight u 0)\n      (Matrix.vecCons 1\n        (Matrix.vecCons 1\n          (Matrix.vecCons 1\n            (Matrix.vecCons 1\n              (Matrix.vecCons 1\n                (Matrix.vecCons 1\n                  (Matrix.vecCons 1\n                    (Matrix.vecCons 1\n                      (Matrix.vecCons 1\n                        (Matrix.vecCons 1 (Matrix.vecCons 1 (Matrix.vecCons 1 Matrix.vecEmpty)))))))))))) \u2192\n    And (Exists fun y => circuit.Rel time u y)\n      (And\n        (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 15),\n          circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n        (\u2200 (y : Gimle.Asgard.Dynamics.Signal 15),\n          circuit.Rel time u y \u2192\n            \u2200 (t : Real),\n              GE.ge t 0 \u2192\n                have E := y t 12;\n                And (GE.ge E 0) (Real.instLE.le E 313)))"
+      }
+    },
+    "f0795cb19de6cf744e04e133a011a6c7291b795b394026fdc3062ca804aa358d": {
+      "created": "2026-11-02T01:31:24+00:00",
+      "fingerprint": "cc3f9b0b1f93d0644513a5e120167f9ea67ee4dbe04ed4862b62b5fcab636a38",
+      "outcome": {
+        "block": "\nnamespace Decided_below_one\n\nopen DecidedShared_eb9ca2106187\n\nexample : @forsetiTime = @DecidedShared_eb9ca2106187.forsetiTime := rfl\nexample : @forsetiInitial = @DecidedShared_eb9ca2106187.forsetiInitial := rfl\nexample : @forsetiObservation = @DecidedShared_eb9ca2106187.forsetiObservation := rfl\nexample : @forsetiIdentities = @DecidedShared_eb9ca2106187.forsetiIdentities := rfl\n\ndef forsetiPost : Gimle.Forseti.Syntax.Formula 1 :=\n  (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (1) 1)))))\n\ndef forsetiContract : Prop :=\n  Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.GalerkinNS.B2.observed forsetiTime\n    (Gimle.Forseti.Trajectory.Initialized forsetiTime (fun _ => True)\n      (\u00b7 = forsetiInitial))\n    (Gimle.Forseti.Trajectory.Always forsetiTime\n      fun o => forsetiPost.holds (fun _ => o forsetiObservation))\n\ndef forsetiRoot : Prop := forsetiIdentities \u2227 forsetiContract\n\n/-- E is output 12 of the compiled circuit, the port obs-e; the input's initial wires (initial-a01, initial-a02, initial-a1m2, initial-a1m1, initial-a10, initial-a11, initial-a12, initial-a2m2, initial-a2m1, initial-a20, initial-a21, initial-a22) start at (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) at time = 0. The trajectory decider refuted it. Goal (trajectory): trajectory ns-b2 interpretation continuous-real obligation contract start time = 0 initial initial-a01 = 1, initial-a02 = 1, initial-a10 = 1, initial-a11 = 1, initial-a12 = 1, initial-a1m1 = 1, initial-a1m2 = 1, initial-a20 = 1, initial-a21 = 1, initial-a22 = 1, initial-a2m1 = 1, initial-a2m2 = 1 observe obs-e as E always : E <= 1 -/\ntheorem below_one :\n    have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 0\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 12),\n      Gimle.Asgard.Dynamics.signalRight u 0 = ![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 0, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192\n        \u2200 t \u2265 0, have E := y t 12; E \u2264 1) := by\n  sorry\n\ntheorem below_one_refuted : \u00ac (have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 0\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 12),\n      Gimle.Asgard.Dynamics.signalRight u 0 = ![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 0, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 15, circuit.Rel time u y \u2192\n        \u2200 t \u2265 0, have E := y t 12; E \u2264 1)) := by\n  have refuted : forsetiIdentities \u2227 \u00ac forsetiContract := by\n    unfold forsetiIdentities forsetiContract\n    refine \u27e8\u27e8by decide, by decide, by decide\u27e9, ?_\u27e9\n    intro contract\n    have time : forsetiTime = Gimle.Forseti.Examples.GalerkinNS.B2.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Forseti.Examples.GalerkinNS.B2.evolution] <;> norm_num [Rat.mkRat_eq_div]\n    have init : forsetiInitial = Gimle.Forseti.Examples.GalerkinNS.B2.compiled.initial := by rw [Gimle.Forseti.Examples.GalerkinNS.B2.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]\n    have obs : forsetiObservation = Gimle.Forseti.Examples.GalerkinNS.B2.energyIndex := rfl\n    rw [time, init, obs] at contract\n    obtain \u27e8state, realized\u27e9 := Gimle.Forseti.Examples.GalerkinNS.B2.compiled_exists\n    have start : state Gimle.Forseti.Examples.GalerkinNS.B2.evolution.time.start = Gimle.Forseti.Examples.GalerkinNS.B2.compiled.initial := by unfold Gimle.Asgard.Model.ContinuousModel.Realizes Gimle.Asgard.Model.ContinuousModel.feedback at realized; exact ((Gimle.Forseti.Trajectory.close_rel _ _ _ _ _ _).mp realized).2.1\n    have bounded := contract.holds _ Gimle.Forseti.Examples.GalerkinNS.B2.declared_input_admitted _ \u27e8state, (Gimle.Forseti.Examples.GalerkinNS.B2.feedback_reads _ Gimle.Forseti.Examples.GalerkinNS.B2.declared_input_admitted state).mpr realized, rfl\u27e9 Gimle.Forseti.Examples.GalerkinNS.B2.evolution.time.start (by simp [Gimle.Asgard.Dynamics.TimeDomain.domain])\n    simp only at bounded\n    rw [start, Gimle.Forseti.Examples.GalerkinNS.B2.energy_at_initial] at bounded\n    have witness : forsetiPost.holds (fun i => (((fun _ : Fin 1 => (mkRat (91) 20)) i : \u211a) : \u211d)) := by convert bounded using 2; norm_num [Rat.mkRat_eq_div]\n    rw [\u2190 Gimle.Forseti.Syntax.Formula.holdsQ_iff] at witness\n    exact absurd witness (by decide +kernel)\n  intro claim\n  have forsetiCast0 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (0) 1) : \u211a) : \u211d) = 0 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiContract) => refuted.2 (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiContract\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at claim\n    refine \u27e8?_, ?_, ?_\u27e9 <;> set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc]\n    \u00b7 exact fun u start => (claim u start).1\n    \u00b7 exact fun u start => (claim u start).2.1\n    \u00b7 exact fun u start => (claim u start).2.2\n  \u00b7 intro lane\n    unfold forsetiContract at lane\n    obtain \u27e8realizable, unique, holds\u27e9 := lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at realizable unique holds \u22a2\n    exact fun u start => \u27e8realizable u start, unique u start, holds u start\u27e9\n\n\n/-!\n### Compare unresolved energy with certified enstrophy {fold}\n\nThe request $E \\le 150$ remains unknown. The next request certifies\nexistence, uniqueness and $0 \\le Z \\le 626$ from the stated start,\nsupporting the amplitude bound above. The later request $Z \\le 600$\nalso remains unknown.\n-/\n\nend Decided_below_one",
+        "reason": "Found by the initial-witness stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "ns-b2/obs-e"
+          ],
+          [
+            "certificate",
+            "none",
+            "z3 unsat: the 2-square dictionary is exhausted; so is its 4-square dsos widening"
+          ],
+          [
+            "initial-witness",
+            "found",
+            "z3 sat"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate\nimport Gimle.Forseti.Examples.GalerkinNS.B2"
+          ]
+        ],
+        "status": "refuted",
+        "theorem": "below_one_refuted"
+      },
+      "prefix_sha256": "864fb1c7ea20087ba5df775a53958e9cfc6b9c1ce834a089e9998afb868db003",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.NSB2.Decided_below_one.below_one_refuted` as checked.",
+        "status": "checked",
+        "type": "Not\n  (have circuit := Gimle.Forseti.Examples.GalerkinNS.B2.observed;\n  have time := { axis := \"time\", start := 0 };\n  \u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 12)),\n    Eq (Gimle.Asgard.Dynamics.signalRight u 0)\n        (Matrix.vecCons 1\n          (Matrix.vecCons 1\n            (Matrix.vecCons 1\n              (Matrix.vecCons 1\n                (Matrix.vecCons 1\n                  (Matrix.vecCons 1\n                    (Matrix.vecCons 1\n                      (Matrix.vecCons 1\n                        (Matrix.vecCons 1\n                          (Matrix.vecCons 1 (Matrix.vecCons 1 (Matrix.vecCons 1 Matrix.vecEmpty)))))))))))) \u2192\n      And (Exists fun y => circuit.Rel time u y)\n        (And\n          (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 15),\n            circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n          (\u2200 (y : Gimle.Asgard.Dynamics.Signal 15),\n            circuit.Rel time u y \u2192\n              \u2200 (t : Real),\n                GE.ge t 0 \u2192\n                  have E := y t 12;\n                  Real.instLE.le E 1)))"
+      }
+    }
+  },
   "environment": {
-    "check": "07a3fb86ae17cb22675dffaf7304eb2f31f365200baf123957f86346df12cd5a",
+    "check": "9c5cad55c61cf9461bc883f18c39352631cb54b83dbbe89e58a90931d8880574",
     "fingerprint": "cc3f9b0b1f93d0644513a5e120167f9ea67ee4dbe04ed4862b62b5fcab636a38"
   },
   "format": "glitnir.project-checks/v2",
-  "source_sha256": "10c8ffee1d423443d8d0cd2d8689e2ec43a367a9db4044e6f60710b1ccf894ed",
+  "source_sha256": "28d4dc2f1301a016f4078dae2e14b344a66d1c404c4f9f96da6ec4f604fcd5dc",
   "views": {
     "1b2a2bab2dc52d9df035a96e88340421a770ad83d0c4a12f67f5ca0d479dcefa": {
       "created": "2026-10-29T19:46:20+00:00",

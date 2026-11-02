@@ -21,7 +21,7 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5365",
       "prefix_sha256": "b8b585097c019486e54caf1c728584c15bc6e2641087bf5bc3064f7589518b2a",
-      "proposition_sha256": "a056cdd9575789731473da373078a1370312d827de41d8cebc7bb1920fadc5d1",
+      "proposition_sha256": "5264079a2d3550e4c920989b9d558cf1e0a19f53f0629eb77f24d081973ddae8",
       "start_line": 124,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
@@ -48,7 +48,7 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5437",
       "prefix_sha256": "03a6b3941ea4fdcefdf12ce683883aefe3b15c067476b97e084a8733ae99b94c",
-      "proposition_sha256": "3e3928e994dbbad2be316d658eacd52ca5106d6352040383327fed03a51b605d",
+      "proposition_sha256": "19a87820cf025f0e43426787eda0d92d7d84535ec2e018991910f52fd6b1651d",
       "start_line": 125,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
@@ -62,7 +62,7 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5515",
       "prefix_sha256": "aca9a586d877e6287170b95244bc1db46210b0a876daab3e93d25c876fa59a17",
-      "proposition_sha256": "42e37d8ff910eb42a5444cf6d95156e30a8eb7886a66dae4678978c8e01642ef",
+      "proposition_sha256": "f1fdf9b8394687a02887b67ecc509faf7467061630aeb5524f33cac05a43c84e",
       "start_line": 126,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
@@ -89,7 +89,7 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5601",
       "prefix_sha256": "cff6b3c973ff2472878040a4563ac56dc61baec6c285580f12606c3d711b0fac",
-      "proposition_sha256": "1aedf719b2d131c500966e67a2bdfc76651ef2924d74fac68bb45cae8b1f4534",
+      "proposition_sha256": "d29cfe1775b524ef79b557b5ebdbf7e3c3daaf3cde52dd99196d08c004ff4253",
       "start_line": 127,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
@@ -110,11 +110,11 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "9b875174c48673896ed55b7c386a8766d7f0da9729445fe465f8368c75291d6a",
+      "declaration_sha256": "df4ac9de36b200170e9a2daa7cc361b3088976156eebb801d829c542b9e27ed9",
       "end_line": 188,
       "name": "Notebook.ThreeState.Decided_energy_band.energy_band",
-      "prefix_sha256": "0f83118493f6c36b549053a5f8253767837e64f3cb767fa14db125b5f54aa354",
-      "proposition_sha256": "c289bb0c7086fc2cc7cce2760f0c78791953ff3f41fed34b56d393d57449ac8d",
+      "prefix_sha256": "ed0a575248acd9b05ab760a6adb909cf2c929e31c56d3963db875c464378728c",
+      "proposition_sha256": "e36b6a1370ad89c120550f74771ccf95c4d9f76c363f3d8f6582c940889f6c55",
       "start_line": 146,
       "status": "checked",
       "uses": []
@@ -138,9 +138,9 @@
       "end_line": 217,
       "example": true,
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime",
-      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12807",
-      "prefix_sha256": "21ca33ce92b5e044e830ad5a86a6a8be568c8f23ef5256d94553ab56bd8af480",
-      "proposition_sha256": "a056cdd9575789731473da373078a1370312d827de41d8cebc7bb1920fadc5d1",
+      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12808",
+      "prefix_sha256": "6c984596e4172bdc00fdd0f9708b7785fa7e876fd894af0877a220518cbfde39",
+      "proposition_sha256": "5264079a2d3550e4c920989b9d558cf1e0a19f53f0629eb77f24d081973ddae8",
       "start_line": 217,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
@@ -165,9 +165,9 @@
       "end_line": 218,
       "example": true,
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial",
-      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12879",
-      "prefix_sha256": "f30ef2ed8ac9be4cb80558aeb314026bdec3a45faa2a9960278f4f3888aad740",
-      "proposition_sha256": "3e3928e994dbbad2be316d658eacd52ca5106d6352040383327fed03a51b605d",
+      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12880",
+      "prefix_sha256": "067583f884b96bbdb232f83447a4ac58877d0065eb01993bacd74aaa683daf34",
+      "proposition_sha256": "19a87820cf025f0e43426787eda0d92d7d84535ec2e018991910f52fd6b1651d",
       "start_line": 218,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
@@ -179,9 +179,9 @@
       "end_line": 219,
       "example": true,
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation",
-      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12957",
-      "prefix_sha256": "ad8082d1ae365732510f457d1c32d163ef95a367841757b28ed34091b1d36a81",
-      "proposition_sha256": "42e37d8ff910eb42a5444cf6d95156e30a8eb7886a66dae4678978c8e01642ef",
+      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12958",
+      "prefix_sha256": "0b39a3ec2e6504289efb6f1b80acd4e0d35e336c04d209848861f558bf8e4d5d",
+      "proposition_sha256": "f1fdf9b8394687a02887b67ecc509faf7467061630aeb5524f33cac05a43c84e",
       "start_line": 219,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
@@ -206,9 +206,9 @@
       "end_line": 220,
       "example": true,
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities",
-      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_13043",
-      "prefix_sha256": "4b6c530dd8f0710381c126221d04490f81282f20b6ed1f4bb120f6fc660d0938",
-      "proposition_sha256": "1aedf719b2d131c500966e67a2bdfc76651ef2924d74fac68bb45cae8b1f4534",
+      "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_13044",
+      "prefix_sha256": "5e059be83f70522f35a1f1df9c518ad6b2d7fb68904b49038bf77a16e821f177",
+      "proposition_sha256": "d29cfe1775b524ef79b557b5ebdbf7e3c3daaf3cde52dd99196d08c004ff4253",
       "start_line": 220,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
@@ -236,8 +236,8 @@
       "declaration_sha256": "896c5a6c93eafd2da2d671f5446e56366ae17167f74d2890b7c310697a41a0f7",
       "end_line": 245,
       "name": "Notebook.ThreeState.Decided_energy_below_five.energy_below_five",
-      "prefix_sha256": "d3021ee217ba6a75032bc18774f7aa2f8596f6fbcec2b2f07bd6443f04f6e41e",
-      "proposition_sha256": "a71a39123c5f7ee9c38353c2852c4f879efa2633c82af4eb6dec728bd227f71e",
+      "prefix_sha256": "a5b81feee993ba5b1de575ce5a44a16fbc6fa67cd2771bbb5a0b92f46291a7d9",
+      "proposition_sha256": "9d565a28750c1f71c5cf6acbaf7771b8557300f9342bb3f122a0064f404c7ae7",
       "start_line": 234,
       "status": "admitted",
       "uses": []
@@ -257,22 +257,131 @@
           "name": "Quot.sound"
         }
       ],
+      "declaration_sha256": "ca4def5ffcf4c6a66fe1cf6f8a0fe9f1942546d268d3e93033b7c3043820d44c",
+      "end_line": 290,
+      "name": "Notebook.ThreeState.Decided_energy_below_five.energy_below_five_refuted",
+      "prefix_sha256": "b7694d1703372c2e0108919809be7513f192021741d88c51da5b149dd023e12d",
+      "proposition_sha256": "7a794aee7b413ddad8a29d4ed152f154cca0b91ccf9f7479a061631387e31f44",
+      "start_line": 247,
+      "status": "checked",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
       "declaration_sha256": "63a5feb961b79ba9c23e21caaaa5f30355ecf825f2e01696ddec4755bde124f7",
-      "end_line": 291,
+      "end_line": 336,
       "name": "Notebook.ThreeState.energy_rate_nonpositive",
-      "prefix_sha256": "da27b8eace8350f5706b60948b6145b59cd6bf5889f02fb77d9838ca38517e7a",
-      "proposition_sha256": "20840438d0aade5b9a9ad94922f0efa957004262600dab5de2ee9e6bff6e25ed",
-      "start_line": 286,
+      "prefix_sha256": "8041f838d9d9b3f5b7ecf6fee633dcec06627975e1c75ce8d0b6d1ef6377603e",
+      "proposition_sha256": "7eadc7ecf2f835e437298be42e4c76eedb30db750e1829fdc9f3c84e195e910c",
+      "start_line": 331,
       "status": "checked",
       "uses": []
     }
   ],
+  "decisions": {
+    "370aae990a83acccf8d39aa26cdcf635687b4f3acba97d267f71c3e0f3d0c93f": {
+      "created": "2026-11-02T02:53:12+00:00",
+      "fingerprint": "75da7ed0edb0ab32b47b260ac98722bb781bedbbd9c7f0bdc9111c1e846f34cd",
+      "outcome": {
+        "block": "\nnamespace DecidedShared_e390e59d2288\n\ndef forsetiTime : Gimle.Asgard.Dynamics.TimeDomain :=\n  \u27e8\"time\", (((mkRat (2) 1) : \u211a) : \u211d)\u27e9\n\ndef forsetiInitial : Gimle.Asgard.Point 3 :=\n  ![(((mkRat (1) 1) : \u211a) : \u211d), (((mkRat (2) 1) : \u211a) : \u211d), (((mkRat (-1) 1) : \u211a) : \u211d)]\n\ndef forsetiObservation : Fin 4 := \u27e83, by decide\u27e9\n\ndef forsetiIdentities : Prop :=\n  Gimle.Asgard.Examples.ThreeState.evolution.states.map (\u00b7.initialId) = [\"initial-x\", \"initial-y\", \"initial-z\"] \u2227\n  ((Gimle.Asgard.Examples.ThreeState.body (1 / 3) (1 / 2) 2).observations.get forsetiObservation).port.id =\n    \"obs-v\" \u2227\n  Gimle.Asgard.Examples.ThreeState.evolution.axis.id = \"time\"\n\nend DecidedShared_e390e59d2288\n\nnamespace Decided_energy_band\n\nopen DecidedShared_e390e59d2288\n\nexample : @forsetiTime = @DecidedShared_e390e59d2288.forsetiTime := rfl\nexample : @forsetiInitial = @DecidedShared_e390e59d2288.forsetiInitial := rfl\nexample : @forsetiObservation = @DecidedShared_e390e59d2288.forsetiObservation := rfl\nexample : @forsetiIdentities = @DecidedShared_e390e59d2288.forsetiIdentities := rfl\n\ndef forsetiPost : Gimle.Forseti.Syntax.Formula 1 :=\n  (.and (.atom .ge (.var \u27e80, by decide\u27e9)) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (6) 1))))))\n\ndef forsetiLeaf : Gimle.Forseti.Syntax.Goal :=\n  \u27e8\u27e8[\"V\"], by decide, by decide, by decide\u27e9,\n    (.and (.atom .le (.neg (.var \u27e80, by decide\u27e9))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (6) 1)))))),\n    forsetiPost\u27e9\n\ndef forsetiContract : Prop :=\n  Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.ThreeStateContract.observed forsetiTime\n    (Gimle.Forseti.Trajectory.Initialized forsetiTime (fun _ => True)\n      (\u00b7 = forsetiInitial))\n    (Gimle.Forseti.Trajectory.Always forsetiTime\n      fun o => forsetiPost.holds (fun _ => o forsetiObservation))\n\ndef forsetiRoot : Prop := forsetiIdentities \u2227 forsetiContract\n\n/-- V is output 3 of the compiled circuit, the port obs-v; the input's initial wires (initial-x, initial-y, initial-z) start at (1, 2, -1) at time = 2. The trajectory decider proved it. Goal (trajectory): trajectory three-state interpretation continuous-real obligation contract start time = 2 initial initial-x = 1, initial-y = 2, initial-z = -1 observe obs-v as V always : V >= 0 and V <= 6 -/\ntheorem energy_band :\n    have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 2\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 3),\n      Gimle.Asgard.Dynamics.signalRight u 2 = ![1, 2, -1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 2, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y \u2192\n        \u2200 t \u2265 2, have V := y t 3; V \u2265 0 \u2227 V \u2264 6) := by\n  have root : forsetiRoot := by\n    unfold forsetiRoot forsetiIdentities forsetiContract\n    refine \u27e8\u27e8by decide, by decide, by decide\u27e9, ?_\u27e9\n    have time : forsetiTime = Gimle.Asgard.Examples.ThreeState.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Asgard.Examples.ThreeState.evolution] <;> norm_num [Rat.mkRat_eq_div]\n    have init : forsetiInitial = Gimle.Asgard.Examples.ThreeState.model.initial := by rw [Gimle.Asgard.Examples.ThreeState.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]\n    have obs : forsetiObservation = Gimle.Asgard.Examples.ThreeState.energyIndex := rfl\n    rw [time, init, obs]\n    refine Gimle.Forseti.Trajectory.Contract.consequence Gimle.Forseti.Examples.ThreeStateContract.energy_contract (fun _ admitted => admitted) ?_\n    intro o band t within\n    have leaf := Gimle.Forseti.Syntax.EntailmentCertificate.sound forsetiLeaf \u27e8[\u27e8\u27e8[]\u27e9, [\u27e8[((mkRat (1) 1), (.constant (mkRat (1) 1)))]\u27e9, \u27e8[]\u27e9]\u27e9, \u27e8\u27e8[]\u27e9, [\u27e8[]\u27e9, \u27e8[((mkRat (1) 1), (.constant (mkRat (1) 1)))]\u27e9]\u27e9]\u27e9 (by decide +kernel)\n    apply leaf\n    simp only [forsetiLeaf, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval]\n    obtain \u27e8low, high\u27e9 := band t within\n    refine \u27e8?_, ?_\u27e9 <;> norm_num [Rat.mkRat_eq_div] <;> linarith\n  have forsetiCast0 : (((mkRat (6) 1) : \u211a) : \u211d) = 6 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (2) 1) : \u211a) : \u211d) = 2 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast3 : (((mkRat (-1) 1) : \u211a) : \u211d) = -1 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiContract) => bridge.mpr (show forsetiIdentities \u2227 forsetiContract from root).2) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiContract\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at claim\n    refine \u27e8?_, ?_, ?_\u27e9 <;> set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc]\n    \u00b7 exact fun u start => (claim u start).1\n    \u00b7 exact fun u start => (claim u start).2.1\n    \u00b7 exact fun u start => (claim u start).2.2\n  \u00b7 intro lane\n    unfold forsetiContract at lane\n    obtain \u27e8realizable, unique, holds\u27e9 := lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at realizable unique holds \u22a2\n    exact fun u start => \u27e8realizable u start, unique u start, holds u start\u27e9\n\nend Decided_energy_band",
+        "reason": "Found by the certificate stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "three-state/obs-v"
+          ],
+          [
+            "certificate",
+            "found",
+            "z3 sat"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate\nimport Gimle.Forseti.Examples.ThreeStateContract"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "energy_band"
+      },
+      "prefix_sha256": "614ef4b460073bfc9f904d27a27b2af39dbe22e777a7138fe2cb94122de33a47",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.ThreeState.Decided_energy_band.energy_band` as checked.",
+        "status": "checked",
+        "type": "have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed;\nhave time := { axis := \"time\", start := 2 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 3)),\n  Eq (Gimle.Asgard.Dynamics.signalRight u 2)\n      (Matrix.vecCons 1 (Matrix.vecCons 2 (Matrix.vecCons (-1) Matrix.vecEmpty))) \u2192\n    And (Exists fun y => circuit.Rel time u y)\n      (And\n        (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 4),\n          circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 2 \u2192 Eq (y t) (y' t))\n        (\u2200 (y : Gimle.Asgard.Dynamics.Signal 4),\n          circuit.Rel time u y \u2192\n            \u2200 (t : Real),\n              GE.ge t 2 \u2192\n                have V := y t 3;\n                And (GE.ge V 0) (Real.instLE.le V 6)))"
+      }
+    },
+    "ca07992ae5754e120f4017dea188732d77e5499ac3bc3a653d2952881f938aef": {
+      "created": "2026-11-02T02:58:36+00:00",
+      "fingerprint": "75da7ed0edb0ab32b47b260ac98722bb781bedbbd9c7f0bdc9111c1e846f34cd",
+      "outcome": {
+        "block": "\nnamespace Decided_energy_below_five\n\nopen DecidedShared_e390e59d2288\n\nexample : @forsetiTime = @DecidedShared_e390e59d2288.forsetiTime := rfl\nexample : @forsetiInitial = @DecidedShared_e390e59d2288.forsetiInitial := rfl\nexample : @forsetiObservation = @DecidedShared_e390e59d2288.forsetiObservation := rfl\nexample : @forsetiIdentities = @DecidedShared_e390e59d2288.forsetiIdentities := rfl\n\ndef forsetiPost : Gimle.Forseti.Syntax.Formula 1 :=\n  (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (5) 1)))))\n\ndef forsetiContract : Prop :=\n  Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.ThreeStateContract.observed forsetiTime\n    (Gimle.Forseti.Trajectory.Initialized forsetiTime (fun _ => True)\n      (\u00b7 = forsetiInitial))\n    (Gimle.Forseti.Trajectory.Always forsetiTime\n      fun o => forsetiPost.holds (fun _ => o forsetiObservation))\n\ndef forsetiRoot : Prop := forsetiIdentities \u2227 forsetiContract\n\n/-- V is output 3 of the compiled circuit, the port obs-v; the input's initial wires (initial-x, initial-y, initial-z) start at (1, 2, -1) at time = 2. The trajectory decider refuted it. Goal (trajectory): trajectory three-state interpretation continuous-real obligation contract start time = 2 initial initial-x = 1, initial-y = 2, initial-z = -1 observe obs-v as V always : V <= 5 -/\ntheorem energy_below_five :\n    have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 2\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 3),\n      Gimle.Asgard.Dynamics.signalRight u 2 = ![1, 2, -1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 2, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y \u2192\n        \u2200 t \u2265 2, have V := y t 3; V \u2264 5) := by\n  sorry\n\ntheorem energy_below_five_refuted : \u00ac (have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed\n    have time : Gimle.Asgard.Dynamics.TimeDomain := \u27e8\"time\", 2\u27e9\n    \u2200 u : Gimle.Asgard.Dynamics.Signal (0 + 3),\n      Gimle.Asgard.Dynamics.signalRight u 2 = ![1, 2, -1] \u2192\n      (\u2203 y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y) \u2227\n      (\u2200 y y' : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192\n        \u2200 t \u2265 2, y t = y' t) \u2227\n      (\u2200 y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y \u2192\n        \u2200 t \u2265 2, have V := y t 3; V \u2264 5)) := by\n  have refuted : forsetiIdentities \u2227 \u00ac forsetiContract := by\n    unfold forsetiIdentities forsetiContract\n    refine \u27e8\u27e8by decide, by decide, by decide\u27e9, ?_\u27e9\n    intro contract\n    have time : forsetiTime = Gimle.Asgard.Examples.ThreeState.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Asgard.Examples.ThreeState.evolution] <;> norm_num [Rat.mkRat_eq_div]\n    have init : forsetiInitial = Gimle.Asgard.Examples.ThreeState.model.initial := by rw [Gimle.Asgard.Examples.ThreeState.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]\n    have obs : forsetiObservation = Gimle.Asgard.Examples.ThreeState.energyIndex := rfl\n    rw [time, init, obs] at contract\n    obtain \u27e8state, realized\u27e9 := Gimle.Forseti.Examples.ThreeState.compiled_exists\n    have start : state Gimle.Asgard.Examples.ThreeState.evolution.time.start = Gimle.Asgard.Examples.ThreeState.model.initial := by unfold Gimle.Asgard.Model.ContinuousModel.Realizes Gimle.Asgard.Model.ContinuousModel.feedback at realized; exact ((Gimle.Forseti.Trajectory.close_rel _ _ _ _ _ _).mp realized).2.1\n    have bounded := contract.holds _ Gimle.Forseti.Examples.ThreeStateContract.declared_input_admitted _ \u27e8state, (Gimle.Forseti.Examples.ThreeStateContract.feedback_reads _ Gimle.Forseti.Examples.ThreeStateContract.declared_input_admitted state).mpr realized, rfl\u27e9 Gimle.Asgard.Examples.ThreeState.evolution.time.start (by simp [Gimle.Asgard.Dynamics.TimeDomain.domain])\n    simp only at bounded\n    rw [start, Gimle.Asgard.Examples.ThreeState.energy_at_initial] at bounded\n    have witness : forsetiPost.holds (fun i => (((fun _ : Fin 1 => (mkRat (6) 1)) i : \u211a) : \u211d)) := by convert bounded using 2; norm_num [Rat.mkRat_eq_div]\n    rw [\u2190 Gimle.Forseti.Syntax.Formula.holdsQ_iff] at witness\n    exact absurd witness (by decide +kernel)\n  intro claim\n  have forsetiCast0 : (((mkRat (5) 1) : \u211a) : \u211d) = 5 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (2) 1) : \u211a) : \u211d) = 2 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast3 : (((mkRat (-1) 1) : \u211a) : \u211d) = -1 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiContract) => refuted.2 (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiContract\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at claim\n    refine \u27e8?_, ?_, ?_\u27e9 <;> set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc]\n    \u00b7 exact fun u start => (claim u start).1\n    \u00b7 exact fun u start => (claim u start).2.1\n    \u00b7 exact fun u start => (claim u start).2.2\n  \u00b7 intro lane\n    unfold forsetiContract at lane\n    obtain \u27e8realizable, unique, holds\u27e9 := lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at realizable unique holds \u22a2\n    exact fun u start => \u27e8realizable u start, unique u start, holds u start\u27e9\n\nend Decided_energy_below_five",
+        "reason": "Found by the initial-witness stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "three-state/obs-v"
+          ],
+          [
+            "certificate",
+            "none",
+            "z3 unsat: the 2-square dictionary is exhausted; so is its 4-square dsos widening"
+          ],
+          [
+            "initial-witness",
+            "found",
+            "z3 sat"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate\nimport Gimle.Forseti.Examples.ThreeStateContract"
+          ]
+        ],
+        "status": "refuted",
+        "theorem": "energy_below_five_refuted"
+      },
+      "prefix_sha256": "081ab5db983466082a598716a39c249b080a208f11c670f2b86871c6c7edcbe8",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.ThreeState.Decided_energy_below_five.energy_below_five_refuted` as checked.",
+        "status": "checked",
+        "type": "Not\n  (have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed;\n  have time := { axis := \"time\", start := 2 };\n  \u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 3)),\n    Eq (Gimle.Asgard.Dynamics.signalRight u 2)\n        (Matrix.vecCons 1 (Matrix.vecCons 2 (Matrix.vecCons (-1) Matrix.vecEmpty))) \u2192\n      And (Exists fun y => circuit.Rel time u y)\n        (And\n          (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 4),\n            circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 2 \u2192 Eq (y t) (y' t))\n          (\u2200 (y : Gimle.Asgard.Dynamics.Signal 4),\n            circuit.Rel time u y \u2192\n              \u2200 (t : Real),\n                GE.ge t 2 \u2192\n                  have V := y t 3;\n                  Real.instLE.le V 5)))"
+      }
+    }
+  },
   "environment": {
-    "check": "ade521b348efca4a7a27b8d8d87f7dc0a9fbaed334ba80e632999146a122e86a",
+    "check": "321b8025960bfd5e649837ad6910659c7cc6fe41c3daa0cfa14cbace5aef0f1f",
     "fingerprint": "75da7ed0edb0ab32b47b260ac98722bb781bedbbd9c7f0bdc9111c1e846f34cd"
   },
   "format": "glitnir.project-checks/v2",
-  "source_sha256": "08f0b2c8fd0138620031f7b599cfb569b8678f6a873acc1b423bf2369af63485",
+  "source_sha256": "2f5630a161d9675b05eff83e8135f233ecf70c4c7a574eaa51f9a239cf0701ba",
   "views": {
     "2cddafd62d8b0f9d5143f9671f5765d8f4b32ab5603efae20d7a8dc663020123": {
       "created": "2026-10-29T19:29:37+00:00",

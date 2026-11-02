@@ -19,7 +19,7 @@
       "end_line": 80,
       "name": "Notebook.EnergyOptimization.energy_formula",
       "prefix_sha256": "01102687e1ea346bcba11867ab0bbe53ea861c191e56c711e1f70f175a8c88ff",
-      "proposition_sha256": "47906a6beab02ad185ece5249bceb20c6fec6aa1ea86fcfd180543d4120b99bc",
+      "proposition_sha256": "1c3c985100cb2e400bcfc343129568372ebeceb24d6e17b7d618fad6027502d4",
       "start_line": 76,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 130,
       "name": "Notebook.EnergyOptimization.Decided_energy_in_band.energy_in_band",
       "prefix_sha256": "a6ceb7e8154f99d52ecb0bc02b030c1cb34b5bc2eda82fd25136404884440c69",
-      "proposition_sha256": "732adf43afb062f2fc55ec65a0653c18e4db4d8c6166afcb0e68d8e4c4f1a7fa",
+      "proposition_sha256": "bb575660c9ab8325f8c5468b94eae7c490564d3ec23048d72d005d74187ba87f",
       "start_line": 112,
       "status": "checked",
       "uses": []
@@ -71,7 +71,7 @@
       "end_line": 167,
       "name": "Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three",
       "prefix_sha256": "9e610f799b853f9543cfc4c21c20dfd82f0db81629a4aa52a04e2346310be1a4",
-      "proposition_sha256": "feae1e565e875f640c06723c8ff637ef00fc49d1a38be332039c6d9f0a45fdf7",
+      "proposition_sha256": "17c1a38bc02f38f611937ba03165ac15b46e08a4b15075db199c31297da8a665",
       "start_line": 164,
       "status": "admitted",
       "uses": []
@@ -91,12 +91,36 @@
           "name": "Quot.sound"
         }
       ],
+      "declaration_sha256": "cc771fbd5d879ff1ca2ebd21c006f69a12dc5ab781ff7f77ebf903f3a82138ba",
+      "end_line": 184,
+      "name": "Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three_refuted",
+      "prefix_sha256": "1bc2a98f8d21957d7c18288620d0910705bcb7484ddbe25a1eb45c634d2fb1ba",
+      "proposition_sha256": "dd336d6d64b47b99e4a97210c9cf2201cd80a6868c503a2553225b7b12bb9487",
+      "start_line": 169,
+      "status": "checked",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
       "declaration_sha256": "242934c9b90d542f271a4cf431aa9e8ca44459c0b100b57b25073feb30d2e5cf",
-      "end_line": 192,
+      "end_line": 209,
       "name": "Notebook.EnergyOptimization.original_contract",
-      "prefix_sha256": "cf8a9304d7aee2fbff0563d9933b2160e2cde48ddacf2d927e943fa755913663",
-      "proposition_sha256": "f15f6000c0ffa8427b17905e180c56309792e374fd5defb36aa2e86671843f36",
-      "start_line": 184,
+      "prefix_sha256": "d96ab7f9e2adde95cc1deddb58239fc5a88f55fb40a348ed96f91d33e409a00e",
+      "proposition_sha256": "b3a652340cacc21bcdd8cbf19e4cb7740803873bc4c1827714885d8e6872811f",
+      "start_line": 201,
       "status": "checked",
       "uses": [
         {
@@ -127,11 +151,11 @@
         }
       ],
       "declaration_sha256": "ba0f0d832bdc05fb6d44765bd8998f6c3bc8b845335c4193e5789c229db92ee9",
-      "end_line": 217,
+      "end_line": 234,
       "name": "Notebook.EnergyOptimization.same_function",
-      "prefix_sha256": "1bd3b14a35e618948c49719e268e981e8f39174c70489c31406c2225713c9b7c",
-      "proposition_sha256": "bad656d8da46ba647dd60220c595c3249a581ade8571251e817ab5c1ba501828",
-      "start_line": 210,
+      "prefix_sha256": "248c6af6dc49fbc1ca6b42f2518b5c00fa05a516c507fe4988600f6dd857bce4",
+      "proposition_sha256": "0544a0558e68ebe3dba8122bb55fce55477897804fe420953b5ecf93bebde0bc",
+      "start_line": 227,
       "status": "checked",
       "uses": [
         {
@@ -157,11 +181,11 @@
         }
       ],
       "declaration_sha256": "c2e9fd5538621708a01e1614f27d9b65d32bd9871002c2f6a79bd9480132ed05",
-      "end_line": 231,
+      "end_line": 248,
       "name": "Notebook.EnergyOptimization.optimised_contract",
-      "prefix_sha256": "4ef8e9114609c015d660e4e85d051af99e34f28764b99cc5671d964399e62496",
-      "proposition_sha256": "9b0d07a6df60f8f18d28c37d1dc63c6bc0c30e08b07bfc0afd29cf38f0eb7cc3",
-      "start_line": 228,
+      "prefix_sha256": "40401eeee0e1d902549cb29e4c2c0ce38738b1e8ba8e3202d64c73f4ff0d3efe",
+      "proposition_sha256": "fbc2be343eac838bf9c2edc7c3d46c0cef4eb70f12793206aef7f521f7a8344b",
+      "start_line": 245,
       "status": "checked",
       "uses": [
         {
@@ -192,11 +216,11 @@
         }
       ],
       "declaration_sha256": "e6ee1e6dc938ae53a58bcdca1b982bd1baa366c10377ea51aa19b40d0f26b841",
-      "end_line": 254,
+      "end_line": 271,
       "name": "Notebook.EnergyOptimization.wrong_differs",
-      "prefix_sha256": "4518595b8c07d9c025f0e4f351f074f3e11494742c249ccfdbd694567ec44a61",
-      "proposition_sha256": "684762726190a2fc5267b1b50139e0e9d2322de9af18566e32c31e4b5f714516",
-      "start_line": 251,
+      "prefix_sha256": "c36163fb439049712dd65ba071db579855fcdf414e217a771c87424ef7da11e9",
+      "proposition_sha256": "0fd38a243dfd8f26cc1426f14e8f92c1d8db5fc897eea8d6478352f20267580b",
+      "start_line": 268,
       "status": "checked",
       "uses": [
         {
@@ -222,11 +246,11 @@
         }
       ],
       "declaration_sha256": "05e10e63e243423d32530f1ce90a4c07233dd70c05f0e89af3f73bde3961f7b5",
-      "end_line": 261,
+      "end_line": 278,
       "name": "Notebook.EnergyOptimization.wrong_not_equivalent",
-      "prefix_sha256": "15083ec92d82550d1d287c5419a1763530d3d4a56e3a7b74cc1d242e156830d4",
-      "proposition_sha256": "a2775721045fd500c33211d872269b7604f4e368d1fd845504d460e360b72a11",
-      "start_line": 256,
+      "prefix_sha256": "bab7f9e417731f73358534b81458b3640b183fa7af2e46a02f38797c49c1bf68",
+      "proposition_sha256": "5946d3bbba714f23e9d4330e4001b01e0c8c4869ea13ae48ce7f60e05d7fa0d8",
+      "start_line": 273,
       "status": "checked",
       "uses": [
         {
@@ -252,11 +276,11 @@
         }
       ],
       "declaration_sha256": "40c8b46b522e261aed6d70e4cc8b7ee11999ddeda5cb80b3943c68f38823a992",
-      "end_line": 270,
+      "end_line": 287,
       "name": "Notebook.EnergyOptimization.wrong_breaks_contract",
-      "prefix_sha256": "48ad6cc7646a7a98cb7714712028cefdb47aa067157bec9c53a5a52d3d521fc7",
-      "proposition_sha256": "5e75e0ffdad239047dc08d811ab350fcb9528d4052e2bdcaac1a02392c255a5c",
-      "start_line": 263,
+      "prefix_sha256": "3e18aba0f04fdae47b1807aabc9536807093aaae578af0e7401b0f0809835e04",
+      "proposition_sha256": "e8e51201f8243d3197f6f598dc6c6183e3dca204f675ed754d8a8faa92bfd98a",
+      "start_line": 280,
       "status": "checked",
       "uses": [
         {
@@ -282,11 +306,11 @@
         }
       ],
       "declaration_sha256": "12b1d865670ad4fc370345e918a111cb4bf63c3d65a0ff7a412b0de53203bb79",
-      "end_line": 287,
+      "end_line": 304,
       "name": "Notebook.EnergyOptimization.four_is_sharp",
-      "prefix_sha256": "84f88c06ec75893d2c61754c20ba3eeb087b72fa9ff9433287c23098e090e605",
-      "proposition_sha256": "256abfa6e130e99a19379f452f9625a1720a2b44eff772dc372bc9e0078ead71",
-      "start_line": 279,
+      "prefix_sha256": "d315244602371bfd5d51e948181e11fb8660782c699b616ef8e03c1326d1bcec",
+      "proposition_sha256": "4040eb0feec31b406af0f3a2321d3d4290def5045978ee17089f7d3bb1c8f9e4",
+      "start_line": 296,
       "status": "checked",
       "uses": [
         {
@@ -297,15 +321,90 @@
       ]
     }
   ],
+  "decisions": {
+    "aed5c5240dd5968a358d823132fbdba903911f518f436e8d512aa35f9b132a63": {
+      "created": "2026-11-01T23:49:13+00:00",
+      "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d",
+      "outcome": {
+        "block": "\nnamespace Decided_energy_below_three\n\ndef forsetiContext : Gimle.Forseti.Syntax.Context :=\n  \u27e8[\"x\", \"y\"], by decide, by decide, by decide\u27e9\n\ndef forsetiAntecedent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.and (.and (.and (.atom .ge (.add (.var \u27e80, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1)))))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (1) 1)))))) (.atom .ge (.add (.var \u27e81, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1))))))) (.atom .le (.add (.var \u27e81, by decide\u27e9) (.neg (.constant (mkRat (1) 1))))))\n\ndef forsetiConsequent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.atom .le (.add (.add (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e80, by decide\u27e9) (.var \u27e80, by decide\u27e9))) (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e81, by decide\u27e9) (.var \u27e81, by decide\u27e9)))) (.neg (.constant (mkRat (3) 1)))))\n\ndef forsetiGoal : Gimle.Forseti.Syntax.Goal := \u27e8forsetiContext, forsetiAntecedent, forsetiConsequent\u27e9\n\n/-- x, y are real numbers. The entailment decider refuted it. Goal (entailment): entailment x, y : x >= -1 and x <= 1 and y >= -1 and y <= 1 |- 2*(x*x) + 2*(y*y) <= 3 -/\ntheorem energy_below_three :\n    \u2200 x y : \u211d, x \u2265 -1 \u2227 x \u2264 1 \u2227 y \u2265 -1 \u2227 y \u2264 1 \u2192 2 * (x * x) + 2 * (y * y) \u2264 3 := by\n  sorry\n\ntheorem energy_below_three_refuted : \u00ac (\u2200 x y : \u211d, x \u2265 -1 \u2227 x \u2264 1 \u2227 y \u2265 -1 \u2227 y \u2264 1 \u2192 2 * (x * x) + 2 * (y * y) \u2264 3) := by\n  have refuted : \u00ac Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent := by\n    exact Gimle.Forseti.Syntax.refutes_sound forsetiGoal [(\"x\", (mkRat (-3) 4)), (\"y\", (mkRat (-31) 32))] (by decide +kernel)\n  intro claim\n  have forsetiSucc : \u2200 {n : Nat} (k : Nat) (h : k + 1 < n + 1), (\u27e8k + 1, h\u27e9 : Fin (n + 1)) = Fin.succ \u27e8k, Nat.lt_of_succ_lt_succ h\u27e9 := fun _ _ => rfl\n  have forsetiCast0 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (2) 1) : \u211a) : \u211d) = 2 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (3) 1) : \u211a) : \u211d) = 3 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent) => refuted (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    revert claim\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n  \u00b7 intro lane\n    revert lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n\nend Decided_energy_below_three",
+        "reason": "Found by the refutation stage.",
+        "stages": [
+          [
+            "refutation",
+            "found",
+            "z3 sat"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate"
+          ]
+        ],
+        "status": "refuted",
+        "theorem": "energy_below_three_refuted"
+      },
+      "prefix_sha256": "5da7dc16bca3a8e1763304d1b45e16cf3327cff07b026c8be5b0650849c1b202",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three_refuted` as checked.",
+        "status": "checked",
+        "type": "Not\n  (\u2200 (x y : Real),\n    And (GE.ge x (-1)) (And (Real.instLE.le x 1) (And (GE.ge y (-1)) (Real.instLE.le y 1))) \u2192\n      Real.instLE.le (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 3)"
+      }
+    },
+    "e42b022eefc0d79a6c733bdb750d0149dcabfb559d6c90b83825aa7ce93ec49f": {
+      "created": "2026-11-01T23:44:31+00:00",
+      "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d",
+      "outcome": {
+        "block": "\nnamespace Decided_energy_in_band\n\ndef forsetiContext : Gimle.Forseti.Syntax.Context :=\n  \u27e8[\"x\", \"y\"], by decide, by decide, by decide\u27e9\n\ndef forsetiAntecedent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.and (.and (.and (.atom .ge (.add (.var \u27e80, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1)))))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (1) 1)))))) (.atom .ge (.add (.var \u27e81, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1))))))) (.atom .le (.add (.var \u27e81, by decide\u27e9) (.neg (.constant (mkRat (1) 1))))))\n\ndef forsetiConsequent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.and (.atom .ge (.add (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e80, by decide\u27e9) (.var \u27e80, by decide\u27e9))) (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e81, by decide\u27e9) (.var \u27e81, by decide\u27e9))))) (.atom .le (.add (.add (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e80, by decide\u27e9) (.var \u27e80, by decide\u27e9))) (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e81, by decide\u27e9) (.var \u27e81, by decide\u27e9)))) (.neg (.constant (mkRat (4) 1))))))\n\ndef forsetiGoal : Gimle.Forseti.Syntax.Goal := \u27e8forsetiContext, forsetiAntecedent, forsetiConsequent\u27e9\n\n/-- x, y are real numbers. The entailment decider proved it. Goal (entailment): entailment x, y : x >= -1 and x <= 1 and y >= -1 and y <= 1 |- 2*(x*x) + 2*(y*y) >= 0 and 2*(x*x) + 2*(y*y) <= 4 -/\ntheorem energy_in_band :\n    \u2200 x y : \u211d,\n      x \u2265 -1 \u2227 x \u2264 1 \u2227 y \u2265 -1 \u2227 y \u2264 1 \u2192\n      2 * (x * x) + 2 * (y * y) \u2265 0 \u2227 2 * (x * x) + 2 * (y * y) \u2264 4 := by\n  have root : Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent := by\n    exact Gimle.Forseti.Syntax.EntailmentCertificate.sound forsetiGoal \u27e8[\u27e8\u27e8[((mkRat (2) 1), (.var \u27e80, by decide\u27e9)), ((mkRat (2) 1), (.var \u27e81, by decide\u27e9))]\u27e9, [\u27e8[]\u27e9, \u27e8[]\u27e9, \u27e8[]\u27e9, \u27e8[]\u27e9]\u27e9, \u27e8\u27e8[]\u27e9, [\u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.neg (.var \u27e80, by decide\u27e9))))]\u27e9, \u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.var \u27e80, by decide\u27e9)))]\u27e9, \u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.neg (.var \u27e81, by decide\u27e9))))]\u27e9, \u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.var \u27e81, by decide\u27e9)))]\u27e9]\u27e9]\u27e9 (by decide +kernel)\n  have forsetiSucc : \u2200 {n : Nat} (k : Nat) (h : k + 1 < n + 1), (\u27e8k + 1, h\u27e9 : Fin (n + 1)) = Fin.succ \u27e8k, Nat.lt_of_succ_lt_succ h\u27e9 := fun _ _ => rfl\n  have forsetiCast0 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (2) 1) : \u211a) : \u211d) = 2 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (4) 1) : \u211a) : \u211d) = 4 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    revert claim\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n  \u00b7 intro lane\n    revert lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n\nend Decided_energy_in_band",
+        "reason": "Found by the certificate stage.",
+        "stages": [
+          [
+            "refutation",
+            "none",
+            "z3 unsat: no counterexample exists to check"
+          ],
+          [
+            "certificate",
+            "found",
+            "z3 sat with its 9-square dsos widening"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Syntax.Certificate"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "energy_in_band"
+      },
+      "prefix_sha256": "0707a787fa1ab4ca61549280d1b1be296ff070293d527cae196a2c5e1307ffbb",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.EnergyOptimization.Decided_energy_in_band.energy_in_band` as checked.",
+        "status": "checked",
+        "type": "\u2200 (x y : Real),\n  And (GE.ge x (-1)) (And (Real.instLE.le x 1) (And (GE.ge y (-1)) (Real.instLE.le y 1))) \u2192\n    And (GE.ge (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 0)\n      (Real.instLE.le (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 4)"
+      }
+    }
+  },
   "environment": {
-    "check": "0e79a0f025da6f0233b27215c24b9ffff13398150c97d873246eb7dce78185f0",
+    "check": "2165ca47c742bf813ba451bf34b4e63a632126134be9aa721a9eba66f986d954",
     "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d"
   },
   "format": "glitnir.project-checks/v2",
-  "source_sha256": "b1a9fdc202dd8ad7269f84c6cb6a7bd8ebfc7a241cea035ee0325f9b584a8538",
+  "source_sha256": "bcae8a7bec1b5caf9a452b82cfa786f33c30cad4dbe58242d04f5ea3b13d73b4",
   "views": {
     "223de730b9d126f4589cae4d8588bc3e8f62655f8b857f60f993ca490193a0a8": {
-      "created": "2026-10-29T19:38:19+00:00",
+      "created": "2026-11-01T23:55:15+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -465,12 +564,12 @@
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1050 420\" width=\"1050\" height=\"420\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 324 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,90 317,86 317,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 130 324 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,130 317,126 317,134\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 265 250 265 250 324 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,250 317,246 317,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 277 290 277 290 324 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,290 317,286 317,294\" fill=\"#476579\"></polygon><path d=\"M 484 90 C 509 90 509 90 568 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,90 561,86 561,94\" fill=\"#476579\"></polygon><path d=\"M 484 250 C 521 250 521 130 568 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,130 561,126 561,134\" fill=\"#476579\"></polygon><path d=\"M 728 90 C 753 90 753 90 800 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"800,90 793,86 793,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"960,90 1020,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1020,90 1013,86 1013,94\" fill=\"#476579\"></polygon><text x=\"985\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"568\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"603\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"573\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"573\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"708\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"800\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"835\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (2)</text><text x=\"805\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"940\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"370\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"392\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
       "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
-      "prefix_sha256": "940372f90c9e9ca552d9d2b629d50f557bbadba7e1b0e23876dce2d7fb0d7886",
+      "prefix_sha256": "c9f574af279c37d4670330cb9f372a08af0a52154ddd42e10555ff5b3d89881f",
       "provider": "forseti",
       "provider_sha256": "969c3b267c6e22f3558858a667f002b02a8d1d39982ab3f7ea51069b106070de"
     },
     "c4dd12e29e00b2b5ff0d1471f623481425fb6529b6091d6796f551f5c18c26a6": {
-      "created": "2026-10-29T19:38:19+00:00",
+      "created": "2026-11-01T23:55:15+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -630,7 +729,7 @@
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1050 420\" width=\"1050\" height=\"420\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 324 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,90 317,86 317,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 130 324 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,130 317,126 317,134\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 265 250 265 250 324 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,250 317,246 317,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 277 290 277 290 324 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,290 317,286 317,294\" fill=\"#476579\"></polygon><path d=\"M 484 90 C 509 90 509 90 568 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,90 561,86 561,94\" fill=\"#476579\"></polygon><path d=\"M 484 250 C 521 250 521 130 568 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,130 561,126 561,134\" fill=\"#476579\"></polygon><path d=\"M 728 90 C 753 90 753 90 800 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"800,90 793,86 793,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"960,90 1020,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1020,90 1013,86 1013,94\" fill=\"#476579\"></polygon><text x=\"985\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"568\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"603\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"573\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"573\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"708\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"800\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"835\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (3)</text><text x=\"805\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"940\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"370\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"392\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
       "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
-      "prefix_sha256": "f39803e1bd12712e66e4a7f8dcc0f34db04868588c5ac5d76869ce293b7b6865",
+      "prefix_sha256": "4a1b4764e0a76dd01e206e98e456b9bc5a9a504f1d4ef5900d1ae6c4a2f850fa",
       "provider": "forseti",
       "provider_sha256": "6bbe5f42fb468028b3b4d0533d98a979d45c144b9798884ced8cd87e5930ba6b"
     },
