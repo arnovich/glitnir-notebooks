@@ -15,12 +15,12 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "9d58571a4ce4c9408a71859bd334e99dfb8949fec008819e08c968b698255e57",
-      "end_line": 162,
-      "name": "Notebook.RobustHedge.Decided_covered_from_premium.covered_from_premium",
-      "prefix_sha256": "07319c92d6a335fe3859ec5a05602e50556cd59903f8eb3481d284324411ce54",
-      "proposition_sha256": "9ba81a57251a07c5735b4b19c00c0175bf491973df77b229c87f77dccfcc7736",
-      "start_line": 144,
+      "declaration_sha256": "538432b3e538569152eb37ec62ad808bebde2d2de65d536bf790559f146fc88f",
+      "end_line": 178,
+      "name": "Notebook.RobustHedge.Decided_covers_at_premium.covers_at_premium",
+      "prefix_sha256": "32a110c65c479cc592c11e1a4de1c65f3705b72d1ea594793c2059745bfa4bff",
+      "proposition_sha256": "73c70f85adc57931d7c092ef8bb34bf57b09d3d19a925b67e20e070d7e5f40bd",
+      "start_line": 160,
       "statement_expansion": {
         "kind": "definition",
         "text": "\u2200 (S : Nat \u2192 Real),\n  Eq (S 0) 100 \u2192\n    (\u2200 (k : Nat),\n        instLTNat.lt k 20 \u2192\n          (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef).InBand (S k) (S (instHAdd.hAdd k 1))) \u2192\n      Real.instLE.le (Gimle.Forseti.Hedging.call 100 (S 20))\n        (Gimle.Forseti.Hedging.wealth\n          (Gimle.Forseti.Hedging.hedge (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef)\n            (Gimle.Forseti.Hedging.call 100) 20)\n          (711 / 200) S 20)",
@@ -47,11 +47,11 @@
         }
       ],
       "declaration_sha256": "dfffa81bad7878eb92d121f7280dd6d8ca0571d9ad4171e8614ae7472954a93b",
-      "end_line": 177,
+      "end_line": 195,
       "name": "Notebook.RobustHedge.exact_price",
-      "prefix_sha256": "2f58f9712d27a7542ac5bad5cdc96d254d806035ad17267d977521dbfce38fc3",
-      "proposition_sha256": "1456fa6cb5e137d1ebe4e42532a5862be297eea09d07844d3bc61e97a4ec8fab",
-      "start_line": 173,
+      "prefix_sha256": "f04919928a483c3fa93061f21b921c7116ba77ce8c68831c409a5cc9cdaa4957",
+      "proposition_sha256": "e8a7a3aadad6608df62d5c15f7ec05f23869e3a709f05c0c5e3094dc1213fcab",
+      "start_line": 191,
       "status": "checked",
       "type": "Eq (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100)\n  (177744620736998422379605070486628497811 / 50000000000000000000000000000000000000)",
       "type_sha256": "79b630ea2b40c99cdfb01cca5747b870c12f05a9d602da53ae27fc31774986a2",
@@ -72,15 +72,15 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "8c216b51ebe3999f96c0f8e5f083bb93560969a79f98411f75b00e155a694d6b",
-      "end_line": 185,
+      "declaration_sha256": "bda0d9226d95f72798d8bc33a1ef3d43ab78619c65ea839b3f821aaff0ba266c",
+      "end_line": 202,
       "name": "Notebook.RobustHedge.price_decimal",
-      "prefix_sha256": "6c81bb389723dbe822a6074038d1c7e451e8184669a3aa28dc2f6f221a992c11",
-      "proposition_sha256": "c40d53258bb09d56fac66e9ceb6aeaf1ca43ca03e340d7d2f3a574f73d7b5fc2",
-      "start_line": 179,
+      "prefix_sha256": "dc3b392255386bee1225c616e7dac1c39ce006b0b2cb3377a39253e763e6a53b",
+      "proposition_sha256": "5eb80fa44f5fd1ae3db7c724d905c594c19e0bbf7a5ca8c0e9eb3e40287911ed",
+      "start_line": 197,
       "status": "checked",
-      "type": "And (Rat.instLT.lt (3554 / 1000) (177744620736998422379605070486628497811 / 50000000000000000000000000000000000000))\n  (Rat.instLT.lt (177744620736998422379605070486628497811 / 50000000000000000000000000000000000000) (3555 / 1000))",
-      "type_sha256": "a8e2122c1f76b905ce68b8e48bf007482fb4c661a2b03baf16e29106bda586a1",
+      "type": "And\n  (Real.instLT.lt (3554 / 1000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100)\n    (3555 / 1000))",
+      "type_sha256": "b1487371e9f9f4291f6e85e2f0f42930a940846c61cd6c92d57be33a8e4d1065",
       "uses": []
     },
     {
@@ -99,11 +99,11 @@
         }
       ],
       "declaration_sha256": "eb0ce559a834083d242c360ec17ca46fb81f5640a9a00b56d4dfae8fdaccd91e",
-      "end_line": 191,
+      "end_line": 208,
       "name": "Notebook.RobustHedge.least_premium",
-      "prefix_sha256": "69713a790eb2616e314aceadb0692a84cfe75ec0e0289c32e10cecfcb1d62afc",
-      "proposition_sha256": "ed46c2cbb8f041950fdd0fec37923331db2f26fac6aae632ed8ae9beff09cf1d",
-      "start_line": 187,
+      "prefix_sha256": "33943917326c3b50701857ee88f0d342836bf605ea41d4bf170bdff4ca4f2532",
+      "proposition_sha256": "6edb59a5c945c514c666c09763fff65e9952375a4641a8591b7a7deef1e0313a",
+      "start_line": 204,
       "statement_expansion": {
         "kind": "definition",
         "text": "And\n  (Set.instMembership.mem\n    (Set.ofPred fun w =>\n      Exists fun \u03b4 =>\n        Gimle.Forseti.Hedging.Covers Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 \u03b4 w 100)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100))\n  (Set.instMembership.mem\n    (lowerBounds\n      (Set.ofPred fun w =>\n        Exists fun \u03b4 =>\n          Gimle.Forseti.Hedging.Covers Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 \u03b4 w\n            100))\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100))",
@@ -129,12 +129,12 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "085c519ed95883e1026e526a60c19709bc42c289b909d7a5148e4903689e4122",
-      "end_line": 232,
-      "name": "Notebook.RobustHedge.Decided_cheaper_refuted.cheaper_refuted_refuted",
-      "prefix_sha256": "388c979ade722142f77664abd8e582e4ce9c47c94245547ebcc0e3e3219a073a",
-      "proposition_sha256": "735c4cf03349d56d16a5b49fb073bb96c06a374bfe188dd5e90bf629bf4e5f4d",
-      "start_line": 215,
+      "declaration_sha256": "98b674ff1d376fbc6133b79f8fe42f41eca56c0950e4ebc0074402d3b7300f8e",
+      "end_line": 248,
+      "name": "Notebook.RobustHedge.Decided_covers_from_seven_halves.covers_from_seven_halves_refuted",
+      "prefix_sha256": "420cfa8dbcd3235a42fdc03749a7d48be4651c8f0f4aab6554ae25aa45b8af6d",
+      "proposition_sha256": "9e835d52fccf9f5445e315874e829caec95ea84df2f5ac69098fc256b8cdabe6",
+      "start_line": 231,
       "status": "checked",
       "type": "Not\n  (Exists fun \u03b4 =>\n    Gimle.Forseti.Hedging.Covers (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef)\n      (Gimle.Forseti.Hedging.call 100) 20 \u03b4 (7 / 2) 100)",
       "type_sha256": "4bda77fb482c4d780f1379db7bc53032c32ae8a97614f9f9c6ad0e68dffffe99",
@@ -155,12 +155,12 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "3c2ab88513c69e67a6f881994c472cef8b2290fd2624d5c2e04941c621e18ed2",
-      "end_line": 326,
-      "name": "Notebook.RobustHedge.Decided_narrow_hedge_loses.narrow_hedge_loses_refuted",
-      "prefix_sha256": "adfaded199f9999623feaf478f2179defc74ceb88fe3674b9503bbe38be694e0",
-      "proposition_sha256": "fddb0c1f9a2c852b7ca3c2492e69e23fad38f98e23d38a07b1cd64ebd8274e58",
-      "start_line": 303,
+      "declaration_sha256": "c1060edb5bf08280810fc96018f15e36c995d08b228663f769912e5a68df0f4a",
+      "end_line": 345,
+      "name": "Notebook.RobustHedge.Decided_narrow_within_four.narrow_within_four_refuted",
+      "prefix_sha256": "3590556d1b90d272cb7e160c9706a9373e7d94475793b6baf904a31b5dc02210",
+      "proposition_sha256": "a1f02c1a6635b5aa346a3e235dcd54a9a7adfe2656ef1a1068135ea81593a847",
+      "start_line": 322,
       "status": "checked",
       "type": "Not\n  (\u2200 (S : Nat \u2192 Real),\n    Eq (S 0) 100 \u2192\n      (\u2200 (k : Nat),\n          instLTNat.lt k 20 \u2192\n            (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef).InBand (S k) (S (instHAdd.hAdd k 1))) \u2192\n        Real.instLE.le (-4)\n          (instHSub.hSub\n            (Gimle.Forseti.Hedging.wealth\n              (Gimle.Forseti.Hedging.hedge (Gimle.Forseti.Hedging.Band.ofRat (1 / 100) (1 / 100) \u22ef \u22ef \u22ef)\n                (Gimle.Forseti.Hedging.call 100) 20)\n              (Gimle.Forseti.Hedging.price (Gimle.Forseti.Hedging.Band.ofRat (1 / 100) (1 / 100) \u22ef \u22ef \u22ef)\n                (Gimle.Forseti.Hedging.call 100) 20 100)\n              S 20)\n            (Gimle.Forseti.Hedging.call 100 (S 20))))",
       "type_sha256": "d33dbf4fa853415e559cf9dc37f694cb3f55d23ccd8f4a169233b516bed40492",
@@ -181,15 +181,15 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "6ebbe70c88af71a0bb2f340b3ee9acaeaa7e60f2f579ad0b8e2df7d9b75df04a",
-      "end_line": 356,
-      "name": "Notebook.RobustHedge.zigzag_loss_decimal",
-      "prefix_sha256": "63985dc8a7d8bcd713e84a2b3d883120c53e49d7cd15563fa976c1eae7b976d7",
-      "proposition_sha256": "0d9d3999ebb37b1fb42619871251b458ebf90ebf409bf01a3e59a0cfab75b00a",
-      "start_line": 348,
+      "declaration_sha256": "3312fd2e4864032b245d5e415f7d79fe644c35ead0333a1a345abce8ef29f65a",
+      "end_line": 380,
+      "name": "Notebook.RobustHedge.zigzag_shortfall_decimal",
+      "prefix_sha256": "56e01a42b16c556a9ebfde4100be60bf179f1d60d065786511bc8b5320ee5a6c",
+      "proposition_sha256": "32569a69a6eeb43cfc0d432795ff26c2c8e27224785804d0f62272c7a6094afb",
+      "start_line": 370,
       "status": "checked",
-      "type": "And\n  (Rat.instLT.lt (-411295 / 100000)\n    (-215634705196340256271204096412694900382147731 / 52428800000000000000000000000000000000000000))\n  (Rat.instLT.lt (-215634705196340256271204096412694900382147731 / 52428800000000000000000000000000000000000000)\n    (-411285 / 100000))",
-      "type_sha256": "6eeb16f26d04bdc734e8a63de3719f0e104fbabca36d5a95d6f3d1b69d1eee85",
+      "type": "And\n  (Real.instLT.lt (-411295 / 100000)\n    (instHSub.hSub\n      (Gimle.Forseti.Hedging.wealth\n        (Gimle.Forseti.Hedging.hedge Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20)\n        (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100)\n        (fun k => (Gimle.Forseti.Examples.RobustCall.zigzagSpot k).cast) 20)\n      (Gimle.Forseti.Hedging.call 100 (Gimle.Forseti.Examples.RobustCall.zigzagSpot 20).cast)))\n  (Real.instLT.lt\n    (instHSub.hSub\n      (Gimle.Forseti.Hedging.wealth\n        (Gimle.Forseti.Hedging.hedge Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20)\n        (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100)\n        (fun k => (Gimle.Forseti.Examples.RobustCall.zigzagSpot k).cast) 20)\n      (Gimle.Forseti.Hedging.call 100 (Gimle.Forseti.Examples.RobustCall.zigzagSpot 20).cast))\n    (-411285 / 100000))",
+      "type_sha256": "806d55e4a18db0f6dbeb8b2fe1cfa0f32eaf70343e1635428f23f3da55aa6b40",
       "uses": []
     },
     {
@@ -207,12 +207,133 @@
           "name": "Quot.sound"
         }
       ],
+      "declaration_sha256": "d9a1f0d4ed0bc9c8879c54fe3ae2c2f177cb4b80dc6cb6daf0a15afc47b79682",
+      "end_line": 404,
+      "name": "Notebook.RobustHedge.offset_inBand",
+      "prefix_sha256": "d9a48d641871d52f198f7bc0bf26e2893ca702f7c35d04debb2094594fad8a60",
+      "proposition_sha256": "71a56f5644f6587524a33b473f5bfba01daa51292efe2b2ca6ff7efe21838ca8",
+      "start_line": 402,
+      "status": "checked",
+      "type": "\u2200 (k : Nat),\n  instLTNat.lt k 20 \u2192\n    And (Rat.instLE.le (Rat.instNeg.neg (1 / 50)) (Notebook.RobustHedge.offsetZigzag k))\n      (Rat.instLE.le (Notebook.RobustHedge.offsetZigzag k) (1 / 50))",
+      "type_sha256": "6b52d0d12a9e0748389d71a1970ecc5a884241430c19e3a52ad6585111008bba",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "2ce7742878e44384f42dcf169a4a8a8c59aa0992d7f528ee14197c84abc417bb",
+      "end_line": 426,
+      "name": "Notebook.RobustHedge.offset_shortfall",
+      "prefix_sha256": "ba183c9ccd95afa7bff5264a870aad2f736643139c7a97f1c79eb5890cc4c7bb",
+      "proposition_sha256": "3c981d7b00bf8daeb85c4c265e35b60c10ab05345a6dd721b635923096cc1b01",
+      "start_line": 406,
+      "status": "checked",
+      "type": "Eq\n  (instHSub.hSub\n    (Gimle.Forseti.Hedging.wealth\n      (Gimle.Forseti.Hedging.hedge Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20)\n      (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100)\n      (fun k => (Gimle.Forseti.Hedging.spotQ 100 Notebook.RobustHedge.offsetZigzag k).cast) 20)\n    (Gimle.Forseti.Hedging.call 100 (Gimle.Forseti.Hedging.spotQ 100 Notebook.RobustHedge.offsetZigzag 20).cast))\n  (-5020803849242416135129911003500656238480441941 / 1048576000000000000000000000000000000000000000)",
+      "type_sha256": "bb2a5af09c69c232b62cedef880910856dca0ddc0523da7c32e0c8327595ce7b",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "7f8b770014f89e76dbd271c29719d6b999c510d0b171a7fd2b6ec4773b3e2129",
+      "end_line": 438,
+      "name": "Notebook.RobustHedge.offset_shortfall_decimal",
+      "prefix_sha256": "8388b562e761d2ed8cc2136f31344c9bc4616d748c11cf2ec81a0248d2d05690",
+      "proposition_sha256": "c89d2b67cd3c27e19da807485e0757c8a09947d26bc4a17c34db541c5bd4caf6",
+      "start_line": 428,
+      "status": "checked",
+      "type": "And\n  (Real.instLT.lt (-478825 / 100000)\n    (instHSub.hSub\n      (Gimle.Forseti.Hedging.wealth\n        (Gimle.Forseti.Hedging.hedge Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20)\n        (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100)\n        (fun k => (Gimle.Forseti.Hedging.spotQ 100 Notebook.RobustHedge.offsetZigzag k).cast) 20)\n      (Gimle.Forseti.Hedging.call 100 (Gimle.Forseti.Hedging.spotQ 100 Notebook.RobustHedge.offsetZigzag 20).cast)))\n  (Real.instLT.lt\n    (instHSub.hSub\n      (Gimle.Forseti.Hedging.wealth\n        (Gimle.Forseti.Hedging.hedge Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20)\n        (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100)\n        (fun k => (Gimle.Forseti.Hedging.spotQ 100 Notebook.RobustHedge.offsetZigzag k).cast) 20)\n      (Gimle.Forseti.Hedging.call 100 (Gimle.Forseti.Hedging.spotQ 100 Notebook.RobustHedge.offsetZigzag 20).cast))\n    (-478815 / 100000))",
+      "type_sha256": "db773f5b4629dd17b7599919beafd115a27d0933175c2be32dbba78d9f9c32a4",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "RobustHedge",
+          "name": "Notebook.RobustHedge.offset_shortfall"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "b54e2af44f854c104af6dec3a117241948241eea3895a7d8840367d7e301223f",
+      "end_line": 453,
+      "name": "Notebook.RobustHedge.narrow_hedge_not_within_4_75",
+      "prefix_sha256": "c6bd2434dcf3fde1e47858a57ebb79c8e79958413bf4501ffb8c02927a3c33c5",
+      "proposition_sha256": "eecae72e0b5683757e18a33e421ca8c53448a47626e92441bdf480e2d7ffbf22",
+      "start_line": 440,
+      "status": "checked",
+      "type": "Not\n  (\u2200 (S : Nat \u2192 Real),\n    Eq (S 0) 100 \u2192\n      (\u2200 (k : Nat), instLTNat.lt k 20 \u2192 Gimle.Forseti.Examples.RobustCall.wide.InBand (S k) (S (instHAdd.hAdd k 1))) \u2192\n        Real.instLE.le (Real.instNeg.neg (475 / 100))\n          (instHSub.hSub\n            (Gimle.Forseti.Hedging.wealth\n              (Gimle.Forseti.Hedging.hedge Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20)\n              (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20\n                100)\n              S 20)\n            (Gimle.Forseti.Hedging.call 100 (S 20))))",
+      "type_sha256": "dc029f9163e91c136aade7ccb5e7c07670a5462679f0f6c7cefa9015caec4b11",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "RobustHedge",
+          "name": "Notebook.RobustHedge.offset_inBand"
+        },
+        {
+          "in_notebook": true,
+          "module": "RobustHedge",
+          "name": "Notebook.RobustHedge.offset_shortfall"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
       "declaration_sha256": "fc0b36a33af891f3a6b92ccd43b7c418e1ab03b2cd115d0336748f44b02d6210",
-      "end_line": 417,
+      "end_line": 512,
       "name": "Notebook.RobustHedge.table_1_percent",
-      "prefix_sha256": "105572aaeac3ad755a9830f40ff0953b2533e428484faf6eb831333e990e9836",
-      "proposition_sha256": "2a8618a4b4215dc9b459b1cb566e58a3f0eb1676fa38cbcf5356b33d945701dd",
-      "start_line": 412,
+      "prefix_sha256": "0d8d5903fb77762d4211b90361d6c2bf855c607d2e436ce395591c58b06cd1ed",
+      "proposition_sha256": "c2b60840c50d51c7fc778f4cf620b955c51a10b261ac8bf0ccd208c8ccb4d03f",
+      "start_line": 507,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (177015 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.narrow (Gimle.Forseti.Hedging.call 100) 20 100)\n    (177025 / 100000))",
       "type_sha256": "415097615e11972edc9251aa725ff162dec6a68e57e4d4b0a145a4ce49ca524d",
@@ -234,11 +355,11 @@
         }
       ],
       "declaration_sha256": "6549f6ce919b800c7081c2aada3f5af75d7017de8526365a34666e03909ffd4a",
-      "end_line": 424,
+      "end_line": 519,
       "name": "Notebook.RobustHedge.table_2_percent",
-      "prefix_sha256": "aaa51f512d6e1c3765dfc8765e62841d7a96142e5eea2988a38eb69d680a9786",
-      "proposition_sha256": "6977a7292090e798c01c9b8ef4741e6a895a470731670e29c0d64701672d5cd8",
-      "start_line": 419,
+      "prefix_sha256": "5854ad34315be5442b7624b3b3799a81f43373b1757d5cd82f362152d5d76fa3",
+      "proposition_sha256": "557c48b5cda465f422649c85d589f8d65301ecccbe9ca8cc9d3554a10efb4bdc",
+      "start_line": 514,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (355485 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 20 100)\n    (355495 / 100000))",
       "type_sha256": "24a6f57406c9cfd1b55ab73ea30109fde5734b8b485dbdcf74de1339a29b4f5a",
@@ -260,11 +381,11 @@
         }
       ],
       "declaration_sha256": "242b6afd673842d96d49216da248f61264de50d3b5d591dc1aafe7b4992aa6aa",
-      "end_line": 434,
+      "end_line": 529,
       "name": "Notebook.RobustHedge.table_3_percent",
-      "prefix_sha256": "f6bda38dcbe6fd0e3b4877094d2c2c105f7dc7e547ad84afa18f51c1ad6913bc",
-      "proposition_sha256": "d6d77b9901f3f0b4a351db6afcf42cba356786ffdfb532c0fc49c1cb5317a783",
-      "start_line": 426,
+      "prefix_sha256": "cdc43585e652970e54ec56f63286def9a11697579279dec2a73565e9642c57fd",
+      "proposition_sha256": "832d531163664cc4ba950f3d73c2f09a7a58c699c53838f174ff40cb49b79fff",
+      "start_line": 521,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (535055 / 100000)\n    (Gimle.Forseti.Hedging.price (Gimle.Forseti.Hedging.Band.ofRat (3 / 100) (3 / 100) \u22ef \u22ef \u22ef)\n      (Gimle.Forseti.Hedging.call 100) 20 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price (Gimle.Forseti.Hedging.Band.ofRat (3 / 100) (3 / 100) \u22ef \u22ef \u22ef)\n      (Gimle.Forseti.Hedging.call 100) 20 100)\n    (535065 / 100000))",
       "type_sha256": "f271ef0e8836e69aa606c02f68e9ad71226a9231f4f9cb2c760f8c361cafc5a8",
@@ -286,11 +407,11 @@
         }
       ],
       "declaration_sha256": "ccd32e8fb25a7e1dffaa479677139e8d6fa205a55016226f2c4129bf55699db4",
-      "end_line": 441,
+      "end_line": 536,
       "name": "Notebook.RobustHedge.table_5_steps",
-      "prefix_sha256": "3f32a2bf1cfaf644f1b0ae04ca4f792bf88697af8e38201f27ea48b1fb6e239b",
-      "proposition_sha256": "23546e4086baf5c3c2d4e8410211396b946c6d4f8139f969e3c4f5039027756a",
-      "start_line": 436,
+      "prefix_sha256": "5378748c0803bd311beb9bc42504738325d09524423df185baeea831f89b4a31",
+      "proposition_sha256": "3ea82ee2db1fd69c6bd86db7e4051d4d3ade0795bfcab5519ef6158b4ccdf3d2",
+      "start_line": 531,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (187445 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 5 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 5 100)\n    (187455 / 100000))",
       "type_sha256": "5ed1f07eaff594d726b65ef0f5f590a54993c7ec0885924c4c8bf164c20c1bb2",
@@ -312,11 +433,11 @@
         }
       ],
       "declaration_sha256": "ae3a7960ceab30bc138fb2ddff0a9d6c0d53ea85e65f96fc9975575e476fdfc3",
-      "end_line": 448,
+      "end_line": 543,
       "name": "Notebook.RobustHedge.table_60_steps",
-      "prefix_sha256": "bf7da653dd735e07233845543e125da148b70fa88e71f5de74eef5232ac3f6ed",
-      "proposition_sha256": "36193661ab480d2a723878cfda2e67cadce839866e7d7fcf11750f6a5b7856fa",
-      "start_line": 443,
+      "prefix_sha256": "47fc55fb0e78e28dee1dbe2a1671ee0049824c5ce925ac5bb88b4f27de7104c0",
+      "proposition_sha256": "adc293ad6ac50ea57e0491f34afe65a1f67241a7a3e514425b712b514b465fe1",
+      "start_line": 538,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (619215 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 60 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 60 100)\n    (619225 / 100000))",
       "type_sha256": "7b08a16779b9eedacf8d8431a34e6e3945d94e99bb3ec1d5556eff335d7ba8bc",
@@ -338,11 +459,11 @@
         }
       ],
       "declaration_sha256": "cdee52de71b12597ef083e401348a5657d9b5073aed18cdc831c0f3f944b8a66",
-      "end_line": 455,
+      "end_line": 550,
       "name": "Notebook.RobustHedge.table_250_steps",
-      "prefix_sha256": "32ca41a8e5b3197138b7332c3fccb0ff87e43685681b124341631146d5b40a98",
-      "proposition_sha256": "0680e48502f55997eafccc310effeb078fa8bcbb556572c7f846e439bd9172dc",
-      "start_line": 450,
+      "prefix_sha256": "538887315b7fbbeb29724473758931e3632a835393564a8fecfd8c56af55a4a1",
+      "proposition_sha256": "3ac7971bac9c773fdebce5e1218a3142085dffdcaebb11cbb4296e1da61e4777",
+      "start_line": 545,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (1257045 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 250 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.call 100) 250 100)\n    (1257055 / 100000))",
       "type_sha256": "b1324d88494bd1bc8aeae80384e066eb585e901541a5bb6cf055966a22c2f531",
@@ -363,12 +484,12 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "b38dcaf987b94494726c14854651a9fd7b4d6265b562029ab931112dac3e1352",
-      "end_line": 462,
+      "declaration_sha256": "27061b576e76bf95d0ee5b9fe45804001312c1717bc666f5395216b14a3bd251",
+      "end_line": 558,
       "name": "Notebook.RobustHedge.table_put",
-      "prefix_sha256": "607176d08a48a77aecb37093b585549f1f0bbd2c5aeb02bb2f59ea0118935643",
-      "proposition_sha256": "51eeda73fa6163d77dc7435feb629cc8c2b8704bddd045f533e283877bfdd968",
-      "start_line": 457,
+      "prefix_sha256": "1b07a09f80218f24775cd38ddb54ef50f23538916014f1e60bec042d29c049f8",
+      "proposition_sha256": "c8f7c82638828a5cdca89cb78b77595817baf5b799c4f2c38bc3190611194367",
+      "start_line": 552,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (355485 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.put 100) 20 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.put 100) 20 100)\n    (355495 / 100000))",
       "type_sha256": "9bf60d28ad6ef8db9f5db4a93a4fca03675c294e3beff92110ce66ad53f17858",
@@ -389,12 +510,12 @@
           "name": "Quot.sound"
         }
       ],
-      "declaration_sha256": "f3ac91b6734e9cc7418378109cc0fb4dd814751cdef8dbb62c7152e989e88612",
-      "end_line": 469,
+      "declaration_sha256": "77eb166c90f66b3df6c5bb9c9bca8dfd609b94b81155ffe3eb0ea78f93e84e9d",
+      "end_line": 565,
       "name": "Notebook.RobustHedge.table_straddle",
-      "prefix_sha256": "f5600d5f750bbf5e6d2a87df6b3b5e02160e9731951ff6a739c268e2b108a191",
-      "proposition_sha256": "30d4cf65cf3f86a48a76697b1ff47bbc045623e95ceeefe7cc9fa795b5037a80",
-      "start_line": 464,
+      "prefix_sha256": "171657bbde7df319e87728c2d8217819f9dba90dd040f6843519c1c8856edef6",
+      "proposition_sha256": "ac8b3692a4ed1100e19db3ba16693ad04807536442e1e9bedd545325202a118e",
+      "start_line": 560,
       "status": "checked",
       "type": "And\n  (Real.instLT.lt (710975 / 100000)\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.straddle 100) 20 100))\n  (Real.instLT.lt\n    (Gimle.Forseti.Hedging.price Gimle.Forseti.Examples.RobustCall.wide (Gimle.Forseti.Hedging.straddle 100) 20 100)\n    (710985 / 100000))",
       "type_sha256": "06570a050174248f25f83e62011d8c3da2bc25b479f617b3ec415841649e84d6",
@@ -402,50 +523,11 @@
     }
   ],
   "decisions": {
-    "423ef51520210888b6a6625b46da5103c3087ae27a91f3dadacca8833ce29eeb": {
-      "created": "2026-11-01T22:56:32+00:00",
+    "29ff6613166b472db03fc7d320a5c9bf8bbe137f4860015fe605d458b6634362": {
+      "created": "2026-11-01T23:46:04+00:00",
       "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
       "outcome": {
-        "block": "namespace Decided_narrow_hedge_loses\n\nopen Gimle.Forseti.Hedging\n\ndef forsetiReturns : List \u211a := [1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50]\n\ndef forsetiClaim : Prop :=\n  \u2200 S : \u2115 \u2192 \u211d, S 0 = 100 \u2192\n    (\u2200 k < 20, (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)).InBand (S k) (S (k + 1))) \u2192\n    -4 \u2264 wealth (hedge (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n      (price (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 100) S 20 - call 100 (S 20)\n\n/-- The hedge built for returns within \u22121 % and +1 % (\u22121/100 and +1/100) a step, started from its own price and rebalanced at each of 20 steps with zero interest and no costs, ends at most 4 below the payoff of the call struck at 100 (the seller's account less the payoff is at least \u22124) on every path from a spot of 100 whose simple returns stay within \u22122 % and +2 % (\u22121/50 and +1/50) a step. The hedging decider refuted it. On the zigzag (up and down by turns) of 20 steps of +2 % (+1/50) and \u22122 % (\u22121/50), the seller's account less the payoff ends at \u2212215634705196340256271204096412694900382147731/52428800000000000000000000000000000000000000 (\u2248 \u22124.1129), below \u22124. Goal (hedging): hedging call strike 100 spot 100 band down 1/100 up 1/100 steps 20 against down 1/50 up 1/50 shortfall <= 4 -/\ntheorem narrow_hedge_loses_refuted : \u00ac (\u2200 S : \u2115 \u2192 \u211d, S 0 = 100 \u2192\n      (\u2200 k < 20, (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)).InBand (S k) (S (k + 1))) \u2192\n      -4 \u2264 wealth (hedge (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n        (price (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 100) S 20 - call 100 (S 20)) := by\n  have refuted : \u00ac forsetiClaim := by\n    unfold forsetiClaim\n    intro h\n    have hr : \u2200 k < 20, -(1/50 : \u211a) \u2264 forsetiReturns.getD k 0 \u2227 forsetiReturns.getD k 0 \u2264 1/50 := by decide +kernel\n    have h0 : ((spotQ 100 (fun k => forsetiReturns.getD k 0) 0 : \u211a) : \u211d) = 100 := by norm_num [spotQ]\n    have key := h (fun k => ((spotQ 100 (fun k => forsetiReturns.getD k 0) k : \u211a) : \u211d)) h0 (spotQ_inBand (S\u2080 := 100) (N := 20) (r := fun k => forsetiReturns.getD k 0) (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num) (by norm_num) hr)\n    have hw := wealth_hedge_cast (fun S => call_cast 100 S) (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num) 20 100 (fun k => forsetiReturns.getD k 0) 20\n    have hc := call_cast 100 (spotQ 100 (fun k => forsetiReturns.getD k 0) 20)\n    have hk : wealthQ (callQ 100) (1/100) (1/100) 20 100 (fun k => forsetiReturns.getD k 0) 20 - callQ 100 (spotQ 100 (fun k => forsetiReturns.getD k 0) 20) = -215634705196340256271204096412694900382147731/52428800000000000000000000000000000000000000 := by decide +kernel\n    have hs := congrArg (Rat.cast : \u211a \u2192 \u211d) hk\n    push_cast at hw hc hs\n    linarith\n  intro claim\n  refine (fun (bridge : _ \u2194 forsetiClaim) => refuted (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_narrow_hedge_loses",
-        "reason": "Found by the extreme-path stage.",
-        "stages": [
-          [
-            "binding",
-            "supported",
-            "the call struck at 100, 20 steps"
-          ],
-          [
-            "extreme-path",
-            "found",
-            "on the zigzag (up and down by turns) of 20 steps of +2 % (+1/50) and \u22122 % (\u22121/50), the hedge ends \u2248 4.1129 below the payoff, more than 4"
-          ],
-          [
-            "imports",
-            "needed",
-            "import Gimle.Forseti.Hedging"
-          ]
-        ],
-        "status": "refuted",
-        "theorem": "narrow_hedge_loses_refuted"
-      },
-      "prefix_sha256": "dad548e7028fafd72c5b1e841d64eaa586d1b0a7df66883101e0fc6679d76a71",
-      "provider": "forseti",
-      "verification": {
-        "axioms": [
-          "propext",
-          "Classical.choice",
-          "Quot.sound"
-        ],
-        "message": "The checker reports `Notebook.RobustHedge.Decided_narrow_hedge_loses.narrow_hedge_loses_refuted` as checked.",
-        "status": "checked",
-        "type": "Not\n  (\u2200 (S : Nat \u2192 Real),\n    Eq (S 0) 100 \u2192\n      (\u2200 (k : Nat),\n          instLTNat.lt k 20 \u2192\n            (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef).InBand (S k) (S (instHAdd.hAdd k 1))) \u2192\n        Real.instLE.le (-4)\n          (instHSub.hSub\n            (Gimle.Forseti.Hedging.wealth\n              (Gimle.Forseti.Hedging.hedge (Gimle.Forseti.Hedging.Band.ofRat (1 / 100) (1 / 100) \u22ef \u22ef \u22ef)\n                (Gimle.Forseti.Hedging.call 100) 20)\n              (Gimle.Forseti.Hedging.price (Gimle.Forseti.Hedging.Band.ofRat (1 / 100) (1 / 100) \u22ef \u22ef \u22ef)\n                (Gimle.Forseti.Hedging.call 100) 20 100)\n              S 20)\n            (Gimle.Forseti.Hedging.call 100 (S 20))))"
-      }
-    },
-    "4407aa1a496ab58b9278e781ee610deb59e536721afb590b07c7964eea454e46": {
-      "created": "2026-11-01T22:54:54+00:00",
-      "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
-      "outcome": {
-        "block": "namespace Decided_cheaper_refuted\n\nopen Gimle.Forseti.Hedging\n\ndef forsetiClaim : Prop :=\n  \u2200 \u03b4 : \u2115 \u2192 \u211d \u2192 \u211d,\n    \u00ac Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 \u03b4 (7/2) 100\n\n/-- Some spot-feedback strategy, holding over each step a number of units set by the step and the spot, keeps the seller's account at least at the payoff of the call struck at 100 on every path from a spot of 100 whose simple returns stay within \u22122 % and +2 % (\u22121/50 and +1/50) a step, from a premium of 3.5 (7/2), rebalanced at each of 20 steps with zero interest and no costs. The hedging decider refuted it. The premium is below the binomial price at the band, 177744620736998422379605070486628497811/50000000000000000000000000000000000000 (\u2248 3.5549), the least premium from which any spot-feedback strategy covers the payoff. Goal (hedging): hedging call strike 100 spot 100 band down 1/50 up 1/50 steps 20 premium 7/2 covers -/\ntheorem cheaper_refuted_refuted : \u00ac (\u2203 \u03b4 : \u2115 \u2192 \u211d \u2192 \u211d,\n      Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 \u03b4 (7/2) 100) := by\n  have refuted : forsetiClaim := by\n    unfold forsetiClaim\n    have hq : (7/2 : \u211a) < priceQ (callQ 100) (1/50) (1/50) 20 100 := by decide +kernel\n    have hr := Rat.cast_lt (K := \u211d) |>.mpr hq\n    have hp := price_cast (fun S => call_cast 100 S) (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num) 20 100\n    push_cast at hp hr\n    rw [\u2190 hp] at hr\n    exact not_covers_of_lt (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 (by norm_num) hr\n  intro claim\n  refine (fun (bridge : _ \u2194 \u2203 \u03b4 : \u2115 \u2192 \u211d \u2192 \u211d, Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 \u03b4 (7/2) 100) => (not_exists.mpr refuted) (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_cheaper_refuted",
+        "block": "namespace Decided_covers_from_seven_halves\n\nopen Gimle.Forseti.Hedging\n\ndef forsetiClaim : Prop :=\n  \u2200 \u03b4 : \u2115 \u2192 \u211d \u2192 \u211d,\n    \u00ac Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 \u03b4 (7/2) 100\n\n/-- Some spot-feedback strategy, holding over each step a number of units set by the step and the spot, keeps the seller's account at least at the payoff of the call struck at 100 on every path from a spot of 100 whose simple returns stay within \u22122 % and +2 % (\u22121/50 and +1/50) a step, from a premium of 3.5 (7/2), rebalanced at each of 20 steps with zero interest and no costs. The hedging decider refuted it. The premium is below the binomial price at the band, 177744620736998422379605070486628497811/50000000000000000000000000000000000000 (\u2248 3.5549), the least premium from which any spot-feedback strategy covers the payoff. Goal (hedging): hedging call strike 100 spot 100 band down 1/50 up 1/50 steps 20 premium 7/2 covers -/\ntheorem covers_from_seven_halves_refuted : \u00ac (\u2203 \u03b4 : \u2115 \u2192 \u211d \u2192 \u211d,\n      Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 \u03b4 (7/2) 100) := by\n  have refuted : forsetiClaim := by\n    unfold forsetiClaim\n    have hq : (7/2 : \u211a) < priceQ (callQ 100) (1/50) (1/50) 20 100 := by decide +kernel\n    have hr := Rat.cast_lt (K := \u211d) |>.mpr hq\n    have hp := price_cast (fun S => call_cast 100 S) (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num) 20 100\n    push_cast at hp hr\n    rw [\u2190 hp] at hr\n    exact not_covers_of_lt (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 (by norm_num) hr\n  intro claim\n  refine (fun (bridge : _ \u2194 \u2203 \u03b4 : \u2115 \u2192 \u211d \u2192 \u211d, Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 \u03b4 (7/2) 100) => (not_exists.mpr refuted) (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_covers_from_seven_halves",
         "reason": "Found by the price stage.",
         "stages": [
           [
@@ -465,9 +547,9 @@
           ]
         ],
         "status": "refuted",
-        "theorem": "cheaper_refuted_refuted"
+        "theorem": "covers_from_seven_halves_refuted"
       },
-      "prefix_sha256": "52557cae2e59b657e7d4b51b9f6b60ab5864565a459794a339f362a1a206ddff",
+      "prefix_sha256": "09fb8a783b52a67258fea28cf0d60085559096fcf2f82e4bfed4232ca32a5d0c",
       "provider": "forseti",
       "verification": {
         "axioms": [
@@ -475,52 +557,13 @@
           "Classical.choice",
           "Quot.sound"
         ],
-        "message": "The checker reports `Notebook.RobustHedge.Decided_cheaper_refuted.cheaper_refuted_refuted` as checked.",
+        "message": "The checker reports `Notebook.RobustHedge.Decided_covers_from_seven_halves.covers_from_seven_halves_refuted` as checked.",
         "status": "checked",
         "type": "Not\n  (Exists fun \u03b4 =>\n    Gimle.Forseti.Hedging.Covers (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef)\n      (Gimle.Forseti.Hedging.call 100) 20 \u03b4 (7 / 2) 100)"
       }
     },
-    "92df7ac3c8107e21f215d517e2695128109a3b4ac89d477e8ec4e5f6568b19ea": {
-      "created": "2026-11-01T22:53:15+00:00",
-      "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
-      "outcome": {
-        "block": "namespace Decided_covered_from_premium\n\nopen Gimle.Forseti.Hedging\n\ndef forsetiClaim : Prop :=\n  Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20\n    (hedge (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n    (711/200) 100\n\n/-- Sold for a premium of 3.555 (711/200) and hedged at the band's binomial hedge ratio, rebalanced at each of 20 steps with zero interest and no costs, the seller's account ends at least at the payoff of the call struck at 100 on every path from a spot of 100 whose simple returns stay within \u22122 % and +2 % (\u22121/50 and +1/50) a step. The hedging decider proved it. The binomial price at the band is 177744620736998422379605070486628497811/50000000000000000000000000000000000000 (\u2248 3.5549); any premium of at least the price covers the payoff, 3.5549 (the price rounded up to four places) among them. Goal (hedging): hedging call strike 100 spot 100 band down 1/50 up 1/50 steps 20 premium 711/200 covers -/\ntheorem covered_from_premium :\n    Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20\n      (hedge (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n      (711/200) 100 := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    have hq : priceQ (callQ 100) (1/50) (1/50) 20 100 \u2264 711/200 := by decide +kernel\n    have hr := Rat.cast_le (K := \u211d) |>.mpr hq\n    have hp := price_cast (fun S => call_cast 100 S) (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num) 20 100\n    push_cast at hp hr\n    rw [\u2190 hp] at hr\n    exact Covers.mono hr (covers_hedge (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call_convexOn 100) 20 (by norm_num))\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_covered_from_premium",
-        "reason": "Found by the price stage.",
-        "stages": [
-          [
-            "binding",
-            "supported",
-            "the call struck at 100, 20 steps"
-          ],
-          [
-            "price",
-            "found",
-            "the binomial price \u2248 3.5549 is at most the premium 711/200"
-          ],
-          [
-            "imports",
-            "needed",
-            "import Gimle.Forseti.Hedging"
-          ]
-        ],
-        "status": "proven",
-        "theorem": "covered_from_premium"
-      },
-      "prefix_sha256": "cf91a563a3a4250414191cfc04aae3b25b350183f542f088fd8390a370505d74",
-      "provider": "forseti",
-      "verification": {
-        "axioms": [
-          "propext",
-          "Classical.choice",
-          "Quot.sound"
-        ],
-        "message": "The checker reports `Notebook.RobustHedge.Decided_covered_from_premium.covered_from_premium` as checked.",
-        "status": "checked",
-        "type": "Gimle.Forseti.Hedging.Covers (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef) (Gimle.Forseti.Hedging.call 100)\n  20\n  (Gimle.Forseti.Hedging.hedge (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef)\n    (Gimle.Forseti.Hedging.call 100) 20)\n  (711 / 200) 100"
-      }
-    },
-    "bc029b5c390687d5e129fc0a11be9dfab547b83c8c76904b3db3974bb3a5c69b": {
-      "created": "2026-11-01T23:14:40+00:00",
+    "3445abb70408f2b3a858c933451cfb77b7cb6cad3d5ec00f1a5d0d303570bd11": {
+      "created": "2026-11-01T23:59:51+00:00",
       "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
       "outcome": {
         "block": null,
@@ -540,20 +583,98 @@
         "status": "unknown",
         "theorem": null
       },
-      "prefix_sha256": "4ec70333d2ed68d752d88c3d53740ab72c09da7a079073ccdd11ff8abf0a698e",
+      "prefix_sha256": "1cc167e93491367aa85629e8468f787b6a52685a59746c8902829ac13f888125",
       "provider": "forseti",
       "verification": null
+    },
+    "407c2c84aa1a840edc8b667685b9210319f8e857d362f655d1db0a3465939df9": {
+      "created": "2026-11-01T23:45:06+00:00",
+      "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
+      "outcome": {
+        "block": "namespace Decided_covers_at_premium\n\nopen Gimle.Forseti.Hedging\n\ndef forsetiClaim : Prop :=\n  Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20\n    (hedge (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n    (711/200) 100\n\n/-- Sold for a premium of 3.555 (711/200) and hedged at the band's binomial hedge ratio, rebalanced at each of 20 steps with zero interest and no costs, the seller's account ends at least at the payoff of the call struck at 100 on every path from a spot of 100 whose simple returns stay within \u22122 % and +2 % (\u22121/50 and +1/50) a step. The hedging decider proved it. The binomial price at the band is 177744620736998422379605070486628497811/50000000000000000000000000000000000000 (\u2248 3.5549); any premium of at least the price covers the payoff, 3.5549 (the price rounded up to four places) among them. Goal (hedging): hedging call strike 100 spot 100 band down 1/50 up 1/50 steps 20 premium 711/200 covers -/\ntheorem covers_at_premium :\n    Covers (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20\n      (hedge (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n      (711/200) 100 := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    have hq : priceQ (callQ 100) (1/50) (1/50) 20 100 \u2264 711/200 := by decide +kernel\n    have hr := Rat.cast_le (K := \u211d) |>.mpr hq\n    have hp := price_cast (fun S => call_cast 100 S) (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num) 20 100\n    push_cast at hp hr\n    rw [\u2190 hp] at hr\n    exact Covers.mono hr (covers_hedge (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)) (call_convexOn 100) 20 (by norm_num))\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_covers_at_premium",
+        "reason": "Found by the price stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "the call struck at 100, 20 steps"
+          ],
+          [
+            "price",
+            "found",
+            "the binomial price \u2248 3.5549 is at most the premium 711/200"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Hedging"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "covers_at_premium"
+      },
+      "prefix_sha256": "62a2115e90fb807b2dee6529c98037193a5310cdb3d776a5a522d1d35965e622",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.RobustHedge.Decided_covers_at_premium.covers_at_premium` as checked.",
+        "status": "checked",
+        "type": "Gimle.Forseti.Hedging.Covers (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef) (Gimle.Forseti.Hedging.call 100)\n  20\n  (Gimle.Forseti.Hedging.hedge (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef)\n    (Gimle.Forseti.Hedging.call 100) 20)\n  (711 / 200) 100"
+      }
+    },
+    "b26df6df5e13d991f8507a35d8172f2ee9e03569b67e454dd9660c7b2a923319": {
+      "created": "2026-11-01T23:46:49+00:00",
+      "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
+      "outcome": {
+        "block": "namespace Decided_narrow_within_four\n\nopen Gimle.Forseti.Hedging\n\ndef forsetiReturns : List \u211a := [1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50, 1/50, -1/50]\n\ndef forsetiClaim : Prop :=\n  \u2200 S : \u2115 \u2192 \u211d, S 0 = 100 \u2192\n    (\u2200 k < 20, (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)).InBand (S k) (S (k + 1))) \u2192\n    -4 \u2264 wealth (hedge (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n      (price (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 100) S 20 - call 100 (S 20)\n\n/-- The hedge built for returns within \u22121 % and +1 % (\u22121/100 and +1/100) a step, started from its own price and rebalanced at each of 20 steps with zero interest and no costs, ends at most 4 below the payoff of the call struck at 100 (the seller's account less the payoff is at least \u22124) on every path from a spot of 100 whose simple returns stay within \u22122 % and +2 % (\u22121/50 and +1/50) a step. The hedging decider refuted it. On the zigzag (up and down by turns) of 20 steps of +2 % (+1/50) and \u22122 % (\u22121/50), the seller's account less the payoff ends at \u2212215634705196340256271204096412694900382147731/52428800000000000000000000000000000000000000 (\u2248 \u22124.1129), below \u22124. Goal (hedging): hedging call strike 100 spot 100 band down 1/100 up 1/100 steps 20 against down 1/50 up 1/50 shortfall <= 4 -/\ntheorem narrow_within_four_refuted : \u00ac (\u2200 S : \u2115 \u2192 \u211d, S 0 = 100 \u2192\n      (\u2200 k < 20, (Band.ofRat (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num)).InBand (S k) (S (k + 1))) \u2192\n      -4 \u2264 wealth (hedge (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20)\n        (price (Band.ofRat (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num)) (call 100) 20 100) S 20 - call 100 (S 20)) := by\n  have refuted : \u00ac forsetiClaim := by\n    unfold forsetiClaim\n    intro h\n    have hr : \u2200 k < 20, -(1/50 : \u211a) \u2264 forsetiReturns.getD k 0 \u2227 forsetiReturns.getD k 0 \u2264 1/50 := by decide +kernel\n    have h0 : ((spotQ 100 (fun k => forsetiReturns.getD k 0) 0 : \u211a) : \u211d) = 100 := by norm_num [spotQ]\n    have key := h (fun k => ((spotQ 100 (fun k => forsetiReturns.getD k 0) k : \u211a) : \u211d)) h0 (spotQ_inBand (S\u2080 := 100) (N := 20) (r := fun k => forsetiReturns.getD k 0) (1/50) (1/50) (by norm_num) (by norm_num) (by norm_num) (by norm_num) hr)\n    have hw := wealth_hedge_cast (fun S => call_cast 100 S) (1/100) (1/100) (by norm_num) (by norm_num) (by norm_num) 20 100 (fun k => forsetiReturns.getD k 0) 20\n    have hc := call_cast 100 (spotQ 100 (fun k => forsetiReturns.getD k 0) 20)\n    have hk : wealthQ (callQ 100) (1/100) (1/100) 20 100 (fun k => forsetiReturns.getD k 0) 20 - callQ 100 (spotQ 100 (fun k => forsetiReturns.getD k 0) 20) = -215634705196340256271204096412694900382147731/52428800000000000000000000000000000000000000 := by decide +kernel\n    have hs := congrArg (Rat.cast : \u211a \u2192 \u211d) hk\n    push_cast at hw hc hs\n    linarith\n  intro claim\n  refine (fun (bridge : _ \u2194 forsetiClaim) => refuted (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_narrow_within_four",
+        "reason": "Found by the extreme-path stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "the call struck at 100, 20 steps"
+          ],
+          [
+            "extreme-path",
+            "found",
+            "on the zigzag (up and down by turns) of 20 steps of +2 % (+1/50) and \u22122 % (\u22121/50), the hedge ends \u2248 4.1129 below the payoff, more than 4"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.Hedging"
+          ]
+        ],
+        "status": "refuted",
+        "theorem": "narrow_within_four_refuted"
+      },
+      "prefix_sha256": "efac6612b8660252b119fd94e925661ac511e7bad610b11668078b72d71e77e2",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `Notebook.RobustHedge.Decided_narrow_within_four.narrow_within_four_refuted` as checked.",
+        "status": "checked",
+        "type": "Not\n  (\u2200 (S : Nat \u2192 Real),\n    Eq (S 0) 100 \u2192\n      (\u2200 (k : Nat),\n          instLTNat.lt k 20 \u2192\n            (Gimle.Forseti.Hedging.Band.ofRat (1 / 50) (1 / 50) \u22ef \u22ef \u22ef).InBand (S k) (S (instHAdd.hAdd k 1))) \u2192\n        Real.instLE.le (-4)\n          (instHSub.hSub\n            (Gimle.Forseti.Hedging.wealth\n              (Gimle.Forseti.Hedging.hedge (Gimle.Forseti.Hedging.Band.ofRat (1 / 100) (1 / 100) \u22ef \u22ef \u22ef)\n                (Gimle.Forseti.Hedging.call 100) 20)\n              (Gimle.Forseti.Hedging.price (Gimle.Forseti.Hedging.Band.ofRat (1 / 100) (1 / 100) \u22ef \u22ef \u22ef)\n                (Gimle.Forseti.Hedging.call 100) 20 100)\n              S 20)\n            (Gimle.Forseti.Hedging.call 100 (S 20))))"
+      }
     }
   },
   "environment": {
-    "check": "fbd67c789b8810659584b9eff197a9f13e925e9ce4f60f5f7e16db9624a00f0c",
+    "check": "c5a6bdc143d0878742c9b31e083b8c98937a501034804d9692f2ae2f712abccc",
     "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae"
   },
   "evidence": {
     "6c35ca2ad2ba185bdcaec91c2881857a8915f2a586043e498618ca52bad19578": {
-      "created": "2026-11-01T23:15:03+00:00",
+      "created": "2026-11-02T00:00:14+00:00",
       "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
-      "prefix_sha256": "fca33d214e32e46380ba35f84cf3b9d36abfa3e9718a822bc153f94549806e5c",
+      "prefix_sha256": "6d8ffbc82408994fccc630af0fb03dbcdb5053bcc68336fd7cab4264e57f1cbd",
       "provider": "forseti",
       "snapshot": {
         "finite": true,
@@ -629,7 +750,7 @@
           ],
           [
             "created",
-            "2026-11-01T23:15:03+00:00"
+            "2026-11-02T00:00:14+00:00"
           ]
         ],
         "series": {
@@ -808,9 +929,9 @@
       }
     },
     "ccdcbed68f7a593afd641281bba34cdcd6d046bb2dd9bd321e21ee9be36ad703": {
-      "created": "2026-11-01T23:15:14+00:00",
+      "created": "2026-11-02T00:00:25+00:00",
       "fingerprint": "149638b02e084a2b1ca4a720c44c1130a193c58a4af0cb767aa8393e10ada7ae",
-      "prefix_sha256": "ae1d6859078ec52e83798139aa8fc6fe016d96e02d08e9c5d47cd43b75d500b8",
+      "prefix_sha256": "512bf9a65b27c34c930159d8b72497961f6b3c8ee736d89bb93b621e6a2a759b",
       "provider": "forseti",
       "snapshot": {
         "finite": true,
@@ -890,7 +1011,7 @@
           ],
           [
             "created",
-            "2026-11-01T23:15:14+00:00"
+            "2026-11-02T00:00:25+00:00"
           ]
         ],
         "series": {
@@ -1070,6 +1191,6 @@
     }
   },
   "format": "glitnir.project-checks/v2",
-  "source_sha256": "83b1b09f7fb1c4ccc710808a4261456443f039f60798178afd7c52480b4f6310",
+  "source_sha256": "ac7f0bd77f033b1146be6cd08cd3412e88730920a369e69e90ca40114452e53c",
   "withheld": null
 }

@@ -90,7 +90,7 @@ laptop; later checks take a few minutes.
 | [CircuitProofs](examples/circuits/CircuitProofs.lean), [EnergyOptimization](examples/circuits/EnergyOptimization.lean) | Circuit contracts and rewrites |
 | [Fibonacci](examples/circuits/LinearCircuitFibonacci.lean), [Jordan](examples/circuits/LinearCircuitJordan.lean) | Discrete linear circuits |
 | [Lorenz](examples/dynamics/Lorenz.lean) | Continuous trajectories and bounds |
-| [HedgedSpread](examples/finance/HedgedSpread.lean), [HedgedSpreadRisk](examples/finance/HedgedSpreadRisk.lean), [RobustHedge](examples/finance/RobustHedge.lean) | A hedged book under every shock in a band, bounds on the odds of its stop under random shocks marked daily, and a hedge that covers an option on every path within a daily move band |
+| [HedgedSpread](examples/finance/HedgedSpread.lean), [HedgedSpreadRisk](examples/finance/HedgedSpreadRisk.lean), [RobustHedge](examples/finance/RobustHedge.lean) | A hedged book under every shock in a band, bounds on the odds of its stop under random shocks marked daily, and an at-the-money call hedged on every path whose daily moves stay in a band |
 | [Laminar](examples/galerkin/NS_Laminar.lean), [T3](examples/galerkin/NS_T3.lean), [K5](examples/galerkin/NS_K5.lean), [B2](examples/galerkin/NS_B2.lean) | Finite-dimensional fluid models, energy and enstrophy |
 | [Burgers](examples/pdes/Burgers.lean), [BurgersFronts](examples/pdes/BurgersFronts.lean), [Euler](examples/pdes/Euler.lean), [NavierStokes](examples/pdes/NavierStokes.lean) | Stream and PDE contracts |
 
