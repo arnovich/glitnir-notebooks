@@ -17,11 +17,16 @@ their exact source/results bytes to the v0.1.10 triptych. Their new artifacts
 add no claims, so preserving that receipt takes precedence over refreshing
 checker fingerprints or equivalent normalization tactics.
 
-Two prose corrections are prepared to distinguish ThreeState and
-EnergyOptimization's admitted positive claims from their separately checked
-negation theorems. They will be checked and recorded in CI before their final
-source/results pairs are added to this PR; the imported pairs in this commit
-remain exact existing CI artifacts.
+ThreeState and EnergyOptimization also include corrected explanations of the
+admitted positive claims and their separately checked negation theorems. Their
+final source/results pairs come from [successful authoring run 41419233149](https://github.com/arnovich/glitnir-notebooks/actions/runs/41419233149),
+head `57a7e543da19d196cdcf830189dca91b666ec875`, using the same published Glitnir
+v0.1.10. Each CI job applied only its reviewed prose edit before running the
+normal saved-file check and view pipeline. Both reported `checked_snapshot`,
+no problems and no withheld claims; all four views were saved. Their claim
+statuses and axiom sets remain unchanged. The imported files match those
+artifacts byte-for-byte. The other 14 updated records and six updated Lean
+sources remain exact artifacts from the original recheck.
 
 ## Evidence review
 
@@ -32,7 +37,7 @@ axioms, with no `sorryAx`. Simulation remains evidence, and unresolved decisions
 remain unknown (Lorenz and NS_T3 exhausted their bounded searches; the
 HedgedSpreadRisk request remains unsupported). Existing statements, supporting definitions, shared namespaces,
 identity examples and comments are preserved in the generated patches. Only the
-two status explanations above are the planned follow-up edits.
+two status explanations above are the deliberate prose edits.
 
 The existing theorem proof edits normalize rational casts with
 `norm_num [Rat.mkRat_eq_div]`. The seven new theorems accompany false positive
@@ -77,8 +82,14 @@ for all 18 notebooks/283 claims; the six exact triptych receipts still pass;
 stopped at the owner's request to move the heavy validation to CI. They are not
 reported as completed local checks.
 
-The two corrected notebooks will be checked in a temporary CI authoring branch,
-which applies only the reviewed prose patch before using the existing recheck
-pipeline. Its generated source/results artifacts will be copied back together.
-The PR's own editor, gallery and targeted recheck CI still need to pass before
-merge.
+The two corrected notebooks passed their independent CI kernel checks in run
+41419233149. Their generated source/results pairs were imported together after
+validating the exact prose-only diff and matching source hashes. The temporary
+authoring workflow and patch are not part of this PR. The PR's own editor,
+gallery and targeted recheck CI still need to pass before merge.
+
+Final authority review of the two authoring artifacts found no blockers: exact
+artifact equality and source hashes passed; all 23 claim identities, statuses
+and axiom sets match the prior reviewed records. Both admitted positives retain
+`sorryAx`, while their negation theorems remain checked without it. The final
+lightweight Python, gallery, bundle, triptych and whitespace checks passed.

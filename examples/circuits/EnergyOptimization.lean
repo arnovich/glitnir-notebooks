@@ -142,8 +142,9 @@ Could the bound be tighter? Asking for $2x^2 + 2y^2 \le 3$ on the same square
 is refuted: the decider produces a point where the claim fails, and Lean checks
 that the point satisfies the hypotheses and violates the conclusion, which
 proves the negation. The claim below is stated with `sorry` in place of a
-proof: it is false, so it has none. What Lean checked is its negation, recorded
-beside the notebook, and that is what its status reads.
+proof: it is false, so it has none. That positive theorem remains admitted
+and displays **Contains sorry**. The separate theorem
+`energy_below_three_refuted` below proves its negation and is checked.
 -/
 
 -- @decide energy_below_three : entailment x, y : x >= -1 and x <= 1 and y >= -1 and y <= 1 |- 2*x^2 + 2*y^2 <= 3

@@ -19,7 +19,7 @@
       "end_line": 80,
       "name": "Notebook.EnergyOptimization.energy_formula",
       "prefix_sha256": "01102687e1ea346bcba11867ab0bbe53ea861c191e56c711e1f70f175a8c88ff",
-      "proposition_sha256": "1c3c985100cb2e400bcfc343129568372ebeceb24d6e17b7d618fad6027502d4",
+      "proposition_sha256": "00edffce74c4c77e50b369964eb9dfba20c8c28292d18c29a4a4db5ca97bb4ce",
       "start_line": 76,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 130,
       "name": "Notebook.EnergyOptimization.Decided_energy_in_band.energy_in_band",
       "prefix_sha256": "a6ceb7e8154f99d52ecb0bc02b030c1cb34b5bc2eda82fd25136404884440c69",
-      "proposition_sha256": "bb575660c9ab8325f8c5468b94eae7c490564d3ec23048d72d005d74187ba87f",
+      "proposition_sha256": "a531347a0a321cd1b6c82dcf4908b313793c3ae2fc02ffc5d24b0e91681120fe",
       "start_line": 112,
       "status": "checked",
       "uses": []
@@ -68,11 +68,11 @@
         }
       ],
       "declaration_sha256": "0dc8052c1303f908ee13e147d17c44e681c0bfd1e421858a0b403f162e558a76",
-      "end_line": 167,
+      "end_line": 168,
       "name": "Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three",
-      "prefix_sha256": "9e610f799b853f9543cfc4c21c20dfd82f0db81629a4aa52a04e2346310be1a4",
-      "proposition_sha256": "17c1a38bc02f38f611937ba03165ac15b46e08a4b15075db199c31297da8a665",
-      "start_line": 164,
+      "prefix_sha256": "0ed1f55cc522720fd932dea72009a2dd89634797ee27134544dfb8e3f80a2132",
+      "proposition_sha256": "a352baf960722f5575c32bd4a2bed54d397cbba97526b7f7c5ac5d2b4aa749d0",
+      "start_line": 165,
       "status": "admitted",
       "uses": []
     },
@@ -92,11 +92,11 @@
         }
       ],
       "declaration_sha256": "cc771fbd5d879ff1ca2ebd21c006f69a12dc5ab781ff7f77ebf903f3a82138ba",
-      "end_line": 184,
+      "end_line": 185,
       "name": "Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three_refuted",
-      "prefix_sha256": "1bc2a98f8d21957d7c18288620d0910705bcb7484ddbe25a1eb45c634d2fb1ba",
-      "proposition_sha256": "dd336d6d64b47b99e4a97210c9cf2201cd80a6868c503a2553225b7b12bb9487",
-      "start_line": 169,
+      "prefix_sha256": "fd76161b78e62543645f2abb120b0f6db011c25013aa9b1e955e757ed6939007",
+      "proposition_sha256": "156df5bfc9351cca9f696d85c2c5e79d575f40c3c7e2d81c78274fcff5822f92",
+      "start_line": 170,
       "status": "checked",
       "uses": []
     },
@@ -116,11 +116,11 @@
         }
       ],
       "declaration_sha256": "242934c9b90d542f271a4cf431aa9e8ca44459c0b100b57b25073feb30d2e5cf",
-      "end_line": 209,
+      "end_line": 210,
       "name": "Notebook.EnergyOptimization.original_contract",
-      "prefix_sha256": "d96ab7f9e2adde95cc1deddb58239fc5a88f55fb40a348ed96f91d33e409a00e",
-      "proposition_sha256": "b3a652340cacc21bcdd8cbf19e4cb7740803873bc4c1827714885d8e6872811f",
-      "start_line": 201,
+      "prefix_sha256": "ebd37440bf5ba9ea24288de448befd6d8eebb2c9841721a11ca6e29b73a1475c",
+      "proposition_sha256": "6e799aa23deee3a56d51a146e91c7476817c2adeaa986a7474260ad549fb05fc",
+      "start_line": 202,
       "status": "checked",
       "uses": [
         {
@@ -151,11 +151,11 @@
         }
       ],
       "declaration_sha256": "ba0f0d832bdc05fb6d44765bd8998f6c3bc8b845335c4193e5789c229db92ee9",
-      "end_line": 234,
+      "end_line": 235,
       "name": "Notebook.EnergyOptimization.same_function",
-      "prefix_sha256": "248c6af6dc49fbc1ca6b42f2518b5c00fa05a516c507fe4988600f6dd857bce4",
-      "proposition_sha256": "0544a0558e68ebe3dba8122bb55fce55477897804fe420953b5ecf93bebde0bc",
-      "start_line": 227,
+      "prefix_sha256": "1d1ba8d314b8d50c40c8a27fdb48758f99eef2fce8c019fd82676c50a5d63da0",
+      "proposition_sha256": "9c2ad85bb4d45312c44bd731ed1e17d796ab821e17aede29e1d04890f7b977d2",
+      "start_line": 228,
       "status": "checked",
       "uses": [
         {
@@ -181,11 +181,11 @@
         }
       ],
       "declaration_sha256": "c2e9fd5538621708a01e1614f27d9b65d32bd9871002c2f6a79bd9480132ed05",
-      "end_line": 248,
+      "end_line": 249,
       "name": "Notebook.EnergyOptimization.optimised_contract",
-      "prefix_sha256": "40401eeee0e1d902549cb29e4c2c0ce38738b1e8ba8e3202d64c73f4ff0d3efe",
-      "proposition_sha256": "fbc2be343eac838bf9c2edc7c3d46c0cef4eb70f12793206aef7f521f7a8344b",
-      "start_line": 245,
+      "prefix_sha256": "739f7fc405a1ab18122a2cbf495eca3b3c942e968c11fc7478491e29901c1a46",
+      "proposition_sha256": "a0db89e55f504beed5ea927069b6fcfd2be010406f0adb4f26fda5f2bfe8dfc7",
+      "start_line": 246,
       "status": "checked",
       "uses": [
         {
@@ -216,11 +216,11 @@
         }
       ],
       "declaration_sha256": "e6ee1e6dc938ae53a58bcdca1b982bd1baa366c10377ea51aa19b40d0f26b841",
-      "end_line": 271,
+      "end_line": 272,
       "name": "Notebook.EnergyOptimization.wrong_differs",
-      "prefix_sha256": "c36163fb439049712dd65ba071db579855fcdf414e217a771c87424ef7da11e9",
-      "proposition_sha256": "0fd38a243dfd8f26cc1426f14e8f92c1d8db5fc897eea8d6478352f20267580b",
-      "start_line": 268,
+      "prefix_sha256": "35c947075c67bc5793eb894c2b18f5df783e72c90a742059e3394dbca85d8a4a",
+      "proposition_sha256": "d2e05646554fe8517454c5aa6bf2a42be125fb896b1d1095716ff6da981ea748",
+      "start_line": 269,
       "status": "checked",
       "uses": [
         {
@@ -246,11 +246,11 @@
         }
       ],
       "declaration_sha256": "05e10e63e243423d32530f1ce90a4c07233dd70c05f0e89af3f73bde3961f7b5",
-      "end_line": 278,
+      "end_line": 279,
       "name": "Notebook.EnergyOptimization.wrong_not_equivalent",
-      "prefix_sha256": "bab7f9e417731f73358534b81458b3640b183fa7af2e46a02f38797c49c1bf68",
-      "proposition_sha256": "5946d3bbba714f23e9d4330e4001b01e0c8c4869ea13ae48ce7f60e05d7fa0d8",
-      "start_line": 273,
+      "prefix_sha256": "6924a54ca412ac4a404c59e9a5b80133939e2189b86046dcc6726b18a5f52941",
+      "proposition_sha256": "98fbe9f35e382d6975a04d1b53e2387e198f809023dbe9a41a96d039b39ed738",
+      "start_line": 274,
       "status": "checked",
       "uses": [
         {
@@ -276,11 +276,11 @@
         }
       ],
       "declaration_sha256": "40c8b46b522e261aed6d70e4cc8b7ee11999ddeda5cb80b3943c68f38823a992",
-      "end_line": 287,
+      "end_line": 288,
       "name": "Notebook.EnergyOptimization.wrong_breaks_contract",
-      "prefix_sha256": "3e18aba0f04fdae47b1807aabc9536807093aaae578af0e7401b0f0809835e04",
-      "proposition_sha256": "e8e51201f8243d3197f6f598dc6c6183e3dca204f675ed754d8a8faa92bfd98a",
-      "start_line": 280,
+      "prefix_sha256": "61ef4cd3c6fefe3d93a550406c0957bfd88f3fce6de46cb46879329791ce8119",
+      "proposition_sha256": "3e47cbf8a0446cf906ee165d8a10a380ba51fc02fa929035c22e7c332c0f1ac1",
+      "start_line": 281,
       "status": "checked",
       "uses": [
         {
@@ -306,11 +306,11 @@
         }
       ],
       "declaration_sha256": "12b1d865670ad4fc370345e918a111cb4bf63c3d65a0ff7a412b0de53203bb79",
-      "end_line": 304,
+      "end_line": 305,
       "name": "Notebook.EnergyOptimization.four_is_sharp",
-      "prefix_sha256": "d315244602371bfd5d51e948181e11fb8660782c699b616ef8e03c1326d1bcec",
-      "proposition_sha256": "4040eb0feec31b406af0f3a2321d3d4290def5045978ee17089f7d3bb1c8f9e4",
-      "start_line": 296,
+      "prefix_sha256": "cfb6ca0f80aa3ec90d202062db39fe15c4b90e523052fe4ac09ad9886f63bfb5",
+      "proposition_sha256": "bec22546288b9b9fbd049ec9961538c64de753fe97a673bf5cf160be5b5bbfa6",
+      "start_line": 297,
       "status": "checked",
       "uses": [
         {
@@ -397,14 +397,14 @@
     }
   },
   "environment": {
-    "check": "2165ca47c742bf813ba451bf34b4e63a632126134be9aa721a9eba66f986d954",
+    "check": "cecbe11772c054768bef22a4fd3a671b21969cebc114ba41db99ef1f11875a11",
     "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d"
   },
   "format": "glitnir.project-checks/v2",
-  "source_sha256": "bcae8a7bec1b5caf9a452b82cfa786f33c30cad4dbe58242d04f5ea3b13d73b4",
+  "source_sha256": "1cfd37a8ff1ebc64e8934abaaad8d995a01870af575935bf9be934c4a9c4abcd",
   "views": {
     "223de730b9d126f4589cae4d8588bc3e8f62655f8b857f60f993ca490193a0a8": {
-      "created": "2026-11-01T23:55:15+00:00",
+      "created": "2026-11-02T09:51:53+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -564,12 +564,12 @@
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1050 420\" width=\"1050\" height=\"420\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 324 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,90 317,86 317,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 130 324 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,130 317,126 317,134\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 265 250 265 250 324 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,250 317,246 317,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 277 290 277 290 324 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,290 317,286 317,294\" fill=\"#476579\"></polygon><path d=\"M 484 90 C 509 90 509 90 568 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,90 561,86 561,94\" fill=\"#476579\"></polygon><path d=\"M 484 250 C 521 250 521 130 568 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,130 561,126 561,134\" fill=\"#476579\"></polygon><path d=\"M 728 90 C 753 90 753 90 800 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"800,90 793,86 793,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"960,90 1020,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1020,90 1013,86 1013,94\" fill=\"#476579\"></polygon><text x=\"985\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"568\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"603\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"573\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"573\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"708\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"800\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"835\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (2)</text><text x=\"805\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"940\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"370\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"392\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
       "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
-      "prefix_sha256": "c9f574af279c37d4670330cb9f372a08af0a52154ddd42e10555ff5b3d89881f",
+      "prefix_sha256": "bd178c8d2d2051c23797eb663ec5c361ffac71bd90297ffd886e696be3ef2a25",
       "provider": "forseti",
       "provider_sha256": "969c3b267c6e22f3558858a667f002b02a8d1d39982ab3f7ea51069b106070de"
     },
     "c4dd12e29e00b2b5ff0d1471f623481425fb6529b6091d6796f551f5c18c26a6": {
-      "created": "2026-11-01T23:55:15+00:00",
+      "created": "2026-11-02T09:51:53+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -729,7 +729,7 @@
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1050 420\" width=\"1050\" height=\"420\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 324 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,90 317,86 317,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 130 324 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,130 317,126 317,134\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 265 250 265 250 324 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,250 317,246 317,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 277 290 277 290 324 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,290 317,286 317,294\" fill=\"#476579\"></polygon><path d=\"M 484 90 C 509 90 509 90 568 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,90 561,86 561,94\" fill=\"#476579\"></polygon><path d=\"M 484 250 C 521 250 521 130 568 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,130 561,126 561,134\" fill=\"#476579\"></polygon><path d=\"M 728 90 C 753 90 753 90 800 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"800,90 793,86 793,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"960,90 1020,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1020,90 1013,86 1013,94\" fill=\"#476579\"></polygon><text x=\"985\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"568\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"603\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"573\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"573\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"708\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"800\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"835\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (3)</text><text x=\"805\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"940\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"370\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"392\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
       "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
-      "prefix_sha256": "4a1b4764e0a76dd01e206e98e456b9bc5a9a504f1d4ef5900d1ae6c4a2f850fa",
+      "prefix_sha256": "810171c118e1d3cb944fdc91cfc2dfd9156a6861d5a8ea2c26972b378567104c",
       "provider": "forseti",
       "provider_sha256": "6bbe5f42fb468028b3b4d0533d98a979d45c144b9798884ced8cd87e5930ba6b"
     },

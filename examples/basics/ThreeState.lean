@@ -200,10 +200,11 @@ merely fail to prove it; it refutes it with the initial state as a checked
 witness.
 
 Below, the claim is stated in the same form as the band, with `sorry` in
-place of a proof: it is false, so it has none. What Lean checked is its
-negation, recorded beside the notebook, which is why the claim shows as
-refuted. A later claim that used it would be marked as depending on a refuted
-claim.
+place of a proof: it is false, so it has none. That positive theorem remains
+admitted and displays **Contains sorry**. The separate theorem
+`energy_below_five_refuted` below proves its negation and is checked. A later
+claim that used the admitted positive theorem would inherit its `sorryAx`
+assumption; the checked refutation does not turn that positive claim into a proof.
 -/
 
 -- @decide energy_below_five : trajectory three-state interpretation
