@@ -699,6 +699,47 @@ theorem front_band_refuted :
         Gimle.Asgard.Streams.analyticField .ogf u ![t, x] ≤ 27/50 := by
   sorry
 
+theorem front_band_refuted_refuted : ¬ (have circuit := Gimle.Asgard.Streams.Burgers.circuit .ogf (1/2)
+    have slice := Gimle.Asgard.Streams.ColeHopf.zeroSlice
+      (Gimle.Asgard.Streams.ColeHopf.front (1/2) [(1, 0), (1, -1)])
+    ∀ u unused u_t : Gimle.Asgard.Streams.Stream 2,
+      circuit.Rel ![u, slice, unused] ![u_t, u] →
+      ∀ t x : ℝ, |t| ≤ 1/6 ∧ |x| ≤ 1/8 →
+        HasSum (Gimle.Asgard.Streams.seriesTerm .ogf u ![t, x])
+          (Gimle.Asgard.Streams.analyticField .ogf u ![t, x]) ∧
+        Gimle.Asgard.Streams.analyticField .ogf u ![t, x] ≤ 27/50) := by
+  have refuted : ¬ forsetiRoot := by
+    unfold forsetiRoot
+    intro h
+    exact Gimle.Asgard.Streams.ColeHopf.front_above_of_window (hi := ((mkRat (27) 50) : ℚ)) (ε := (mkRat (1) 16384)) (show (0 : ℚ) < ((mkRat (1) 2) : ℚ) by decide +kernel) (show (0 : ℚ) < ((mkRat (1) 1) : ℚ) by decide +kernel) [((mkRat (1) 1), (mkRat (0) 1)), ((mkRat (1) 1), (mkRat (-1) 1))] (show Gimle.Asgard.Streams.ColeHopf.constantTerm [((mkRat (1) 1), (mkRat (0) 1)), ((mkRat (1) 1), (mkRat (-1) 1))] ≠ 0 by decide +kernel) (by decide +kernel) (r := forsetiRadii) (by decide +kernel) (by decide +kernel) (by decide +kernel) forsetiBox (by decide +kernel) ![16, 16] (by decide +kernel) (by decide +kernel) (Q := forsetiQ) (by decide +kernel) forsetiPoint (by decide +kernel) (by decide +kernel) fun a unused v rel x hx => (h a unused v rel x hx).2
+  intro claim
+  have forsetiFront : Gimle.Asgard.Streams.ColeHopf.front (mkRat (1) 2) [((mkRat (1) 1), (mkRat (0) 1)), ((mkRat (1) 1), (mkRat (-1) 1))] = Gimle.Asgard.Streams.ColeHopf.front (1/2) [(1, 0), (1, -1)] := by norm_num [Rat.mkRat_eq_div]
+  have forsetiCircuit : Gimle.Asgard.Streams.Burgers.circuit .ogf (mkRat (1) 2) = Gimle.Asgard.Streams.Burgers.circuit .ogf (1/2) := by norm_num [Rat.mkRat_eq_div]
+  have forsetiInside : ∀ t x : ℝ, forsetiBox.Mem ![t, x] ↔ |t| ≤ 1/6 ∧ |x| ≤ 1/8 := by
+    intro t x
+    norm_num [Gimle.Asgard.Streams.Box.Mem, Fin.forall_fin_two, forsetiBox, Rat.mkRat_eq_div]
+  have forsetiCast0 : (((mkRat (27) 50) : ℚ) : ℝ) = (27/50) := by norm_num [Rat.mkRat_eq_div]
+  refine (fun (bridge : _ ↔ forsetiRoot) => refuted (bridge.mp claim)) ?_
+  constructor
+  · intro claim
+    dsimp only at claim
+    unfold forsetiRoot
+    rw [forsetiFront, forsetiCircuit]
+    intro u unused u_t rel z inside
+    have point : ![z 0, z 1] = z := by funext i; fin_cases i <;> rfl
+    have holds := claim u unused u_t rel (z 0) (z 1) ((forsetiInside _ _).mp (point ▸ inside))
+    rw [point] at holds
+    set_option linter.unusedSimpArgs false in simp only [forsetiCast0]
+    exact holds
+  · intro lane
+    unfold forsetiRoot at lane
+    rw [forsetiFront, forsetiCircuit] at lane
+    dsimp only
+    intro u unused u_t rel t x inside
+    have holds := lane u unused u_t rel ![t, x] ((forsetiInside t x).mpr inside)
+    set_option linter.unusedSimpArgs false in simp only [forsetiCast0] at holds
+    exact holds
+
 end Decided_front_band_refuted
 
 

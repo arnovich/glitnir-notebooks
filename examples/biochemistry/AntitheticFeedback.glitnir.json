@@ -19,7 +19,7 @@
       "end_line": 89,
       "name": "Notebook.AntitheticFeedback.field_equations",
       "prefix_sha256": "b07da8ca204555c14bbb9a02cd332dd506f83f8c06bad98d73aeb87cd1cdf4fb",
-      "proposition_sha256": "24e06118ef29e4e17c8a44c64e4f6246d707ae03afd2c018d1d96604194860d3",
+      "proposition_sha256": "82fd4f6ad1d485640b79c4a6dbe8f49cb7ec153dbd4518a29ca85333a21cf1bf",
       "start_line": 85,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 100,
       "name": "Notebook.AntitheticFeedback.realizes_iff",
       "prefix_sha256": "346d963f17aa3b0a899aa971dc3f5d5f4e8045870a08f6a030e1b657a6afa215",
-      "proposition_sha256": "0081c320d96264a25870f47515facda32d00ec5b26cd1be75fadeff9a2569f5e",
+      "proposition_sha256": "b32795003f4453219e40186f06b89bc66f9a858d06f58fd15daddf14a3d372b5",
       "start_line": 91,
       "status": "checked",
       "uses": []
@@ -67,7 +67,7 @@
       "end_line": 104,
       "name": "Notebook.AntitheticFeedback.output_is_x2",
       "prefix_sha256": "4605e1054e1fb587d2ebe7f6379ee3280d3dbf8ef3c807c3994f6466cd4b8655",
-      "proposition_sha256": "9999b45ba86dce107a22ca842da4f474f48aabddd03d810f628c85aa1995225c",
+      "proposition_sha256": "e4ef260fc5e91cdeb52fbe3697a85741fdef38ee83e56d9c138b523d79d5c768",
       "start_line": 102,
       "status": "checked",
       "uses": []
@@ -91,7 +91,7 @@
       "end_line": 120,
       "name": "Notebook.AntitheticFeedback.exists_behaviour",
       "prefix_sha256": "1a3ea4f52c7a2d3882548b7a1062c953ab77dd73bb8762fbdd9a038d70f5e276",
-      "proposition_sha256": "ef23b3aab9934cedffed8be0aef02f6a41b8b3042a9b7b3d400e919227d49e4f",
+      "proposition_sha256": "0481bc5ed94e88aaccf5569b3405b769327463439d6d2f852657b1e73625f728",
       "start_line": 117,
       "status": "checked",
       "uses": []
@@ -115,7 +115,7 @@
       "end_line": 126,
       "name": "Notebook.AntitheticFeedback.behaviour_unique",
       "prefix_sha256": "05b1ac34497df840155bc29b0f7f6bd2b21424f7b8116f72e0c4cf5e4532051e",
-      "proposition_sha256": "b9fdb027fc958d40ce0b59ffe7529ce952283f9ececfa08a40d609334e08f3bc",
+      "proposition_sha256": "c8f4e36ff66a31d367b67fb55cf6f292549c6da3f20c3f4f003ac8c67cf8b960",
       "start_line": 122,
       "status": "checked",
       "uses": []
@@ -139,7 +139,7 @@
       "end_line": 132,
       "name": "Notebook.AntitheticFeedback.species_nonnegative",
       "prefix_sha256": "16af6f0161375e5cca964ea7f4417ef2ba45206c453fc3e3a53592009d6d76bb",
-      "proposition_sha256": "389a4295006d82a1ed1026e4c8579fc2d1f67ef0f734419342203e14ef31d953",
+      "proposition_sha256": "791a867640960253510337e64f24c5d09cf1f6ebd3c8b9f42acbd8bbf49b0c5e",
       "start_line": 128,
       "status": "checked",
       "uses": []
@@ -163,7 +163,7 @@
       "end_line": 181,
       "name": "Notebook.AntitheticFeedback.tube_from_certificates",
       "prefix_sha256": "43b37c901a88ecf748cb2b179d1da07d14e61df198468b569fa61afa6bb7884d",
-      "proposition_sha256": "358a1ce18c485f86d9e060232a96bbb6b2842d9dbe1c6a23870ffc6fba3773bd",
+      "proposition_sha256": "e74cb3f3ac86341be94ea16dd08c413a56ae37621d50b3353efe4ae911ffebee",
       "start_line": 165,
       "status": "checked",
       "uses": []
@@ -187,7 +187,7 @@
       "end_line": 204,
       "name": "Notebook.AntitheticFeedback.first_cell",
       "prefix_sha256": "a9b89448156e37fb33c57ec87e08b7e7eb5ec95d1397178e38b300d02905ba1a",
-      "proposition_sha256": "923991d6422323cd20ece41fd47758ed482eaa36a47860c1c6f10af2f7a0cf7f",
+      "proposition_sha256": "aec4930691be008be3f8746d7911b0a39319059d5f654592dc0b3102106bdf59",
       "start_line": 195,
       "status": "checked",
       "uses": []
@@ -211,7 +211,7 @@
       "end_line": 209,
       "name": "Notebook.AntitheticFeedback.first_cell_in_mesh",
       "prefix_sha256": "0ec163afe0446c92a22e7aff977f8edf44e50d1fa2db16c237f77da498a99398",
-      "proposition_sha256": "2b3980933d9588079bb55ae0a16a60b58a1ab0dcd74772d782570e23db6e2e66",
+      "proposition_sha256": "b600c019a863dd553194118a27889ee258c8dd743d0f459bbafceae8eb61359c",
       "start_line": 206,
       "status": "checked",
       "uses": []
@@ -235,7 +235,7 @@
       "end_line": 227,
       "name": "Notebook.AntitheticFeedback.cell_drift",
       "prefix_sha256": "aa0378aafeebb0dee2122b2f037a663ac42b3f04136cdea1e1c89fffd399a41d",
-      "proposition_sha256": "73268b1c4053ee40f2fcc9d1543bca9f4292fd80f0aa6b7a924f52158d1d89f9",
+      "proposition_sha256": "d2c78fe9b0cc5c8e47c460ed245da91d001a41d7854dcc238acd7949fff4064e",
       "start_line": 224,
       "status": "checked",
       "uses": [
@@ -265,7 +265,7 @@
       "end_line": 232,
       "name": "Notebook.AntitheticFeedback.cell_output",
       "prefix_sha256": "600456093025aabf73e334145edc05fc6e76fefbb56f76008a92d0083fe5a8b9",
-      "proposition_sha256": "b8a6574f61f344ebcd5ffad0b634e61cf90410d625f5f5e439de28c7624d4310",
+      "proposition_sha256": "d93bd54f218db4b52557165dc5dbcc3b6b5bb501dc6677eb2fa3b43fad685922",
       "start_line": 229,
       "status": "checked",
       "uses": [
@@ -278,7 +278,7 @@
     }
   ],
   "environment": {
-    "check": "819ae269130890e050900a294ce5dc34904ead3601d4a53553fb56ae67297b8c",
+    "check": "10eb41773c54ce8bc34c80acea15bf6f2eb814e675352949c5906eb9fded7477",
     "fingerprint": "653ae4716dfa1ff2f2f40dab76bca2baa5bbd4543f25103a13439ffa42108e05"
   },
   "format": "glitnir.project-checks/v2",

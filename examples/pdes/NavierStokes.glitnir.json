@@ -19,7 +19,7 @@
       "end_line": 82,
       "name": "NavierStokes.circuit_contract",
       "prefix_sha256": "dc2b359aef58f47444c2b4cb5aab09223364ec69b8b0966165d82c8abab0d1af",
-      "proposition_sha256": "f509a39957a3a656ba651ef010c2ed38a40765faedb0920edb65dd0f21eff967",
+      "proposition_sha256": "c65243d25df249f71841d976a87945bd55b0aa799f838e93b58f1a42bb392b24",
       "start_line": 73,
       "status": "checked",
       "uses": []
@@ -43,7 +43,7 @@
       "end_line": 90,
       "name": "NavierStokes.truncation_contract",
       "prefix_sha256": "56272c64dd86727ec1530f6ffb23d6c2b59c2b4beeba9235fa2df7f5aa955880",
-      "proposition_sha256": "b90e251bd19945b3865dbe40c19542c9f9771a9069cde7e6a43c836f9e2c2122",
+      "proposition_sha256": "a85ce142115ea663d8cf6b88ae9e2c1a6e30a9d64e4ba5dfdcce3666f3a8a620",
       "start_line": 84,
       "status": "checked",
       "uses": [
@@ -73,7 +73,7 @@
       "end_line": 98,
       "name": "NavierStokes.band_contract",
       "prefix_sha256": "b1af20d255dbb6348648395123e5b6b74907391c76d9756964862d04bcd9294d",
-      "proposition_sha256": "6a2a21c57918fb5c3a1757e1dcb647f08484f33a08d2ba1bc319538bf3058345",
+      "proposition_sha256": "46a21a1929a984369fdd85873e78bc715b8f6afd8ea35bfc0b0162d78ca9356a",
       "start_line": 92,
       "status": "checked",
       "uses": [
@@ -103,7 +103,7 @@
       "end_line": 122,
       "name": "NavierStokes.euler_scale_contract",
       "prefix_sha256": "0e3033be7f4e32c2cc26e68393e16d4c916a4b91932fa3427824e665759dc8e6",
-      "proposition_sha256": "5adf9dc1dbae49b964dcbd67452cd68ee748e2f13d7664d4f8ad124c72de5bd0",
+      "proposition_sha256": "51f06d0d74fae6a44c2bd12b4bf93d1428ae270f1bda265b44f0f2ace6ec826a",
       "start_line": 114,
       "status": "checked",
       "uses": []
@@ -127,7 +127,7 @@
       "end_line": 135,
       "name": "NavierStokes.euler_tail_contract",
       "prefix_sha256": "5d17f038fc018abea3da470651ccd5ba4f3f5140285d753bca0730a0af3a9835",
-      "proposition_sha256": "8b6a2f15d98b8e2cdd175de0333f574d919dfa3387c46c28c3dae045dbfcca55",
+      "proposition_sha256": "5f60f242947794a0dfa879e511b64baa23dee44acb866f0c25690714f9508857",
       "start_line": 124,
       "status": "checked",
       "uses": [
@@ -157,7 +157,7 @@
       "end_line": 178,
       "name": "NavierStokes.heat_x",
       "prefix_sha256": "3545390c7213d73ff33e397be8dde0d7cf9a13a2a2168e23f7744aff527c8ef7",
-      "proposition_sha256": "056003792b04c92bd171747900afe2901a90d299e6ab648083252e43887fd886",
+      "proposition_sha256": "5be2b960145a65e8f7578cc8f9b26850a16cf00f8b8a00a86b74e9ea6e5b2195",
       "start_line": 176,
       "status": "checked",
       "uses": []
@@ -181,7 +181,7 @@
       "end_line": 183,
       "name": "NavierStokes.first_y",
       "prefix_sha256": "6589a63b92328f9d0d036e47b58a70664d8bb40238b30e03e628607ed82d33d4",
-      "proposition_sha256": "3879a36e71f06c680436ea1110021c302eaf3d29f5e7b356986bb4b9372abfa7",
+      "proposition_sha256": "90c02b272fa00856ff80daf78b1be55e9ae574f203a6f9256ad25cbdb5deedc9",
       "start_line": 180,
       "status": "checked",
       "uses": []
@@ -205,7 +205,7 @@
       "end_line": 188,
       "name": "NavierStokes.second_2x2y",
       "prefix_sha256": "7da1c3658513efa3bf693bae958395790f59314f8b234e47a7db0f34429ba2c5",
-      "proposition_sha256": "d23bcefbe362f481177d0b69150964289a90f303a0f24fb5df8619173394033f",
+      "proposition_sha256": "687e0e293b25562b0f0d214d7f95e3af28bd187f4376afcc2abc38448e94947e",
       "start_line": 185,
       "status": "checked",
       "uses": []
@@ -229,7 +229,7 @@
       "end_line": 192,
       "name": "NavierStokes.inspected_output",
       "prefix_sha256": "3c1ec02254468099e6f29141f4e264c55196bccc6f9c4299088ae17ca0b2349e",
-      "proposition_sha256": "75d43bcb25833e3ccbeb102b056d5b82d530e3fde5837b156d60e06cf1d0aab8",
+      "proposition_sha256": "9a24c13d577df7a0c457216fb94008abf102e766cdb9824b8505cd1dd00dbdfc",
       "start_line": 190,
       "status": "checked",
       "uses": []
@@ -253,7 +253,7 @@
       "end_line": 209,
       "name": "NavierStokes.crossing",
       "prefix_sha256": "71afccefd9bcb3c46f2efd203f028d240d6428be7890c45c79e2702687dbc009",
-      "proposition_sha256": "a581104b48e085222484aaa8ad67c366dab362a4289daf9e2a24c7ade92684eb",
+      "proposition_sha256": "2fa9068068311592ccffc20e3ea82ec2e662d14ed76d632e94190ac0a03636c2",
       "start_line": 207,
       "status": "checked",
       "uses": []
@@ -277,7 +277,7 @@
       "end_line": 240,
       "name": "NavierStokes.exists_certified",
       "prefix_sha256": "69415192af72e5f3c59d71b535859d0bdd783842600460804823645dd5569052",
-      "proposition_sha256": "21633a04c05c1a24ceb8b7f34fe54f78bb4a46381e470f20383c9f0b3ffe6306",
+      "proposition_sha256": "fb1a80f9869753562738d79b1ac23cbf662550a89be490a488b0a73b843b5594",
       "start_line": 236,
       "status": "checked",
       "uses": [
@@ -307,7 +307,7 @@
       "end_line": 246,
       "name": "NavierStokes.classical_output",
       "prefix_sha256": "9c405619d0dab1f52760ca9b59b70a926996bfb09a2457a5148ee2b20aa9ef96",
-      "proposition_sha256": "baa100a072c897f67a178395d81802e6e7988fda9bac8c3ba19a9eb6a7544b5c",
+      "proposition_sha256": "a4e980960c02170290237673bcd65b36f3ba7529a59d2248c7569be80a7fde7a",
       "start_line": 242,
       "status": "checked",
       "uses": [
@@ -337,7 +337,7 @@
       "end_line": 272,
       "name": "NavierStokes.enstrophy_identity",
       "prefix_sha256": "c4afe54f8434e57afce38c369245391aa8f265062e892697add5f3e1f840cddc",
-      "proposition_sha256": "8bd520f3ada9ed3b485227046ed0fdddce544423ee5a88fe78786e4fa1ba9a7d",
+      "proposition_sha256": "67ec397ea33f2aa1987a28819c385b6a48dcfaec74c6aa6f56a701a6f93ba082",
       "start_line": 266,
       "status": "checked",
       "uses": [
@@ -367,7 +367,7 @@
       "end_line": 280,
       "name": "NavierStokes.energy_identity",
       "prefix_sha256": "a5d7715c35c6f35a1431007546a9bab8ccded0d0b005659a227321d07183f9ee",
-      "proposition_sha256": "05130d3cb270de6436b2a9070fb5f11a131e07aec4c2b0df73e95bc5ea38a7d0",
+      "proposition_sha256": "9b78c0f0f0597b1782229ff530749a6e1983f6f02fd35752484c32d510a03ae4",
       "start_line": 274,
       "status": "checked",
       "uses": [
@@ -397,7 +397,7 @@
       "end_line": 287,
       "name": "NavierStokes.energy_endpoint",
       "prefix_sha256": "c1aaeaea4540ffce3110757605212cd0d05518472b5a49d69183419dc394e124",
-      "proposition_sha256": "5e3b3a4b29320747b3405d0c42861fa2133759873e13151baa5e2a7763abd98a",
+      "proposition_sha256": "84b3eb2a799ee610e497bfb386b3a53fe767a6e109a491cbcd78195a8d679592",
       "start_line": 282,
       "status": "checked",
       "uses": [
@@ -427,7 +427,7 @@
       "end_line": 366,
       "name": "NavierStokes.Decided_truncation_decided.truncation_decided",
       "prefix_sha256": "b8ffe27b892abced533bd69078af706c5b302c67568c5050e54dba05a83ab6be",
-      "proposition_sha256": "11979bba199509f29669841fad7b672c416f2027a07b5fba13d89bd7e623d5bb",
+      "proposition_sha256": "2da7e3dd099712696f054de674f5d431ebaedf3797b698c938853bc0a49503d8",
       "start_line": 332,
       "status": "checked",
       "uses": []
@@ -451,14 +451,94 @@
       "end_line": 433,
       "name": "NavierStokes.Decided_band_decided.band_decided",
       "prefix_sha256": "6cdbea135b2ea69659b90c3c17a12cedf585d8e00b92c370218b5c5397c6b827",
-      "proposition_sha256": "c11f52741eead29660987d01741d9bf2c3578ead4fd4dbcbdba21de7e597a2ee",
+      "proposition_sha256": "764945c9bf1fe0af6b4f6cf53227f1db735f891ff4ab04f540246586e31b5339",
       "start_line": 397,
       "status": "checked",
       "uses": []
     }
   ],
+  "decisions": {
+    "2a3d8b4a659ed81f21d379b102d13de8a457e44368f7770e676ccf187ac2081f": {
+      "created": "2026-11-02T02:35:47+00:00",
+      "fingerprint": "78bf5fa748ffc901d163b4a33e4ef5700f947fa72afc09dbb1bc36c17ed981c7",
+      "outcome": {
+        "block": "\nnamespace Decided_band_decided\n\ndef forsetiTable : Gimle.Asgard.Streams.Torus.Table := [((1, 0), (mkRat (1) 2)), ((-1, 0), (mkRat (1) 2)), ((1, 1), (mkRat (1) 2)), ((-1, -1), (mkRat (1) 2)), ((2, 1), (mkRat (1) 2)), ((-2, -1), (mkRat (1) 2))]\n\nnoncomputable def forsetiP : Gimle.Asgard.Streams.Torus.TrigPoly := Gimle.Asgard.Streams.Torus.Table.toTrig forsetiTable\n\ndef forsetiPost (output : Gimle.Asgard.Streams.Mild.Point 1) : Prop :=\n  Gimle.Forseti.MildVorticity.Certified (1 / 10 : \u211a) forsetiP (((mkRat (1) 5760) : \u211a) : \u211d) output \u2227\n  (\u2200 t \u2208 Set.Icc 0 (((mkRat (1) 5760) : \u211a) : \u211d), \u2200 x : \u211d \u00d7 \u211d, (((mkRat (-3519) 1000) : \u211a) : \u211d) \u2264 Gimle.Asgard.Streams.Mild.analyticField (1 / 10 : \u211a) (output 0) t x \u2227 Gimle.Asgard.Streams.Mild.analyticField (1 / 10 : \u211a) (output 0) t x \u2264 (((mkRat (3519) 1000) : \u211a) : \u211d))\n\ndef forsetiRoot : Prop :=\n  Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10 : \u211a))\n    (fun input => input 0 0 = Gimle.Asgard.Streams.Mild.embed forsetiP) forsetiPost\n\n/-- The typed mild feedback circuit at viscosity 1/10 admits every input with the listed even, mean-zero initial vorticity; higher boundary coefficients are free. A unique formal output exists. On 0 \u2264 t \u2264 1/5760, every output has absolute convergence, Fourier reconstruction, continuous spatial derivatives, and nonincreasing spectral energy and enstrophy. The time derivative, classical PDE and dissipation derivative identities hold in the interval's interior; the time derivative extends continuously to its endpoints, and a positive horizon also gives a right derivative at zero. The physical field remains in the requested band. The window counts interaction terms, each already a function of physical time. The stream decider proved it. Goal (stream): stream vorticity viscosity 1/10 interpretation mild-band basis interaction start modes [1, 0, 1/2], [-1, 0, 1/2], [1, 1, 1/2], [-1, -1, 1/2], [2, 1, 1/2], [-2, -1, 1/2] band u time 1/5760 : u >= -3519/1000 and u <= 3519/1000 -/\ntheorem band_decided :\n    Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1/10))\n      (fun input => input 0 0 = Gimle.Asgard.Streams.Mild.embed (Gimle.Asgard.Streams.Torus.Table.toTrig [((1, 0), (1/2)), ((-1, 0), (1/2)), ((1, 1), (1/2)), ((-1, -1), (1/2)), ((2, 1), (1/2)), ((-2, -1), (1/2))]))\n      (fun output => Gimle.Forseti.MildVorticity.Certified (1/10) (Gimle.Asgard.Streams.Torus.Table.toTrig [((1, 0), (1/2)), ((-1, 0), (1/2)), ((1, 1), (1/2)), ((-1, -1), (1/2)), ((2, 1), (1/2)), ((-2, -1), (1/2))]) (1/5760) output \u2227\n        (\u2200 t \u2208 Set.Icc 0 (1/5760), \u2200 x : \u211d \u00d7 \u211d, (-3519/1000) \u2264 Gimle.Asgard.Streams.Mild.analyticField (1/10) (output 0) t x \u2227 Gimle.Asgard.Streams.Mild.analyticField (1/10) (output 0) t x \u2264 (3519/1000))) := by\n  have root : forsetiRoot := by\n    have hs : Gimle.Asgard.Streams.Torus.SizeLE 3 forsetiP := by\n      exact Gimle.Asgard.Streams.Torus.Table.sizeLE_toTrig (by decide +kernel : \u2200 e \u2208 forsetiTable, Gimle.Asgard.Streams.Torus.size e.1 \u2264 3)\n    have hl : Gimle.Asgard.Streams.Torus.l1 forsetiP \u2264 (mkRat (3) 1) := (Gimle.Asgard.Streams.Torus.Table.l1_le_absSum forsetiTable).trans (by decide +kernel : Gimle.Asgard.Streams.Torus.Table.absSum forsetiTable \u2264 (mkRat (3) 1))\n    have hc : Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10 : \u211a))\n        (fun input => input 0 0 = Gimle.Asgard.Streams.Mild.embed forsetiP)\n        (Gimle.Forseti.MildVorticity.Certified (1 / 10 : \u211a) forsetiP (((mkRat (1) 5760) : \u211a) : \u211d)) := by\n      exact Gimle.Forseti.MildVorticity.Table.catalan_contract forsetiTable (by decide +kernel) (by decide +kernel) (r := (mkRat (1) 24)) (by norm_num [Rat.mkRat_eq_div]) (K := 3) (by decide +kernel) (L := (mkRat (3) 1)) (by decide +kernel) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div])\n    unfold forsetiRoot forsetiPost\n    apply Gimle.Forseti.MildVorticity.contract_with forsetiP hc\n    have h := Gimle.Asgard.Streams.Mild.wild_catalan_band (\u03bd := (1 / 10 : \u211a)) (r := (mkRat (1) 24)) (T := (((mkRat (1) 5760) : \u211a) : \u211d)) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div]) (Gimle.Forseti.MildVorticity.boundary forsetiP) forsetiP rfl (L := (mkRat (3) 1)) hl (by norm_num [Rat.mkRat_eq_div]) 8\n    intro t ht x\n    have hh := abs_le.mp (h t ht x)\n    exact \u27e8le_trans (by exact_mod_cast (show (mkRat (-3519) 1000) \u2264 -(Gimle.Asgard.Streams.Mild.catalanBand (mkRat (3) 1) (mkRat (1) 24) 8) by decide +kernel)) hh.1, le_trans hh.2 (by exact_mod_cast (show Gimle.Asgard.Streams.Mild.catalanBand (mkRat (3) 1) (mkRat (1) 24) 8 \u2264 (mkRat (3519) 1000) by decide +kernel))\u27e9\n  have forsetiInitial : forsetiP = (Gimle.Asgard.Streams.Torus.Table.toTrig [((1, 0), (1/2)), ((-1, 0), (1/2)), ((1, 1), (1/2)), ((-1, -1), (1/2)), ((2, 1), (1/2)), ((-2, -1), (1/2))]) := by\n    unfold forsetiP forsetiTable\n    norm_num [Rat.mkRat_eq_div]\n  have forsetiViscosity : ((mkRat (1) 10) : \u211a) = (1/10) := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast0 : (((mkRat (1) 5760) : \u211a) : \u211d) = (1/5760) := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (-3519) 1000) : \u211a) : \u211d) = (-3519/1000) := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (3519) 1000) : \u211a) : \u211d) = (3519/1000) := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiRoot) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiRoot forsetiPost\n    set_option linter.unusedSimpArgs false in simp only [forsetiInitial, forsetiViscosity, forsetiCast0, forsetiCast1, forsetiCast2, Rat.cast_zero]\n    exact claim\n  \u00b7 intro lane\n    unfold forsetiRoot forsetiPost at lane\n    set_option linter.unusedSimpArgs false in simp only [forsetiInitial, forsetiViscosity, forsetiCast0, forsetiCast1, forsetiCast2, Rat.cast_zero] at lane\n    exact lane\n\nend Decided_band_decided",
+        "reason": "Found by the mild-bound stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "vorticity/MildBandClaim"
+          ],
+          [
+            "mild-bound",
+            "found",
+            "mild-contraction, K = 3, L = 3, window 8; physical absolute band bound 14742063/4194304 on 0 \u2264 t \u2264 1/5760; full circuit, convergence, classical and dissipation contract\nCarrier report evidence only (60-digit evaluation at T; no supremum claim):\ndegree | Fourier modes | carrier entries | physical \u21131(T)\n0 | 6 | 6 | 2.999861115632E+0\n1 | 12 | 24 | 2.777524609698E-4\n2 | 28 | 112 | 2.584764047804E-8\n3 | 52 | 382 | 2.947738750176E-12"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.MildVorticity"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "band_decided"
+      },
+      "prefix_sha256": "204eee4d41e3a87ec34cf43afaa0578bb87988fb4f7324cb171c13bdd1cc28f7",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `NavierStokes.Decided_band_decided.band_decided` as checked.",
+        "status": "checked",
+        "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input =>\n    Eq (input 0 0)\n      (Gimle.Asgard.Streams.Mild.embed\n        (Gimle.Asgard.Streams.Torus.Table.toTrig\n          (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                    (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))))\n  fun output =>\n  And\n    (Gimle.Forseti.MildVorticity.Certified (1 / 10)\n      (Gimle.Asgard.Streams.Torus.Table.toTrig\n        (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n          (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))\n      (1 / 5760) output)\n    (\u2200 (t : Real),\n      Set.instMembership.mem (Set.Icc 0 (1 / 5760)) t \u2192\n        \u2200 (x : Prod Real Real),\n          And (Real.instLE.le (-3519 / 1000) (Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) t x))\n            (Real.instLE.le (Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) t x) (3519 / 1000)))"
+      }
+    },
+    "cac9c014f9e290b88e20cc332de6dfd3403e2c6fade06014153f49191d04768f": {
+      "created": "2026-11-02T02:28:48+00:00",
+      "fingerprint": "78bf5fa748ffc901d163b4a33e4ef5700f947fa72afc09dbb1bc36c17ed981c7",
+      "outcome": {
+        "block": "\nnamespace Decided_truncation_decided\n\ndef forsetiTable : Gimle.Asgard.Streams.Torus.Table := [((1, 0), (mkRat (1) 2)), ((-1, 0), (mkRat (1) 2)), ((1, 1), (mkRat (1) 2)), ((-1, -1), (mkRat (1) 2)), ((2, 1), (mkRat (1) 2)), ((-2, -1), (mkRat (1) 2))]\n\nnoncomputable def forsetiP : Gimle.Asgard.Streams.Torus.TrigPoly := Gimle.Asgard.Streams.Torus.Table.toTrig forsetiTable\n\ndef forsetiPost (output : Gimle.Asgard.Streams.Mild.Point 1) : Prop :=\n  Gimle.Forseti.MildVorticity.Certified (1 / 10 : \u211a) forsetiP (((mkRat (1) 5760) : \u211a) : \u211d) output \u2227\n  (Gimle.Asgard.Streams.Mild.MildTruncationBound (1 / 10 : \u211a) (output 0) (((mkRat (1) 5760) : \u211a) : \u211d) 4 (((mkRat (21) 1024) : \u211a) : \u211d))\n\ndef forsetiRoot : Prop :=\n  Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10 : \u211a))\n    (fun input => input 0 0 = Gimle.Asgard.Streams.Mild.embed forsetiP) forsetiPost\n\n/-- The typed mild feedback circuit at viscosity 1/10 admits every input with the listed even, mean-zero initial vorticity; higher boundary coefficients are free. A unique formal output exists. On 0 \u2264 t \u2264 1/5760, every output has absolute convergence, Fourier reconstruction, continuous spatial derivatives, and nonincreasing spectral energy and enstrophy. The time derivative, classical PDE and dissipation derivative identities hold in the interval's interior; the time derivative extends continuously to its endpoints, and a positive horizon also gives a right derivative at zero. The first 4 physical interaction terms approximate the sum within 21/1024. The window counts interaction terms, each already a function of physical time. The stream decider proved it. Goal (stream): stream vorticity viscosity 1/10 interpretation mild-truncation basis interaction start modes [1, 0, 1/2], [-1, 0, 1/2], [1, 1, 1/2], [-1, -1, 1/2], [2, 1, 1/2], [-2, -1, 1/2] truncation u window 4 time 1/5760 epsilon 21/1024 -/\ntheorem truncation_decided :\n    Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1/10))\n      (fun input => input 0 0 = Gimle.Asgard.Streams.Mild.embed (Gimle.Asgard.Streams.Torus.Table.toTrig [((1, 0), (1/2)), ((-1, 0), (1/2)), ((1, 1), (1/2)), ((-1, -1), (1/2)), ((2, 1), (1/2)), ((-2, -1), (1/2))]))\n      (fun output => Gimle.Forseti.MildVorticity.Certified (1/10) (Gimle.Asgard.Streams.Torus.Table.toTrig [((1, 0), (1/2)), ((-1, 0), (1/2)), ((1, 1), (1/2)), ((-1, -1), (1/2)), ((2, 1), (1/2)), ((-2, -1), (1/2))]) (1/5760) output \u2227\n        (Gimle.Asgard.Streams.Mild.MildTruncationBound (1/10) (output 0) (1/5760) 4 (21/1024))) := by\n  have root : forsetiRoot := by\n    have hs : Gimle.Asgard.Streams.Torus.SizeLE 3 forsetiP := by\n      exact Gimle.Asgard.Streams.Torus.Table.sizeLE_toTrig (by decide +kernel : \u2200 e \u2208 forsetiTable, Gimle.Asgard.Streams.Torus.size e.1 \u2264 3)\n    have hl : Gimle.Asgard.Streams.Torus.l1 forsetiP \u2264 (mkRat (3) 1) := (Gimle.Asgard.Streams.Torus.Table.l1_le_absSum forsetiTable).trans (by decide +kernel : Gimle.Asgard.Streams.Torus.Table.absSum forsetiTable \u2264 (mkRat (3) 1))\n    have hc : Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10 : \u211a))\n        (fun input => input 0 0 = Gimle.Asgard.Streams.Mild.embed forsetiP)\n        (Gimle.Forseti.MildVorticity.Certified (1 / 10 : \u211a) forsetiP (((mkRat (1) 5760) : \u211a) : \u211d)) := by\n      exact Gimle.Forseti.MildVorticity.Table.euler_contract forsetiTable (by decide +kernel) (by decide +kernel) (by norm_num [Rat.mkRat_eq_div]) (K := 3) (by decide +kernel) (by decide +kernel) (L := (mkRat (3) 1)) (by decide +kernel) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div])\n    unfold forsetiRoot forsetiPost\n    apply Gimle.Forseti.MildVorticity.contract_with forsetiP hc\n    have h := Gimle.Asgard.Streams.Mild.wild_euler_truncation (\u03bd := (1 / 10 : \u211a)) (T := (mkRat (1) 5760)) (by norm_num [Rat.mkRat_eq_div]) (by norm_num [Rat.mkRat_eq_div]) (Gimle.Forseti.MildVorticity.boundary forsetiP) forsetiP rfl (K := 3) (by decide +kernel) hs (L := (mkRat (3) 1)) hl (by norm_num [Rat.mkRat_eq_div]) 4\n    apply h.mono\n    exact_mod_cast (show Gimle.Asgard.Streams.Mild.eulerTail (mkRat (3) 1) 3 (mkRat (1) 5760) 4 \u2264 (mkRat (21) 1024) by decide +kernel)\n  have forsetiInitial : forsetiP = (Gimle.Asgard.Streams.Torus.Table.toTrig [((1, 0), (1/2)), ((-1, 0), (1/2)), ((1, 1), (1/2)), ((-1, -1), (1/2)), ((2, 1), (1/2)), ((-2, -1), (1/2))]) := by\n    unfold forsetiP forsetiTable\n    norm_num [Rat.mkRat_eq_div]\n  have forsetiViscosity : ((mkRat (1) 10) : \u211a) = (1/10) := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast0 : (((mkRat (1) 5760) : \u211a) : \u211d) = (1/5760) := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (21) 1024) : \u211a) : \u211d) = (21/1024) := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 forsetiRoot) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    unfold forsetiRoot forsetiPost\n    set_option linter.unusedSimpArgs false in simp only [forsetiInitial, forsetiViscosity, forsetiCast0, forsetiCast1, Rat.cast_zero]\n    exact claim\n  \u00b7 intro lane\n    unfold forsetiRoot forsetiPost at lane\n    set_option linter.unusedSimpArgs false in simp only [forsetiInitial, forsetiViscosity, forsetiCast0, forsetiCast1, Rat.cast_zero] at lane\n    exact lane\n\n/-!\n### Inspect the certified band and the unresolved tighter band {fold}\n\nContraction certifies $[-3.519,3.519]$ with the full circuit guarantees.\nThe subsequent request for $[-3,3]$ remains unknown, which does not establish\nthat the physical field ever leaves that tighter band.\n-/\n\nend Decided_truncation_decided",
+        "reason": "Found by the mild-bound stage.",
+        "stages": [
+          [
+            "binding",
+            "supported",
+            "vorticity/MildTruncationClaim"
+          ],
+          [
+            "mild-bound",
+            "found",
+            "mild-scale, K = 3, L = 3, window 4; physical tail bound 59049/36352000 on 0 \u2264 t \u2264 1/5760; full circuit, convergence, classical and dissipation contract\nCarrier report evidence only (60-digit evaluation at T; no supremum claim):\ndegree | Fourier modes | carrier entries | physical \u21131(T)\n0 | 6 | 6 | 2.999861115632E+0\n1 | 12 | 24 | 2.777524609698E-4\n2 | 28 | 112 | 2.584764047804E-8\n3 | 52 | 382 | 2.947738750176E-12"
+          ],
+          [
+            "imports",
+            "needed",
+            "import Gimle.Forseti.MildVorticity"
+          ]
+        ],
+        "status": "proven",
+        "theorem": "truncation_decided"
+      },
+      "prefix_sha256": "d6ae5ee601f4d16d191377c2bfa693a88126758178768cc32b70d9c3c5769cf3",
+      "provider": "forseti",
+      "verification": {
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "message": "The checker reports `NavierStokes.Decided_truncation_decided.truncation_decided` as checked.",
+        "status": "checked",
+        "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input =>\n    Eq (input 0 0)\n      (Gimle.Asgard.Streams.Mild.embed\n        (Gimle.Asgard.Streams.Torus.Table.toTrig\n          (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                    (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))))\n  fun output =>\n  And\n    (Gimle.Forseti.MildVorticity.Certified (1 / 10)\n      (Gimle.Asgard.Streams.Torus.Table.toTrig\n        (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n          (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))\n      (1 / 5760) output)\n    (Gimle.Asgard.Streams.Mild.MildTruncationBound (1 / 10) (output 0) (1 / 5760) 4 (21 / 1024))"
+      }
+    }
+  },
   "environment": {
-    "check": "f46256f5c728876893713927e64c17901e791bf6daee641999f34fd1bc4ba487",
+    "check": "f05067515a2572ce49212e41943b73a5b0b549785f9507d05a4dccf44c5c45fc",
     "fingerprint": "78bf5fa748ffc901d163b4a33e4ef5700f947fa72afc09dbb1bc36c17ed981c7"
   },
   "format": "glitnir.project-checks/v2",

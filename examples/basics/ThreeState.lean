@@ -157,7 +157,7 @@ theorem energy_band :
   have root : forsetiRoot := by
     unfold forsetiRoot forsetiIdentities forsetiContract
     refine ⟨⟨by decide, by decide, by decide⟩, ?_⟩
-    have time : forsetiTime = Gimle.Asgard.Examples.ThreeState.evolution.time := by (simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Asgard.Examples.ThreeState.evolution]; norm_num [Rat.mkRat_eq_div])
+    have time : forsetiTime = Gimle.Asgard.Examples.ThreeState.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Asgard.Examples.ThreeState.evolution] <;> norm_num [Rat.mkRat_eq_div]
     have init : forsetiInitial = Gimle.Asgard.Examples.ThreeState.model.initial := by rw [Gimle.Asgard.Examples.ThreeState.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]
     have obs : forsetiObservation = Gimle.Asgard.Examples.ThreeState.energyIndex := rfl
     rw [time, init, obs]
@@ -200,10 +200,11 @@ merely fail to prove it; it refutes it with the initial state as a checked
 witness.
 
 Below, the claim is stated in the same form as the band, with `sorry` in
-place of a proof: it is false, so it has none. What Lean checked is its
-negation, recorded beside the notebook, which is why the claim shows as
-refuted. A later claim that used it would be marked as depending on a refuted
-claim.
+place of a proof: it is false, so it has none. That positive theorem remains
+admitted and displays **Contains sorry**. The separate theorem
+`energy_below_five_refuted` below proves its negation and is checked. A later
+claim that used the admitted positive theorem would inherit its `sorryAx`
+assumption; the checked refutation does not turn that positive claim into a proof.
 -/
 
 -- @decide energy_below_five : trajectory three-state interpretation
@@ -243,6 +244,51 @@ theorem energy_below_five :
       (∀ y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y →
         ∀ t ≥ 2, have V := y t 3; V ≤ 5) := by
   sorry
+
+theorem energy_below_five_refuted : ¬ (have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed
+    have time : Gimle.Asgard.Dynamics.TimeDomain := ⟨"time", 2⟩
+    ∀ u : Gimle.Asgard.Dynamics.Signal (0 + 3),
+      Gimle.Asgard.Dynamics.signalRight u 2 = ![1, 2, -1] →
+      (∃ y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y) ∧
+      (∀ y y' : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y → circuit.Rel time u y' →
+        ∀ t ≥ 2, y t = y' t) ∧
+      (∀ y : Gimle.Asgard.Dynamics.Signal 4, circuit.Rel time u y →
+        ∀ t ≥ 2, have V := y t 3; V ≤ 5)) := by
+  have refuted : forsetiIdentities ∧ ¬ forsetiContract := by
+    unfold forsetiIdentities forsetiContract
+    refine ⟨⟨by decide, by decide, by decide⟩, ?_⟩
+    intro contract
+    have time : forsetiTime = Gimle.Asgard.Examples.ThreeState.evolution.time := by simp [forsetiTime, Gimle.Asgard.Model.Evolution.time, Gimle.Asgard.Examples.ThreeState.evolution] <;> norm_num [Rat.mkRat_eq_div]
+    have init : forsetiInitial = Gimle.Asgard.Examples.ThreeState.model.initial := by rw [Gimle.Asgard.Examples.ThreeState.initial_eq]; funext i; fin_cases i <;> norm_num [forsetiInitial, Rat.mkRat_eq_div]
+    have obs : forsetiObservation = Gimle.Asgard.Examples.ThreeState.energyIndex := rfl
+    rw [time, init, obs] at contract
+    obtain ⟨state, realized⟩ := Gimle.Forseti.Examples.ThreeState.compiled_exists
+    have start : state Gimle.Asgard.Examples.ThreeState.evolution.time.start = Gimle.Asgard.Examples.ThreeState.model.initial := by unfold Gimle.Asgard.Model.ContinuousModel.Realizes Gimle.Asgard.Model.ContinuousModel.feedback at realized; exact ((Gimle.Forseti.Trajectory.close_rel _ _ _ _ _ _).mp realized).2.1
+    have bounded := contract.holds _ Gimle.Forseti.Examples.ThreeStateContract.declared_input_admitted _ ⟨state, (Gimle.Forseti.Examples.ThreeStateContract.feedback_reads _ Gimle.Forseti.Examples.ThreeStateContract.declared_input_admitted state).mpr realized, rfl⟩ Gimle.Asgard.Examples.ThreeState.evolution.time.start (by simp [Gimle.Asgard.Dynamics.TimeDomain.domain])
+    simp only at bounded
+    rw [start, Gimle.Asgard.Examples.ThreeState.energy_at_initial] at bounded
+    have witness : forsetiPost.holds (fun i => (((fun _ : Fin 1 => (mkRat (6) 1)) i : ℚ) : ℝ)) := by convert bounded using 2; norm_num [Rat.mkRat_eq_div]
+    rw [← Gimle.Forseti.Syntax.Formula.holdsQ_iff] at witness
+    exact absurd witness (by decide +kernel)
+  intro claim
+  have forsetiCast0 : (((mkRat (5) 1) : ℚ) : ℝ) = 5 := by norm_num [Rat.mkRat_eq_div]
+  have forsetiCast1 : (((mkRat (2) 1) : ℚ) : ℝ) = 2 := by norm_num [Rat.mkRat_eq_div]
+  have forsetiCast2 : (((mkRat (1) 1) : ℚ) : ℝ) = 1 := by norm_num [Rat.mkRat_eq_div]
+  have forsetiCast3 : (((mkRat (-1) 1) : ℚ) : ℝ) = -1 := by norm_num [Rat.mkRat_eq_div]
+  refine (fun (bridge : _ ↔ forsetiContract) => refuted.2 (bridge.mp claim)) ?_
+  constructor
+  · intro claim
+    unfold forsetiContract
+    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, ← sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at claim
+    refine ⟨?_, ?_, ?_⟩ <;> set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, ← sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc]
+    · exact fun u start => (claim u start).1
+    · exact fun u start => (claim u start).2.1
+    · exact fun u start => (claim u start).2.2
+  · intro lane
+    unfold forsetiContract at lane
+    obtain ⟨realizable, unique, holds⟩ := lane
+    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Trajectory.Realizable, Gimle.Forseti.Trajectory.Unique, Gimle.Forseti.Trajectory.Holds, Gimle.Forseti.Trajectory.Initialized, Gimle.Forseti.Trajectory.Always, Set.EqOn, Gimle.Asgard.Dynamics.TimeDomain.domain, Set.mem_Ici, forsetiTime, forsetiInitial, forsetiPost, forsetiObservation, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, true_and, forsetiCast0, forsetiCast1, forsetiCast2, forsetiCast3, ← sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc] at realizable unique holds ⊢
+    exact fun u start => ⟨realizable u start, unique u start, holds u start⟩
 
 end Decided_energy_below_five
 
