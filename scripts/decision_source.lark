@@ -1,0 +1,9 @@
+// Lexical boundaries only. This is not a Lean elaborator or general command parser.
+start: atom*
+?atom: block_comment | line_comment | string | quoted_name | CODE
+block_comment: "/-" (block_comment | COMMENT_TEXT)* "-/"
+line_comment: /--[^\n]*/
+string: /"(?:\\.|[^"\\])*"/s
+quoted_name: /«[^»]*»/
+COMMENT_TEXT: /(?:[^\/-]|\/(?!-)|-(?!\/))+/
+CODE.1: /(?:(?!\/-|--|"|«)[\s\S])+/

@@ -9,6 +9,7 @@ when adding or moving examples.
 Run the repository checks with Python 3.12 or newer:
 
 ```sh
+python3 -m pip install --require-hashes --only-binary=:all: -r scripts/gallery/requirements.txt
 python3 -m unittest discover -s tests -v
 python3 scripts/check_bundles.py
 ```
@@ -26,17 +27,20 @@ rechecks only what changed: `scripts/select_recheck.py` takes
 source changed plus those that import them (through `import` lines and the
 lakefile's libraries). A change to `lean-toolchain`, `lake-manifest.json`,
 `lakefile.toml`, the gallery or recheck requirements, `scripts/recheck.py`,
+`scripts/decision_refresh.py`, `scripts/decision_source.lark`,
 `scripts/select_recheck.py` or the workflow rechecks all; results files and
-docs recheck nothing, and the workflow's `.lean` paths filter does not even
-start it for a pull request without `.lean` changes. When nothing is selected
+docs recheck nothing. The workflow paths filter includes these recheck inputs.
+When nothing is selected
 the job succeeds with a summary line and builds no Lean. Manual dispatch takes
 an optional `only` list (empty means all), on Linux with the gallery's pinned
 Glitnir. Because the diff is against the pull request's base, a results commit
 on top of a source change rechecks that notebook again. `python -m scripts.recheck` checks each notebook
 through Glitnir's preview service, decides out-of-date decisions again
-(replacing an earlier decision's block the way **Accept** inserts it), runs
+(refreshing only the generated theorem after checking the preserved block), runs
 out-of-date evidence again and draws every view so its drawing is saved. The
-workflow never pushes: it uploads the results, `recheck.patch` and a
+workflow runs one job per selected notebook (at most four in parallel), with
+independent six-hour limits and no fail-fast cancellation. Each job uploads a
+`notebook-recheck-<name>` artifact. The workflow never pushes: it uploads the results, `recheck.patch` and a
 per-notebook report (`report.md`, also the job summary) that lists every claim
 whose status changed. Review the report, apply the patch and commit each file
 by its path. Results saved on one machine read as out of date in another

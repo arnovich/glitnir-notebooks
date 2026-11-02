@@ -19,6 +19,8 @@ prints ``all``, or the space-separated names (an empty line for none).
 Run it from the repository root; it reads ``lakefile.toml`` and the notebooks.
 """
 
+import argparse
+import json
 import re
 import sys
 import tomllib
@@ -37,6 +39,8 @@ EVERYTHING = frozenset(
         "scripts/glitnir_release.py",
         "scripts/recheck-requirements.txt",
         "scripts/recheck.py",
+        "scripts/decision_refresh.py",
+        "scripts/decision_source.lark",
         "scripts/select_recheck.py",
         ".github/workflows/recheck.yml",
     }
@@ -51,6 +55,7 @@ def notebook_sources(root: Path) -> dict[str, Path]:
     return {
         library["name"]: Path(library.get("srcDir", ".")) / f"{library['name']}.lean"
         for library in config["lean_lib"]
+        if library.get("srcDir") != "certificates"
     }
 
 
@@ -115,10 +120,29 @@ def select_notebooks(changed: Iterable[str], root: Path) -> str | list[str]:
     return sorted(selected)
 
 
+def recheck_matrix(selection: str, root: Path) -> dict[str, list[str]]:
+    """Give each selected notebook its own bounded CI job, with no omissions."""
+    known = set(notebook_sources(root))
+    names = known if selection == ALL else set(selection.split())
+    if unknown := names - known:
+        raise ValueError(f"Unknown notebooks: {', '.join(sorted(unknown))}")
+    return {"notebook": sorted(names)}
+
+
 def main() -> int:
-    """Print the selection for the changed paths on standard input."""
-    selection = select_notebooks(sys.stdin.read().split("\n"), Path.cwd())
-    print(selection if isinstance(selection, str) else " ".join(selection))
+    """Print the selection or expand an explicit selection into a CI matrix."""
+    parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    parser.add_argument("--matrix", action="store_true")
+    parser.add_argument("--only", default="")
+    args = parser.parse_args()
+    if args.matrix:
+        try:
+            print(json.dumps(recheck_matrix(args.only, Path.cwd())))
+        except ValueError as error:
+            parser.error(str(error))
+    else:
+        selection = select_notebooks(sys.stdin.read().split("\n"), Path.cwd())
+        print(selection if isinstance(selection, str) else " ".join(selection))
     return 0
 
 
