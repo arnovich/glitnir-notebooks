@@ -36,7 +36,8 @@ an optional `only` list (empty means all), on Linux with the gallery's pinned
 Glitnir. Because the diff is against the pull request's base, a results commit
 on top of a source change rechecks that notebook again. `python -m scripts.recheck` checks each notebook
 through Glitnir's preview service, decides out-of-date decisions again
-(refreshing only the generated theorem after checking the preserved block), runs
+(refreshing only the generated theorem after checking the preserved block),
+including accepted decisions saved in another environment, runs
 out-of-date evidence again and draws every view so its drawing is saved. The
 workflow runs one job per selected notebook (at most four in parallel), with
 independent six-hour limits and no fail-fast cancellation. Each job uploads a
