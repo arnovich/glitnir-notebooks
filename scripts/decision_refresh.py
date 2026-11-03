@@ -147,12 +147,18 @@ def refresh_decision(original: str, name: str, candidate: str) -> str:
         raise PreservationError("Candidate contains content outside its decision namespace.")
     if any(c.kind not in {"open", "def", "theorem", "example"} for c in old):
         raise PreservationError("Unsupported author context; keep the old decision block.")
-    if any(c.kind not in {"def", "theorem"} for c in new):
+    if any(c.kind not in {"open", "def", "theorem"} for c in new):
         raise PreservationError("Unsupported generated decision context.")
     local = _definitions(old)
     shared: dict[str, _Command] = {}
+    # Library opens, as the stepped decider writes them, are kept only when the
+    # candidate opens exactly the same namespaces in the same order.
+    plain = [c for c in old if c.kind == "open" and not c.text.startswith("open DecidedShared_")]
+    opened = [c for c in new if c.kind == "open"]
+    if [_canonical(c.text) for c in plain] != [_canonical(c.text) for c in opened]:
+        raise PreservationError("Namespace opens changed; keep the old block.")
     for command in old:
-        if command.kind != "open":
+        if command.kind != "open" or command in plain:
             continue
         if not re.fullmatch(r"open DecidedShared_[\w]+", command.text):
             raise PreservationError("Unsupported namespace open; keep the old block.")

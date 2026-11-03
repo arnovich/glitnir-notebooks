@@ -7,10 +7,12 @@ This fixes the source loss reported in [Glitnir #91](https://github.com/arnovich
 The editor's **Accept** inserts a candidate; the script owns this replacement.
 
 The fresh candidate's supporting definitions must match the retained local
-definitions or an explicitly opened `DecidedShared_*` namespace. The matching
-is conservative and literal values are significant. Changed definitions,
-ambiguous/nested namespaces, unsupported syntax and proof comments that would
-be lost cause refusal. The old source and previous decision receipt are restored
+definitions or an explicitly opened `DecidedShared_*` namespace, and any other
+`open` lines, such as the stepped decider's library opens, must be the same and
+in the same order as the old block's. The matching is conservative and literal
+values are significant. Changed definitions or opens, ambiguous/nested
+namespaces, unsupported syntax and proof comments that would be lost cause
+refusal. The old source and previous decision receipt are restored
 when the run still owns them; detected external changes are never overwritten.
 
 Before accepting a refresh, Glitnir's kernel checker checks the exact preserved

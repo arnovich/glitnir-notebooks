@@ -123,6 +123,31 @@ class PreservationTests(unittest.TestCase):
         with self.assertRaisesRegex(PreservationError, "forsetiStart"):
             refresh_decision(source, "truncation_decided", candidate.replace("noncomputable def", "def"))
 
+    def test_real_stepped_blocks_keep_their_namespace_opens(self) -> None:
+        """Stepped decisions open library namespaces; only identical opens are kept."""
+        source = (
+            Path(__file__).resolve().parents[1] / "examples/finance/HedgedSpreadRisk.lean"
+        ).read_text()
+        opening, closing = "namespace Decided_year_breach_bound", "end Decided_year_breach_bound"
+        block = opening + source.split(opening, 1)[1].split(closing, 1)[0] + closing
+        self.assertIn("open MeasureTheory", block)
+        fresh = block.replace("(by norm_num [Δ])", "(by norm_num [Δ]; done)")
+        self.assertEqual(
+            refresh_decision(source, "year_breach_bound", fresh),
+            source.replace(block, fresh),
+        )
+        for changed in (
+            fresh.replace("open MeasureTheory\n", ""),
+            fresh.replace("open MeasureTheory\n", "open MeasureTheory Real\n"),
+            fresh.replace(
+                "open MeasureTheory\nopen Gimle.Forseti.Stepped\n",
+                "open Gimle.Forseti.Stepped\nopen MeasureTheory\n",
+            ),
+        ):
+            with self.subTest(changed=changed[:120]):
+                with self.assertRaisesRegex(PreservationError, "open"):
+                    refresh_decision(source, "year_breach_bound", changed)
+
     def test_real_ns_t3_blocks_keep_all_twelve_identity_examples(self) -> None:
         """Use the actual issue #91 blocks, with a harmless new proof comment."""
         source = (Path(__file__).resolve().parents[1] / "examples/galerkin/NS_T3.lean").read_text()
