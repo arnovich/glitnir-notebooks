@@ -21,10 +21,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5365",
       "prefix_sha256": "b8b585097c019486e54caf1c728584c15bc6e2641087bf5bc3064f7589518b2a",
-      "proposition_sha256": "026dfce9f7557ca46a5b4983b516dcda28879586abe21a300e7558ead968ca08",
+      "proposition_sha256": "a569460fac37ea011bd91c5b8f1701d635ad3ec2cf0850520990327643774425",
       "start_line": 124,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime",
+      "type_sha256": "a438cefb5d18b78856ee5f651298dca150ba2f9b6a98a2b50d7da70319bcca09",
       "uses": []
     },
     {
@@ -48,10 +50,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5437",
       "prefix_sha256": "03a6b3941ea4fdcefdf12ce683883aefe3b15c067476b97e084a8733ae99b94c",
-      "proposition_sha256": "cc053020f177a609a1af477bf6696da03c41500a0313b3b7db9f85009deec870",
+      "proposition_sha256": "79f0c0fd9282a10295712b22910c29f6493975d1028b73b055205986d0c03aa5",
       "start_line": 125,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial",
+      "type_sha256": "fdc2d1646e4bd75d1a91aeb7c92808cf65b61603d8ddfcf769c375f259d34e1d",
       "uses": []
     },
     {
@@ -62,10 +66,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5515",
       "prefix_sha256": "aca9a586d877e6287170b95244bc1db46210b0a876daab3e93d25c876fa59a17",
-      "proposition_sha256": "04b52b7c9a65112b8e4d1ea1e782dc052625929acb2c81416ba96160be2f88eb",
+      "proposition_sha256": "b0a5de7cc4a5ebea9603e027a604f7ec180a692e6b5fec6024b6c20386426690",
       "start_line": 126,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation",
+      "type_sha256": "4f10e14a43a1004da1d08e3d24b2643e572e832fcc688f4d19ef9715ee2b6ee5",
       "uses": []
     },
     {
@@ -89,10 +95,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_band._glitnir_example_5601",
       "prefix_sha256": "cff6b3c973ff2472878040a4563ac56dc61baec6c285580f12606c3d711b0fac",
-      "proposition_sha256": "f8e381a8407a4f1ef5dccc76862df73578d4450638bfdbd5ea4edfb8d102be54",
+      "proposition_sha256": "2b2f7aaa49aecdc801129637e02fdb862d967c945cb416b964eebbdca412339d",
       "start_line": 127,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities",
+      "type_sha256": "bfd8712d687f67f075d1eff9b2ef7a9e1d30befbdee9f14548d99bcc047ec5c7",
       "uses": []
     },
     {
@@ -114,9 +122,11 @@
       "end_line": 188,
       "name": "Notebook.ThreeState.Decided_energy_band.energy_band",
       "prefix_sha256": "ed0a575248acd9b05ab760a6adb909cf2c929e31c56d3963db875c464378728c",
-      "proposition_sha256": "86f84671cddf320d2a1b2d0449ac7ddf495795ceb5ca43f33fbd6bb09394ce5e",
+      "proposition_sha256": "7dfb81de4a3342e1cee5a3d5d18f3b54dce95e94d04373b60c2e723be06437c9",
       "start_line": 146,
       "status": "checked",
+      "type": "have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed;\nhave time := { axis := \"time\", start := 2 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 3)),\n  Eq (Gimle.Asgard.Dynamics.signalRight u 2)\n      (Matrix.vecCons 1 (Matrix.vecCons 2 (Matrix.vecCons (-1) Matrix.vecEmpty))) \u2192\n    And (Exists fun y => circuit.Rel time u y)\n      (And\n        (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 4),\n          circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 2 \u2192 Eq (y t) (y' t))\n        (\u2200 (y : Gimle.Asgard.Dynamics.Signal 4),\n          circuit.Rel time u y \u2192\n            \u2200 (t : Real),\n              GE.ge t 2 \u2192\n                have V := y t 3;\n                And (GE.ge V 0) (Real.instLE.le V 6)))",
+      "type_sha256": "c2fbe4e42142a191d80e2f9bcfab21f27e757af3e46d8c208f4095791e9fb4e2",
       "uses": []
     },
     {
@@ -140,10 +150,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_12954",
       "prefix_sha256": "ffd1ed4a8d0f99d0815fa8f13f97036234676e41730a2d4c7469485f97eb968f",
-      "proposition_sha256": "026dfce9f7557ca46a5b4983b516dcda28879586abe21a300e7558ead968ca08",
+      "proposition_sha256": "a569460fac37ea011bd91c5b8f1701d635ad3ec2cf0850520990327643774425",
       "start_line": 218,
       "statement": "forsetiTime = forsetiTime",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiTime",
+      "type_sha256": "a438cefb5d18b78856ee5f651298dca150ba2f9b6a98a2b50d7da70319bcca09",
       "uses": []
     },
     {
@@ -167,10 +179,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_13026",
       "prefix_sha256": "58aeacbec31186057cf69835b7f6cae20697c590c6cfe70f0b00ea0fff81bce4",
-      "proposition_sha256": "cc053020f177a609a1af477bf6696da03c41500a0313b3b7db9f85009deec870",
+      "proposition_sha256": "79f0c0fd9282a10295712b22910c29f6493975d1028b73b055205986d0c03aa5",
       "start_line": 219,
       "statement": "forsetiInitial = forsetiInitial",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiInitial",
+      "type_sha256": "fdc2d1646e4bd75d1a91aeb7c92808cf65b61603d8ddfcf769c375f259d34e1d",
       "uses": []
     },
     {
@@ -181,10 +195,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_13104",
       "prefix_sha256": "81877393eaa3538eb437336744455ee48af1e5732826d18abdd9bd228f5b1e64",
-      "proposition_sha256": "04b52b7c9a65112b8e4d1ea1e782dc052625929acb2c81416ba96160be2f88eb",
+      "proposition_sha256": "b0a5de7cc4a5ebea9603e027a604f7ec180a692e6b5fec6024b6c20386426690",
       "start_line": 220,
       "statement": "forsetiObservation = forsetiObservation",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiObservation",
+      "type_sha256": "4f10e14a43a1004da1d08e3d24b2643e572e832fcc688f4d19ef9715ee2b6ee5",
       "uses": []
     },
     {
@@ -208,10 +224,12 @@
       "kernel_statement": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities",
       "name": "_private.ThreeState.0.Notebook.ThreeState.Decided_energy_below_five._glitnir_example_13190",
       "prefix_sha256": "c1fae88e367ac91720ff2bc3b2dab0f8169fa5e07a2b658200f2f624006aa455",
-      "proposition_sha256": "f8e381a8407a4f1ef5dccc76862df73578d4450638bfdbd5ea4edfb8d102be54",
+      "proposition_sha256": "2b2f7aaa49aecdc801129637e02fdb862d967c945cb416b964eebbdca412339d",
       "start_line": 221,
       "statement": "forsetiIdentities = forsetiIdentities",
       "status": "checked",
+      "type": "Eq Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities\n  Notebook.ThreeState.DecidedShared_e390e59d2288.forsetiIdentities",
+      "type_sha256": "bfd8712d687f67f075d1eff9b2ef7a9e1d30befbdee9f14548d99bcc047ec5c7",
       "uses": []
     },
     {
@@ -237,9 +255,11 @@
       "end_line": 246,
       "name": "Notebook.ThreeState.Decided_energy_below_five.energy_below_five",
       "prefix_sha256": "41909e76686c51261ebd2eb565b0ecfac2bf454b3b234b67967e41a273b7ec41",
-      "proposition_sha256": "9c30c6f39aad58c30b9250e0c4fdf5eb1e288d813ad328deb1d2ef237c8f5655",
+      "proposition_sha256": "9466d00165940147ba9454422b8d74b94191ad5cac6dc67b9ceeaff0c7582f35",
       "start_line": 235,
       "status": "admitted",
+      "type": "have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed;\nhave time := { axis := \"time\", start := 2 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 3)),\n  Eq (Gimle.Asgard.Dynamics.signalRight u 2)\n      (Matrix.vecCons 1 (Matrix.vecCons 2 (Matrix.vecCons (-1) Matrix.vecEmpty))) \u2192\n    And (Exists fun y => circuit.Rel time u y)\n      (And\n        (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 4),\n          circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 2 \u2192 Eq (y t) (y' t))\n        (\u2200 (y : Gimle.Asgard.Dynamics.Signal 4),\n          circuit.Rel time u y \u2192\n            \u2200 (t : Real),\n              GE.ge t 2 \u2192\n                have V := y t 3;\n                Real.instLE.le V 5))",
+      "type_sha256": "be1caf404a8109c6b8ee0fb0d5fd938017005e722e5352afc5ef1eb8fd0921e4",
       "uses": []
     },
     {
@@ -261,9 +281,11 @@
       "end_line": 291,
       "name": "Notebook.ThreeState.Decided_energy_below_five.energy_below_five_refuted",
       "prefix_sha256": "16afc7d608659e22bddedbd44ece67f9950085576737919b1288e2a1edf8ddc8",
-      "proposition_sha256": "e959a4f5d78e2b179e78995af0e79915619bbdfc321450d02cc2fecb1cb89a23",
+      "proposition_sha256": "2e77162d193df43ffe73864f4e3c96db402ecdd00d6b83405a377f4036924ba6",
       "start_line": 248,
       "status": "checked",
+      "type": "Not\n  (have circuit := Gimle.Forseti.Examples.ThreeStateContract.observed;\n  have time := { axis := \"time\", start := 2 };\n  \u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 0 3)),\n    Eq (Gimle.Asgard.Dynamics.signalRight u 2)\n        (Matrix.vecCons 1 (Matrix.vecCons 2 (Matrix.vecCons (-1) Matrix.vecEmpty))) \u2192\n      And (Exists fun y => circuit.Rel time u y)\n        (And\n          (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 4),\n            circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 2 \u2192 Eq (y t) (y' t))\n          (\u2200 (y : Gimle.Asgard.Dynamics.Signal 4),\n            circuit.Rel time u y \u2192\n              \u2200 (t : Real),\n                GE.ge t 2 \u2192\n                  have V := y t 3;\n                  Real.instLE.le V 5)))",
+      "type_sha256": "e0435344c3e1131545e0a1d6993837bcc7e021c962f9a8f3d986ee36a966ff9e",
       "uses": []
     },
     {
@@ -285,9 +307,16 @@
       "end_line": 337,
       "name": "Notebook.ThreeState.energy_rate_nonpositive",
       "prefix_sha256": "765b61b4b60fb0224467a70ffa83ce0ca878d49317e9e20bdfa5b578c48e7918",
-      "proposition_sha256": "e8f562dcabb360e4e8f03f38e340784da39ed4c1cd21fc1ab347bd1d33e9540a",
+      "proposition_sha256": "d342f6328a675d81ed3dd6ef91b85dbeb051fcf5665cefe06e22eb50cd8b4492",
       "start_line": 332,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (x : Gimle.Asgard.Point 3),\n  Real.instLE.1\n    (instHMul.hMul 2\n      (Finset.univ.sum fun i => instHMul.hMul (x i) (Gimle.Asgard.Examples.ThreeState.model.rates.circuit.run x i)))\n    0",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (x : Gimle.Asgard.Point 3),\n  Real.instLE.le\n    (instHMul.hMul 2\n      (Finset.univ.sum fun i => instHMul.hMul (x i) (Gimle.Asgard.Examples.ThreeState.model.rates.circuit.run x i)))\n    0",
+      "type_sha256": "c37d908f2bb15a42f959c932cb39c3f7f5547cca4fe9e5ad79f892e629ed945f",
       "uses": []
     }
   ],
@@ -377,14 +406,14 @@
     }
   },
   "environment": {
-    "check": "390c070eb4083f1ed17a8b793cb9c5290ddcd735c3f54d3c1c1e1a6926e1a6ce",
-    "fingerprint": "75da7ed0edb0ab32b47b260ac98722bb781bedbbd9c7f0bdc9111c1e846f34cd"
+    "check": "c43cd0eac459bad1295b0344746bd5f469f315726cc89afb851095f5ee87a1b9",
+    "fingerprint": "5a6ef69b1962c7fbfa91332a6b971a06b906a588e2b972582045d341cf46538d"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "66a89e47b15cea68c90af926eb3a53b0300eff0bdcf382f3da06ba26096afef9",
   "views": {
     "2cddafd62d8b0f9d5143f9671f5765d8f4b32ab5603efae20d7a8dc663020123": {
-      "created": "2026-10-29T19:29:37+00:00",
+      "created": "2026-11-03T11:53:17+00:00",
       "drawing": {
         "contracts": [],
         "detail": null,
@@ -432,7 +461,7 @@
         },
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1020 737\" width=\"1020\" height=\"737\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><text x=\"35\" y=\"35\" font-size=\"20\" fill=\"#172f43\" textLength=\"528\" lengthAdjust=\"spacingAndGlyphs\">Continuous circuit \u00b7 compiled model overview</text><text x=\"35\" y=\"62\" font-size=\"14\" fill=\"#172f43\" textLength=\"369\" lengthAdjust=\"spacingAndGlyphs\">Axis t [time] \u2022 start 2 \u2022 exact coefficients</text><rect x=\"100\" y=\"100\" width=\"390\" height=\"330\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"120\" y=\"125\" font-size=\"15\" fill=\"#172f43\" textLength=\"189\" lengthAdjust=\"spacingAndGlyphs\">Compiled vector field</text><rect x=\"600\" y=\"100\" width=\"240\" height=\"330\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"620\" y=\"125\" font-size=\"15\" fill=\"#172f43\" textLength=\"153\" lengthAdjust=\"spacingAndGlyphs\">Integrate along t</text><g><title>state: state-x; derivative: dx; initial: initial-x</title><text x=\"120\" y=\"165\" font-size=\"14\" fill=\"#172f43\" textLength=\"294\" lengthAdjust=\"spacingAndGlyphs\">dx/dt = ((((-1/3) \u00d7 x) + y) + (-z))</text><polyline points=\"490,165 600,165\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"600,165 593,161 593,169\" fill=\"#476579\"></polygon><text x=\"620\" y=\"165\" font-size=\"14\" fill=\"#172f43\" textLength=\"58\" lengthAdjust=\"spacingAndGlyphs\">\u222b  \u2192  x</text><text x=\"620\" y=\"189\" font-size=\"13\" fill=\"#172f43\" textLength=\"62\" lengthAdjust=\"spacingAndGlyphs\">x(2) = 1</text><polyline points=\"840,165 990,165\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"990,165 983,161 983,169\" fill=\"#476579\"></polygon><text x=\"855\" y=\"155\" font-size=\"12\" fill=\"#172f43\" textLength=\"28\" lengthAdjust=\"spacingAndGlyphs\">0: x</text></g><g><title>state: state-y; derivative: dy; initial: initial-y</title><text x=\"120\" y=\"255\" font-size=\"14\" fill=\"#172f43\" textLength=\"294\" lengthAdjust=\"spacingAndGlyphs\">dy/dt = (((-x) + (-(1/2 \u00d7 y))) + z)</text><polyline points=\"490,255 600,255\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"600,255 593,251 593,259\" fill=\"#476579\"></polygon><text x=\"620\" y=\"255\" font-size=\"14\" fill=\"#172f43\" textLength=\"58\" lengthAdjust=\"spacingAndGlyphs\">\u222b  \u2192  y</text><text x=\"620\" y=\"279\" font-size=\"13\" fill=\"#172f43\" textLength=\"62\" lengthAdjust=\"spacingAndGlyphs\">y(2) = 2</text><polyline points=\"840,255 990,255\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"990,255 983,251 983,259\" fill=\"#476579\"></polygon><text x=\"855\" y=\"245\" font-size=\"12\" fill=\"#172f43\" textLength=\"28\" lengthAdjust=\"spacingAndGlyphs\">1: y</text></g><g><title>state: state-z; derivative: dz; initial: initial-z</title><text x=\"120\" y=\"345\" font-size=\"14\" fill=\"#172f43\" textLength=\"277\" lengthAdjust=\"spacingAndGlyphs\">dz/dt = ((x + (-y)) + (-(2 \u00d7 z)))</text><polyline points=\"490,345 600,345\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"600,345 593,341 593,349\" fill=\"#476579\"></polygon><text x=\"620\" y=\"345\" font-size=\"14\" fill=\"#172f43\" textLength=\"58\" lengthAdjust=\"spacingAndGlyphs\">\u222b  \u2192  z</text><text x=\"620\" y=\"369\" font-size=\"13\" fill=\"#172f43\" textLength=\"70\" lengthAdjust=\"spacingAndGlyphs\">z(2) = -1</text><polyline points=\"840,345 990,345\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"990,345 983,341 983,349\" fill=\"#476579\"></polygon><text x=\"855\" y=\"335\" font-size=\"12\" fill=\"#172f43\" textLength=\"28\" lengthAdjust=\"spacingAndGlyphs\">2: z</text></g><circle cx=\"970\" cy=\"165\" r=\"3\" fill=\"#a65328\"></circle><polyline points=\"970,165 970,470 20,470 20,165 100,165\" fill=\"none\" stroke=\"#a65328\" stroke-width=\"2\"></polyline><polygon points=\"100,165 93,161 93,169\" fill=\"#a65328\"></polygon><text x=\"120\" y=\"463\" font-size=\"12\" fill=\"#172f43\" textLength=\"93\" lengthAdjust=\"spacingAndGlyphs\">Feedback 0: x</text><circle cx=\"958\" cy=\"255\" r=\"3\" fill=\"#a65328\"></circle><polyline points=\"958,255 958,498 32,498 32,255 100,255\" fill=\"none\" stroke=\"#a65328\" stroke-width=\"2\"></polyline><polygon points=\"100,255 93,251 93,259\" fill=\"#a65328\"></polygon><text x=\"120\" y=\"491\" font-size=\"12\" fill=\"#172f43\" textLength=\"93\" lengthAdjust=\"spacingAndGlyphs\">Feedback 1: y</text><circle cx=\"946\" cy=\"345\" r=\"3\" fill=\"#a65328\"></circle><polyline points=\"946,345 946,526 44,526 44,345 100,345\" fill=\"none\" stroke=\"#a65328\" stroke-width=\"2\"></polyline><polygon points=\"100,345 93,341 93,349\" fill=\"#a65328\"></polygon><text x=\"120\" y=\"519\" font-size=\"12\" fill=\"#172f43\" textLength=\"93\" lengthAdjust=\"spacingAndGlyphs\">Feedback 2: z</text><text x=\"35\" y=\"574\" font-size=\"13\" fill=\"#172f43\" textLength=\"234\" lengthAdjust=\"spacingAndGlyphs\">Observations (declared order):</text><text x=\"35\" y=\"599\" font-size=\"13\" fill=\"#172f43\" textLength=\"109\" lengthAdjust=\"spacingAndGlyphs\">0: z \u2190 state-z</text><text x=\"35\" y=\"621\" font-size=\"13\" fill=\"#172f43\" textLength=\"109\" lengthAdjust=\"spacingAndGlyphs\">1: x \u2190 state-x</text><text x=\"35\" y=\"643\" font-size=\"13\" fill=\"#172f43\" textLength=\"109\" lengthAdjust=\"spacingAndGlyphs\">2: y \u2190 state-y</text><text x=\"35\" y=\"665\" font-size=\"13\" fill=\"#172f43\" textLength=\"62\" lengthAdjust=\"spacingAndGlyphs\">3: V \u2190 V</text><text x=\"35\" y=\"687\" font-size=\"12\" fill=\"#172f43\" textLength=\"475\" lengthAdjust=\"spacingAndGlyphs\">Crossings are not junctions. IC inputs are read at the start time.</text><text x=\"35\" y=\"712\" font-size=\"12\" fill=\"#172f43\" textLength=\"511\" lengthAdjust=\"spacingAndGlyphs\">Diagram only. Existence, uniqueness and bounds require separate proofs.</text></svg>"
       },
-      "fingerprint": "b7b5999af8ceb15f898975391b21e3d07fd7389baa482ed82f361b345a3cdf9c",
+      "fingerprint": "8d16c90f685867b4b7e28c75b30b9dea87c3790e29e594904e9a6867df100b4d",
       "prefix_sha256": "c8084212b6fd060c7df9fedfb345a7fdf5ff578df3a7535535b59e0f9108a7e0",
       "provider": "forseti",
       "provider_sha256": "d463e5673fae191efa04a5392069bed8c1cb74c502fa7ab69a804c7959249ca1"

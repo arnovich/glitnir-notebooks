@@ -19,9 +19,11 @@
       "end_line": 120,
       "name": "Notebook.HedgedSpread.budget_rate",
       "prefix_sha256": "c677b7c4573b6fe466c870fde4dffb2e85416d44a9b34908c12c9bd66e78e535",
-      "proposition_sha256": "b23b68780889a93b8771986407ce178c70ad770f768197a1c65fa8318cde1cdb",
+      "proposition_sha256": "7ef5f14386367713fcb0dce26a4d8f7f8ab55a6ff649022d01cad1e04856cc78",
       "start_line": 112,
       "status": "checked",
+      "type": "\u2200 (d : Gimle.Asgard.Point Gimle.Forseti.Examples.HedgedSpread.width)\n  (x : Gimle.Asgard.Point Gimle.Forseti.Examples.HedgedSpread.states),\n  Eq\n    (instHAdd.hAdd\n      (instHMul.hMul (instHMul.hMul 2 (x 0))\n        (Gimle.Asgard.Polynomial.Expr.eval (Gimle.Asgard.pointAppend d x)\n          (Gimle.Forseti.Examples.HedgedSpread.compiled.rates.expressions 0)))\n      (instHMul.hMul (instHMul.hMul 2 (x 1))\n        (Gimle.Asgard.Polynomial.Expr.eval (Gimle.Asgard.pointAppend d x)\n          (Gimle.Forseti.Examples.HedgedSpread.compiled.rates.expressions 1))))\n    (instHAdd.hAdd (instHMul.hMul (-2) (Gimle.Forseti.Examples.HedgedSpreadContract.energy x))\n      (instHMul.hMul (instHMul.hMul 2 (x 0)) (d Gimle.Forseti.Examples.HedgedSpread.dIndex)))",
+      "type_sha256": "1f562dd1a350331aa7b714aafdc5391ad19b0424b859def52fb188ab215ace9d",
       "uses": []
     },
     {
@@ -43,9 +45,16 @@
       "end_line": 138,
       "name": "Notebook.HedgedSpread.budget_leaf",
       "prefix_sha256": "96f0431db6da0803f0bc603b95583dadb6a2ca8f1d7372997bf7e8cb512363e1",
-      "proposition_sha256": "8897a1c27d5ccb1a12922c53fd72653f96e8287e06931a80193485425589b3ce",
+      "proposition_sha256": "04bc014313a2844271a5a9eec4f18f24748ac74279aff6f292e5e3207de4ad5b",
       "start_line": 135,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (s h d : Real),\n  Real.instLE.le (abs d) 1 \u2192\n    Real.instLE.1\n      (instHAdd.hAdd (instHMul.hMul (-2) (instHAdd.hAdd (instHPow.hPow s 2) (instHPow.hPow h 2)))\n        (instHMul.hMul (instHMul.hMul 2 s) d))\n      (instHSub.hSub 1 (instHAdd.hAdd (instHPow.hPow s 2) (instHPow.hPow h 2)))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (s h d : Real),\n  Real.instLE.le (abs d) 1 \u2192\n    Real.instLE.le\n      (instHAdd.hAdd (instHMul.hMul (-2) (instHAdd.hAdd (instHPow.hPow s 2) (instHPow.hPow h 2)))\n        (instHMul.hMul (instHMul.hMul 2 s) d))\n      (instHSub.hSub 1 (instHAdd.hAdd (instHPow.hPow s 2) (instHPow.hPow h 2)))",
+      "type_sha256": "8f05b6a37ff0fd0c75475e0f0c7fd7716cb61741d287722fa8ff979b9f8ea672",
       "uses": []
     },
     {
@@ -67,9 +76,11 @@
       "end_line": 248,
       "name": "Notebook.HedgedSpread.Decided_no_limit_breach.no_limit_breach",
       "prefix_sha256": "b9643d727641a4f3db6435f8bc60ffc6ceee99a9736e66875f40736530996359",
-      "proposition_sha256": "88adba3ec4856dcabf69f44299edc472d17ab416fa6cad9a1fb103698f42ff81",
+      "proposition_sha256": "21a3a5f312a38bcd82aa6871660c35f5c0097a9e7e75d1f6461d816b05c83b1f",
       "start_line": 204,
       "status": "checked",
+      "type": "have circuit := Gimle.Forseti.Examples.HedgedSpreadContract.observed;\nhave time := { axis := \"time\", start := 0 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 1 2)),\n  Gimle.Forseti.Examples.HedgedSpread.evolution.Admitted Gimle.Forseti.Examples.HedgedSpread.drivers\n      (Gimle.Asgard.Dynamics.signalLeft u) \u2192\n    (\u2200 (t : Real), GE.ge t 0 \u2192 Real.instLE.le (abs (Gimle.Asgard.Dynamics.signalLeft u t 0)) 1) \u2192\n      Eq (Gimle.Asgard.Dynamics.signalRight u 0) (Matrix.vecCons 0 (Matrix.vecCons 0 Matrix.vecEmpty)) \u2192\n        And (Exists fun y => circuit.Rel time u y)\n          (And\n            (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 2),\n              circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n            (\u2200 (y : Gimle.Asgard.Dynamics.Signal 2),\n              circuit.Rel time u y \u2192\n                \u2200 (t : Real),\n                  GE.ge t 0 \u2192\n                    have s := y t 0;\n                    And (GE.ge s (-1)) (Real.instLE.le s 1)))",
+      "type_sha256": "6b357390450977034b39bf9417fb949c3bf8848f4c5d386ed401112b7a6564bd",
       "uses": []
     },
     {
@@ -91,9 +102,11 @@
       "end_line": 344,
       "name": "Notebook.HedgedSpread.Decided_budget_band.budget_band",
       "prefix_sha256": "2f931fa75bf18fc35b8b7accafa81b65187334df08b169b5ed3054c2f13f6fe5",
-      "proposition_sha256": "b9d44def91d2b1069f0f0fa4142346816ca9ab51b5e81dfbed6e3be375279fb0",
+      "proposition_sha256": "15edad68d9041ec1e803d8b303fbceb3532d485bde733374dc6386633a7dba89",
       "start_line": 300,
       "status": "checked",
+      "type": "have circuit := Gimle.Forseti.Examples.HedgedSpreadContract.observed;\nhave time := { axis := \"time\", start := 0 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 1 2)),\n  Gimle.Forseti.Examples.HedgedSpread.evolution.Admitted Gimle.Forseti.Examples.HedgedSpread.drivers\n      (Gimle.Asgard.Dynamics.signalLeft u) \u2192\n    (\u2200 (t : Real), GE.ge t 0 \u2192 Real.instLE.le (abs (Gimle.Asgard.Dynamics.signalLeft u t 0)) 1) \u2192\n      Eq (Gimle.Asgard.Dynamics.signalRight u 0) (Matrix.vecCons 0 (Matrix.vecCons 0 Matrix.vecEmpty)) \u2192\n        And (Exists fun y => circuit.Rel time u y)\n          (And\n            (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 2),\n              circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n            (\u2200 (y : Gimle.Asgard.Dynamics.Signal 2),\n              circuit.Rel time u y \u2192\n                \u2200 (t : Real),\n                  GE.ge t 0 \u2192\n                    have V := y t 1;\n                    And (GE.ge V 0) (Real.instLE.le V 1)))",
+      "type_sha256": "6c76a2e8b5413e6379b7fe9fe516d1765055f9116d2ec9e196acfa1f1cf7ef1e",
       "uses": []
     },
     {
@@ -115,9 +128,11 @@
       "end_line": 442,
       "name": "Notebook.HedgedSpread.Decided_calmer_market.calmer_market",
       "prefix_sha256": "43db91188cf491e0fe6b2345967dfa1cf19550f99bada2f13d14ce62bbb68f48",
-      "proposition_sha256": "ecf1f5f1de53891cbbb23bca8186cad90010581a01d89e309af6b879600e6cbe",
+      "proposition_sha256": "7f1f167cb2913c1fbad384ea8246c9b3b6fb440aa028582ed088b9cd7100ad36",
       "start_line": 397,
       "status": "checked",
+      "type": "have circuit := Gimle.Forseti.Examples.HedgedSpreadContract.observed;\nhave time := { axis := \"time\", start := 0 };\n\u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 1 2)),\n  Gimle.Forseti.Examples.HedgedSpread.evolution.Admitted Gimle.Forseti.Examples.HedgedSpread.drivers\n      (Gimle.Asgard.Dynamics.signalLeft u) \u2192\n    (\u2200 (t : Real), GE.ge t 0 \u2192 Real.instLE.le (abs (Gimle.Asgard.Dynamics.signalLeft u t 0)) (1 / 2)) \u2192\n      Eq (Gimle.Asgard.Dynamics.signalRight u 0) (Matrix.vecCons 0 (Matrix.vecCons 0 Matrix.vecEmpty)) \u2192\n        And (Exists fun y => circuit.Rel time u y)\n          (And\n            (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 2),\n              circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n            (\u2200 (y : Gimle.Asgard.Dynamics.Signal 2),\n              circuit.Rel time u y \u2192\n                \u2200 (t : Real),\n                  GE.ge t 0 \u2192\n                    have s := y t 0;\n                    Real.instLE.le s 1))",
+      "type_sha256": "5350f26c61933c2cbf12170c55e01001974c55308a0da3ec1183da14e3f753bc",
       "uses": []
     },
     {
@@ -139,9 +154,11 @@
       "end_line": 538,
       "name": "Notebook.HedgedSpread.Decided_budget_quarter.budget_quarter_refuted",
       "prefix_sha256": "edc02940bad469ddab453e4ecb6f2519de3d98b1bb9dea8db95284fe5d956b82",
-      "proposition_sha256": "e9ac8689c90acddb60c44ce34ce661a5f1fba2492e38b5f5684dd7787c0f8ce3",
+      "proposition_sha256": "1830596c9d040ade43f034b5de255507c2dc4ce1b83a4333b1779557eb346077",
       "start_line": 490,
       "status": "checked",
+      "type": "Not\n  (have circuit := Gimle.Forseti.Examples.HedgedSpreadContract.observed;\n  have time := { axis := \"time\", start := 0 };\n  \u2200 (u : Gimle.Asgard.Dynamics.Signal (instHAdd.hAdd 1 2)),\n    Gimle.Forseti.Examples.HedgedSpread.evolution.Admitted Gimle.Forseti.Examples.HedgedSpread.drivers\n        (Gimle.Asgard.Dynamics.signalLeft u) \u2192\n      (\u2200 (t : Real), GE.ge t 0 \u2192 Real.instLE.le (abs (Gimle.Asgard.Dynamics.signalLeft u t 0)) 1) \u2192\n        Eq (Gimle.Asgard.Dynamics.signalRight u 0) (Matrix.vecCons 0 (Matrix.vecCons 0 Matrix.vecEmpty)) \u2192\n          And (Exists fun y => circuit.Rel time u y)\n            (And\n              (\u2200 (y y' : Gimle.Asgard.Dynamics.Signal 2),\n                circuit.Rel time u y \u2192 circuit.Rel time u y' \u2192 \u2200 (t : Real), GE.ge t 0 \u2192 Eq (y t) (y' t))\n              (\u2200 (y : Gimle.Asgard.Dynamics.Signal 2),\n                circuit.Rel time u y \u2192\n                  \u2200 (t : Real),\n                    GE.ge t 0 \u2192\n                      have V := y t 1;\n                      GE.ge V (1 / 4))))",
+      "type_sha256": "198c9736710f852d124a5ab6b5fb5724394c5c16a07199776098ae2c9424109d",
       "uses": []
     },
     {
@@ -163,9 +180,11 @@
       "end_line": 573,
       "name": "Notebook.HedgedSpread.unit_shock_realized",
       "prefix_sha256": "33c0f1f3b4cab3b3776a05d745f8387faf531f13f4c97eb7be78669101374321",
-      "proposition_sha256": "cb6ddb71e0cde4f9e7773acfcace37019461e0c101529dc5c9588a23c1161129",
+      "proposition_sha256": "2da43a0fd32b7d273e3bdcc4c2c33a2bc884e7340d2cd32d051316a273fd80ff",
       "start_line": 569,
       "status": "checked",
+      "type": "Exists fun output =>\n  Gimle.Forseti.Examples.HedgedSpreadContract.observed.Rel Gimle.Forseti.Examples.HedgedSpread.evolution.time\n    (Gimle.Forseti.Examples.HedgedSpreadContract.withInitial\n      (Gimle.Forseti.Examples.HedgedSpreadContract.constantDriver 1))\n    output",
+      "type_sha256": "2f8031105d11fa67ec6e828ac0930ea74e76d3248cfc404db18b09e1567ecd6e",
       "uses": []
     },
     {
@@ -187,9 +206,11 @@
       "end_line": 582,
       "name": "Notebook.HedgedSpread.exposure_under_unit_shock",
       "prefix_sha256": "57fa39defd606d9f43231f5b4d4fb9387bd840e71e2af9a75e55954090df88b9",
-      "proposition_sha256": "31ded257b76ea47b0868120ba5ae3b71ca8d1178eaf9b8aebb0a4824dd33aed5",
+      "proposition_sha256": "ead8ad8466aa6b5deb2e5e114ae89024ce19a6c3fd1583f64c9b8b06b78f9bd5",
       "start_line": 575,
       "status": "checked",
+      "type": "\u2200 (output : Gimle.Asgard.Dynamics.Signal Gimle.Forseti.Examples.HedgedSpread.model.lowered.body.observations.length),\n  Gimle.Forseti.Examples.HedgedSpreadContract.observed.Rel Gimle.Forseti.Examples.HedgedSpread.evolution.time\n      (Gimle.Forseti.Examples.HedgedSpreadContract.withInitial\n        (Gimle.Forseti.Examples.HedgedSpreadContract.constantDriver 1))\n      output \u2192\n    Eq (output (instHDiv.hDiv Real.pi 2) Gimle.Forseti.Examples.HedgedSpread.sIndex)\n      (instHAdd.hAdd (1 / 2) (instHDiv.hDiv (Real.exp (Real.instNeg.neg (instHDiv.hDiv Real.pi 2))) 2))",
+      "type_sha256": "bed45c078cc86e1797bdb5c2a4f0c2d0b1a488c643b084baf75d998e1810a271",
       "uses": []
     },
     {
@@ -211,9 +232,11 @@
       "end_line": 601,
       "name": "Notebook.HedgedSpread.half_is_not_a_bound",
       "prefix_sha256": "ab703db505e4faa790938e7de0c397ba99e816061d2a75a19bad1a9fc275f0f5",
-      "proposition_sha256": "80a75cc5e4ecc9c8366bf78d9ab4c741eb3f4b957299748df22ba32a295a4629",
+      "proposition_sha256": "be46bcdbe3537c74cd05c63926197cb5ec32e6af894d77f35a3be8456db6bf21",
       "start_line": 584,
       "status": "checked",
+      "type": "Not\n  (Gimle.Forseti.Trajectory.Holds Gimle.Forseti.Examples.HedgedSpreadContract.observed\n    Gimle.Forseti.Examples.HedgedSpread.evolution.time Gimle.Forseti.Examples.HedgedSpreadContract.admitted\n    (Gimle.Forseti.Trajectory.Always Gimle.Forseti.Examples.HedgedSpread.evolution.time fun o =>\n      Real.instLE.le (o Gimle.Forseti.Examples.HedgedSpread.sIndex) (1 / 2)))",
+      "type_sha256": "0690bb8a810433d2a5cf5d426cb65f0ccf62e9c9ea71c9cd3d3fac0472715b20",
       "uses": [
         {
           "in_notebook": true,
@@ -246,9 +269,11 @@
       "end_line": 608,
       "name": "Notebook.HedgedSpread.band_needed",
       "prefix_sha256": "932979ff10b00d20a6caf52d4afc970d377499a35b9f703e8b037c5cbd9bb621",
-      "proposition_sha256": "df0251b49b39614aa6f35923fc5c58f5b5c32b59035b07528791e1f73b8944e8",
+      "proposition_sha256": "b274a55d3847fa3bc11614ceafb70171b385b0dc2c8a1140f9b516e5e47ac14e",
       "start_line": 603,
       "status": "checked",
+      "type": "Not\n  (Gimle.Forseti.Trajectory.Holds Gimle.Forseti.Examples.HedgedSpreadContract.observed\n    Gimle.Forseti.Examples.HedgedSpread.evolution.time Gimle.Forseti.Examples.HedgedSpreadContract.admittedOnly\n    (Gimle.Forseti.Trajectory.Always Gimle.Forseti.Examples.HedgedSpread.evolution.time fun o =>\n      And (Real.instLE.le (-1) (o Gimle.Forseti.Examples.HedgedSpread.sIndex))\n        (Real.instLE.le (o Gimle.Forseti.Examples.HedgedSpread.sIndex) 1)))",
+      "type_sha256": "32647c0b8d784564a1968949da244f8b5afb7326a9130d845e1409bb232dd37a",
       "uses": []
     },
     {
@@ -270,9 +295,16 @@
       "end_line": 626,
       "name": "Notebook.HedgedSpread.any_band",
       "prefix_sha256": "e6769a93942fd2c576681312eb16cd25c97f69531e585eb25e80035fcc560bfd",
-      "proposition_sha256": "263d5507f09cada57eff06b55c95c32765d40843b27744b11620dced16ccbd00",
+      "proposition_sha256": "ba34da2f8c16384cbd09f512db7b7df8799ba00066e0c424d65c64094d46cc8c",
       "start_line": 622,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "\u2200 (B : Real),\n  Gimle.Forseti.Trajectory.Realizable Gimle.Forseti.Examples.HedgedSpreadContract.observed\n      Gimle.Forseti.Examples.HedgedSpread.evolution.time\n      (Gimle.Forseti.Examples.HedgedSpreadContract.admittedWithin B) \u2192\n    Gimle.Forseti.Trajectory.Unique Gimle.Forseti.Examples.HedgedSpreadContract.observed\n        Gimle.Forseti.Examples.HedgedSpread.evolution.time\n        (Gimle.Forseti.Examples.HedgedSpreadContract.admittedWithin B) \u2192\n      Gimle.Forseti.Trajectory.Holds Gimle.Forseti.Examples.HedgedSpreadContract.observed\n          Gimle.Forseti.Examples.HedgedSpread.evolution.time\n          (Gimle.Forseti.Examples.HedgedSpreadContract.admittedWithin B)\n          (Gimle.Forseti.Trajectory.Always Gimle.Forseti.Examples.HedgedSpread.evolution.time fun o =>\n            And (Real.instLE.le (Real.instNeg.neg B) (o Gimle.Forseti.Examples.HedgedSpread.sIndex))\n              (Real.instLE.le (o Gimle.Forseti.Examples.HedgedSpread.sIndex) B)) \u2192\n        Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.HedgedSpreadContract.observed\n          Gimle.Forseti.Examples.HedgedSpread.evolution.time\n          (Gimle.Forseti.Examples.HedgedSpreadContract.admittedWithin B)\n          (Gimle.Forseti.Trajectory.Always Gimle.Forseti.Examples.HedgedSpread.evolution.time fun o =>\n            And (Real.instLE.le (Real.instNeg.neg B) (o Gimle.Forseti.Examples.HedgedSpread.sIndex))\n              (Real.instLE.le (o Gimle.Forseti.Examples.HedgedSpread.sIndex) B))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (B : Real),\n  Gimle.Forseti.Trajectory.Contract Gimle.Forseti.Examples.HedgedSpreadContract.observed\n    Gimle.Forseti.Examples.HedgedSpread.evolution.time (Gimle.Forseti.Examples.HedgedSpreadContract.admittedWithin B)\n    (Gimle.Forseti.Trajectory.Always Gimle.Forseti.Examples.HedgedSpread.evolution.time fun o =>\n      And (Real.instLE.le (Real.instNeg.neg B) (o Gimle.Forseti.Examples.HedgedSpread.sIndex))\n        (Real.instLE.le (o Gimle.Forseti.Examples.HedgedSpread.sIndex) B))",
+      "type_sha256": "e6cbd3bc96e185bac51987f43beeb1d92aba6b827ad30e0de43f921b9be6c1e2",
       "uses": []
     }
   ],
@@ -440,8 +472,8 @@
     }
   },
   "environment": {
-    "check": "8832d5a74b552300f91176d4e1e188ee0f34069baa9745fcba0e28448a843d01",
-    "fingerprint": "c6436a7ab87078c01587f1e9e8b0022dbf3a9bed2f9779f25815bbdf54ccf369"
+    "check": "02d1fa9176722513da3b634a6c7352f0c6e517b36a25ff925ad7ece6a3fd3287",
+    "fingerprint": "b9999d2e17bca934b09270d70d01ce97c6910e7714eb485258ad7cbce123ba50"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "ba008c9bdac23296186045fcf8cd5c826b71ca2fe8027716141dda79339a1924",

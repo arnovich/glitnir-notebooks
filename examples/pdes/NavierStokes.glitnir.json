@@ -19,9 +19,16 @@
       "end_line": 82,
       "name": "NavierStokes.circuit_contract",
       "prefix_sha256": "dc2b359aef58f47444c2b4cb5aab09223364ec69b8b0966165d82c8abab0d1af",
-      "proposition_sha256": "c65243d25df249f71841d976a87945bd55b0aa799f838e93b58f1a42bb392b24",
+      "proposition_sha256": "4f9d6a738d66b29939438cc68abc10c9e23b5cb9e59feab088303f8ac95a6366",
       "start_line": 73,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "(\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n    (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n      Exists fun y => (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y) \u2192\n  (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n      (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n        \u2200 (y z : Gimle.Asgard.Streams.Mild.Point 1),\n          (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y \u2192\n            (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x z \u2192 Eq y z) \u2192\n    (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n        (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n          \u2200 (y : Gimle.Asgard.Streams.Mild.Point 1),\n            (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y \u2192\n              Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760) y) \u2192\n      Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n        (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n        (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n  (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760))",
+      "type_sha256": "76fed02a5e564e8540ff412df5332926aa5156fba52d421682f015e065de2137",
       "uses": []
     },
     {
@@ -43,9 +50,16 @@
       "end_line": 90,
       "name": "NavierStokes.truncation_contract",
       "prefix_sha256": "56272c64dd86727ec1530f6ffb23d6c2b59c2b4beeba9235fa2df7f5aa955880",
-      "proposition_sha256": "a85ce142115ea663d8cf6b88ae9e2c1a6e30a9d64e4ba5dfdcce3666f3a8a620",
+      "proposition_sha256": "6e28e8f1c410f1a5106d2c2686a4c983974712685b8f0f95022b965136b5f18e",
       "start_line": 84,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "(\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n    (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n      Exists fun y => (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y) \u2192\n  (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n      (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n        \u2200 (y z : Gimle.Asgard.Streams.Mild.Point 1),\n          (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y \u2192\n            (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x z \u2192 Eq y z) \u2192\n    (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n        (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n          \u2200 (y : Gimle.Asgard.Streams.Mild.Point 1),\n            (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y \u2192\n              (fun output =>\n                  And\n                    (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760)\n                      output)\n                    (Gimle.Asgard.Streams.Mild.MildTruncationBound (1 / 10) (output 0) (1 / 5760) 4 (21 / 1024)))\n                y) \u2192\n      Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n        (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n        fun output =>\n        And (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760) output)\n          (Gimle.Asgard.Streams.Mild.MildTruncationBound (1 / 10) (output 0) (1 / 5760) 4 (21 / 1024))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) fun output =>\n  And (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760) output)\n    (Gimle.Asgard.Streams.Mild.MildTruncationBound (1 / 10) (output 0) (1 / 5760) 4 (21 / 1024))",
+      "type_sha256": "54917542254adeaa641fc33ac6702a040462ba04ceae638e66605276ee69ed89",
       "uses": [
         {
           "in_notebook": true,
@@ -73,9 +87,16 @@
       "end_line": 98,
       "name": "NavierStokes.band_contract",
       "prefix_sha256": "b1af20d255dbb6348648395123e5b6b74907391c76d9756964862d04bcd9294d",
-      "proposition_sha256": "46a21a1929a984369fdd85873e78bc715b8f6afd8ea35bfc0b0162d78ca9356a",
+      "proposition_sha256": "954e97aa0bdb81cb7f8ebb925e632f0c3b48680a9f914db67989809c8c36b7ce",
       "start_line": 92,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "(\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n    (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n      Exists fun y => (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y) \u2192\n  (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n      (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n        \u2200 (y z : Gimle.Asgard.Streams.Mild.Point 1),\n          (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y \u2192\n            (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x z \u2192 Eq y z) \u2192\n    (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n        (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n          \u2200 (y : Gimle.Asgard.Streams.Mild.Point 1),\n            (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel x y \u2192\n              (fun output =>\n                  And\n                    (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760)\n                      output)\n                    (Gimle.Asgard.Streams.Mild.MildBandBound (1 / 10) (output 0) (1 / 5760) (3519 / 1000)))\n                y) \u2192\n      Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n        (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n        fun output =>\n        And (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760) output)\n          (Gimle.Asgard.Streams.Mild.MildBandBound (1 / 10) (output 0) (1 / 5760) (3519 / 1000))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) fun output =>\n  And (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760) output)\n    (Gimle.Asgard.Streams.Mild.MildBandBound (1 / 10) (output 0) (1 / 5760) (3519 / 1000))",
+      "type_sha256": "b00a2150ed6c4861aa984fc2bfc444a5f9b7b280b99d81845e34ecf5ab07084c",
       "uses": [
         {
           "in_notebook": true,
@@ -103,9 +124,16 @@
       "end_line": 122,
       "name": "NavierStokes.euler_scale_contract",
       "prefix_sha256": "0e3033be7f4e32c2cc26e68393e16d4c916a4b91932fa3427824e665759dc8e6",
-      "proposition_sha256": "51f06d0d74fae6a44c2bd12b4bf93d1428ae270f1bda265b44f0f2ace6ec826a",
+      "proposition_sha256": "1e646c54a731d7e7dbe217a1dda9e312fb8a56adbdc2a62f936b7a72321ea61c",
       "start_line": 114,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "\u2200 {\u03bd : Rat} {T : Real},\n  Rat.instLE.le 0 \u03bd \u2192\n    Real.instLE.le 0 T \u2192\n      Real.instLT.lt T (1 / 648) \u2192\n        (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n            (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n              Exists fun y => (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x y) \u2192\n          (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n              (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n                  x \u2192\n                \u2200 (y z : Gimle.Asgard.Streams.Mild.Point 1),\n                  (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x y \u2192\n                    (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x z \u2192 Eq y z) \u2192\n            (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n                (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n                    x \u2192\n                  \u2200 (y : Gimle.Asgard.Streams.Mild.Point 1),\n                    (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x y \u2192\n                      Gimle.Forseti.MildVorticity.Certified \u03bd Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 T y) \u2192\n              Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd)\n                (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n                (Gimle.Forseti.MildVorticity.Certified \u03bd Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 T)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 {\u03bd : Rat} {T : Real},\n  Rat.instLE.le 0 \u03bd \u2192\n    Real.instLE.le 0 T \u2192\n      Real.instLT.lt T (1 / 648) \u2192\n        Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd)\n          (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n          (Gimle.Forseti.MildVorticity.Certified \u03bd Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 T)",
+      "type_sha256": "872e2076faa8808715db1dc77d46e5c4cf665ed2487dbdce9c4089dc87a190f4",
       "uses": []
     },
     {
@@ -127,9 +155,16 @@
       "end_line": 135,
       "name": "NavierStokes.euler_tail_contract",
       "prefix_sha256": "5d17f038fc018abea3da470651ccd5ba4f3f5140285d753bca0730a0af3a9835",
-      "proposition_sha256": "5f60f242947794a0dfa879e511b64baa23dee44acb866f0c25690714f9508857",
+      "proposition_sha256": "bce595f7da66a3609b5d3c697130450fbd5448146894e5d4e7e6eaa9361bc98e",
       "start_line": 124,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "\u2200 {\u03bd T : Rat},\n  Rat.instLE.le 0 \u03bd \u2192\n    Rat.instLE.le 0 T \u2192\n      Rat.instLT.lt T (1 / 648) \u2192\n        (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n            (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080)) x \u2192\n              Exists fun y => (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x y) \u2192\n          (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n              (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n                  x \u2192\n                \u2200 (y z : Gimle.Asgard.Streams.Mild.Point 1),\n                  (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x y \u2192\n                    (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x z \u2192 Eq y z) \u2192\n            (\u2200 (x : Gimle.Asgard.Streams.Mild.Point 1),\n                (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n                    x \u2192\n                  \u2200 (y : Gimle.Asgard.Streams.Mild.Point 1),\n                    (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd).Rel x y \u2192\n                      (fun output =>\n                          And\n                            (Gimle.Forseti.MildVorticity.Certified \u03bd Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 T.cast\n                              output)\n                            (Gimle.Asgard.Streams.Mild.MildTruncationBound \u03bd (output 0) T.cast 4\n                              (instHDiv.hDiv (instHMul.hMul 9 (instHPow.hPow (instHMul.hMul 648 T.cast) 4))\n                                (instHSub.hSub 1 (instHMul.hMul 648 T.cast)))))\n                        y) \u2192\n              Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd)\n                (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n                fun output =>\n                And (Gimle.Forseti.MildVorticity.Certified \u03bd Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 T.cast output)\n                  (Gimle.Asgard.Streams.Mild.MildTruncationBound \u03bd (output 0) T.cast 4\n                    (instHDiv.hDiv (instHMul.hMul 9 (instHPow.hPow (instHMul.hMul 648 T.cast) 4))\n                      (instHSub.hSub 1 (instHMul.hMul 648 T.cast))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 {\u03bd T : Rat},\n  Rat.instLE.le 0 \u03bd \u2192\n    Rat.instLE.le 0 T \u2192\n      Rat.instLT.lt T (1 / 648) \u2192\n        Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit \u03bd)\n          (fun input => Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080))\n          fun output =>\n          And (Gimle.Forseti.MildVorticity.Certified \u03bd Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 T.cast output)\n            (Gimle.Asgard.Streams.Mild.MildTruncationBound \u03bd (output 0) T.cast 4\n              (instHDiv.hDiv (instHMul.hMul 9 (instHPow.hPow (instHMul.hMul 648 T.cast) 4))\n                (instHSub.hSub 1 (instHMul.hMul 648 T.cast))))",
+      "type_sha256": "3c5dfe9898ef40eee9ece55b4f0f8f53d2db4425cb19397c5462162043f0e429",
       "uses": [
         {
           "in_notebook": true,
@@ -157,9 +192,11 @@
       "end_line": 178,
       "name": "NavierStokes.heat_x",
       "prefix_sha256": "3545390c7213d73ff33e397be8dde0d7cf9a13a2a2168e23f7744aff527c8ef7",
-      "proposition_sha256": "5be2b960145a65e8f7578cc8f9b26850a16cf00f8b8a00a86b74e9ea6e5b2195",
+      "proposition_sha256": "9b7bdf8a2ae338d24ac0e30de5b718a05850efa86156597d64156c5a2e192adf",
       "start_line": 176,
       "status": "checked",
+      "type": "Eq (Finsupp.instFunLike.coe (Gimle.Asgard.Examples.MildBand.\u03c9 (1 / 10) 0) { fst := 1, snd := 0 })\n  (Gimle.Asgard.Streams.ExpPoly.Table.toExp (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 } List.nil))",
+      "type_sha256": "6504b8a5df34c7213227a8c46e92c5cb06bf5f562be32b6e83d65fb4f72c2eeb",
       "uses": []
     },
     {
@@ -181,9 +218,11 @@
       "end_line": 183,
       "name": "NavierStokes.first_y",
       "prefix_sha256": "6589a63b92328f9d0d036e47b58a70664d8bb40238b30e03e628607ed82d33d4",
-      "proposition_sha256": "90c02b272fa00856ff80daf78b1be55e9ae574f203a6f9256ad25cbdb5deedc9",
+      "proposition_sha256": "2057d3233a7eff7c334aa7208bcba8555e8e5a35fe04bcc0a59ce6d02d5b4267",
       "start_line": 180,
       "status": "checked",
+      "type": "Eq (Finsupp.instFunLike.coe (Gimle.Asgard.Examples.MildBand.\u03c9 (1 / 10) 1) { fst := 0, snd := 1 })\n  (Gimle.Asgard.Streams.ExpPoly.Table.toExp\n    (List.cons { fst := { fst := 1, snd := 0 }, snd := 5 / 8 }\n      (List.cons { fst := { fst := 3, snd := 0 }, snd := -5 / 8 } List.nil)))",
+      "type_sha256": "5003a5880342db415d337a3ed308fca97a28ed290cc9168a2f30db058cd8a9d7",
       "uses": []
     },
     {
@@ -205,9 +244,11 @@
       "end_line": 188,
       "name": "NavierStokes.second_2x2y",
       "prefix_sha256": "7da1c3658513efa3bf693bae958395790f59314f8b234e47a7db0f34429ba2c5",
-      "proposition_sha256": "687e0e293b25562b0f0d214d7f95e3af28bd187f4376afcc2abc38448e94947e",
+      "proposition_sha256": "2833824825a0520d3a815817f72c03354745d5ac35332e91c7dc04430c6d3a1e",
       "start_line": 185,
       "status": "checked",
+      "type": "Eq (Finsupp.instFunLike.coe (Gimle.Asgard.Examples.MildBand.\u03c9 (1 / 10) 2) { fst := 2, snd := 2 })\n  (Gimle.Asgard.Streams.ExpPoly.Table.toExp\n    (List.cons { fst := { fst := 8, snd := 0 }, snd := -35 / 13 }\n      (List.cons { fst := { fst := 14, snd := 0 }, snd := 5 / 26 }\n        (List.cons { fst := { fst := 8, snd := 1 }, snd := -5 / 13 }\n          (List.cons { fst := { fst := 6, snd := 0 }, snd := 5 / 2 } List.nil)))))",
+      "type_sha256": "60c0df62441baa56b521a90013a27eab34a457bd708f45ec15188eb62365451a",
       "uses": []
     },
     {
@@ -229,9 +270,16 @@
       "end_line": 192,
       "name": "NavierStokes.inspected_output",
       "prefix_sha256": "3c1ec02254468099e6f29141f4e264c55196bccc6f9c4299088ae17ca0b2349e",
-      "proposition_sha256": "9a24c13d577df7a0c457216fb94008abf102e766cdb9824b8505cd1dd00dbdfc",
+      "proposition_sha256": "7c8461f17b77fefea3d76916d828eda0535bb95e22d49f7388f8fc4855f9f930",
       "start_line": 190,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Gimle.Asgard.Streams.Mild.Circuit.brecOn (motive := fun {n m} x =>\n  Gimle.Asgard.Streams.Mild.Point n \u2192 Gimle.Asgard.Streams.Mild.Point m \u2192 Prop)\n  (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)) (@Gimle.Asgard.Streams.Mild.Circuit.Rel._f (1 / 10))\n  (Matrix.vecCons Gimle.Asgard.Examples.MildBand.start Matrix.vecEmpty)\n  (Matrix.vecCons (Gimle.Asgard.Examples.MildBand.\u03c9 (1 / 10)) Matrix.vecEmpty)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "(Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel\n  (Matrix.vecCons Gimle.Asgard.Examples.MildBand.start Matrix.vecEmpty)\n  (Matrix.vecCons (Gimle.Asgard.Examples.MildBand.\u03c9 (1 / 10)) Matrix.vecEmpty)",
+      "type_sha256": "26aee145151158d3f37568bcb818797596bffdcd7b21639795d9b088c4c91a3e",
       "uses": []
     },
     {
@@ -253,9 +301,11 @@
       "end_line": 209,
       "name": "NavierStokes.crossing",
       "prefix_sha256": "71afccefd9bcb3c46f2efd203f028d240d6428be7890c45c79e2702687dbc009",
-      "proposition_sha256": "2fa9068068311592ccffc20e3ea82ec2e662d14ed76d632e94190ac0a03636c2",
+      "proposition_sha256": "80d9238c4cbdc6ee698f5bb1e96bf89769696bf39583ce4a8bc6835bed7d41c2",
       "start_line": 207,
       "status": "checked",
+      "type": "\u2200 (\u03bd : Rat), Iff (Rat.instLT.lt (1 / 648) (instHMul.hMul \u03bd (instHPow.hPow (1 / 24) 2))) (Rat.instLT.lt (8 / 9) \u03bd)",
+      "type_sha256": "96606e1af0ef80a26f1cfc15ea77b01cb15f7ab41e114c6916a24b319ef364f4",
       "uses": []
     },
     {
@@ -277,9 +327,11 @@
       "end_line": 240,
       "name": "NavierStokes.exists_certified",
       "prefix_sha256": "69415192af72e5f3c59d71b535859d0bdd783842600460804823645dd5569052",
-      "proposition_sha256": "fb1a80f9869753562738d79b1ac23cbf662550a89be490a488b0a73b843b5594",
+      "proposition_sha256": "58bf97a23440497568ab53b4b3a841c4411d2f9ad50b0c608c9742e7773645f7",
       "start_line": 236,
       "status": "checked",
+      "type": "\u2200 (input : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    Exists fun output =>\n      And ((Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output)\n        (Gimle.Forseti.MildVorticity.Certified (1 / 10) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760) output)",
+      "type_sha256": "4f1067ee51477a8603791092d32261e51b0641a3193396cea7398cb83e0e7fe3",
       "uses": [
         {
           "in_notebook": true,
@@ -307,9 +359,16 @@
       "end_line": 246,
       "name": "NavierStokes.classical_output",
       "prefix_sha256": "9c405619d0dab1f52760ca9b59b70a926996bfb09a2457a5148ee2b20aa9ef96",
-      "proposition_sha256": "a4e980960c02170290237673bcd65b36f3ba7529a59d2248c7569be80a7fde7a",
+      "proposition_sha256": "a7d199da0a0ed1d7b7a10888125bf2b256e9905922ebfffda4186009d166e3e0",
       "start_line": 242,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      Gimle.Asgard.Streams.Mild.SpatialRegularity (1 / 10) (output 0) (1 / 5760) \u2192\n        Gimle.Asgard.Streams.Mild.SpatialRegularity (1 / 10) (Gimle.Asgard.Streams.Mild.psi (output 0)) (1 / 5760) \u2192\n          (\u2200 (t : Real),\n              Set.instMembership.mem (Set.Icc 0 (1 / 5760)) t \u2192\n                \u2200 (x : Prod Real Real),\n                  Summable fun n => Real.norm.norm (Gimle.Asgard.Streams.Mild.seriesTerm (1 / 10) (output 0) t x n)) \u2192\n            (\u2200 (t : Real),\n                Set.instMembership.mem (Set.Ioo 0 (1 / 5760)) t \u2192\n                  \u2200 (x : Prod Real Real),\n                    HasDerivAt (fun s => Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) s x)\n                      (Gimle.Asgard.Streams.Mild.seriesDt (1 / 10) (output 0) t x) t) \u2192\n              ContinuousOn (fun z => Gimle.Asgard.Streams.Mild.seriesDt (1 / 10) (output 0) z.fst z.snd)\n                  (Set.ofPred fun z => Set.instMembership.mem (Set.Icc 0 (1 / 5760)) z.fst) \u2192\n                (Real.instLT.lt 0 (1 / 5760) \u2192\n                    \u2200 (x : Prod Real Real),\n                      HasDerivWithinAt (fun s => Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) s x)\n                        (Gimle.Asgard.Streams.Mild.seriesDt (1 / 10) (output 0) 0 x) (Set.Ici 0) 0) \u2192\n                  (\u2200 (x : Prod Real Real),\n                      Eq (Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) 0 x)\n                        ((LinearMap.instFunLike.coe Gimle.Asgard.Streams.Mild.realEmbed\n                              Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080).field\n                          x)) \u2192\n                    (\u2200 (t : Real),\n                        Set.instMembership.mem (Set.Icc 0 (1 / 5760)) t \u2192\n                          \u2200 (x : Prod Real Real),\n                            Eq\n                              (instHAdd.hAdd\n                                (Gimle.Asgard.Streams.Mild.seriesD\u2081\u2081 (1 / 10) (Gimle.Asgard.Streams.Mild.psi (output 0))\n                                  t x)\n                                (Gimle.Asgard.Streams.Mild.seriesD\u2082\u2082 (1 / 10) (Gimle.Asgard.Streams.Mild.psi (output 0))\n                                  t x))\n                              (Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) t x)) \u2192\n                      (\u2200 (t : Real),\n                          Set.instMembership.mem (Set.Ioo 0 (1 / 5760)) t \u2192\n                            \u2200 (x : Prod Real Real),\n                              Eq\n                                (instHAdd.hAdd (Gimle.Asgard.Streams.Mild.seriesDt (1 / 10) (output 0) t x)\n                                  (instHAdd.hAdd\n                                    (instHMul.hMul\n                                      (Real.instNeg.neg\n                                        (Gimle.Asgard.Streams.Mild.seriesD\u2082 (1 / 10)\n                                          (Gimle.Asgard.Streams.Mild.psi (output 0)) t x))\n                                      (Gimle.Asgard.Streams.Mild.seriesD\u2081 (1 / 10) (output 0) t x))\n                                    (instHMul.hMul\n                                      (Gimle.Asgard.Streams.Mild.seriesD\u2081 (1 / 10)\n                                        (Gimle.Asgard.Streams.Mild.psi (output 0)) t x)\n                                      (Gimle.Asgard.Streams.Mild.seriesD\u2082 (1 / 10) (output 0) t x))))\n                                (instHMul.hMul (1 / 10).cast\n                                  (instHAdd.hAdd (Gimle.Asgard.Streams.Mild.seriesD\u2081\u2081 (1 / 10) (output 0) t x)\n                                    (Gimle.Asgard.Streams.Mild.seriesD\u2082\u2082 (1 / 10) (output 0) t x)))) \u2192\n                        Gimle.Asgard.Streams.Mild.IsMildClassicalSolution (1 / 10) (output 0)\n                          Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080 (1 / 5760)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      Gimle.Asgard.Streams.Mild.IsMildClassicalSolution (1 / 10) (output 0) Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080\n        (1 / 5760)",
+      "type_sha256": "86a5df8750906c67edef68d9e9159596e519978e175d46315d3b413364d9796a",
       "uses": [
         {
           "in_notebook": true,
@@ -337,9 +396,16 @@
       "end_line": 272,
       "name": "NavierStokes.enstrophy_identity",
       "prefix_sha256": "c4afe54f8434e57afce38c369245391aa8f265062e892697add5f3e1f840cddc",
-      "proposition_sha256": "67ec397ea33f2aa1987a28819c385b6a48dcfaec74c6aa6f56a701a6f93ba082",
+      "proposition_sha256": "09a4e7e46a3a59ea6dc1052f11635dc3a57359b1f2590b10ad53e5901f4721e7",
       "start_line": 266,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      \u2200 (t : Real),\n        Set.instMembership.mem (Set.Ioo 0 (1 / 5760)) t \u2192\n          HasDerivAtFilter\n            (fun s =>\n              Gimle.Asgard.Streams.Mild.enstrophy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) s))\n            (instHMul.hMul (instHMul.hMul (-2) (1 / 10))\n              (Gimle.Asgard.Streams.Mild.palinstrophy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) t)))\n            (Filter.instSProd.sprod (nhds t) (Filter.instPure.pure t))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      \u2200 (t : Real),\n        Set.instMembership.mem (Set.Ioo 0 (1 / 5760)) t \u2192\n          HasDerivAt\n            (fun s =>\n              Gimle.Asgard.Streams.Mild.enstrophy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) s))\n            (instHMul.hMul (instHMul.hMul (-2) (1 / 10))\n              (Gimle.Asgard.Streams.Mild.palinstrophy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) t)))\n            t",
+      "type_sha256": "182fc3ee1a789b2ba919856e9bfb49bdf6f1d73306dbfaf4e905c20b45a98978",
       "uses": [
         {
           "in_notebook": true,
@@ -367,9 +433,16 @@
       "end_line": 280,
       "name": "NavierStokes.energy_identity",
       "prefix_sha256": "a5d7715c35c6f35a1431007546a9bab8ccded0d0b005659a227321d07183f9ee",
-      "proposition_sha256": "9b78c0f0f0597b1782229ff530749a6e1983f6f02fd35752484c32d510a03ae4",
+      "proposition_sha256": "2039a645d942ae158232c41329c6b8b7c7b6533035b7d4de6c41eed12ab5a7b7",
       "start_line": 274,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      \u2200 (t : Real),\n        Set.instMembership.mem (Set.Ioo 0 (1 / 5760)) t \u2192\n          HasDerivAtFilter\n            (fun s => Gimle.Asgard.Streams.Mild.energy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) s))\n            (instHMul.hMul (instHMul.hMul (-2) (1 / 10))\n              (Gimle.Asgard.Streams.Mild.enstrophy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) t)))\n            (Filter.instSProd.sprod (nhds t) (Filter.instPure.pure t))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      \u2200 (t : Real),\n        Set.instMembership.mem (Set.Ioo 0 (1 / 5760)) t \u2192\n          HasDerivAt\n            (fun s => Gimle.Asgard.Streams.Mild.energy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) s))\n            (instHMul.hMul (instHMul.hMul (-2) (1 / 10))\n              (Gimle.Asgard.Streams.Mild.enstrophy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) t)))\n            t",
+      "type_sha256": "1ce23d5c4e8f717786e03e8192da8e45006a52dac6cb3b2e0f2502dbf1eaab3d",
       "uses": [
         {
           "in_notebook": true,
@@ -397,9 +470,16 @@
       "end_line": 287,
       "name": "NavierStokes.energy_endpoint",
       "prefix_sha256": "c1aaeaea4540ffce3110757605212cd0d05518472b5a49d69183419dc394e124",
-      "proposition_sha256": "84b3eb2a799ee610e497bfb386b3a53fe767a6e109a491cbcd78195a8d679592",
+      "proposition_sha256": "64d37e6b027f70ccd395b370ed1faeb0f07abe31b096c9044ca57b8021b683f4",
       "start_line": 282,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      Real.instLE.1\n        (Gimle.Asgard.Streams.Mild.energy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) (1 / 5760)))\n        (Gimle.Asgard.Streams.Mild.energy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) 0))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (input output : Gimle.Asgard.Streams.Mild.Point 1),\n  Eq (input 0 0) (Gimle.Asgard.Streams.Mild.embed Gimle.Asgard.Examples.EulerThreeMode.\u03c9\u2080) \u2192\n    (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10)).Rel input output \u2192\n      Real.instLE.le\n        (Gimle.Asgard.Streams.Mild.energy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) (1 / 5760)))\n        (Gimle.Asgard.Streams.Mild.energy (Gimle.Asgard.Streams.Mild.fourierCoeff (1 / 10) (output 0) 0))",
+      "type_sha256": "48953134b0c2077d617b1c62a910eafc95b724879103d4a2965ce988555fb8c7",
       "uses": [
         {
           "in_notebook": true,
@@ -427,9 +507,16 @@
       "end_line": 366,
       "name": "NavierStokes.Decided_truncation_decided.truncation_decided",
       "prefix_sha256": "b8ffe27b892abced533bd69078af706c5b302c67568c5050e54dba05a83ab6be",
-      "proposition_sha256": "2da7e3dd099712696f054de674f5d431ebaedf3797b698c938853bc0a49503d8",
+      "proposition_sha256": "3e1f7b6230480db422fa44bfcf69c0bff4b03753af0f0bef8361f5976048c6a2",
       "start_line": 332,
+      "statement_expansion": {
+        "kind": "unavailable",
+        "text": "Statement expansion unavailable.",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input =>\n    Eq (input 0 0)\n      (Gimle.Asgard.Streams.Mild.embed\n        (Gimle.Asgard.Streams.Torus.Table.toTrig\n          (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                    (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))))\n  fun output =>\n  And\n    (Gimle.Forseti.MildVorticity.Certified (1 / 10)\n      (Gimle.Asgard.Streams.Torus.Table.toTrig\n        (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n          (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))\n      (1 / 5760) output)\n    (Gimle.Asgard.Streams.Mild.MildTruncationBound (1 / 10) (output 0) (1 / 5760) 4 (21 / 1024))",
+      "type_sha256": "a7487bb9d48cd8d5c656885664ca85f4ccefaa60da9d7bf24cb6a00f08b6bf0b",
       "uses": []
     },
     {
@@ -451,9 +538,16 @@
       "end_line": 433,
       "name": "NavierStokes.Decided_band_decided.band_decided",
       "prefix_sha256": "6cdbea135b2ea69659b90c3c17a12cedf585d8e00b92c370218b5c5397c6b827",
-      "proposition_sha256": "764945c9bf1fe0af6b4f6cf53227f1db735f891ff4ab04f540246586e31b5339",
+      "proposition_sha256": "9da5af2e45846e49a0bf8d232f0a4bf5a7b870d3ad20923603686f9098af343b",
       "start_line": 397,
+      "statement_expansion": {
+        "kind": "unavailable",
+        "text": "Statement expansion unavailable.",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.Mild.Contract (Gimle.Asgard.Streams.Mild.mildCircuit (1 / 10))\n  (fun input =>\n    Eq (input 0 0)\n      (Gimle.Asgard.Streams.Mild.embed\n        (Gimle.Asgard.Streams.Torus.Table.toTrig\n          (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                    (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))))\n  fun output =>\n  And\n    (Gimle.Forseti.MildVorticity.Certified (1 / 10)\n      (Gimle.Asgard.Streams.Torus.Table.toTrig\n        (List.cons { fst := { fst := 1, snd := 0 }, snd := 1 / 2 }\n          (List.cons { fst := { fst := -1, snd := 0 }, snd := 1 / 2 }\n            (List.cons { fst := { fst := 1, snd := 1 }, snd := 1 / 2 }\n              (List.cons { fst := { fst := -1, snd := -1 }, snd := 1 / 2 }\n                (List.cons { fst := { fst := 2, snd := 1 }, snd := 1 / 2 }\n                  (List.cons { fst := { fst := -2, snd := -1 }, snd := 1 / 2 } List.nil)))))))\n      (1 / 5760) output)\n    (\u2200 (t : Real),\n      Set.instMembership.mem (Set.Icc 0 (1 / 5760)) t \u2192\n        \u2200 (x : Prod Real Real),\n          And (Real.instLE.le (-3519 / 1000) (Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) t x))\n            (Real.instLE.le (Gimle.Asgard.Streams.Mild.analyticField (1 / 10) (output 0) t x) (3519 / 1000)))",
+      "type_sha256": "5585a74d1340185a6484a2d27d8e5a173bfe8b21c1e12134a2e333af70c9f586",
       "uses": []
     }
   ],
@@ -538,8 +632,8 @@
     }
   },
   "environment": {
-    "check": "f05067515a2572ce49212e41943b73a5b0b549785f9507d05a4dccf44c5c45fc",
-    "fingerprint": "78bf5fa748ffc901d163b4a33e4ef5700f947fa72afc09dbb1bc36c17ed981c7"
+    "check": "6094ac05338614bbbda5299b269788c08616cabe6b5d6b8f83e9248e9240a06f",
+    "fingerprint": "b7a0cbb65bb9cbe1382620223e62003312f0697aae14ff5a78f23ca7dad4de7e"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "c66f7cc7b60520dc03661b55f7844cbeaa19d512dddfaa4177478ed7eb0b0599",

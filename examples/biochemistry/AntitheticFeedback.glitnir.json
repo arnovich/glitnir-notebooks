@@ -19,9 +19,11 @@
       "end_line": 89,
       "name": "Notebook.AntitheticFeedback.field_equations",
       "prefix_sha256": "b07da8ca204555c14bbb9a02cd332dd506f83f8c06bad98d73aeb87cd1cdf4fb",
-      "proposition_sha256": "82fd4f6ad1d485640b79c4a6dbe8f49cb7ec153dbd4518a29ca85333a21cf1bf",
+      "proposition_sha256": "01624c5f2352c569366ea06a15d83d53832b36c4840b4a84f3f08997d3382deb",
       "start_line": 85,
       "status": "checked",
+      "type": "\u2200 (eta : Real) (x : Gimle.Asgard.Point 4),\n  Eq (Gimle.Asgard.Examples.AIF.field.run (Gimle.Asgard.pointAppend (Matrix.vecCons eta Matrix.vecEmpty) x))\n    (Matrix.vecCons (instHSub.hSub (x 2) (x 0))\n      (Matrix.vecCons (instHSub.hSub (x 0) (x 1))\n        (Matrix.vecCons (instHSub.hSub 2 (instHMul.hMul (instHMul.hMul eta (x 2)) (x 3)))\n          (Matrix.vecCons (instHSub.hSub (x 1) (instHMul.hMul (instHMul.hMul eta (x 2)) (x 3))) Matrix.vecEmpty))))",
+      "type_sha256": "5c450069607a17f55d591ce10577bced81596b731eab5a5a7e503282a2d1f26d",
       "uses": []
     },
     {
@@ -43,9 +45,11 @@
       "end_line": 100,
       "name": "Notebook.AntitheticFeedback.realizes_iff",
       "prefix_sha256": "346d963f17aa3b0a899aa971dc3f5d5f4e8045870a08f6a030e1b657a6afa215",
-      "proposition_sha256": "b32795003f4453219e40186f06b89bc66f9a858d06f58fd15daddf14a3d372b5",
+      "proposition_sha256": "b8ede46c1c662e82b689f1c81ff517be44880fe534905008ea083981a577eae2",
       "start_line": 91,
       "status": "checked",
+      "type": "\u2200 (eta : Real) (state : Gimle.Asgard.Dynamics.Signal 4),\n  Iff (Gimle.Asgard.Examples.AIF.Realizes eta state)\n    (And (Eq (state 0) 0)\n      (\u2200 (t : Real),\n        Set.instMembership.mem (Set.Ici 0) t \u2192\n          \u2200 (i : Fin 4),\n            HasDerivWithinAt (fun s => state s i)\n              (Matrix.vecCons (instHSub.hSub (state t 2) (state t 0))\n                (Matrix.vecCons (instHSub.hSub (state t 0) (state t 1))\n                  (Matrix.vecCons (instHSub.hSub 2 (instHMul.hMul (instHMul.hMul eta (state t 2)) (state t 3)))\n                    (Matrix.vecCons\n                      (instHSub.hSub (state t 1) (instHMul.hMul (instHMul.hMul eta (state t 2)) (state t 3)))\n                      Matrix.vecEmpty)))\n                i)\n              (Set.Ici 0) t))",
+      "type_sha256": "6874c6d6cd9202b737f3cc54db81cba04d2858ef76dfe4ffed54353330fd729e",
       "uses": []
     },
     {
@@ -67,9 +71,11 @@
       "end_line": 104,
       "name": "Notebook.AntitheticFeedback.output_is_x2",
       "prefix_sha256": "4605e1054e1fb587d2ebe7f6379ee3280d3dbf8ef3c807c3994f6466cd4b8655",
-      "proposition_sha256": "e4ef260fc5e91cdeb52fbe3697a85741fdef38ee83e56d9c138b523d79d5c768",
+      "proposition_sha256": "15a68f6a3ac6156764d3ab244d32d57bbe3797fc454164c2d624421471114801",
       "start_line": 102,
       "status": "checked",
+      "type": "\u2200 (x : Gimle.Asgard.Point 4), Eq (Gimle.Asgard.Examples.AIF.output.run x 0) (x 1)",
+      "type_sha256": "fc69faa4b0f1849fedaf8fbd57347293a73870fc2689866c35be6de809c04b16",
       "uses": []
     },
     {
@@ -91,9 +97,11 @@
       "end_line": 120,
       "name": "Notebook.AntitheticFeedback.exists_behaviour",
       "prefix_sha256": "1a3ea4f52c7a2d3882548b7a1062c953ab77dd73bb8762fbdd9a038d70f5e276",
-      "proposition_sha256": "0481bc5ed94e88aaccf5569b3405b769327463439d6d2f852657b1e73625f728",
+      "proposition_sha256": "be0e4d21408e2070bf66a00330399739ae96e15bbc03962fe6345282fb186088",
       "start_line": 117,
       "status": "checked",
+      "type": "\u2200 (eta : Real), Real.instLE.le 0 eta \u2192 Exists fun state => Gimle.Asgard.Examples.AIF.Realizes eta state",
+      "type_sha256": "8acacd0a0678ecdc61b83b5ec65acb8c1cfb17a1839b92428e5b9c5856945e60",
       "uses": []
     },
     {
@@ -115,9 +123,16 @@
       "end_line": 126,
       "name": "Notebook.AntitheticFeedback.behaviour_unique",
       "prefix_sha256": "05b1ac34497df840155bc29b0f7f6bd2b21424f7b8116f72e0c4cf5e4532051e",
-      "proposition_sha256": "c8f4e36ff66a31d367b67fb55cf6f292549c6da3f20c3f4f003ac8c67cf8b960",
+      "proposition_sha256": "a10cbb8533f4f0966211dc108a362b8fc5a4135a4c39f76fe2acb3e70fd86d62",
       "start_line": 122,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (eta : Real),\n  Real.instLE.le 0 eta \u2192\n    \u2200 (x y : Gimle.Asgard.Dynamics.Signal 4),\n      Gimle.Asgard.Examples.AIF.Realizes eta x \u2192\n        Gimle.Asgard.Examples.AIF.Realizes eta y \u2192\n          \u2200 \u2983x_1 : Real\u2984, Set.instMembership.mem (Set.Ici 0) x_1 \u2192 Eq (x x_1) (y x_1)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (eta : Real),\n  Real.instLE.le 0 eta \u2192\n    \u2200 (x y : Gimle.Asgard.Dynamics.Signal 4),\n      Gimle.Asgard.Examples.AIF.Realizes eta x \u2192 Gimle.Asgard.Examples.AIF.Realizes eta y \u2192 Set.EqOn x y (Set.Ici 0)",
+      "type_sha256": "bd1e16eb61ab89ca6a9f0a41b89848e1020470d8bfc487d54cfa3e5838f61af9",
       "uses": []
     },
     {
@@ -139,9 +154,16 @@
       "end_line": 132,
       "name": "Notebook.AntitheticFeedback.species_nonnegative",
       "prefix_sha256": "16af6f0161375e5cca964ea7f4417ef2ba45206c453fc3e3a53592009d6d76bb",
-      "proposition_sha256": "791a867640960253510337e64f24c5d09cf1f6ebd3c8b9f42acbd8bbf49b0c5e",
+      "proposition_sha256": "89d2dbc417eb106d411455822af0ba854ee419d34f9d29d67d3e4ca4e1ff700b",
       "start_line": 128,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (eta : Real),\n  Real.instLE.le 0 eta \u2192\n    \u2200 (state : Gimle.Asgard.Dynamics.Signal 4),\n      Gimle.Asgard.Examples.AIF.Realizes eta state \u2192\n        \u2200 (t : Real), Real.instLE.le 0 t \u2192 \u2200 (i : Fin 4), Real.instLE.1 0 (state t i)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (eta : Real),\n  Real.instLE.le 0 eta \u2192\n    \u2200 (state : Gimle.Asgard.Dynamics.Signal 4),\n      Gimle.Asgard.Examples.AIF.Realizes eta state \u2192\n        \u2200 (t : Real), Real.instLE.le 0 t \u2192 \u2200 (i : Fin 4), Real.instLE.le 0 (state t i)",
+      "type_sha256": "1703407677c4ae2c6605e2ec313bee1b8935743e34dd517fa5955b62c6d3c0ea",
       "uses": []
     },
     {
@@ -163,9 +185,16 @@
       "end_line": 181,
       "name": "Notebook.AntitheticFeedback.tube_from_certificates",
       "prefix_sha256": "43b37c901a88ecf748cb2b179d1da07d14e61df198468b569fa61afa6bb7884d",
-      "proposition_sha256": "e74cb3f3ac86341be94ea16dd08c413a56ae37621d50b3353efe4ae911ffebee",
+      "proposition_sha256": "38be6048af83f5fd524058005290d647ad1366bca950e48561b6fe3e9f7d8f2a",
       "start_line": 165,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 {nt nb : Nat} (m : Gimle.Forseti.Examples.AIFMesh.Mesh (instHAdd.hAdd nt 1) nb) (b : Fin nb),\n  (\u2200 (i : Fin (instHAdd.hAdd nt 1)), Rat.instLT.lt 0 (m.slab b i).step) \u2192\n    Rat.instLT.lt (m.edges b.castSucc) (m.edges b.succ) \u2192\n      \u2200 (p : Real),\n        Set.instMembership.mem (Set.Icc (m.edges b.castSucc).cast (m.edges b.succ).cast) p \u2192\n          \u2200 (state : Real \u2192 Fin 4 \u2192 Real),\n            (\u2200 (i : Fin (instHAdd.hAdd nt 1)) (t : Real),\n                Set.instMembership.mem (Set.Icc (m.times i.castSucc).cast (m.times i.succ).cast) t \u2192\n                  \u2200 (j : Fin 4),\n                    HasDerivWithinAt (fun z => state z j) (Gimle.Forseti.Examples.AIFDriftModel.field p (state t) j)\n                      (Set.Icc (m.times i.castSucc).cast (m.times i.succ).cast) t) \u2192\n              \u2200\n                (certificates :\n                  (i : Fin (instHAdd.hAdd nt 1)) \u2192 Gimle.Forseti.Examples.AIFSlabDrift.CellCertificates (m.slab b i)),\n                Real.instLE.le\n                    (Gimle.Forseti.Examples.AIFMesh.tubeEnergy (m.slab b 0) (m.times 0).cast p (state (m.times 0).cast))\n                    (1 / 40000) \u2192\n                  \u2200 (i : Fin (instHAdd.hAdd nt 1)) (t : Real),\n                    Set.instMembership.mem (Set.Icc (m.times i.castSucc).cast (m.times i.succ).cast) t \u2192\n                      Real.instLE.1 (Gimle.Forseti.Examples.AIFMesh.tubeEnergy (m.slab b i) t p (state t)) (1 / 40000)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 {nt nb : Nat} (m : Gimle.Forseti.Examples.AIFMesh.Mesh (instHAdd.hAdd nt 1) nb) (b : Fin nb),\n  (\u2200 (i : Fin (instHAdd.hAdd nt 1)), Rat.instLT.lt 0 (m.slab b i).step) \u2192\n    Rat.instLT.lt (m.edges b.castSucc) (m.edges b.succ) \u2192\n      \u2200 (p : Real),\n        Set.instMembership.mem (Set.Icc (m.edges b.castSucc).cast (m.edges b.succ).cast) p \u2192\n          \u2200 (state : Real \u2192 Fin 4 \u2192 Real),\n            (\u2200 (i : Fin (instHAdd.hAdd nt 1)) (t : Real),\n                Set.instMembership.mem (Set.Icc (m.times i.castSucc).cast (m.times i.succ).cast) t \u2192\n                  \u2200 (j : Fin 4),\n                    HasDerivWithinAt (fun z => state z j) (Gimle.Forseti.Examples.AIFDriftModel.field p (state t) j)\n                      (Set.Icc (m.times i.castSucc).cast (m.times i.succ).cast) t) \u2192\n              \u2200\n                (certificates :\n                  (i : Fin (instHAdd.hAdd nt 1)) \u2192 Gimle.Forseti.Examples.AIFSlabDrift.CellCertificates (m.slab b i)),\n                Real.instLE.le\n                    (Gimle.Forseti.Examples.AIFMesh.tubeEnergy (m.slab b 0) (m.times 0).cast p (state (m.times 0).cast))\n                    (1 / 40000) \u2192\n                  \u2200 (i : Fin (instHAdd.hAdd nt 1)) (t : Real),\n                    Set.instMembership.mem (Set.Icc (m.times i.castSucc).cast (m.times i.succ).cast) t \u2192\n                      Real.instLE.le (Gimle.Forseti.Examples.AIFMesh.tubeEnergy (m.slab b i) t p (state t)) (1 / 40000)",
+      "type_sha256": "c6d0a01ab13698e3248070d35a9541253862d133306ee0451e6998f105c5c5e3",
       "uses": []
     },
     {
@@ -187,9 +216,16 @@
       "end_line": 204,
       "name": "Notebook.AntitheticFeedback.first_cell",
       "prefix_sha256": "a9b89448156e37fb33c57ec87e08b7e7eb5ec95d1397178e38b300d02905ba1a",
-      "proposition_sha256": "aec4930691be008be3f8746d7911b0a39319059d5f654592dc0b3102106bdf59",
+      "proposition_sha256": "10019aa1ab8cec7d02c0869e6368f5089c796aaece2d7fb91650a8c6f9b9b561",
       "start_line": 195,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (eta : Real),\n  Set.instMembership.mem (Set.Icc 8 (17 / 2)) eta \u2192\n    \u2200 (state : Gimle.Asgard.Dynamics.Signal 4),\n      Gimle.Asgard.Examples.AIF.Realizes eta state \u2192\n        \u2200 (t : Real),\n          Set.instMembership.mem (Set.Icc 0 (1 / 200)) t \u2192\n            Real.instLE.1\n              (Gimle.Forseti.Examples.AIFMesh.tubeEnergy Gimle.Forseti.Examples.AIFCertifiedCellData.slab t eta\n                (Gimle.Forseti.Examples.AIFPhysicalCoordinates.shift eta (state t)))\n              (1 / 40000)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (eta : Real),\n  Set.instMembership.mem (Set.Icc 8 (17 / 2)) eta \u2192\n    \u2200 (state : Gimle.Asgard.Dynamics.Signal 4),\n      Gimle.Asgard.Examples.AIF.Realizes eta state \u2192\n        \u2200 (t : Real),\n          Set.instMembership.mem (Set.Icc 0 (1 / 200)) t \u2192\n            Real.instLE.le\n              (Gimle.Forseti.Examples.AIFMesh.tubeEnergy Gimle.Forseti.Examples.AIFCertifiedCellData.slab t eta\n                (Gimle.Forseti.Examples.AIFPhysicalCoordinates.shift eta (state t)))\n              (1 / 40000)",
+      "type_sha256": "707d36ca2415dd970a30ee60cd2bcf8f8e10f39f340848b4e2a0f52da446ba67",
       "uses": []
     },
     {
@@ -211,9 +247,11 @@
       "end_line": 209,
       "name": "Notebook.AntitheticFeedback.first_cell_in_mesh",
       "prefix_sha256": "0ec163afe0446c92a22e7aff977f8edf44e50d1fa2db16c237f77da498a99398",
-      "proposition_sha256": "b600c019a863dd553194118a27889ee258c8dd743d0f459bbafceae8eb61359c",
+      "proposition_sha256": "5bbcd944a495e897e3e862c04fd464e88153ae3ac49939a8adb0a3e5daee6f72",
       "start_line": 206,
       "status": "checked",
+      "type": "Eq Gimle.Forseti.Examples.AIFCertifiedCellData.slab (AIFSafety.CandidateMesh.mesh.slab 0 0)",
+      "type_sha256": "4127232fda02d138d6900b2f8cf0e0b57bd0688342fda5456f04ef4feaf18e9d",
       "uses": []
     },
     {
@@ -235,9 +273,16 @@
       "end_line": 227,
       "name": "Notebook.AntitheticFeedback.cell_drift",
       "prefix_sha256": "aa0378aafeebb0dee2122b2f037a663ac42b3f04136cdea1e1c89fffd399a41d",
-      "proposition_sha256": "d2c78fe9b0cc5c8e47c460ed245da91d001a41d7854dcc238acd7949fff4064e",
+      "proposition_sha256": "cb311c9db77acff511f7f11eb109b5ef788a0825e8691392ec0953b0f741e078",
       "start_line": 224,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (t p : Real) (e : Fin 4 \u2192 Real),\n  Set.instMembership.mem\n      (Set.Icc (AIFSafety.CandidateMesh.mesh.slab 3 100).tStart.cast\n        (instHAdd.hAdd (AIFSafety.CandidateMesh.mesh.slab 3 100).tStart.cast\n          (AIFSafety.CandidateMesh.mesh.slab 3 100).step.cast))\n      t \u2192\n    Set.instMembership.mem\n        (Set.Icc (AIFSafety.CandidateMesh.mesh.slab 3 100).etaLo.cast\n          (AIFSafety.CandidateMesh.mesh.slab 3 100).etaHi.cast)\n        p \u2192\n      Real.instLE.le\n          (Gimle.Forseti.BernsteinMatrix.matrixForm\n            (Gimle.Forseti.Examples.AIFSlabModel.metric (AIFSafety.CandidateMesh.mesh.slab 3 100)\n              (Gimle.Forseti.Examples.AIFSlabModel.timeCoordinate (AIFSafety.CandidateMesh.mesh.slab 3 100) t))\n            e)\n          (1 / 40000) \u2192\n        Real.instLE.le\n          (Gimle.Forseti.Examples.AIFSlabModel.energyRate (AIFSafety.CandidateMesh.mesh.slab 3 100)\n            (Gimle.Forseti.Examples.AIFSlabModel.timeCoordinate (AIFSafety.CandidateMesh.mesh.slab 3 100) t)\n            (Gimle.Forseti.Examples.AIFSlabModel.etaCoordinate (AIFSafety.CandidateMesh.mesh.slab 3 100) p) e)\n          (instHSub.hSub\n            (instHMul.hMul (1 / 100)\n              (instHSub.hSub (1 / 40000)\n                (Gimle.Forseti.BernsteinMatrix.matrixForm\n                  (Gimle.Forseti.Examples.AIFSlabModel.metric (AIFSafety.CandidateMesh.mesh.slab 3 100)\n                    (Gimle.Forseti.Examples.AIFSlabModel.timeCoordinate (AIFSafety.CandidateMesh.mesh.slab 3 100) t))\n                  e)))\n            (1 / 16000000))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "AIFSafety.Cell.Drift (AIFSafety.CandidateMesh.mesh.slab 3 100)",
+      "type_sha256": "eb6060fe739c18b7a2b794b5e175f7f7155950f63becac89c82e2d5d954ed667",
       "uses": [
         {
           "in_notebook": false,
@@ -265,9 +310,16 @@
       "end_line": 232,
       "name": "Notebook.AntitheticFeedback.cell_output",
       "prefix_sha256": "600456093025aabf73e334145edc05fc6e76fefbb56f76008a92d0083fe5a8b9",
-      "proposition_sha256": "d93bd54f218db4b52557165dc5dbcc3b6b5bb501dc6677eb2fa3b43fad685922",
+      "proposition_sha256": "5a3726173e2ef5fe38c3656b8a3ec511da13e76331ee19e2524fbb0ffec9f5f2",
       "start_line": 229,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (t p : Real) (x : Fin 4 \u2192 Real),\n  Set.instMembership.mem\n      (Set.Icc (AIFSafety.CandidateMesh.mesh.slab 3 100).tStart.cast\n        (instHAdd.hAdd (AIFSafety.CandidateMesh.mesh.slab 3 100).tStart.cast\n          (AIFSafety.CandidateMesh.mesh.slab 3 100).step.cast))\n      t \u2192\n    Set.instMembership.mem\n        (Set.Icc (AIFSafety.CandidateMesh.mesh.slab 3 100).etaLo.cast\n          (AIFSafety.CandidateMesh.mesh.slab 3 100).etaHi.cast)\n        p \u2192\n      Real.instLE.le (Gimle.Forseti.Examples.AIFMesh.tubeEnergy (AIFSafety.CandidateMesh.mesh.slab 3 100) t p x)\n          (1 / 40000) \u2192\n        Real.instLE.le (x 1) (6 / 5)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "AIFSafety.Cell.Output (AIFSafety.CandidateMesh.mesh.slab 3 100)",
+      "type_sha256": "2d0ab17b88002ab96685d972774eeb074f4fc21a012142ce86c8ca0ef97ffe19",
       "uses": [
         {
           "in_notebook": false,
@@ -278,8 +330,8 @@
     }
   ],
   "environment": {
-    "check": "10eb41773c54ce8bc34c80acea15bf6f2eb814e675352949c5906eb9fded7477",
-    "fingerprint": "653ae4716dfa1ff2f2f40dab76bca2baa5bbd4543f25103a13439ffa42108e05"
+    "check": "541724b5eb0fe055a21854ad0b07221fb930780a79b12af551b8712ce67ebd29",
+    "fingerprint": "e5a25f0015d933ebcbfbcb588f4ed2a1fbfefc1e29cca9d5b93b12621c50e894"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "9200631126fee2f3d10e70b1f96ead3f8a902aa26d72e192f2d4166b621cb1c0",

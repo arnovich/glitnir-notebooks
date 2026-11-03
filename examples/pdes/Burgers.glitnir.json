@@ -19,9 +19,11 @@
       "end_line": 101,
       "name": "Notebook.Burgers.uniqueness",
       "prefix_sha256": "ea406c898452080c150d5b291b75de0c2521ed3d0ef98b8241fe9e050c588951",
-      "proposition_sha256": "093bd1aeeb8fb936a31b419401422ab29d29a9e54af95beb20ed694f100ec439",
+      "proposition_sha256": "5e9b6669ccbe4773aa6f5f63f9fef5c3acc5724cf3f78979fa0fd8e353bbbe1d",
       "start_line": 96,
       "status": "checked",
+      "type": "\u2200 (basis : Gimle.Asgard.Streams.Basis) (a b : Gimle.Asgard.Streams.Stream 2),\n  Eq (Gimle.Asgard.Streams.derivative basis 0 a) (Gimle.Asgard.Streams.Burgers.rhs basis (1 / 10) a) \u2192\n    Eq (Gimle.Asgard.Streams.derivative basis 0 b) (Gimle.Asgard.Streams.Burgers.rhs basis (1 / 10) b) \u2192\n      (\u2200 (m : Gimle.Asgard.Streams.Index 2), Eq (Finsupp.instFunLike.coe m 0) 0 \u2192 Eq (a m) (b m)) \u2192 Eq a b",
+      "type_sha256": "36a8599899da6943bebd330699a03e34216b4ca0708de7204905d15066c48038",
       "uses": []
     },
     {
@@ -43,9 +45,16 @@
       "end_line": 110,
       "name": "Notebook.Burgers.circuit_reconstructs",
       "prefix_sha256": "4d585aee4b31d9b46eb9439ff9e6dc92323544152a9ba462fb16d5743ca8b7a7",
-      "proposition_sha256": "a73e6d3fad8a933e179d4eed2883a9710cb8471db3bfee7ad28cf15d3a8b3b73",
+      "proposition_sha256": "85ee4904ad3db4ca1e10cf6fc9c26456d19f0c06b79eace4f7668dfae775abce",
       "start_line": 103,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (unused : Gimle.Asgard.Streams.Stream 2),\n  Gimle.Asgard.Streams.Circuit.brecOn (motive := fun {n m} x =>\n    Gimle.Asgard.Streams.StreamPoint 2 n \u2192 Gimle.Asgard.Streams.StreamPoint 2 m \u2192 Prop)\n    (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 10))\n    (@Gimle.Asgard.Streams.Circuit.Rel._f Gimle.Asgard.Streams.Basis.ogf 2)\n    (Matrix.vecCons\n      (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n        (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2)))\n      (Matrix.vecCons (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n        (Matrix.vecCons unused Matrix.vecEmpty)))\n    (Matrix.vecCons\n      (Gimle.Asgard.Streams.Burgers.rhs Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n        (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n          (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))))\n      (Matrix.vecCons\n        (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n          (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2)))\n        Matrix.vecEmpty))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (unused : Gimle.Asgard.Streams.Stream 2),\n  (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 10)).Rel\n    (Matrix.vecCons\n      (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n        (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2)))\n      (Matrix.vecCons (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n        (Matrix.vecCons unused Matrix.vecEmpty)))\n    (Matrix.vecCons\n      (Gimle.Asgard.Streams.Burgers.rhs Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n        (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n          (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))))\n      (Matrix.vecCons\n        (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n          (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2)))\n        Matrix.vecEmpty))",
+      "type_sha256": "7ed879a3946962d442ab086221ad671b21df5d01b1579ff88247ab5312701f41",
       "uses": []
     },
     {
@@ -67,9 +76,11 @@
       "end_line": 116,
       "name": "Notebook.Burgers.from_circuit",
       "prefix_sha256": "e2bf6e1b6c1f685305e4761a67b8eb52df23ee9a48bcdbc30c6d40f52631195e",
-      "proposition_sha256": "18f885df2dc624a2114b1730936a886a58625fea983f1d5e865fd61f48325b44",
+      "proposition_sha256": "fb2d9d3393bf68f243ec4f6c5eba72c0437a4beb40a8c756dd6c84f6be7921ee",
       "start_line": 112,
       "status": "checked",
+      "type": "\u2200 (a unused v : Gimle.Asgard.Streams.Stream 2),\n  (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 10)).Rel\n      (Matrix.vecCons a\n        (Matrix.vecCons\n          (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n          (Matrix.vecCons unused Matrix.vecEmpty)))\n      (Matrix.vecCons v (Matrix.vecCons a Matrix.vecEmpty)) \u2192\n    Eq a\n      (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n        (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2)))",
+      "type_sha256": "2a89f69503bb665a241e7d09280ffaef987940c96c782037715970be48e323a4",
       "uses": []
     },
     {
@@ -91,9 +102,11 @@
       "end_line": 147,
       "name": "Notebook.Burgers.coefficient_t",
       "prefix_sha256": "7beef3eb3794866c455c0ea7c76c982ed2c2e0f54332d7afb544fda5229610cd",
-      "proposition_sha256": "6e11f9a2256383212838a3ff3221c59c3d4bdf2e827746d90a75e8c1ed796b1d",
+      "proposition_sha256": "53abd7ca1e2b7561ed4b437c08849322b83a68362edd1e2505e9e6a85d0d7ca7",
       "start_line": 142,
       "status": "checked",
+      "type": "Eq\n  (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n    (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n    (Finsupp.single 0 1))\n  (1 / 5)",
+      "type_sha256": "253937927a30646c565e2da37bedc6588c370372450a3f2ec271bc03bb34ef0e",
       "uses": []
     },
     {
@@ -115,9 +128,11 @@
       "end_line": 153,
       "name": "Notebook.Burgers.coefficient_t_x3",
       "prefix_sha256": "1102c2c7632e7f2ffe0907fdffa69bd19ea68b72797a498da813f8cb76e34418",
-      "proposition_sha256": "e53ff172e1d9aed8493e019d76b5aabf6898678250c8ceb9ea2abc91ae600dc9",
+      "proposition_sha256": "a5f6802f8835f0f0cc23a6316aa8fc0f4cf1546861130fae5aa1cb070065ee0e",
       "start_line": 149,
       "status": "checked",
+      "type": "Eq\n  (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n    (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n    (instHAdd.hAdd (Finsupp.single 0 1) (Finsupp.single 1 3)))\n  (-2)",
+      "type_sha256": "e4984ca40ffef1c04790ca9390f8719cf4c2fa0bf5d2c501251aa4f183b61c7b",
       "uses": []
     },
     {
@@ -139,9 +154,11 @@
       "end_line": 161,
       "name": "Notebook.Burgers.coefficients_t2",
       "prefix_sha256": "e4179c9cc0b4845d7b6e7256df42f1503958fed45de109d5b240440aedba679a",
-      "proposition_sha256": "252bfa2889b4fa2289e37667d1400ab61f88f96bc23dc30503ca490db857d360",
+      "proposition_sha256": "bd04fe29733b5dac318738ee8f4deecae34ec6b6abaf44811a26dca7de0745af",
       "start_line": 155,
       "status": "checked",
+      "type": "And\n  (Eq\n    (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n      (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n      (instHAdd.hAdd (Finsupp.single 0 2) (Finsupp.single 1 1)))\n    (-4 / 5))\n  (Eq\n    (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n      (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n      (instHAdd.hAdd (Finsupp.single 0 2) (Finsupp.single 1 4)))\n    5)",
+      "type_sha256": "222862c378d0d4da6250d1e98d3d33e9d195a9eb477ecd2c0975e7b8433bf0a8",
       "uses": []
     },
     {
@@ -163,9 +180,11 @@
       "end_line": 170,
       "name": "Notebook.Burgers.coefficients_t3",
       "prefix_sha256": "13b1735c550e858b348a38b8f8f211ec09e2b55f07328d72be91f039df2d13e5",
-      "proposition_sha256": "54206cc6e97312462aaeccffbb30cf281f120a3ead63fd62c05e5ba8741b7c74",
+      "proposition_sha256": "0b0a92dec4cf813c08427ac299141c007a2fe7704675b1d72c2abb7e321c7c49",
       "start_line": 163,
       "status": "checked",
+      "type": "And\n  (Eq\n    (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n      (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n      (instHAdd.hAdd (Finsupp.single 0 3) (Finsupp.single 1 2)))\n    (16 / 5))\n  (Eq\n    (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n      (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2))\n      (instHAdd.hAdd (Finsupp.single 0 3) (Finsupp.single 1 5)))\n    (-14))",
+      "type_sha256": "d7d2b9ae21c70633fdf6453b74e289d4640f5189ae92400583e7822319df2aec",
       "uses": []
     },
     {
@@ -187,9 +206,11 @@
       "end_line": 196,
       "name": "Notebook.Burgers.not_heat",
       "prefix_sha256": "0c15a9184bb476579a7a4c4f012f90ba3020fcff85497d10a515ac4f9f6d360d",
-      "proposition_sha256": "9a5f5c999842383cf6de4bfe17b5cdd8609ff7d9563f5fed674066c43b30b1b8",
+      "proposition_sha256": "bca56e853ee30848f6fbccdc2acc9915ab1807f5546edb970cf31332f11d6935",
       "start_line": 186,
       "status": "checked",
+      "type": "Ne (Gimle.Asgard.Streams.Heat.stream Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow Polynomial.X 2))\n  (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n    (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (instHPow.hPow (MvPolynomial.X 1) 2)))",
+      "type_sha256": "d9ad5bdae7c50598efe07b286aca9c5f7c40f9125b2ac82fceb25eda485696e6",
       "uses": [
         {
           "in_notebook": true,
@@ -217,9 +238,11 @@
       "end_line": 250,
       "name": "Notebook.Burgers.affine_coefficient",
       "prefix_sha256": "9fc63553f5964da42009482769ab7a4c38ebde24cc9eab3e710516bec242520d",
-      "proposition_sha256": "211f93dcc5e6a048987f6baf5d138449e575af2d1119b8171d114e24acf53a75",
+      "proposition_sha256": "48e94b1b4fa7a43e374c16406ec10ce7e25272f3ccfdb24d6435b55f6017bfb0",
       "start_line": 244,
       "status": "checked",
+      "type": "Eq\n  (Gimle.Asgard.Streams.Burgers.stream Gimle.Asgard.Streams.Basis.ogf (1 / 10)\n    (Gimle.Asgard.Streams.ofPoly Gimle.Asgard.Streams.Basis.ogf (MvPolynomial.X 1))\n    (instHAdd.hAdd (Finsupp.single 0 1) (Finsupp.single 1 1)))\n  (-1)",
+      "type_sha256": "70408271d3a3a81dd636e55a74865efea98bb51013b6950afb057865058ea084",
       "uses": []
     },
     {
@@ -241,9 +264,11 @@
       "end_line": 305,
       "name": "Notebook.Burgers.front_at_origin",
       "prefix_sha256": "c6c29275de4639c009d60cae46d56bbca78526b4a8955fbecde8344765e247c2",
-      "proposition_sha256": "f2df92062ce26a5ac2d240a68cb29c3b77dda61897f824e0af7707d4d67df360",
+      "proposition_sha256": "c886e1cd8ba8958562d78ed080159afa28a8472bfa6e559588fb68c5f9b9f443",
       "start_line": 301,
       "status": "checked",
+      "type": "Eq\n  (RingHom.instFunLike.coe MvPowerSeries.constantCoeff\n    (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n      (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil))))\n  (1 / 2)",
+      "type_sha256": "6f51d28ef49186ad2643a4b97f576a785b5d33554b297ce847a09fcb016cf5b6",
       "uses": []
     },
     {
@@ -265,9 +290,11 @@
       "end_line": 312,
       "name": "Notebook.Burgers.front_error",
       "prefix_sha256": "6c116c2695a84262264c0dda82879fbb9256a464c35af3ccc7703f23b6187380",
-      "proposition_sha256": "2c0150f5f69cadf34d23c53f53a6591c0e90bbb62c44285419215501e7b755f6",
+      "proposition_sha256": "532b56d0b0a5584a763f406949657a41a40437f3bc0271ef678dfcb37e1d4821",
       "start_line": 307,
       "status": "checked",
+      "type": "Eq\n  (Gimle.Asgard.Streams.tailBound\n    (Gimle.Asgard.Streams.ColeHopf.frontMajorant (1 / 2)\n      (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil))\n      (Matrix.vecCons (2 / 3) (Matrix.vecCons (1 / 2) Matrix.vecEmpty)) Gimle.Asgard.Examples.BurgersFront.hr)\n    Gimle.Asgard.Examples.BurgersFront.box (Matrix.vecCons 16 (Matrix.vecCons 16 Matrix.vecEmpty)))\n  (1 / 16384)",
+      "type_sha256": "accd6e70ead732384cf5a62c81a44b8c3480a781af703d9d345d262281e65c0a",
       "uses": []
     },
     {
@@ -289,9 +316,16 @@
       "end_line": 323,
       "name": "Notebook.Burgers.front_converges",
       "prefix_sha256": "565ecd5b687a689c436295a8bcbb0dc6081518017f973e6dfc376dbe9b662929",
-      "proposition_sha256": "15cefacb0c03c8593f59aec0b6d8f50db7b3a4d6f36ab54ff5ba42c875c91b81",
+      "proposition_sha256": "eb6d266306f5c8ac9557e793479b9f3a10cf1a22ec1696e86bfc16c3041dd9e1",
       "start_line": 314,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (x : Fin 2 \u2192 Real),\n  Gimle.Asgard.Examples.BurgersFront.box.Mem x \u2192\n    Filter.Tendsto\n      (fun s =>\n        s.sum fun b =>\n          Gimle.Asgard.Streams.seriesTerm Gimle.Asgard.Streams.Basis.ogf\n            (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n              (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)))\n            x b)\n      (SummationFilter.unconditional (Gimle.Asgard.Streams.Index 2)).filter\n      (nhds\n        (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf\n          (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n            (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)))\n          x))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (x : Fin 2 \u2192 Real),\n  Gimle.Asgard.Examples.BurgersFront.box.Mem x \u2192\n    HasSum\n      (Gimle.Asgard.Streams.seriesTerm Gimle.Asgard.Streams.Basis.ogf\n        (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n          (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)))\n        x)\n      (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf\n        (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n          (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)))\n        x)",
+      "type_sha256": "9a9f15fd0e478037aa74de57e7cb20f8866f303db19e6d2ebc11e282b9e8bb7a",
       "uses": []
     },
     {
@@ -313,9 +347,16 @@
       "end_line": 333,
       "name": "Notebook.Burgers.front_certified",
       "prefix_sha256": "d7908ccb9044ce57f632315053012682eca35cc798fb3cdf4983bd4abfdac5b3",
-      "proposition_sha256": "84a3978ea84119d73c98446e3c926f69043e685fae6f3ca588d9fd42fade39fb",
+      "proposition_sha256": "c4383c5f08ccc7ad67d132c6dba51825000b0f4f9bfb1685c8ccd342192c5d4f",
       "start_line": 325,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (a unused v : Gimle.Asgard.Streams.Stream 2),\n  (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2)).Rel\n      (Matrix.vecCons a\n        (Matrix.vecCons\n          (Gimle.Asgard.Streams.ColeHopf.zeroSlice\n            (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n              (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil))))\n          (Matrix.vecCons unused Matrix.vecEmpty)))\n      (Matrix.vecCons v (Matrix.vecCons a Matrix.vecEmpty)) \u2192\n    \u2200 (x : Fin 2 \u2192 Real),\n      Gimle.Asgard.Examples.BurgersFront.box.Mem x \u2192\n        Real.instLE.le\n          (abs\n            (instHSub.hSub (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf a x)\n              (Gimle.Asgard.Streams.windowField Gimle.Asgard.Streams.Basis.ogf\n                (Matrix.vecCons 16 (Matrix.vecCons 16 Matrix.vecEmpty)) a x)))\n          (1 / 16384).cast",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (a unused v : Gimle.Asgard.Streams.Stream 2),\n  (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2)).Rel\n      (Matrix.vecCons a\n        (Matrix.vecCons\n          (Gimle.Asgard.Streams.ColeHopf.zeroSlice\n            (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n              (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil))))\n          (Matrix.vecCons unused Matrix.vecEmpty)))\n      (Matrix.vecCons v (Matrix.vecCons a Matrix.vecEmpty)) \u2192\n    Gimle.Asgard.Streams.TruncationBound Gimle.Asgard.Streams.Basis.ogf a Gimle.Asgard.Examples.BurgersFront.box\n      (Matrix.vecCons 16 (Matrix.vecCons 16 Matrix.vecEmpty)) (1 / 16384)",
+      "type_sha256": "9ad0047e1f22cd74e07c35ea8ede6894155ca03953a5ebf4db7349e551267261",
       "uses": []
     },
     {
@@ -337,9 +378,11 @@
       "end_line": 370,
       "name": "Notebook.Burgers.front_field",
       "prefix_sha256": "338e5b335ea63ffb59ea3de2177a9dd298aa14e1e89a92f1c3e87d9bf5e08ae8",
-      "proposition_sha256": "9891b4f00a2b62fd621caf6ad642829a491695fa26430fff02631e5ccdc6a85a",
+      "proposition_sha256": "64d290ec1bcca9ec4e8410165bafc342daf7099e928a2dc79b133282ac244d9d",
       "start_line": 365,
       "status": "checked",
+      "type": "\u2200 (x : Fin 2 \u2192 Real),\n  Gimle.Asgard.Examples.BurgersFront.box.Mem x \u2192\n    Eq\n      (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf\n        (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n          (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)))\n        x)\n      (instHDiv.hDiv 1 (instHAdd.hAdd 1 (Real.exp (instHSub.hSub (x 1) (instHDiv.hDiv (x 0) 2)))))",
+      "type_sha256": "8acd77038318a7ce840ef06771d2c4ffd373bace9ec2e3391d77c8fcf24ab439",
       "uses": []
     },
     {
@@ -361,9 +404,11 @@
       "end_line": 380,
       "name": "Notebook.Burgers.front_band",
       "prefix_sha256": "d3236503392e385f28132069fc9196a61a694e678314fb3f03074c7dc590071b",
-      "proposition_sha256": "ee9e581652d2b605a2675c95e0a099879e386da3683e50aae707f2a3988478f6",
+      "proposition_sha256": "801293c37e8e749b0a84ab613ae97562812a14629c2a8145114cf957f2d21317",
       "start_line": 372,
       "status": "checked",
+      "type": "\u2200 (a unused v : Gimle.Asgard.Streams.Stream 2),\n  (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2)).Rel\n      (Matrix.vecCons a\n        (Matrix.vecCons\n          (Gimle.Asgard.Streams.ColeHopf.zeroSlice\n            (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n              (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil))))\n          (Matrix.vecCons unused Matrix.vecEmpty)))\n      (Matrix.vecCons v (Matrix.vecCons a Matrix.vecEmpty)) \u2192\n    \u2200 (x : Fin 2 \u2192 Real),\n      Gimle.Asgard.Examples.BurgersFront.box.Mem x \u2192\n        And (Real.instLE.le (2 / 5) (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf a x))\n          (Real.instLE.le (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf a x) (3 / 5))",
+      "type_sha256": "9f2683cc9e56df87a3360094e1c62639d14502458a83d4411285ed1a7a863020",
       "uses": []
     },
     {
@@ -385,9 +430,11 @@
       "end_line": 390,
       "name": "Notebook.Burgers.front_not_below",
       "prefix_sha256": "dd767accdfdd34bc24f3f114fee20d4d383505468b65b38abb37a3404362762b",
-      "proposition_sha256": "c5d0bde1dc5910ab5a1d9ca7938e726b3b76f09865c75fac79819133cae2ee08",
+      "proposition_sha256": "5372521726df924aa7cc4b80765eae3602ea06d4fcfc74a1acc40e9e08c6c3cc",
       "start_line": 382,
       "status": "checked",
+      "type": "Not\n  (\u2200 (a unused v : Gimle.Asgard.Streams.Stream 2),\n    (Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2)).Rel\n        (Matrix.vecCons a\n          (Matrix.vecCons\n            (Gimle.Asgard.Streams.ColeHopf.zeroSlice\n              (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n                (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil))))\n            (Matrix.vecCons unused Matrix.vecEmpty)))\n        (Matrix.vecCons v (Matrix.vecCons a Matrix.vecEmpty)) \u2192\n      \u2200 (x : Fin 2 \u2192 Real),\n        Gimle.Asgard.Examples.BurgersFront.box.Mem x \u2192\n          Real.instLE.le (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf a x) (27 / 50))",
+      "type_sha256": "d6f8c03f3bfa674039a3313981fa1586fd196c5898c0963386be6f7d598225dd",
       "uses": []
     },
     {
@@ -409,9 +456,11 @@
       "end_line": 503,
       "name": "Notebook.Burgers.Decided_front_decided.front_decided",
       "prefix_sha256": "621db211fbd94ec5bf17b9936fa9addd5f646492e2dd74beb44cc2e613a5a052",
-      "proposition_sha256": "1da93f94b2dcc561d32c2d37ca59d4fc9f9c57fbc54d5eb3116ebac1fe9a5a90",
+      "proposition_sha256": "afd836255634c1dc8c83350cc545787747179389c2f1ae35c8317cccfe2e0e27",
       "start_line": 448,
       "status": "checked",
+      "type": "have circuit := Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2);\nhave slice :=\n  Gimle.Asgard.Streams.ColeHopf.zeroSlice\n    (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n      (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)));\nAnd\n  (Exists fun u =>\n    Exists fun unused =>\n      Exists fun u_t =>\n        circuit.Rel (Matrix.vecCons u (Matrix.vecCons slice (Matrix.vecCons unused Matrix.vecEmpty)))\n          (Matrix.vecCons u_t (Matrix.vecCons u Matrix.vecEmpty)))\n  (\u2200 (u unused u_t : Gimle.Asgard.Streams.Stream 2),\n    circuit.Rel (Matrix.vecCons u (Matrix.vecCons slice (Matrix.vecCons unused Matrix.vecEmpty)))\n        (Matrix.vecCons u_t (Matrix.vecCons u Matrix.vecEmpty)) \u2192\n      \u2200 (t x : Real),\n        And (Real.instLE.le (abs t) (1 / 6)) (Real.instLE.le (abs x) (1 / 8)) \u2192\n          And\n            (HasSum\n              (Gimle.Asgard.Streams.seriesTerm Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n              (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty))))\n            (Real.instLE.le\n              (abs\n                (instHSub.hSub\n                  (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n                    (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n                  (Gimle.Asgard.Streams.windowField Gimle.Asgard.Streams.Basis.ogf\n                    (Matrix.vecCons 16 (Matrix.vecCons 16 Matrix.vecEmpty)) u\n                    (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))))\n              (1 / 10000)))",
+      "type_sha256": "c7c5438571f3dca29aff66c6cdf602b016735622befdd779dc3211831bf41978",
       "uses": []
     },
     {
@@ -433,9 +482,11 @@
       "end_line": 634,
       "name": "Notebook.Burgers.Decided_front_band_decided.front_band_decided",
       "prefix_sha256": "378073a4736fc4d0027f6dbec514b5edae67570f9c6f016d05db4e33a3b93cbc",
-      "proposition_sha256": "af40be4c8773eccfe9cf03ed6e796a0f2a76f04daea1215c66e6e261ab1a4e0f",
+      "proposition_sha256": "6b0d8ea12675a992191ea9eee7523a95924e3d0810f67408d20bd7a4e3270224",
       "start_line": 586,
       "status": "checked",
+      "type": "have circuit := Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2);\nhave slice :=\n  Gimle.Asgard.Streams.ColeHopf.zeroSlice\n    (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n      (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)));\n\u2200 (u unused u_t : Gimle.Asgard.Streams.Stream 2),\n  circuit.Rel (Matrix.vecCons u (Matrix.vecCons slice (Matrix.vecCons unused Matrix.vecEmpty)))\n      (Matrix.vecCons u_t (Matrix.vecCons u Matrix.vecEmpty)) \u2192\n    \u2200 (t x : Real),\n      And (Real.instLE.le (abs t) (1 / 6)) (Real.instLE.le (abs x) (1 / 8)) \u2192\n        And\n          (HasSum\n            (Gimle.Asgard.Streams.seriesTerm Gimle.Asgard.Streams.Basis.ogf u\n              (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n            (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n              (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty))))\n          (And\n            (Real.instLE.le (2 / 5)\n              (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty))))\n            (Real.instLE.le\n              (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n              (3 / 5)))",
+      "type_sha256": "9a401f3a1d834ad980cbb511484f70f8d745730c87ddb34edd7df088408f890c",
       "uses": []
     },
     {
@@ -461,9 +512,11 @@
       "end_line": 700,
       "name": "Notebook.Burgers.Decided_front_band_refuted.front_band_refuted",
       "prefix_sha256": "2b8f3b66f64e34302ec9cae966c04d309733cca677e341e08c4654e279237528",
-      "proposition_sha256": "ec86521025a8a36685672fb2260ed952d003658fffc083fcce1cb923e2bc6403",
+      "proposition_sha256": "47bb839d745837eed719e8f79854dda9f83e8acbda51e936f504672b017b7329",
       "start_line": 689,
       "status": "admitted",
+      "type": "have circuit := Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2);\nhave slice :=\n  Gimle.Asgard.Streams.ColeHopf.zeroSlice\n    (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n      (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)));\n\u2200 (u unused u_t : Gimle.Asgard.Streams.Stream 2),\n  circuit.Rel (Matrix.vecCons u (Matrix.vecCons slice (Matrix.vecCons unused Matrix.vecEmpty)))\n      (Matrix.vecCons u_t (Matrix.vecCons u Matrix.vecEmpty)) \u2192\n    \u2200 (t x : Real),\n      And (Real.instLE.le (abs t) (1 / 6)) (Real.instLE.le (abs x) (1 / 8)) \u2192\n        And\n          (HasSum\n            (Gimle.Asgard.Streams.seriesTerm Gimle.Asgard.Streams.Basis.ogf u\n              (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n            (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n              (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty))))\n          (Real.instLE.le\n            (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n              (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n            (27 / 50))",
+      "type_sha256": "13206e3d65d254d786e3aa76e545cf97851d945ccd41b3b1f6c669acfa6a6dac",
       "uses": []
     },
     {
@@ -485,9 +538,11 @@
       "end_line": 741,
       "name": "Notebook.Burgers.Decided_front_band_refuted.front_band_refuted_refuted",
       "prefix_sha256": "c3df09faaba8988a7278f1ad2dff454aba724947a84558a366efe3f89fe7ee9e",
-      "proposition_sha256": "bbceac9b1950affb5bf297835f25e05ae6d9e59c323d6e9f983e906990d222c6",
+      "proposition_sha256": "f9cca80a0f8d1031bc1f3e4d4268a7a96ea023c8be1eb205643b27b5e1a95e2b",
       "start_line": 702,
       "status": "checked",
+      "type": "Not\n  (have circuit := Gimle.Asgard.Streams.Burgers.circuit Gimle.Asgard.Streams.Basis.ogf (1 / 2);\n  have slice :=\n    Gimle.Asgard.Streams.ColeHopf.zeroSlice\n      (Gimle.Asgard.Streams.ColeHopf.front (1 / 2)\n        (List.cons { fst := 1, snd := 0 } (List.cons { fst := 1, snd := -1 } List.nil)));\n  \u2200 (u unused u_t : Gimle.Asgard.Streams.Stream 2),\n    circuit.Rel (Matrix.vecCons u (Matrix.vecCons slice (Matrix.vecCons unused Matrix.vecEmpty)))\n        (Matrix.vecCons u_t (Matrix.vecCons u Matrix.vecEmpty)) \u2192\n      \u2200 (t x : Real),\n        And (Real.instLE.le (abs t) (1 / 6)) (Real.instLE.le (abs x) (1 / 8)) \u2192\n          And\n            (HasSum\n              (Gimle.Asgard.Streams.seriesTerm Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n              (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty))))\n            (Real.instLE.le\n              (Gimle.Asgard.Streams.analyticField Gimle.Asgard.Streams.Basis.ogf u\n                (Matrix.vecCons t (Matrix.vecCons x Matrix.vecEmpty)))\n              (27 / 50)))",
+      "type_sha256": "7b32bb8f473972551240a6c9c13f1602041249356fdeb38cc4b2e308301f76e2",
       "uses": []
     }
   ],
@@ -611,8 +666,8 @@
     }
   },
   "environment": {
-    "check": "e3045be9c9eb92e5dabc8d96551c2e235237eb1f6fae6c92043748ef0d030e4e",
-    "fingerprint": "6cb2b49f4e996a26e1c3bb54f8487b3f2c055d8252bb4227eff427075aa36aaa"
+    "check": "9129731cd0a0bd08b76641ea50abe38992e1a78657c2420dfbbd69ed30e5646e",
+    "fingerprint": "6a06a31f102a1e6fe37d203dac033631707637cbeaaa54f68f224261ddb4e164"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "e3a29ba9cab4881e452dd26eb0cbc263c1ee309221194d7b9191c8320b54726a",
