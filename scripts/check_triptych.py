@@ -198,10 +198,10 @@ def check_release(root: Path, manifest_path: Path) -> int:
     """Validate ``manifest_path`` against ``root`` and return decision count."""
     root = root.resolve()
     manifest = _read_json(manifest_path)
-    if manifest.get("format") != FORMAT or manifest.get("glitnir_tag") != "v0.1.10":
-        raise ReleaseError(f"expected {FORMAT} pinned to Glitnir v0.1.10")
+    if manifest.get("format") != FORMAT or manifest.get("glitnir_tag") != "v0.1.11":
+        raise ReleaseError(f"expected {FORMAT} pinned to Glitnir v0.1.11")
     if manifest.get("decision_limits") != DECISION_LIMITS:
-        raise ReleaseError("decision limits differ from Glitnir v0.1.10 defaults")
+        raise ReleaseError("decision limits differ from Glitnir v0.1.11 defaults")
     toolchain = (root / "lean-toolchain").read_text().strip()
     if toolchain != manifest.get("lean_toolchain"):
         raise ReleaseError("Lean toolchain differs from the release manifest")
