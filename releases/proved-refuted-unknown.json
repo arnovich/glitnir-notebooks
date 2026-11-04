@@ -14,11 +14,11 @@
     "wall_time_ms": 300000
   },
   "format": "glitnir.triptych-release/v1",
-  "glitnir_tag": "v0.1.10",
-  "lake_manifest_sha256": "46d41f5dfa32e63de3f3d395f9ab103af704c5b1c72e82ef7374f4aa489d0f62",
+  "glitnir_tag": "v0.1.11",
+  "lake_manifest_sha256": "f34a982ce7090226896bcb26efb6dcf766a3e37ab945483246d8c16fdd4d8154",
   "lake_pins": {
     "asgard": "e5e098d5bce80c3907a6acd4e2beb904309a1709",
-    "forseti": "36304c70fd2372fc1aa9b1e74643d0d0a516de3a"
+    "forseti": "0a81edc7fe82748af7c9b1139229c4d898f50c28"
   },
   "lean_toolchain": "leanprover/lean4:v4.35.0",
   "notebooks": [
@@ -55,12 +55,12 @@
         }
       ],
       "environment": {
-        "check": "7ce9204c7c1f842d4d703352073145e54383c45b3da5340df954a6b03ea91ed1",
-        "fingerprint": "6ba3a8da94848f338cb1d264b7837c6034da502ad33eb1781697e27b24a7ea5b"
+        "check": "0a54efef9ebfe3d477781b9c09ef9bcad4dc61ab66542770ca62a00227065d9d",
+        "fingerprint": "20ec955e89afce358e31b8cd13461eb17a71800e8a64a1ab22802d19f171b083"
       },
       "model": "lorenz",
       "observation": "V",
-      "results_sha256": "a5de1b5a2ac46901b07695b1be187a6d8d7f2b5ab552556b906b74f12df47554",
+      "results_sha256": "7971d44a82ab3db74ff68517a0306b4de3c19ef559ff5f4ea3cca469312a8b8f",
       "source": "examples/dynamics/Lorenz.lean",
       "source_sha256": "5a513ffb9c3888defe74e89be026577e49c26e502bab6f8098449883e1563960"
     },
@@ -97,12 +97,12 @@
         }
       ],
       "environment": {
-        "check": "f500e91d609f7c76b3b90ea0c1cda8b9cffb7eee03edc7c684fd1379219d9e4a",
-        "fingerprint": "8c7408344a786217db9f642a4b3f7f6ca6c3c9a3f68b19a850af0ff80d418ec6"
+        "check": "35dd0e7c11c2ba97677df3ec5318384c163f332818ced69d5cad786e1ab85801",
+        "fingerprint": "08b0614639bee73d86c74cb3a3074f624be6f66a16f602cb090afa49b36ebb40"
       },
       "model": "ns-t3",
       "observation": "E",
-      "results_sha256": "650e7babe4175209bc17d7d26726594ba96f588a3dffc7abb1d4e71a164f6247",
+      "results_sha256": "0059c8f0b0f0fb6e756c20702c281b1a97be5bfc833bb3ee55d51d144fcbce7f",
       "source": "examples/galerkin/NS_T3.lean",
       "source_sha256": "325c822be80a94b5b49ac31d6a7de92cf0829bb777b7d632ddc3fc8f5fda635f"
     }

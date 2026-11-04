@@ -1,11 +1,11 @@
 name = "forseti_examples"
 version = "0.1.0"
-defaultTargets = ["AntitheticFeedback", "Burgers", "BurgersFronts", "CircuitProofs", "EnergyOptimization", "Euler", "HedgedSpread", "HedgedSpreadRisk", "LinearCircuitFibonacci", "LinearCircuitJordan", "Lorenz", "NS_B2", "NS_K5", "NS_Laminar", "NS_T3", "NavierStokes", "ScalarDecay", "ThreeState"]
+defaultTargets = ["AntitheticFeedback", "Burgers", "BurgersFronts", "CircuitProofs", "EnergyOptimization", "Euler", "HedgedSpread", "HedgedSpreadRisk", "LinearCircuitFibonacci", "LinearCircuitJordan", "Lorenz", "NS_B2", "NS_K5", "NS_Laminar", "NS_T3", "NavierStokes", "RobustHedge", "ScalarDecay", "ThreeState"]
 
 [[require]]
 name = "forseti"
 git = "https://github.com/arnovich/forseti-lean.git"
-rev = "36304c70fd2372fc1aa9b1e74643d0d0a516de3a"
+rev = "0a81edc7fe82748af7c9b1139229c4d898f50c28"
 
 [[lean_lib]]
 name = "AntitheticFeedback"
@@ -73,6 +73,10 @@ srcDir = "examples/galerkin"
 [[lean_lib]]
 name = "NavierStokes"
 srcDir = "examples/pdes"
+
+[[lean_lib]]
+name = "RobustHedge"
+srcDir = "examples/finance"
 
 [[lean_lib]]
 name = "ScalarDecay"

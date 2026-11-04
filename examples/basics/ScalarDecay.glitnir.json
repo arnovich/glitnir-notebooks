@@ -19,9 +19,16 @@
       "end_line": 39,
       "name": "Notebook.ScalarDecay.k_pos",
       "prefix_sha256": "1e04ee64eb7fd27e65ee0536f5122e5df773646c3401b247b16c673991f62f64",
-      "proposition_sha256": "c601957c6a47526a9a285a8f7a55208641c181f98ed8c3aed444c7c500ae8126",
+      "proposition_sha256": "44777a56c3430d2fe00e6f950192e818ce690ea8b2f5a0b5e1fb767b7e2b3f66",
       "start_line": 36,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Real.instLT.1 0 Notebook.ScalarDecay.k",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Real.instLT.lt 0 Notebook.ScalarDecay.k",
+      "type_sha256": "12d613809a66e41149b0627228bd524b4cca2536f113d309603b3182bc8145db",
       "uses": []
     },
     {
@@ -43,9 +50,16 @@
       "end_line": 53,
       "name": "Notebook.ScalarDecay.energy_rate_nonpositive",
       "prefix_sha256": "d57ba79ef2c77c26deb1ed0fcba46699f542e3dcf3d00a86600b46078640bfae",
-      "proposition_sha256": "a3f37e503872ba95c4c82b29dc536a3b8a5ecc560701b7a4707942aef07479cf",
+      "proposition_sha256": "dd1a5f755785e09a48e9f10921152d747082a419c8cdfd5507fc334dd66f506c",
       "start_line": 50,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (x : Real),\n  Real.instLE.1 (instHMul.hMul (instHMul.hMul 2 x) (instHMul.hMul (Real.instNeg.neg Notebook.ScalarDecay.k) x)) 0",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (x : Real),\n  Real.instLE.le (instHMul.hMul (instHMul.hMul 2 x) (instHMul.hMul (Real.instNeg.neg Notebook.ScalarDecay.k) x)) 0",
+      "type_sha256": "62c79206d639658d5db4229fb00b06263cb0533816445482ae4cb48e678d9767",
       "uses": [
         {
           "in_notebook": true,
@@ -73,9 +87,16 @@
       "end_line": 71,
       "name": "Notebook.ScalarDecay.energy_nonneg",
       "prefix_sha256": "883c19c3831a8f0c3e987b1d1984c4d56236c1469791eeb6a9b5c79bbca8e165",
-      "proposition_sha256": "7b068a2cec171775f933b2ca23a72198ef280aecb919facb7905608074ea7697",
+      "proposition_sha256": "97f490b6caac9cd53d297147cf0cd9851c5aa9c9aa75fa70dc027a152fc6545d",
       "start_line": 69,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (x : Real), Real.instLE.1 0 (instHPow.hPow x 2)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (x : Real), Real.instLE.le 0 (instHPow.hPow x 2)",
+      "type_sha256": "5fd610a5d0c1db09d4bae1881b4b6953bcd2f1605c56ba11be635801b347e26f",
       "uses": []
     },
     {
@@ -101,15 +122,22 @@
       "end_line": 89,
       "name": "Notebook.ScalarDecay.energy_above_floor",
       "prefix_sha256": "4ad24e07a478ee2000db7a559b7342303f6900cad3818549390b341b0d70aa39",
-      "proposition_sha256": "dc38bf3adbf9514b3e6ec462bd7926ea1e5a16e7f8abbabd71f20ae97d9c7b22",
+      "proposition_sha256": "d79d051af6f4723033d5bb35c7c7a4b9c1fb22ac0451ea71f0341cc9e236e1aa",
       "start_line": 87,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (x : Real), Real.instLE.1 (1 / 4) (instHPow.hPow x 2)",
+        "truncated": false
+      },
       "status": "admitted",
+      "type": "\u2200 (x : Real), Real.instLE.le (1 / 4) (instHPow.hPow x 2)",
+      "type_sha256": "e040edf063b9d911b5e5b0f2a88b88c8362ed1815fcc8ef7a52b9cca8bc2e2b5",
       "uses": []
     }
   ],
   "environment": {
-    "check": "8bab7f23e671772daae3c3cd52d4382426e7255c578d0d4dd5bcfad819b9c6ad",
-    "fingerprint": "7abc2744c569845ef69573693e4e0505e6e03fea85017a79caace726bba50648"
+    "check": "e4635ea63c4bdddc6d32a3cabb9ac140475872c3ed5fad043ad0f9cc21655299",
+    "fingerprint": "9ed7d2b121c16d3777801e4839f6e21dcaad6615065bb70b4f76213bd440fc86"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "cf86781b0596d24df074f03c1b8f54bb1e2de33e048bef973eb5b77f9190843c",

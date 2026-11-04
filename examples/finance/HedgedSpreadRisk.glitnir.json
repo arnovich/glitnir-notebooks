@@ -19,9 +19,16 @@
       "end_line": 185,
       "name": "Notebook.HedgedSpreadRisk.Decided_year_breach_bound.year_breach_bound",
       "prefix_sha256": "09156cfa7d8b10b8545976f1ca7e1c3b488ada288040d946be57069d00d2a158",
-      "proposition_sha256": "51299b91b4d8278793998e390967d4e2f307efb64f23f4f884a318d2d75488ad",
+      "proposition_sha256": "230389ca5207b4dc942a72d630ecda661775c306d5081b0ad43b6e291973bc1c",
       "start_line": 173,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (law : MeasureTheory.Measure Real),\n  Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n    And (MeasureTheory.IsProbabilityMeasure law)\n      (And (Real.instLE.le 0 (1 / 4))\n        (ENNReal.instLE.le\n          (MeasureTheory.Measure.instFunLike.coe (Gimle.Forseti.Stepped.pathMeasure law)\n            (Set.ofPred fun \u03c9 =>\n              Exists fun n =>\n                And (instLENat.le n 256)\n                  (Not\n                    (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1\n                      (Gimle.Forseti.Stepped.run Gimle.Forseti.Examples.HedgedSpreadStepped.step\n                        Gimle.Forseti.Examples.HedgedSpread.compiled.initial \u03c9 n)))))\n          (ENNReal.ofReal (1 / 4))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (law : MeasureTheory.Measure Real),\n  Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n    Gimle.Forseti.Stepped.BreachWithin Gimle.Forseti.Examples.HedgedSpreadStepped.step\n      Gimle.Forseti.Examples.HedgedSpread.compiled.initial law 256\n      (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1) (1 / 4)",
+      "type_sha256": "f1804d9db3c99127d6ed98d1a79762d1aae04230dff4274e27b2585a57911843",
       "uses": []
     },
     {
@@ -43,9 +50,16 @@
       "end_line": 203,
       "name": "Notebook.HedgedSpreadRisk.year_bound_any_variance_le",
       "prefix_sha256": "2acd1866612e217e1b4e242c688a3c189dbc3fa1a4c71b2bd677176386ef8225",
-      "proposition_sha256": "bd70dc6a179baa3f3e7f905c409c7f27e3d102f1d4aca75c3c2ac5dc1b53e06b",
+      "proposition_sha256": "f23e18414e538f436f21096776c1b52c9e86f8ffafc3ac68d061a6a3663031e4",
       "start_line": 195,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 {law : MeasureTheory.Measure Real} {v : Real},\n  Real.instLE.le v 64 \u2192\n    Gimle.Forseti.Stepped.TwoMomentLaw law v \u2192\n      And (MeasureTheory.IsProbabilityMeasure law)\n        (And (Real.instLE.le 0 (1 / 4))\n          (ENNReal.instLE.le\n            (MeasureTheory.Measure.instFunLike.coe (Gimle.Forseti.Stepped.pathMeasure law)\n              (Set.ofPred fun \u03c9 =>\n                Exists fun n =>\n                  And (instLENat.le n 256)\n                    (Not\n                      (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1\n                        (Gimle.Forseti.Stepped.run Gimle.Forseti.Examples.HedgedSpreadStepped.step\n                          Gimle.Forseti.Examples.HedgedSpread.compiled.initial \u03c9 n)))))\n            (ENNReal.ofReal (1 / 4))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 {law : MeasureTheory.Measure Real} {v : Real},\n  Real.instLE.le v 64 \u2192\n    Gimle.Forseti.Stepped.TwoMomentLaw law v \u2192\n      Gimle.Forseti.Stepped.BreachWithin Gimle.Forseti.Examples.HedgedSpreadStepped.step\n        Gimle.Forseti.Examples.HedgedSpread.compiled.initial law 256\n        (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1) (1 / 4)",
+      "type_sha256": "8ea0c4a6383e6f86eefface079844648c3155618dbb06338d17b219a48950ac8",
       "uses": []
     },
     {
@@ -67,9 +81,11 @@
       "end_line": 220,
       "name": "Notebook.HedgedSpreadRisk.gaussian_in_both",
       "prefix_sha256": "6f34a5d532221a780563f87c2a92908ce229ce3b4be553d697ce43f2235d23dd",
-      "proposition_sha256": "f6b546b3709334957608254757363d6223b43f2ef4b6ce919ed3c30bc6fb3020",
+      "proposition_sha256": "1fa57b0cdd6db148fe192242e1e63b06fc596018ce8835eb7cb2690d5d1cef71",
       "start_line": 214,
       "status": "checked",
+      "type": "And (Gimle.Forseti.Stepped.TwoMomentLaw (ProbabilityTheory.gaussianReal 0 64) 64)\n  (Gimle.Forseti.Stepped.SubGaussianLaw (ProbabilityTheory.gaussianReal 0 64) 64)",
+      "type_sha256": "8a79afed8c4947e2bf71ffc8bd2cd05a20742752ee6e3ed8af917849d91e3d6d",
       "uses": []
     },
     {
@@ -91,9 +107,16 @@
       "end_line": 253,
       "name": "Notebook.HedgedSpreadRisk.three_point_in_class",
       "prefix_sha256": "34dd11e2311064ccf0f0552a3929ccf5884d2b10a11ea0f089e6abb692c6ac93",
-      "proposition_sha256": "6c41c6770b87a149df7aac856c2a22c1b186e9e2f2c3c0231eb7f06a43aff3c8",
+      "proposition_sha256": "f4563959c0b5173f997cf5e3dc10c09bb317e1e8c5f079449dfcfb36c22fdffe",
       "start_line": 246,
+      "statement_expansion": {
+        "kind": "constructor",
+        "text": "MeasureTheory.IsProbabilityMeasure\n    (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) \u2192\n  MeasureTheory.Integrable (fun d => d)\n      (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) \u2192\n    MeasureTheory.Integrable (fun d => instHPow.hPow d 2)\n        (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) \u2192\n      Eq\n          (MeasureTheory.integral\n            (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) fun d =>\n            d)\n          0 \u2192\n        Eq\n            (MeasureTheory.integral\n              (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) fun d =>\n              instHPow.hPow d 2)\n            64 \u2192\n          Gimle.Forseti.Stepped.TwoMomentLaw\n            (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) 64",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.Stepped.TwoMomentLaw\n  (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257) 64",
+      "type_sha256": "66e00a4b5c3b73cd564639c7a0324f286f4fd10aa4912f7dafef6e26d3a94ffb",
       "uses": []
     },
     {
@@ -115,9 +138,16 @@
       "end_line": 279,
       "name": "Notebook.HedgedSpreadRisk.three_point_breaches_often",
       "prefix_sha256": "de4b2ded532392027cd84c4aa68e9ed3c049f2df1c08176e345f9d4e92958c52",
-      "proposition_sha256": "444e8c7d3c1a3a721e280bd22688182c3229ceed2c9e632d966561459960590b",
+      "proposition_sha256": "987939696775cd530dca90954c5626f5da94a32051c776304067413f1b3f8163",
       "start_line": 271,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "ENNReal.instLE.1\n  (ENNReal.ofReal\n    (instHSub.hSub 1\n      (instHPow.hPow (instHSub.hSub 1 (instHMul.hMul 2 (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2)))))\n        256)))\n  (MeasureTheory.Measure.instFunLike.coe\n    (Gimle.Forseti.Stepped.pathMeasure\n      (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257))\n    (Set.ofPred fun \u03c9 =>\n      Exists fun n =>\n        And (instLENat.le n 256)\n          (Not\n            (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1\n              (Gimle.Forseti.Stepped.run Gimle.Forseti.Examples.HedgedSpreadStepped.step\n                Gimle.Forseti.Examples.HedgedSpread.compiled.initial \u03c9 n)))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "ENNReal.instLE.le\n  (ENNReal.ofReal\n    (instHSub.hSub 1\n      (instHPow.hPow (instHSub.hSub 1 (instHMul.hMul 2 (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2)))))\n        256)))\n  (MeasureTheory.Measure.instFunLike.coe\n    (Gimle.Forseti.Stepped.pathMeasure\n      (Gimle.Forseti.Stepped.threePoint (instHDiv.hDiv 64 (instHMul.hMul 2 (instHPow.hPow 257 2))) 257))\n    (Set.ofPred fun \u03c9 =>\n      Exists fun n =>\n        And (instLENat.le n 256)\n          (Not\n            (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1\n              (Gimle.Forseti.Stepped.run Gimle.Forseti.Examples.HedgedSpreadStepped.step\n                Gimle.Forseti.Examples.HedgedSpread.compiled.initial \u03c9 n)))))",
+      "type_sha256": "df9538bc3531a60216b635adb88b25fa7d7228dfab4f4809778c1df679bf3047",
       "uses": []
     },
     {
@@ -139,9 +169,16 @@
       "end_line": 285,
       "name": "Notebook.HedgedSpreadRisk.three_point_lower_bound_decimal",
       "prefix_sha256": "f44f1b895005cea49452deebf21f71d7e8c73482be19a888324967b4385cbc77",
-      "proposition_sha256": "bf3b63e6d761be6849d9b262a3b4971a2439ab2cb6d8c474a6ac9c58e986416c",
+      "proposition_sha256": "bf64d59f422b5fab4b4856c1f3c0f9a6c00f4d31b716640c5cd8a86b0ab8c0f5",
       "start_line": 281,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Rat.instLT.1 (2197 / 10000)\n  (instHSub.hSub 1 (instHPow.hPow (instHSub.hSub 1 (instHDiv.hDiv 64 (instHPow.hPow 257 2))) 256))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Rat.instLT.lt (2197 / 10000)\n  (instHSub.hSub 1 (instHPow.hPow (instHSub.hSub 1 (instHDiv.hDiv 64 (instHPow.hPow 257 2))) 256))",
+      "type_sha256": "1c08c8d3fe82c07d9293aa71d8b6ad1328103a4bf23714cf4e362a0aef7f73c1",
       "uses": []
     },
     {
@@ -163,9 +200,11 @@
       "end_line": 349,
       "name": "Notebook.HedgedSpreadRisk.Decided_tight_limit.tight_limit_refuted",
       "prefix_sha256": "a702251ed589db78484b4539265b775f3727cd41e6f5dbe4a679952a8c967b44",
-      "proposition_sha256": "59db5787d9ba11835e6d066b0489055a8c1f4d5f8b9467b45af6df1a6580b52e",
+      "proposition_sha256": "36a49ef0aeb6eeb39586aff1605bc228b17862bcf8ef84943d4954b942947c67",
       "start_line": 331,
       "status": "checked",
+      "type": "Not\n  (\u2200 (law : MeasureTheory.Measure Real),\n    Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n      Gimle.Forseti.Stepped.BreachWithin Gimle.Forseti.Examples.HedgedSpreadStepped.step\n        Gimle.Forseti.Examples.HedgedSpread.compiled.initial law 256\n        (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1) (1 / 5))",
+      "type_sha256": "3cbb1d73c2d224f1ed0e00b3b9c75e5788f10954b5ed44d06defbb207e5087b6",
       "uses": []
     },
     {
@@ -187,9 +226,16 @@
       "end_line": 439,
       "name": "Notebook.HedgedSpreadRisk.Decided_mark_on_any_date.mark_on_any_date",
       "prefix_sha256": "398e0b8acfb5e52a56d26b0b8395a8cf4b1045947bb3002a48b47061b78fca63",
-      "proposition_sha256": "0e27183bcbd57c4f41d1ec728d6c88d6be60370daf259343301c3bd725ef5e57",
+      "proposition_sha256": "ba66419a0758e2306853b640b238616f176594311f763f20406bda78ba8894cf",
       "start_line": 390,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (law : MeasureTheory.Measure Real),\n  Gimle.Forseti.Stepped.SubGaussianLaw law 64 \u2192\n    \u2200 (n : Nat),\n      instLENat.le n 256 \u2192\n        Gimle.Forseti.Stepped.ExceedsAt Gimle.Forseti.Examples.HedgedSpreadStepped.step\n          Gimle.Forseti.Examples.HedgedSpread.compiled.initial law n\n          (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1) (1 / 100)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (law : MeasureTheory.Measure Real),\n  Gimle.Forseti.Stepped.SubGaussianLaw law 64 \u2192\n    Gimle.Forseti.Stepped.AtEveryMark Gimle.Forseti.Examples.HedgedSpreadStepped.step\n      Gimle.Forseti.Examples.HedgedSpread.compiled.initial law 256\n      (Gimle.Forseti.Examples.HedgedSpreadStepped.exposureWithin 1) (1 / 100)",
+      "type_sha256": "5f614878e1e676b39065382c0bba51d6a2b0a115ddaea9735492f0a2ee1e9086",
       "uses": []
     },
     {
@@ -211,9 +257,11 @@
       "end_line": 468,
       "name": "Notebook.HedgedSpreadRisk.energy_step_identity",
       "prefix_sha256": "c6deb66f5fdc7f82638720f82094c3d5c499b0e1b7831425e726d6a9416f726e",
-      "proposition_sha256": "f7a72b83202cf6d995e6b105aba72f53b94eacd521f82ece527293330d5a5b0e",
+      "proposition_sha256": "748bfdb0c54234720618a70dbc8b8d5ba40d8a5a99757b978f0e68222ca77543",
       "start_line": 460,
       "status": "checked",
+      "type": "\u2200 (x : Gimle.Asgard.Point Gimle.Forseti.Examples.HedgedSpread.states) (d : Real),\n  Eq (Gimle.Forseti.Examples.HedgedSpreadContract.energy (Gimle.Forseti.Examples.HedgedSpreadStepped.step x d))\n    (instHAdd.hAdd\n      (instHAdd.hAdd\n        (instHMul.hMul Gimle.Forseti.Examples.HedgedSpreadStepped.\u03c1.cast\n          (Gimle.Forseti.Examples.HedgedSpreadContract.energy x))\n        (instHMul.hMul\n          (instHMul.hMul (instHMul.hMul 2 Gimle.Forseti.Examples.HedgedSpreadStepped.\u0394.cast)\n            (instHSub.hSub (instHMul.hMul (instHSub.hSub 1 Gimle.Forseti.Examples.HedgedSpreadStepped.\u0394.cast) (x 0))\n              (instHMul.hMul Gimle.Forseti.Examples.HedgedSpreadStepped.\u0394.cast (x 1))))\n          d))\n      (instHMul.hMul (instHPow.hPow Gimle.Forseti.Examples.HedgedSpreadStepped.\u0394.cast 2) (instHPow.hPow d 2)))",
+      "type_sha256": "59f5ab7ba9d6e039d6b0e2092abda68a42e2db50c6f64ab91d76d94d7d3cc254",
       "uses": []
     },
     {
@@ -235,9 +283,11 @@
       "end_line": 483,
       "name": "Notebook.HedgedSpreadRisk.stationary_energy",
       "prefix_sha256": "e26e86ea16f0415849e14c0aef5ac8627d8490c369f25009ba188f233e90d10a",
-      "proposition_sha256": "d46558b9bdff317d831dcccfaf3e06f251a37772128c9b0330a3093c03696fdc",
+      "proposition_sha256": "8c1f02b0c2f64df2fb96dcba47d1b13452d43c1dc57269b10486dc5d68eb8daa",
       "start_line": 481,
       "status": "checked",
+      "type": "Eq\n  (instHDiv.hDiv (instHMul.hMul (instHPow.hPow Gimle.Forseti.Examples.HedgedSpreadStepped.\u0394.cast 2) 64)\n    (instHSub.hSub 1 Gimle.Forseti.Examples.HedgedSpreadStepped.\u03c1.cast))\n  (32 / 255)",
+      "type_sha256": "6f50b761477f36923f948d5a66e7221f1402e222f00281e2dc857ad6cfbef213",
       "uses": []
     },
     {
@@ -259,9 +309,16 @@
       "end_line": 491,
       "name": "Notebook.HedgedSpreadRisk.expected_gauge_every_mark",
       "prefix_sha256": "5298ea66688177c47ccbad6635c69de2f54a73065ed6c2499cdd55eba02f957f",
-      "proposition_sha256": "82e45bab0fd328eec7c1d672b879d33ff5e5a8bb4951916d08b3d9fc5bf0a337",
+      "proposition_sha256": "372c53cb40ef2c5b180672405a3149e6f3810307e0aa4a159151aa629c34e272",
       "start_line": 485,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 {law : MeasureTheory.Measure Real},\n  Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n    \u2200 (n : Nat),\n      And (MeasureTheory.IsProbabilityMeasure law)\n        (And (Real.instLE.le 0 (32 / 255))\n          (ENNReal.instLE.le\n            (MeasureTheory.lintegral (Gimle.Forseti.Stepped.pathMeasure law) fun \u03c9 =>\n              ENNReal.ofReal\n                (Gimle.Forseti.Examples.HedgedSpreadContract.energy\n                  (Gimle.Forseti.Stepped.run Gimle.Forseti.Examples.HedgedSpreadStepped.step\n                    Gimle.Forseti.Examples.HedgedSpread.compiled.initial \u03c9 n)))\n            (ENNReal.ofReal (32 / 255))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 {law : MeasureTheory.Measure Real},\n  Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n    \u2200 (n : Nat),\n      Gimle.Forseti.Stepped.ExpectedLe Gimle.Forseti.Examples.HedgedSpreadStepped.step\n        Gimle.Forseti.Examples.HedgedSpread.compiled.initial law Gimle.Forseti.Examples.HedgedSpreadContract.energy n\n        (32 / 255)",
+      "type_sha256": "1fca0383b94aba715914571295b323e34cdb84d7a05c4763729ffae01295b09f",
       "uses": [
         {
           "in_notebook": true,
@@ -289,16 +346,23 @@
       "end_line": 534,
       "name": "Notebook.HedgedSpreadRisk.Decided_expected_gauge.expected_gauge",
       "prefix_sha256": "859b7b5de5e97be53cc6d863331620d45627efcfcf70b7066c903106d7b86f11",
-      "proposition_sha256": "16d40ba40a86ba1bbd1090d8292d1537a697946cea69efb64b9002b3fcb5761a",
+      "proposition_sha256": "8a33c4b05a7700a4c5ae10851c173268cefe83a6c6e5c4ada2d82114ed1840a2",
       "start_line": 516,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (law : MeasureTheory.Measure Real),\n  Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n    And (MeasureTheory.IsProbabilityMeasure law)\n      (And (Real.instLE.le 0 (543 / 5000))\n        (ENNReal.instLE.le\n          (MeasureTheory.lintegral (Gimle.Forseti.Stepped.pathMeasure law) fun \u03c9 =>\n            ENNReal.ofReal\n              (Gimle.Forseti.Examples.HedgedSpreadContract.energy\n                (Gimle.Forseti.Stepped.run Gimle.Forseti.Examples.HedgedSpreadStepped.step\n                  Gimle.Forseti.Examples.HedgedSpread.compiled.initial \u03c9 256)))\n          (ENNReal.ofReal (543 / 5000))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (law : MeasureTheory.Measure Real),\n  Gimle.Forseti.Stepped.TwoMomentLaw law 64 \u2192\n    Gimle.Forseti.Stepped.ExpectedLe Gimle.Forseti.Examples.HedgedSpreadStepped.step\n      Gimle.Forseti.Examples.HedgedSpread.compiled.initial law Gimle.Forseti.Examples.HedgedSpreadContract.energy 256\n      (543 / 5000)",
+      "type_sha256": "77a71df7a796a0d7a3635b73db8058c446a03ddc6279143bcdba1525efe774d8",
       "uses": []
     }
   ],
   "decisions": {
     "2020e5e719c74654e28753ee4dd829fd28628bfa0d7df4d321549dc57c32037f": {
-      "created": "2026-10-29T19:42:50+00:00",
-      "fingerprint": "46fc1ca39fa5281c523d0b4f088c701eb50039aedccbb857d5fd407e370edfa2",
+      "created": "2026-11-03T09:47:26+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": null,
         "reason": "unsupported",
@@ -322,8 +386,8 @@
       "verification": null
     },
     "28689ca7f49f8d2b6dea7c3a62ed1a3538f4510b7fa491645e2def6ea46332b2": {
-      "created": "2026-10-20T23:00:18+00:00",
-      "fingerprint": "57af50da584b9306ae030f2f990d6bb6fe6ef555baf3fd0f6efad4f51ec798c1",
+      "created": "2026-11-04T01:09:22+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_expected_gauge\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n    ExpectedLe step compiled.initial law energy 256 (543/5000)\n\n/-- For independent, identically distributed shocks drawn from any centred law with variance 64, the expected energy V at mark 256 is at most 543/5000. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0). The stepped decider proved it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks variance 64 observe V expected <= 543/5000 at 256 -/\ntheorem expected_gauge :\n    \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n      ExpectedLe step compiled.initial law energy 256 (543/5000) := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    intro law h\n    have hq : \u0394 ^ 2 * 64 * geomSum 256 \u2264 543/5000 := by decide +kernel\n    have hr := Rat.cast_le (K := \u211d) |>.mpr hq\n    push_cast at hr\n    refine \u27e8h.prob, by norm_num, ?_\u27e9\n    rw [expected_energy_eq h, \u2190 geomSum_eq]\n    exact ENNReal.ofReal_le_ofReal hr\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_expected_gauge",
         "reason": "Found by the expected stage.",
@@ -347,7 +411,7 @@
         "status": "proven",
         "theorem": "expected_gauge"
       },
-      "prefix_sha256": "53a3c7590273f62b98526703b9dcddb38881e2ffe36a12caf05c1efce46c6a18",
+      "prefix_sha256": "41841ed2e0d78129eecacb693dbbafe8a5f26434c9d0abf8bcd9dad765e51b1a",
       "provider": "forseti",
       "verification": {
         "axioms": [
@@ -361,8 +425,8 @@
       }
     },
     "40aa379ebd947dd315c7be4e8ec67e104eaec1036f6762fdcd804c67e6de6dad": {
-      "created": "2026-10-20T22:53:27+00:00",
-      "fingerprint": "57af50da584b9306ae030f2f990d6bb6fe6ef555baf3fd0f6efad4f51ec798c1",
+      "created": "2026-11-04T00:54:32+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_year_breach_bound\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n    BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/4)\n\n/-- For independent, identically distributed shocks drawn from any centred law with variance 64, the probability that the exposure s breaches 1 within 256 marks is at most 1/4. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0); `exposureWithin 1` is the band |s| \u2264 1. The stepped decider proved it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks variance 64 within 256 observe s breach 1 probability <= 1/4 -/\ntheorem year_breach_bound :\n    \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n      BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/4) := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    exact fun law h => (breach_within h (by norm_num) 256).mono (by norm_num [\u0394])\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_year_breach_bound",
         "reason": "Found by the horizon stage.",
@@ -400,8 +464,8 @@
       }
     },
     "93f083cb2ea3b8afa2a16eaa5261447a5e41916e19c31c2f8cff05f33d7bc388": {
-      "created": "2026-10-22T17:07:03+00:00",
-      "fingerprint": "0e5883befdeb124ef1e3f406a6af2c78168e5a8ac10fb31378cc18258a799b4d",
+      "created": "2026-11-04T01:04:15+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_mark_on_any_date\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, SubGaussianLaw law 64 \u2192\n    AtEveryMark step compiled.initial law 256 (exposureWithin 1) (1/100)\n\n/-- For independent, identically distributed shocks drawn from any sub-Gaussian law with proxy 64, at each mark up to 256, taken separately, the probability that the exposure s breaches 1 is at most 1/100. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0); `exposureWithin 1` is the band |s| \u2264 1. The stepped decider proved it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks subgaussian 64 at every mark within 256 observe s breach 1 probability <= 1/100 -/\ntheorem mark_on_any_date :\n    \u2200 law : Measure \u211d, SubGaussianLaw law 64 \u2192\n      AtEveryMark step compiled.initial law 256 (exposureWithin 1) (1/100) := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    intro law h\n    have numeric : \u2200 c : \u211d, 0 < c \u2192 c \u2264 18251/200000 \u2192 2 * Real.exp (-1 ^ 2 / (2 * c)) \u2264 1/100 := by\n      intro c h0 h1\n      have hr : (100000/18251 : \u211d) \u2264 1 ^ 2 / (2 * c) := by\n        rw [le_div_iff\u2080 (by positivity)]\n        linarith\n      have hexp : Real.exp (-1 ^ 2 / (2 * c)) \u2264 Real.exp (-(100000/18251)) := by\n        rw [Real.exp_le_exp, neg_div]\n        exact neg_le_neg hr\n      have hE := exp_ge_floor_cubic 5 (r := 100000/18251) (by norm_num)\n      norm_num at hE\n      have hq : 2 * Real.exp (-(100000/18251)) \u2264 1/100 := by\n        rw [Real.exp_neg, \u2190 div_eq_mul_inv, div_le_iff\u2080 (Real.exp_pos _)]\n        linarith\n      linarith\n    intro n hn\n    rcases Nat.eq_zero_or_pos n with rfl | hn0\n    \u00b7 have hempty : {\u03c9 : \u2115 \u2192 \u211d | \u00ac exposureWithin 1 (run step compiled.initial \u03c9 0)} = \u2205 := by\n        ext \u03c9\n        simp only [run_zero]\n        norm_num [exposureWithin, initial_eq]\n      refine \u27e8h.prob, by norm_num, ?_\u27e9\n      rw [hempty, measure_empty]\n      exact zero_le\n    \u00b7 refine exceeds_at_proxy h (by norm_num) n ?_\n      have hc : proxy 64 256 \u2264 18251/200000 := by\n        rw [\u2190 proxyRec_eq]\n        decide +kernel\n      have hle : (proxy 64 n : \u211d) \u2264 18251/200000 := by\n        have := Rat.cast_le (K := \u211d) |>.mpr ((proxy_mono 64 (by norm_num) hn).trans hc)\n        push_cast at this\n        exact this\n      have hpos : (0 : \u211d) < proxy 64 n := by\n        have h1 : (0 : \u211a) < proxy 64 1 := by\n          rw [\u2190 proxyRec_eq]\n          decide +kernel\n        exact_mod_cast h1.trans_le (proxy_mono 64 (by norm_num) hn0)\n      exact numeric _ hpos hle\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_mark_on_any_date",
         "reason": "Found by the fixed-date stage.",
@@ -439,8 +503,8 @@
       }
     },
     "df78b08e525298ed40275581145333ffb3f0c00828e53fa14615091e1e00e9a3": {
-      "created": "2026-10-20T22:55:42+00:00",
-      "fingerprint": "57af50da584b9306ae030f2f990d6bb6fe6ef555baf3fd0f6efad4f51ec798c1",
+      "created": "2026-11-04T00:59:17+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_tight_limit\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n    BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/5)\n\n/-- For independent, identically distributed shocks drawn from any centred law with variance 64, the probability that the exposure s breaches 1 within 256 marks is at most 1/5. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0); `exposureWithin 1` is the band |s| \u2264 1. The stepped decider refuted it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks variance 64 within 256 observe s breach 1 probability <= 1/5 -/\ntheorem tight_limit_refuted : \u00ac (\u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n      BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/5)) := by\n  have refuted : \u00ac forsetiClaim := by\n    unfold forsetiClaim\n    intro h\n    have hq : (1/5 : \u211a) < 1 - (1 - 2 * (64 / (2 * 257 ^ 2) : \u211a)) ^ 256 := by decide +kernel\n    have hr := Rat.cast_lt (K := \u211d) |>.mpr hq\n    push_cast at hr\n    have hlaw := threePoint_twoMoment (\u03b5 := 64 / (2 * 257 ^ 2)) (L := 257) (by norm_num) (by norm_num)\n    rw [show 2 * (64 / (2 * 257 ^ 2) : \u211d) * 257 ^ 2 = 64 by norm_num] at hlaw\n    exact not_breachWithin_threePoint_exact (by norm_num) (by norm_num) step_zero_fixed (step_big_breaches 257 (by norm_num [\u0394])) (step_big_breaches (-257) (by norm_num [\u0394])) hr (h _ hlaw)\n  intro claim\n  refine (fun (bridge : _ \u2194 forsetiClaim) => refuted (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_tight_limit",
         "reason": "Found by the three-point stage.",
@@ -479,13 +543,13 @@
     }
   },
   "environment": {
-    "check": "c2f2ee1eb3233c18bbf2187331d02478470c1aabfcf91d918e1beea19ebc3bc1",
-    "fingerprint": "46fc1ca39fa5281c523d0b4f088c701eb50039aedccbb857d5fd407e370edfa2"
+    "check": "c56d790271a0a11f7384b90c44c122b7dd28a112e6c35ea2f6f8cae49114a559",
+    "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50"
   },
   "evidence": {
     "45885ffbf143beb49e82d989048a1fe83c22f1b57c56beef6ffdcf3baf7bbc89": {
-      "created": "2026-10-29T19:43:26+00:00",
-      "fingerprint": "9f496e811271d2a888b41f49aefbf5688fad22aebd5878d40472ef96461bbc45",
+      "created": "2026-11-03T09:48:22+00:00",
+      "fingerprint": "2193caa1c3f9bee4ca8f508743ee2d59583fb3d0a75159ead4b15eb6905f9275",
       "prefix_sha256": "36dfce17828b3c1ab01b93375408cab247c5ed2e1686dba15ede9741d5e1d1b3",
       "provider": "forseti",
       "snapshot": {
@@ -554,11 +618,11 @@
           ],
           [
             "provider",
-            "glitnir-forseti 0.1.10"
+            "glitnir-forseti 0.1.11"
           ],
           [
             "created",
-            "2026-10-29T19:43:26+00:00"
+            "2026-11-03T09:48:22+00:00"
           ]
         ],
         "series": {
@@ -3665,8 +3729,8 @@
       }
     },
     "dac3b6ea2ec60c3565c0f1bd2ae77be0c9185cb78cb829eb55cacfc81c1cc68a": {
-      "created": "2026-10-29T19:43:14+00:00",
-      "fingerprint": "9f496e811271d2a888b41f49aefbf5688fad22aebd5878d40472ef96461bbc45",
+      "created": "2026-11-03T09:48:09+00:00",
+      "fingerprint": "2193caa1c3f9bee4ca8f508743ee2d59583fb3d0a75159ead4b15eb6905f9275",
       "prefix_sha256": "71c01f3a15e2ab0cd6fd8dca175df0ba9728d5bdd17cf15708631da5a963e211",
       "provider": "forseti",
       "snapshot": {
@@ -3735,11 +3799,11 @@
           ],
           [
             "provider",
-            "glitnir-forseti 0.1.10"
+            "glitnir-forseti 0.1.11"
           ],
           [
             "created",
-            "2026-10-29T19:43:14+00:00"
+            "2026-11-03T09:48:09+00:00"
           ]
         ],
         "series": {
