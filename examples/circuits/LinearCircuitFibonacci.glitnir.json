@@ -19,9 +19,16 @@
       "end_line": 68,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_scaled_prefix",
       "prefix_sha256": "94aa792048b2c03eb73279055a880dca4cae32d27b5f5d6a517bfd34f07367ca",
-      "proposition_sha256": "f22de46052a807f83b0e3a86f34b6667294a7b10884056b0f4788d7a39cf8640",
+      "proposition_sha256": "d0ae4a2b651c8cf52e23a32ad70e223db46567cf7323d0d429cf35ebbd3a6fed",
       "start_line": 58,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (r : Real),\n  Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd 2 3) \u2192 Prop)\n    (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n      Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci)\n    Gimle.Forseti.Syntax.Formula.holds._f\n    (Gimle.Asgard.pointAppend (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))\n      (Matrix.vecCons r (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (r : Real),\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n        Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).holds\n    (Gimle.Asgard.pointAppend (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))\n      (Matrix.vecCons r (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))))",
+      "type_sha256": "34f67a74a1a326b8a7319c625fc7cd2614e1f5959e30a0cf5fa793cba7d5e602",
       "uses": []
     },
     {
@@ -43,9 +50,11 @@
       "end_line": 92,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_scaled_equivalent",
       "prefix_sha256": "4ba3cbaf54024269c7f7ee6363e3418d11b9cfefdcc366ea6a87765e2dc32887",
-      "proposition_sha256": "6368ef395affe1e3c439ec1c93c35fc9629e67e0023a89dc3461d7fb30b69ed5",
+      "proposition_sha256": "cfbe37ecdc6bc88c1f18b6c5797b70bc4a4f4e4b3238029825bc26f5e6c8a51f",
       "start_line": 89,
       "status": "checked",
+      "type": "\u2200 (r : Real) (n : Nat),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitModels.fibonacci.observe (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))\n      n)\n    (Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci.observe\n      (Matrix.vecCons r (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))) n)",
+      "type_sha256": "3b18de5525ac11631c04edb692da036b6544ac692bddd9b5394fcbd8440a61a0",
       "uses": [
         {
           "in_notebook": true,
@@ -73,9 +82,16 @@
       "end_line": 97,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_prefix",
       "prefix_sha256": "8f7746fb915a9313d2f8b56976e3a9714a8d3de8095002ce7d10a31ec91f1a52",
-      "proposition_sha256": "e48dcaec749dbb64f153ed45a7b90715e9c79d6ce53acbb6a33151dd2a5276ac",
+      "proposition_sha256": "5e87b3a0c061d6fad4e2ce3a855c4dccee8f8d2b689380d0c171445f63535a79",
       "start_line": 94,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd 2 3) \u2192 Prop)\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n    Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci)\n  Gimle.Forseti.Syntax.Formula.holds._f\n  (Gimle.Asgard.pointAppend (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n    (Matrix.vecCons 1 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "(Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n      Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).holds\n  (Gimle.Asgard.pointAppend (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n    (Matrix.vecCons 1 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))))",
+      "type_sha256": "9c5db88d084a58f33ec4efdbf0716e795d4aec60ef3a8906f6e533849a900a81",
       "uses": [
         {
           "in_notebook": true,
@@ -103,9 +119,11 @@
       "end_line": 106,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_equivalent",
       "prefix_sha256": "a8aeb278c83db194f5f23c654cf4ccc109b07ee62ab387a927fbe814fdcc49f6",
-      "proposition_sha256": "2c809b7f079809c7e5cb19c51bfbc797224d0a435387143b2199d061a53e1442",
+      "proposition_sha256": "ee93c1f3b763cc431226ce33ca174b67de3f57d75a82f2bdf21d5de7e8f1b38c",
       "start_line": 99,
       "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitModels.fibonacci.output.run\n      (Gimle.Forseti.Discrete.run Gimle.Forseti.Examples.LinearCircuitModels.fibonacci.update\n        Gimle.Forseti.LinearCircuit.empty (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n        (fun _step => Gimle.Forseti.LinearCircuit.empty) n)\n      0)\n    (Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci.output.run\n      (Gimle.Forseti.Discrete.run Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci.update\n        Gimle.Forseti.LinearCircuit.empty (Matrix.vecCons 1 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)))\n        (fun _step => Gimle.Forseti.LinearCircuit.empty) n)\n      0)",
+      "type_sha256": "c546e68ed7ee63bbaf40bfab0feccfbb8e4d6372ae960334c7b1474e5d5af249",
       "uses": [
         {
           "in_notebook": true,
@@ -133,9 +151,16 @@
       "end_line": 125,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.fibonacci_hoare",
       "prefix_sha256": "931270b74342e10d8284458d8b015c140576e712f0d23d4445e1796798f4b5f8",
-      "proposition_sha256": "a7caeaa5e2959a8e1704c5d65c6ee094c1e8fe61992b593168f2d89e9668dc6c",
+      "proposition_sha256": "a6f007c3c97f1e2a08f88fe7f0dd079f26b677d686b1d1ba50ee2a6d7a008899",
       "start_line": 121,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input : Gimle.Asgard.Point (instHAdd.hAdd 2 3)),\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n            Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).toPredicate.holds\n      input \u2192\n    (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n            Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).toPredicate.holds\n      ((Gimle.Forseti.LinearCircuit.pairedUpdate Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n            Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).run\n        input)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.ExactHoare\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n      Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).toPredicate\n  (Gimle.Forseti.LinearCircuit.pairedUpdate Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n    Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci)\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n      Gimle.Forseti.Examples.LinearCircuitModels.extendedFibonacci).toPredicate",
+      "type_sha256": "1b94997ac0e02c353074033d6aeeb3f56cc87ff1ad44518277caed86b23134fb",
       "uses": []
     },
     {
@@ -157,9 +182,16 @@
       "end_line": 149,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.permutation_prefix",
       "prefix_sha256": "4cb33a3da687e6459d2950b4a34d7e7f230cfc699a14d8afa7bdefa79026a598",
-      "proposition_sha256": "2a9333dc93f0e6dafe2b27077d7d2fd291362221807227fd0c03d5a618b5c3b8",
+      "proposition_sha256": "8fc4c12ffb42a14f01128316160a2c0b1102bfd4a79aea1d6a5805543a7693d5",
       "start_line": 141,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd 2 2) \u2192 Prop)\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n    Gimle.Forseti.Examples.LinearCircuitModels.permutedFibonacci)\n  Gimle.Forseti.Syntax.Formula.holds._f\n  (Gimle.Asgard.pointAppend (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n    (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "(Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitModels.fibonacci\n      Gimle.Forseti.Examples.LinearCircuitModels.permutedFibonacci).holds\n  (Gimle.Asgard.pointAppend (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n    (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)))",
+      "type_sha256": "8ea3472168a59fc9841d3944453bb26d845f2583c5c9e9b43a708be76ac3874d",
       "uses": []
     },
     {
@@ -181,9 +213,11 @@
       "end_line": 153,
       "name": "Gimle.Forseti.Examples.LinearCircuitFibonacci.permutation_equivalent",
       "prefix_sha256": "e7a3c5c5c41d586c39dcf55a35a4802a02f84a1742c59fd3b24199312cd6047d",
-      "proposition_sha256": "a70dfeb469f6303ba35e691a85cae3290bf969432c4fc03e1b916c5e99f24f36",
+      "proposition_sha256": "0b70881f1d603deb7acc017f14a721119dbb6114100b22e5cd8fb7fa0c9ba908",
       "start_line": 151,
       "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitModels.fibonacci.observe (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n      n)\n    (Gimle.Forseti.Examples.LinearCircuitModels.permutedFibonacci.observe\n      (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) n)",
+      "type_sha256": "1c4660737293bc1f8d76a9c9d1714a57085a0bc5ca7e47b87aa5dfa5d5339194",
       "uses": [
         {
           "in_notebook": true,
@@ -194,8 +228,8 @@
     }
   ],
   "environment": {
-    "check": "fcf94a7c16399ffaa412f1130aefdc22f8123298a04cf8198f59fa6677fd598c",
-    "fingerprint": "dbf978cd43481f8dd164d276d692875d094b8c05bfe2535274e7dc46f96ea479"
+    "check": "513aa5cf1a86132e117342bb34bbe9aa1af2937d14fae1646a0ff75e826f9414",
+    "fingerprint": "14643c49e300be4335f8c7f0565976d6e8677f83cad0592ef343b6e9ab392706"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "0b16d785e83e8a595e2c40c7b778bc29fcba50c722cf271acb15cf126d33c202",

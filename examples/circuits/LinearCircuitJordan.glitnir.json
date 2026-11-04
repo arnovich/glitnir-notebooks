@@ -19,9 +19,16 @@
       "end_line": 131,
       "name": "_private.LinearCircuitJordan.0.Gimle.Forseti.Examples.LinearCircuitJordan.prefix_of_rational_prefix",
       "prefix_sha256": "a3b578bd8ba51563be0a8229c40483ef6ab82dec5192b7b61262a51f8b8b9054",
-      "proposition_sha256": "80e97038b4c5dd62853c7f43682ea014f774f7c3402ac61bebe582ae36b97984",
+      "proposition_sha256": "26a8937026591d2d169be90101734e173ad73e4ad7e1a1a0d7dff8089198f81e",
       "start_line": 117,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 {d\u2081 d\u2082 : Nat} (P : Gimle.Forseti.LinearCircuit.Program d\u2081) (Q : Gimle.Forseti.LinearCircuit.Program d\u2082)\n  (x : Fin d\u2081 \u2192 Rat) (y : Fin d\u2082 \u2192 Rat),\n  (\u2200 (n : Fin (instHAdd.hAdd d\u2081 d\u2082)),\n      Eq (Gimle.Forseti.FiniteLinearEquivalence.matrix_output P.matrix x P.weights n.val)\n        (Gimle.Forseti.FiniteLinearEquivalence.matrix_output Q.matrix y Q.weights n.val)) \u2192\n    Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd d\u2081 d\u2082) \u2192 Prop)\n      (Gimle.Forseti.LinearCircuit.prefixFormula P Q) Gimle.Forseti.Syntax.Formula.holds._f\n      (Gimle.Asgard.pointAppend (Gimle.Forseti.Examples.LinearCircuitJordan.embed x)\n        (Gimle.Forseti.Examples.LinearCircuitJordan.embed y))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 {d\u2081 d\u2082 : Nat} (P : Gimle.Forseti.LinearCircuit.Program d\u2081) (Q : Gimle.Forseti.LinearCircuit.Program d\u2082)\n  (x : Fin d\u2081 \u2192 Rat) (y : Fin d\u2082 \u2192 Rat),\n  (\u2200 (n : Fin (instHAdd.hAdd d\u2081 d\u2082)),\n      Eq (Gimle.Forseti.FiniteLinearEquivalence.matrix_output P.matrix x P.weights n.val)\n        (Gimle.Forseti.FiniteLinearEquivalence.matrix_output Q.matrix y Q.weights n.val)) \u2192\n    (Gimle.Forseti.LinearCircuit.prefixFormula P Q).holds\n      (Gimle.Asgard.pointAppend (Gimle.Forseti.Examples.LinearCircuitJordan.embed x)\n        (Gimle.Forseti.Examples.LinearCircuitJordan.embed y))",
+      "type_sha256": "46c5550df85d28b4303021c176129adc6e6d6820247d02f97f78cefa76037c1d",
       "uses": []
     },
     {
@@ -43,9 +50,16 @@
       "end_line": 153,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan1_prefix",
       "prefix_sha256": "2d184e080a28db53ea278963e1134c3fcf02cc56a033ed4b72838e562e4a3570",
-      "proposition_sha256": "ee499b801e97695df6dfbba138a8eddda73a3091bb83200a76f2861aead47093",
+      "proposition_sha256": "945aecf35de9d6efc2f6d254358e2446fcbfb672e84215e6c76e1a9e32e9291b",
       "start_line": 148,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd 1 1) \u2192 Prop)\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft1\n    Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight1)\n  Gimle.Forseti.Syntax.Formula.holds._f\n  (Gimle.Asgard.pointAppend\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial1)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial1))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "(Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft1\n      Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight1).holds\n  (Gimle.Asgard.pointAppend\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial1)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial1))",
+      "type_sha256": "16ba11fa4d56cc02791333f8d9e739e9f860e78ad37268f91edcf0283149e4f6",
       "uses": [
         {
           "in_notebook": true,
@@ -73,9 +87,11 @@
       "end_line": 158,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan1_equivalent",
       "prefix_sha256": "c6f0bbff31a38db698f618893e17c58e3773f0d7c8310ae0da52b5bb0c8f3243",
-      "proposition_sha256": "a9b0560bad121da7dae778a260ac4470b8645c48d0226bf459b0f06d0379479b",
+      "proposition_sha256": "62a48fadf608fec6715f0ecc40d61af26df262154a4cee10c285c51aca8e59b9",
       "start_line": 155,
       "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft1.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial1) n)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight1.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial1) n)",
+      "type_sha256": "3358a66900bd4fdc35da5609df204469599358460fad50101b0ff0f7c309b120",
       "uses": [
         {
           "in_notebook": true,
@@ -103,9 +119,16 @@
       "end_line": 165,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_prefix",
       "prefix_sha256": "94e4b75efedb7f0a7671e8347c132b33a6a0bfebc4181a9f44a537dbc5118b9c",
-      "proposition_sha256": "33f8debc9a5c1a02025469d87b1ecee915c206d35b3241db91a778e3316e4335",
+      "proposition_sha256": "3f9eb9ea8564680e758fb91eb07c95c1b4e8d7cd3ec86e49a5085c3a7137f730",
       "start_line": 160,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd 2 2) \u2192 Prop)\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft2\n    Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight2)\n  Gimle.Forseti.Syntax.Formula.holds._f\n  (Gimle.Asgard.pointAppend\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "(Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft2\n      Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight2).holds\n  (Gimle.Asgard.pointAppend\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2))",
+      "type_sha256": "5b24f322605f0ac62793fad841990d32e150b61e2c370442642fbaa8a82d1bb0",
       "uses": [
         {
           "in_notebook": true,
@@ -133,9 +156,11 @@
       "end_line": 170,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_equivalent",
       "prefix_sha256": "cec1714c2144f5ed2ffa6f0cd64ad116a0bd6518ae8fa36b0621f93e47b76a20",
-      "proposition_sha256": "6316606c8ffe5e5fb1ef8818d96b632d2a225320c149493ea91b0a9da588e6a1",
+      "proposition_sha256": "b3ad632b9a021c3a9f393672705727c06eea74eabfa6739cf5ff4bed570ffd93",
       "start_line": 167,
       "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft2.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2) n)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight2.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2) n)",
+      "type_sha256": "068e003d30831b57d135a3caa0f026491ec90d9a3a3eb1197c7718c26c2b1f86",
       "uses": [
         {
           "in_notebook": true,
@@ -163,9 +188,16 @@
       "end_line": 177,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_prefix",
       "prefix_sha256": "6ca61ca3d3d1c99a07c0c19bff7dda0d0e65c8a41149a1be08ac55e8be953f10",
-      "proposition_sha256": "f689bc4949966867b652f2a3c084b95698af74e77fa2c7a5b3a3b9102ce456f7",
+      "proposition_sha256": "fb65cad1fc347b58421bee27e48d181b35c0c92c19699bcb767ebe85fc73bf30",
       "start_line": 172,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "Gimle.Forseti.Syntax.Formula.brecOn (motive := fun x => Gimle.Asgard.Point (instHAdd.hAdd 3 3) \u2192 Prop)\n  (Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft3\n    Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight3)\n  Gimle.Forseti.Syntax.Formula.holds._f\n  (Gimle.Asgard.pointAppend\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3))",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "(Gimle.Forseti.LinearCircuit.prefixFormula Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft3\n      Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight3).holds\n  (Gimle.Asgard.pointAppend\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3))",
+      "type_sha256": "e483e17042f8f78fadeeeb8f8cb300953f9b45dd8f539ac7e1ae3e113ed8698f",
       "uses": [
         {
           "in_notebook": true,
@@ -193,9 +225,11 @@
       "end_line": 182,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_equivalent",
       "prefix_sha256": "842f66011d5c2d742cebb7dbf4fa25154a80e03ab5502dcc439142ef5504ee8e",
-      "proposition_sha256": "877087a4cca003b5148fa972a10a8c00281345e39a8fd0cf4e4263037cc77fb0",
+      "proposition_sha256": "3d5ef29b028835de961b063c27f47ba1e6e669d52ffbf9f75357706b56fac91b",
       "start_line": 179,
       "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft3.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3) n)\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight3.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3) n)",
+      "type_sha256": "370cbdb1893e90e234a756cd683cc518a73edbe0eab8dd85298b016fe2b19fc2",
       "uses": [
         {
           "in_notebook": true,
@@ -223,9 +257,11 @@
       "end_line": 205,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_expected",
       "prefix_sha256": "3eadfa0afe0c9694fbd683d11de994372329e2a18d44b2448d379a2481162d54",
-      "proposition_sha256": "7930bf37431a3c0fd5d7836eb5ea4b2f91b39d3213fb51fa43b13e1c61430014",
+      "proposition_sha256": "5902159e722bd3fead6f8ffc77dfa8568d4faf1921528c2200687aa86467e297",
       "start_line": 194,
       "status": "checked",
+      "type": "\u2200 (n : Fin 4),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft2.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2) n.val)\n    (Matrix.vecCons 0 (Matrix.vecCons (1 / 2) (Matrix.vecCons (1 / 2) (Matrix.vecCons (3 / 8) Matrix.vecEmpty))) n)",
+      "type_sha256": "ac5450fe8b3feb9f5e1a5d9d5bce9fb03c020bf0659c772ff65437cb1956de9a",
       "uses": []
     },
     {
@@ -247,9 +283,11 @@
       "end_line": 219,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_expected",
       "prefix_sha256": "6faedd1f5c76c7d8735f077c6f9b06788548eebc62b54d019fa66e0a531dc497",
-      "proposition_sha256": "aaeb977ee8d200213dab44cead08baa223b4756bacd05e12af8304cc8dbe3b6c",
+      "proposition_sha256": "b4e5891755cc44fee2874a18ddbffe182fe7daa71479281eaf2621e3e53e2327",
       "start_line": 207,
       "status": "checked",
+      "type": "\u2200 (n : Fin 6),\n  Eq\n    (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft3.observe\n      (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3) n.val)\n    (Matrix.vecCons 0\n      (Matrix.vecCons 0\n        (Matrix.vecCons (1 / 4)\n          (Matrix.vecCons (3 / 8) (Matrix.vecCons (3 / 8) (Matrix.vecCons (5 / 16) Matrix.vecEmpty)))))\n      n)",
+      "type_sha256": "36c7493832ac479aa9533ef33edd6112ecde25a3391b632ba42aa10f35822682",
       "uses": []
     },
     {
@@ -271,9 +309,11 @@
       "end_line": 224,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan2_different_updates",
       "prefix_sha256": "abe2bea31b53c5e2206a882d7aeb6d4cd8c6f0c8d27a4b2c75c7c6d7589618d7",
-      "proposition_sha256": "fdbe7cad63d87f3008bbbd25a085ba7195445c8c5e7795405775fc7db604e6f8",
+      "proposition_sha256": "31adc123884a5de25b368e7ece60d28bdcc91d109ef06061019be16ee0720fe3",
       "start_line": 221,
       "status": "checked",
+      "type": "Ne\n  (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft2.update.run\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2) 1)\n  (Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight2.update.run\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial2) 1)",
+      "type_sha256": "81c759a4fc9ea17ed59e5f51b97cae297bb082608ba74eaec175af471a44eda6",
       "uses": []
     },
     {
@@ -295,15 +335,17 @@
       "end_line": 228,
       "name": "Gimle.Forseti.Examples.LinearCircuitJordan.jordan3_different_updates",
       "prefix_sha256": "f28309e3abb05acb077be9e161607bf19cdef2212b01eca01e6feb73e7cf6fff",
-      "proposition_sha256": "6e4aaed623be8887ef7cc49ecc785010c586e711504b2b7e2334a1946db702b1",
+      "proposition_sha256": "bad3c30e737a637432ca7d13ea2b4497e6a7a52468272f2299abedf0273f409f",
       "start_line": 226,
       "status": "checked",
+      "type": "Ne\n  (Gimle.Forseti.Examples.LinearCircuitJordan.jordanLeft3.update.run\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3) 1)\n  (Gimle.Forseti.Examples.LinearCircuitJordan.jordanRight3.update.run\n    (Gimle.Forseti.Examples.LinearCircuitJordan.embed Gimle.Forseti.Examples.LinearCircuitJordan.initial3) 1)",
+      "type_sha256": "d93d56ed44230c7eb089bb482b02ca82c3c17d6b92dd7064da43ed6254f75ea0",
       "uses": []
     }
   ],
   "environment": {
-    "check": "1e8601957e1062ea7e82205ddf6fd68a4ef0f17dbdb40d8b49492b9a2e299d6d",
-    "fingerprint": "79e533812fcfc51ca7520d7d8ce6da5a3b91014e170b202e1421eda689910e40"
+    "check": "a76384ef0e3243fa244c1fc8debff3b93b5c31f5b1a8e69bbe6aac72e150ef2c",
+    "fingerprint": "a152e360edbe8eb5fd4ba3b51c786b4efc5fb371860bd57fec7233e934e31104"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "a6684acf9ddce44023fefef188a25ef848359e0b95c7b1cc6779342093fd81f6",

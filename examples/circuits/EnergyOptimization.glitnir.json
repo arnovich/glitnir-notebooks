@@ -19,9 +19,11 @@
       "end_line": 80,
       "name": "Notebook.EnergyOptimization.energy_formula",
       "prefix_sha256": "01102687e1ea346bcba11867ab0bbe53ea861c191e56c711e1f70f175a8c88ff",
-      "proposition_sha256": "00edffce74c4c77e50b369964eb9dfba20c8c28292d18c29a4a4db5ca97bb4ce",
+      "proposition_sha256": "c4a8516c7a1298082691fa374a6ddf957a6cddda3eba94fad932f4fd5a32ba3e",
       "start_line": 76,
       "status": "checked",
+      "type": "\u2200 (input : Gimle.Asgard.Point 2),\n  Eq (Gimle.Asgard.EnergyDemo.energy.run input 0)\n    (instHAdd.hAdd (instHMul.hMul 2 (instHPow.hPow (input 0) 2)) (instHMul.hMul 2 (instHPow.hPow (input 1) 2)))",
+      "type_sha256": "d76d2e7b620f81aa5ce3e6d9e4d2641432132ce638bb356fd99fcb958fe88625",
       "uses": []
     },
     {
@@ -43,9 +45,11 @@
       "end_line": 130,
       "name": "Notebook.EnergyOptimization.Decided_energy_in_band.energy_in_band",
       "prefix_sha256": "a6ceb7e8154f99d52ecb0bc02b030c1cb34b5bc2eda82fd25136404884440c69",
-      "proposition_sha256": "a531347a0a321cd1b6c82dcf4908b313793c3ae2fc02ffc5d24b0e91681120fe",
+      "proposition_sha256": "f5be5bbe90d8da8b91db35f2e1b4fbd895c8d62ecda2c7c2c054745d5cc59db1",
       "start_line": 112,
       "status": "checked",
+      "type": "\u2200 (x y : Real),\n  And (GE.ge x (-1)) (And (Real.instLE.le x 1) (And (GE.ge y (-1)) (Real.instLE.le y 1))) \u2192\n    And (GE.ge (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 0)\n      (Real.instLE.le (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 4)",
+      "type_sha256": "f7f4fa511cfc23e91a6ebe8fda0a33f980416bb9f80c5f46f2d1248736fa6f4f",
       "uses": []
     },
     {
@@ -71,9 +75,16 @@
       "end_line": 168,
       "name": "Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three",
       "prefix_sha256": "0ed1f55cc522720fd932dea72009a2dd89634797ee27134544dfb8e3f80a2132",
-      "proposition_sha256": "a352baf960722f5575c32bd4a2bed54d397cbba97526b7f7c5ac5d2b4aa749d0",
+      "proposition_sha256": "531ba345d8128def21186e97a977bd0c30223e9d47bce577fb991dddd4f96917",
       "start_line": 165,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (x y : Real),\n  And (GE.ge x (-1)) (And (Real.instLE.le x 1) (And (GE.ge y (-1)) (Real.instLE.le y 1))) \u2192\n    Real.instLE.1 (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 3",
+        "truncated": false
+      },
       "status": "admitted",
+      "type": "\u2200 (x y : Real),\n  And (GE.ge x (-1)) (And (Real.instLE.le x 1) (And (GE.ge y (-1)) (Real.instLE.le y 1))) \u2192\n    Real.instLE.le (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 3",
+      "type_sha256": "8cdbb5914cecf43a283c23651463c330055a20e4d4e23e54ae13cd77e37ad4b0",
       "uses": []
     },
     {
@@ -95,9 +106,11 @@
       "end_line": 185,
       "name": "Notebook.EnergyOptimization.Decided_energy_below_three.energy_below_three_refuted",
       "prefix_sha256": "fd76161b78e62543645f2abb120b0f6db011c25013aa9b1e955e757ed6939007",
-      "proposition_sha256": "156df5bfc9351cca9f696d85c2c5e79d575f40c3c7e2d81c78274fcff5822f92",
+      "proposition_sha256": "0a94c25aa5960b594ce51f5beccb0927810a16712bc9b4ae36a068cda4416894",
       "start_line": 170,
       "status": "checked",
+      "type": "Not\n  (\u2200 (x y : Real),\n    And (GE.ge x (-1)) (And (Real.instLE.le x 1) (And (GE.ge y (-1)) (Real.instLE.le y 1))) \u2192\n      Real.instLE.le (instHAdd.hAdd (instHMul.hMul 2 (instHMul.hMul x x)) (instHMul.hMul 2 (instHMul.hMul y y))) 3)",
+      "type_sha256": "43b672bbdc931575d3589178d04ecd8c796bc96aae90b6d4de73ea66d25896ea",
       "uses": []
     },
     {
@@ -119,9 +132,16 @@
       "end_line": 210,
       "name": "Notebook.EnergyOptimization.original_contract",
       "prefix_sha256": "ebd37440bf5ba9ea24288de448befd6d8eebb2c9841721a11ca6e29b73a1475c",
-      "proposition_sha256": "6e799aa23deee3a56d51a146e91c7476817c2adeaa986a7474260ad549fb05fc",
+      "proposition_sha256": "f6f29f54bcdce1772c3615a692262be494f665a7efb546b7a75cc44956bc64ff",
       "start_line": 202,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input : Gimle.Asgard.Point 2),\n  Gimle.Forseti.EnergyDemoData.precondition.holds input \u2192\n    Gimle.Forseti.EnergyDemoData.postcondition.holds (Gimle.Asgard.EnergyDemo.energy.run input)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.ExactHoare Gimle.Forseti.EnergyDemoData.precondition Gimle.Asgard.EnergyDemo.energy\n  Gimle.Forseti.EnergyDemoData.postcondition",
+      "type_sha256": "e0c05d15e598b61953da884be16c5fa7490b35e80f93a0de25ca677570463577",
       "uses": [
         {
           "in_notebook": true,
@@ -154,9 +174,16 @@
       "end_line": 235,
       "name": "Notebook.EnergyOptimization.same_function",
       "prefix_sha256": "1d1ba8d314b8d50c40c8a27fdb48758f99eef2fce8c019fd82676c50a5d63da0",
-      "proposition_sha256": "9c2ad85bb4d45312c44bd731ed1e17d796ab821e17aede29e1d04890f7b977d2",
+      "proposition_sha256": "c536475d8a12cc218bf05febc377ad657f1656f913abc92b6cb386adcf2f2557",
       "start_line": 228,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input : Gimle.Asgard.Point 2),\n  Eq (Gimle.Asgard.EnergyDemo.energy.run input) (Gimle.Asgard.EnergyOptimization.optimized.run input)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Asgard.GlobalCircuitEquivalence Gimle.Asgard.EnergyDemo.energy Gimle.Asgard.EnergyOptimization.optimized",
+      "type_sha256": "a448dd331223a4afa8bcd5573fd994e088e83224fad0c3a49bb00f1c3fde1993",
       "uses": [
         {
           "in_notebook": true,
@@ -184,9 +211,16 @@
       "end_line": 249,
       "name": "Notebook.EnergyOptimization.optimised_contract",
       "prefix_sha256": "739f7fc405a1ab18122a2cbf495eca3b3c942e968c11fc7478491e29901c1a46",
-      "proposition_sha256": "a0db89e55f504beed5ea927069b6fcfd2be010406f0adb4f26fda5f2bfe8dfc7",
+      "proposition_sha256": "ecf41ed466eb56860a9b177a214ff5f6ff4ecf113a9c2800cb70fffa82af1ea1",
       "start_line": 246,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (input : Gimle.Asgard.Point 2),\n  Gimle.Forseti.EnergyDemoData.precondition.holds input \u2192\n    Gimle.Forseti.EnergyDemoData.postcondition.holds (Gimle.Asgard.EnergyOptimization.optimized.run input)",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "Gimle.Forseti.ExactHoare Gimle.Forseti.EnergyDemoData.precondition Gimle.Asgard.EnergyOptimization.optimized\n  Gimle.Forseti.EnergyDemoData.postcondition",
+      "type_sha256": "1ce7337f042942ef1ea2b7223c3782fde4034e4441d25fcf1aad57f817f5d17e",
       "uses": [
         {
           "in_notebook": true,
@@ -219,9 +253,11 @@
       "end_line": 272,
       "name": "Notebook.EnergyOptimization.wrong_differs",
       "prefix_sha256": "35c947075c67bc5793eb894c2b18f5df783e72c90a742059e3394dbca85d8a4a",
-      "proposition_sha256": "d2e05646554fe8517454c5aa6bf2a42be125fb896b1d1095716ff6da981ea748",
+      "proposition_sha256": "a4c99b250aa3b4d5083660610ec899309a353cdecf67b745f1188239f39ef5b0",
       "start_line": 269,
       "status": "checked",
+      "type": "And (Eq (Gimle.Asgard.EnergyDemo.energy.run (Matrix.vecCons 1 (Matrix.vecCons 1 Matrix.vecEmpty)) 0) 4)\n  (Eq (Gimle.Asgard.EnergyOptimization.wrongMultiplier.run (Matrix.vecCons 1 (Matrix.vecCons 1 Matrix.vecEmpty)) 0) 6)",
+      "type_sha256": "2b81d3fe8ac92f76b824221ed22577301820e26e3bc0e7018df322b98cf589f1",
       "uses": [
         {
           "in_notebook": true,
@@ -249,9 +285,11 @@
       "end_line": 279,
       "name": "Notebook.EnergyOptimization.wrong_not_equivalent",
       "prefix_sha256": "6924a54ca412ac4a404c59e9a5b80133939e2189b86046dcc6726b18a5f52941",
-      "proposition_sha256": "98fbe9f35e382d6975a04d1b53e2387e198f809023dbe9a41a96d039b39ed738",
+      "proposition_sha256": "3ecc8a70e165c2ef7b2ad66bdeda9b1e91e74e754b6e33ffb9ee04aee2e6fa69",
       "start_line": 274,
       "status": "checked",
+      "type": "Not\n  (Gimle.Asgard.GlobalCircuitEquivalence Gimle.Asgard.EnergyDemo.energy Gimle.Asgard.EnergyOptimization.wrongMultiplier)",
+      "type_sha256": "0f1bfb2b71b7c768617253db87f759766a227d6a80993f73d62e4381b0d468a3",
       "uses": [
         {
           "in_notebook": true,
@@ -279,9 +317,11 @@
       "end_line": 288,
       "name": "Notebook.EnergyOptimization.wrong_breaks_contract",
       "prefix_sha256": "61ef4cd3c6fefe3d93a550406c0957bfd88f3fce6de46cb46879329791ce8119",
-      "proposition_sha256": "3e47cbf8a0446cf906ee165d8a10a380ba51fc02fa929035c22e7c332c0f1ac1",
+      "proposition_sha256": "c3662b9d80798a7e4786dd2ce1a126d0c87e08a567b659dde0c814a6742ab489",
       "start_line": 281,
       "status": "checked",
+      "type": "Not\n  (Gimle.Forseti.ExactHoare Gimle.Forseti.EnergyDemoData.precondition Gimle.Asgard.EnergyOptimization.wrongMultiplier\n    Gimle.Forseti.EnergyDemoData.postcondition)",
+      "type_sha256": "94cec34ee1a12b8f05c7a8f32690f06b278669942f09b7b075a93f9b8682f971",
       "uses": [
         {
           "in_notebook": true,
@@ -309,9 +349,16 @@
       "end_line": 305,
       "name": "Notebook.EnergyOptimization.four_is_sharp",
       "prefix_sha256": "cfb6ca0f80aa3ec90d202062db39fe15c4b90e523052fe4ac09ad9886f63bfb5",
-      "proposition_sha256": "bec22546288b9b9fbd049ec9961538c64de753fe97a673bf5cf160be5b5bbfa6",
+      "proposition_sha256": "f1be7027daadd6ba4da697f919efc9797d9dc727961ad88e27d0c0a2f1fe9cb8",
       "start_line": 297,
+      "statement_expansion": {
+        "kind": "definition",
+        "text": "\u2200 (bound : Real),\n  (\u2200 (input : Gimle.Asgard.Point 2),\n      Gimle.Forseti.EnergyDemoData.precondition.holds input \u2192\n        Real.instLE.le (Gimle.Asgard.EnergyDemo.energy.run input 0) bound) \u2192\n    Real.instLE.1 4 bound",
+        "truncated": false
+      },
       "status": "checked",
+      "type": "\u2200 (bound : Real),\n  (\u2200 (input : Gimle.Asgard.Point 2),\n      Gimle.Forseti.EnergyDemoData.precondition.holds input \u2192\n        Real.instLE.le (Gimle.Asgard.EnergyDemo.energy.run input 0) bound) \u2192\n    Real.instLE.le 4 bound",
+      "type_sha256": "5fea4794ff3de94999991d58d982e2ad032e2e70c500b5b2a920e3476196a363",
       "uses": [
         {
           "in_notebook": true,
@@ -323,8 +370,8 @@
   ],
   "decisions": {
     "aed5c5240dd5968a358d823132fbdba903911f518f436e8d512aa35f9b132a63": {
-      "created": "2026-11-01T23:49:13+00:00",
-      "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d",
+      "created": "2026-11-03T23:38:16+00:00",
+      "fingerprint": "00fc6d7e7249e9bec919622fb317e7b478986a236466004960c5de10333278f7",
       "outcome": {
         "block": "\nnamespace Decided_energy_below_three\n\ndef forsetiContext : Gimle.Forseti.Syntax.Context :=\n  \u27e8[\"x\", \"y\"], by decide, by decide, by decide\u27e9\n\ndef forsetiAntecedent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.and (.and (.and (.atom .ge (.add (.var \u27e80, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1)))))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (1) 1)))))) (.atom .ge (.add (.var \u27e81, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1))))))) (.atom .le (.add (.var \u27e81, by decide\u27e9) (.neg (.constant (mkRat (1) 1))))))\n\ndef forsetiConsequent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.atom .le (.add (.add (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e80, by decide\u27e9) (.var \u27e80, by decide\u27e9))) (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e81, by decide\u27e9) (.var \u27e81, by decide\u27e9)))) (.neg (.constant (mkRat (3) 1)))))\n\ndef forsetiGoal : Gimle.Forseti.Syntax.Goal := \u27e8forsetiContext, forsetiAntecedent, forsetiConsequent\u27e9\n\n/-- x, y are real numbers. The entailment decider refuted it. Goal (entailment): entailment x, y : x >= -1 and x <= 1 and y >= -1 and y <= 1 |- 2*(x*x) + 2*(y*y) <= 3 -/\ntheorem energy_below_three :\n    \u2200 x y : \u211d, x \u2265 -1 \u2227 x \u2264 1 \u2227 y \u2265 -1 \u2227 y \u2264 1 \u2192 2 * (x * x) + 2 * (y * y) \u2264 3 := by\n  sorry\n\ntheorem energy_below_three_refuted : \u00ac (\u2200 x y : \u211d, x \u2265 -1 \u2227 x \u2264 1 \u2227 y \u2265 -1 \u2227 y \u2264 1 \u2192 2 * (x * x) + 2 * (y * y) \u2264 3) := by\n  have refuted : \u00ac Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent := by\n    exact Gimle.Forseti.Syntax.refutes_sound forsetiGoal [(\"x\", (mkRat (-3) 4)), (\"y\", (mkRat (-31) 32))] (by decide +kernel)\n  intro claim\n  have forsetiSucc : \u2200 {n : Nat} (k : Nat) (h : k + 1 < n + 1), (\u27e8k + 1, h\u27e9 : Fin (n + 1)) = Fin.succ \u27e8k, Nat.lt_of_succ_lt_succ h\u27e9 := fun _ _ => rfl\n  have forsetiCast0 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (2) 1) : \u211a) : \u211d) = 2 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (3) 1) : \u211a) : \u211d) = 3 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent) => refuted (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    revert claim\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n  \u00b7 intro lane\n    revert lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n\nend Decided_energy_below_three",
         "reason": "Found by the refutation stage.",
@@ -343,7 +390,7 @@
         "status": "refuted",
         "theorem": "energy_below_three_refuted"
       },
-      "prefix_sha256": "5da7dc16bca3a8e1763304d1b45e16cf3327cff07b026c8be5b0650849c1b202",
+      "prefix_sha256": "62b4a08b2e61d7218c1b5e21e559c418382c3311bed33115087f49c8f627d561",
       "provider": "forseti",
       "verification": {
         "axioms": [
@@ -357,8 +404,8 @@
       }
     },
     "e42b022eefc0d79a6c733bdb750d0149dcabfb559d6c90b83825aa7ce93ec49f": {
-      "created": "2026-11-01T23:44:31+00:00",
-      "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d",
+      "created": "2026-11-03T23:33:21+00:00",
+      "fingerprint": "00fc6d7e7249e9bec919622fb317e7b478986a236466004960c5de10333278f7",
       "outcome": {
         "block": "\nnamespace Decided_energy_in_band\n\ndef forsetiContext : Gimle.Forseti.Syntax.Context :=\n  \u27e8[\"x\", \"y\"], by decide, by decide, by decide\u27e9\n\ndef forsetiAntecedent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.and (.and (.and (.atom .ge (.add (.var \u27e80, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1)))))) (.atom .le (.add (.var \u27e80, by decide\u27e9) (.neg (.constant (mkRat (1) 1)))))) (.atom .ge (.add (.var \u27e81, by decide\u27e9) (.neg (.neg (.constant (mkRat (1) 1))))))) (.atom .le (.add (.var \u27e81, by decide\u27e9) (.neg (.constant (mkRat (1) 1))))))\n\ndef forsetiConsequent : Gimle.Forseti.Syntax.Formula 2 :=\n  (.and (.atom .ge (.add (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e80, by decide\u27e9) (.var \u27e80, by decide\u27e9))) (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e81, by decide\u27e9) (.var \u27e81, by decide\u27e9))))) (.atom .le (.add (.add (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e80, by decide\u27e9) (.var \u27e80, by decide\u27e9))) (.mul (.constant (mkRat (2) 1)) (.mul (.var \u27e81, by decide\u27e9) (.var \u27e81, by decide\u27e9)))) (.neg (.constant (mkRat (4) 1))))))\n\ndef forsetiGoal : Gimle.Forseti.Syntax.Goal := \u27e8forsetiContext, forsetiAntecedent, forsetiConsequent\u27e9\n\n/-- x, y are real numbers. The entailment decider proved it. Goal (entailment): entailment x, y : x >= -1 and x <= 1 and y >= -1 and y <= 1 |- 2*(x*x) + 2*(y*y) >= 0 and 2*(x*x) + 2*(y*y) <= 4 -/\ntheorem energy_in_band :\n    \u2200 x y : \u211d,\n      x \u2265 -1 \u2227 x \u2264 1 \u2227 y \u2265 -1 \u2227 y \u2264 1 \u2192\n      2 * (x * x) + 2 * (y * y) \u2265 0 \u2227 2 * (x * x) + 2 * (y * y) \u2264 4 := by\n  have root : Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent := by\n    exact Gimle.Forseti.Syntax.EntailmentCertificate.sound forsetiGoal \u27e8[\u27e8\u27e8[((mkRat (2) 1), (.var \u27e80, by decide\u27e9)), ((mkRat (2) 1), (.var \u27e81, by decide\u27e9))]\u27e9, [\u27e8[]\u27e9, \u27e8[]\u27e9, \u27e8[]\u27e9, \u27e8[]\u27e9]\u27e9, \u27e8\u27e8[]\u27e9, [\u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.neg (.var \u27e80, by decide\u27e9))))]\u27e9, \u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.var \u27e80, by decide\u27e9)))]\u27e9, \u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.neg (.var \u27e81, by decide\u27e9))))]\u27e9, \u27e8[((mkRat (1) 1), (.add (.constant (mkRat (1) 1)) (.var \u27e81, by decide\u27e9)))]\u27e9]\u27e9]\u27e9 (by decide +kernel)\n  have forsetiSucc : \u2200 {n : Nat} (k : Nat) (h : k + 1 < n + 1), (\u27e8k + 1, h\u27e9 : Fin (n + 1)) = Fin.succ \u27e8k, Nat.lt_of_succ_lt_succ h\u27e9 := fun _ _ => rfl\n  have forsetiCast0 : (((mkRat (1) 1) : \u211a) : \u211d) = 1 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast1 : (((mkRat (2) 1) : \u211a) : \u211d) = 2 := by norm_num [Rat.mkRat_eq_div]\n  have forsetiCast2 : (((mkRat (4) 1) : \u211a) : \u211d) = 4 := by norm_num [Rat.mkRat_eq_div]\n  refine (fun (bridge : _ \u2194 Gimle.Forseti.Syntax.FormulaEntailment forsetiAntecedent forsetiConsequent) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    revert claim\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n  \u00b7 intro lane\n    revert lane\n    set_option linter.unusedSimpArgs false in simp only [Gimle.Forseti.Syntax.FormulaEntailment, forsetiAntecedent, forsetiConsequent, Gimle.Forseti.Syntax.Formula.holds, Gimle.Forseti.Syntax.Relation.holds, Gimle.Asgard.Polynomial.Expr.eval, Fin.forall_fin_succ_pi, Fin.forall_fin_zero_pi, forsetiSucc, Fin.cons_succ, Fin.zero_eta, Fin.cons_zero, forsetiCast0, forsetiCast1, forsetiCast2, \u2190 sub_eq_add_neg, sub_zero, sub_nonpos, sub_neg, sub_eq_zero, sub_nonneg, sub_pos, ge_iff_le, gt_iff_lt, and_assoc, or_assoc, imp_self]\n\nend Decided_energy_in_band",
         "reason": "Found by the certificate stage.",
@@ -397,14 +444,14 @@
     }
   },
   "environment": {
-    "check": "cecbe11772c054768bef22a4fd3a671b21969cebc114ba41db99ef1f11875a11",
-    "fingerprint": "bff6bfb438cbb4abfeaad4aea26ae2baab1e3b5a0f62649c18962a5e2a43fd4d"
+    "check": "ffc95c59062f406c74ae04d824bbadf8dc69e6923b6f41ecc96d5643961323a6",
+    "fingerprint": "00fc6d7e7249e9bec919622fb317e7b478986a236466004960c5de10333278f7"
   },
   "format": "glitnir.project-checks/v2",
   "source_sha256": "1cfd37a8ff1ebc64e8934abaaad8d995a01870af575935bf9be934c4a9c4abcd",
   "views": {
     "223de730b9d126f4589cae4d8588bc3e8f62655f8b857f60f993ca490193a0a8": {
-      "created": "2026-11-02T09:51:53+00:00",
+      "created": "2026-11-03T23:44:04+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -563,13 +610,13 @@
         },
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1050 420\" width=\"1050\" height=\"420\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 324 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,90 317,86 317,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 130 324 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,130 317,126 317,134\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 265 250 265 250 324 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,250 317,246 317,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 277 290 277 290 324 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,290 317,286 317,294\" fill=\"#476579\"></polygon><path d=\"M 484 90 C 509 90 509 90 568 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,90 561,86 561,94\" fill=\"#476579\"></polygon><path d=\"M 484 250 C 521 250 521 130 568 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,130 561,126 561,134\" fill=\"#476579\"></polygon><path d=\"M 728 90 C 753 90 753 90 800 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"800,90 793,86 793,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"960,90 1020,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1020,90 1013,86 1013,94\" fill=\"#476579\"></polygon><text x=\"985\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"568\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"603\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"573\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"573\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"708\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"800\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"835\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (2)</text><text x=\"805\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"940\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"370\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"392\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
-      "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
+      "fingerprint": "b22b561da39a57c26080279a8b7254ce34886e144b6e6288b4f81576667ab67b",
       "prefix_sha256": "bd178c8d2d2051c23797eb663ec5c361ffac71bd90297ffd886e696be3ef2a25",
       "provider": "forseti",
       "provider_sha256": "969c3b267c6e22f3558858a667f002b02a8d1d39982ab3f7ea51069b106070de"
     },
     "c4dd12e29e00b2b5ff0d1471f623481425fb6529b6091d6796f551f5c18c26a6": {
-      "created": "2026-11-02T09:51:53+00:00",
+      "created": "2026-11-03T23:44:04+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -728,13 +775,13 @@
         },
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1050 420\" width=\"1050\" height=\"420\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 324 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,90 317,86 317,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 130 324 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,130 317,126 317,134\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 265 250 265 250 324 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,250 317,246 317,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 277 290 277 290 324 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"324,290 317,286 317,294\" fill=\"#476579\"></polygon><path d=\"M 484 90 C 509 90 509 90 568 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,90 561,86 561,94\" fill=\"#476579\"></polygon><path d=\"M 484 250 C 521 250 521 130 568 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"568,130 561,126 561,134\" fill=\"#476579\"></polygon><path d=\"M 728 90 C 753 90 753 90 800 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"800,90 793,86 793,94\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"960,90 1020,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1020,90 1013,86 1013,94\" fill=\"#476579\"></polygon><text x=\"985\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"324\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"359\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"329\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"329\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"464\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"568\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"603\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"573\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"573\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"708\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"800\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"835\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (3)</text><text x=\"805\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"940\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"370\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"392\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
-      "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
+      "fingerprint": "b22b561da39a57c26080279a8b7254ce34886e144b6e6288b4f81576667ab67b",
       "prefix_sha256": "810171c118e1d3cb944fdc91cfc2dfd9156a6861d5a8ea2c26972b378567104c",
       "provider": "forseti",
       "provider_sha256": "6bbe5f42fb468028b3b4d0533d98a979d45c144b9798884ced8cd87e5930ba6b"
     },
     "df0459f4c52a9608cf92d5252e53dd717bb4a81a7bfa9e3fe5570cd76e4f841c": {
-      "created": "2026-10-29T19:38:19+00:00",
+      "created": "2026-11-03T23:44:04+00:00",
       "drawing": {
         "contracts": [],
         "graph": {
@@ -1089,7 +1136,7 @@
         },
         "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1842 500\" width=\"1842\" height=\"500\" role=\"img\" font-family=\"system-ui, sans-serif\"><title>Asgard circuit</title><rect width=\"100%\" height=\"100%\" fill=\"#ffffff\"></rect><path d=\"M 240 90 C 265 90 265 90 348 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"348,90 341,86 341,94\" fill=\"#476579\"></polygon><path d=\"M 240 130 C 277 130 277 210 348 210\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"348,210 341,206 341,214\" fill=\"#476579\"></polygon><path d=\"M 240 250 C 289 250 289 250 348 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"348,250 341,246 341,254\" fill=\"#476579\"></polygon><path d=\"M 240 290 C 301 290 301 370 348 370\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"348,370 341,366 341,374\" fill=\"#476579\"></polygon><path d=\"M 776 250 C 801 250 801 250 860 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"860,250 853,246 853,254\" fill=\"#476579\"></polygon><path d=\"M 776 370 C 813 370 813 290 860 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"860,290 853,286 853,294\" fill=\"#476579\"></polygon><path d=\"M 508 90 C 533 90 533 90 616 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"616,90 609,86 609,94\" fill=\"#476579\"></polygon><path d=\"M 508 210 C 545 210 545 130 616 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"616,130 609,126 609,134\" fill=\"#476579\"></polygon><path d=\"M 508 250 C 557 250 557 250 616 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"616,250 609,246 609,254\" fill=\"#476579\"></polygon><path d=\"M 508 370 C 569 370 569 370 616 370\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"616,370 609,366 609,374\" fill=\"#476579\"></polygon><path d=\"M 1264 90 C 1289 90 1289 90 1348 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1348,90 1341,86 1341,94\" fill=\"#476579\"></polygon><path d=\"M 1264 130 C 1301 130 1301 130 1348 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1348,130 1341,126 1341,134\" fill=\"#476579\"></polygon><path d=\"M 1264 250 C 1289 250 1289 250 1348 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1348,250 1341,246 1341,254\" fill=\"#476579\"></polygon><path d=\"M 1264 290 C 1301 290 1301 290 1348 290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1348,290 1341,286 1341,294\" fill=\"#476579\"></polygon><path d=\"M 776 90 C 1045 90 1045 90 1104 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1104,90 1097,86 1097,94\" fill=\"#476579\"></polygon><path d=\"M 1020 250 C 1057 250 1057 250 1104 250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1104,250 1097,246 1097,254\" fill=\"#476579\"></polygon><path d=\"M 1508 90 C 1533 90 1533 90 1592 90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1592,90 1585,86 1585,94\" fill=\"#476579\"></polygon><path d=\"M 1508 250 C 1545 250 1545 130 1592 130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\" data-role=\"wire\"></path><polygon points=\"1592,130 1585,126 1585,134\" fill=\"#476579\"></polygon><polyline points=\"20,90 80,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,90 73,86 73,94\" fill=\"#476579\"></polygon><text x=\"20\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 0</text><polyline points=\"20,250 80,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"80,250 73,246 73,254\" fill=\"#476579\"></polygon><text x=\"20\" y=\"242\" font-size=\"11\" fill=\"#172f43\" textLength=\"26\" lengthAdjust=\"spacingAndGlyphs\">in 1</text><polyline points=\"1752,90 1812,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polygon points=\"1812,90 1805,86 1805,94\" fill=\"#476579\"></polygon><text x=\"1777\" y=\"82\" font-size=\"11\" fill=\"#172f43\" textLength=\"33\" lengthAdjust=\"spacingAndGlyphs\">out 0</text><rect x=\"80\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,90 155,90 210,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,90 155,130 210,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"80\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"115\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"85\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"220\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"105,250 155,250 210,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"155,250 155,290 210,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"348\" y=\"60\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"383\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"15\" lengthAdjust=\"spacingAndGlyphs\">id</text><text x=\"353\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"488\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><polyline points=\"373,90 478,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"348\" y=\"180\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"383\" y=\"195\" font-size=\"13\" fill=\"#172f43\" textLength=\"31\" lengthAdjust=\"spacingAndGlyphs\">swap</text><text x=\"353\" y=\"215\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"353\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"488\" y=\"215\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"488\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"373,210 478,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><path d=\"M 373 250 L 478 210\" stroke=\"#edf5f8\" stroke-width=\"7\"></path><polyline points=\"373,250 478,210\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"348\" y=\"340\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"383\" y=\"355\" font-size=\"13\" fill=\"#172f43\" textLength=\"15\" lengthAdjust=\"spacingAndGlyphs\">id</text><text x=\"353\" y=\"375\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"488\" y=\"375\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><polyline points=\"373,370 478,370\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"616\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"651\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"621\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"621\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"756\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"616\" y=\"220\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"651\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"15\" lengthAdjust=\"spacingAndGlyphs\">id</text><text x=\"621\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"756\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><polyline points=\"641,250 746,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"616\" y=\"340\" width=\"160\" height=\"60\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"651\" y=\"355\" font-size=\"13\" fill=\"#172f43\" textLength=\"46\" lengthAdjust=\"spacingAndGlyphs\">\u00d7 (-1)</text><text x=\"621\" y=\"375\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"756\" y=\"375\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"860\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"895\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"865\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"865\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"1000\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"1104\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"1139\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"1109\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1244\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1244\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"1129,90 1179,90 1234,90\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"1179,90 1179,130 1234,130\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"1348\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"1383\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"1353\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1353\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"1488\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"1104\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"1139\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"39\" lengthAdjust=\"spacingAndGlyphs\">split</text><text x=\"1109\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1244\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1244\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><polyline points=\"1129,250 1179,250 1234,250\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><polyline points=\"1179,250 1179,290 1234,290\" fill=\"none\" stroke=\"#476579\" stroke-width=\"2\"></polyline><rect x=\"1348\" y=\"220\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"1383\" y=\"235\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">\u00d7</text><text x=\"1353\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1353\" y=\"295\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"1488\" y=\"255\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><rect x=\"1592\" y=\"60\" width=\"160\" height=\"100\" rx=\"8\" fill=\"#edf5f8\" stroke=\"#476579\"></rect><text x=\"1627\" y=\"75\" font-size=\"13\" fill=\"#172f43\" textLength=\"7\" lengthAdjust=\"spacingAndGlyphs\">+</text><text x=\"1597\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"1597\" y=\"135\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">1</text><text x=\"1732\" y=\"95\" font-size=\"11\" fill=\"#172f43\" textLength=\"6\" lengthAdjust=\"spacingAndGlyphs\">0</text><text x=\"20\" y=\"450\" font-size=\"12\" fill=\"#172f43\" textLength=\"331\" lengthAdjust=\"spacingAndGlyphs\">Ports start at 0. Crossings are not junctions.</text><text x=\"20\" y=\"472\" font-size=\"12\" fill=\"#172f43\" textLength=\"453\" lengthAdjust=\"spacingAndGlyphs\">Diagram of syntax; mathematical claims require separate proofs.</text></svg>"
       },
-      "fingerprint": "2bb2887dbae82f793d13268c7a1c047331c3c59cfe7a6ab3cc282de13ec761dd",
+      "fingerprint": "b22b561da39a57c26080279a8b7254ce34886e144b6e6288b4f81576667ab67b",
       "prefix_sha256": "97e3e475d390ac0a73bed8d37222a4c7a920aebfca88b7c678b56ef787f6a891",
       "provider": "forseti",
       "provider_sha256": "e00d6328bf77bacedd566c94166754229586c3bdf187f95910540680b7560053"

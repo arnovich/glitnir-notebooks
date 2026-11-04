@@ -85,7 +85,7 @@ class TriptychReleaseTests(unittest.TestCase):
             json.dumps(
                 {
                     "format": "glitnir.triptych-release/v1",
-                    "glitnir_tag": "v0.1.10",
+                    "glitnir_tag": "v0.1.12",
                     "decision_limits": {
                         "wall_time_ms": 300_000,
                         "max_variables": 8,

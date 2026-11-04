@@ -15,6 +15,7 @@ from typing import Any
 
 
 FORMAT = "glitnir.triptych-release/v1"
+GLITNIR_TAG = "v0.1.12"
 SHA256 = re.compile(r"[0-9a-f]{64}")
 DECISION_LIMITS = {
     "wall_time_ms": 300_000,
@@ -198,10 +199,10 @@ def check_release(root: Path, manifest_path: Path) -> int:
     """Validate ``manifest_path`` against ``root`` and return decision count."""
     root = root.resolve()
     manifest = _read_json(manifest_path)
-    if manifest.get("format") != FORMAT or manifest.get("glitnir_tag") != "v0.1.10":
-        raise ReleaseError(f"expected {FORMAT} pinned to Glitnir v0.1.10")
+    if manifest.get("format") != FORMAT or manifest.get("glitnir_tag") != GLITNIR_TAG:
+        raise ReleaseError(f"expected {FORMAT} pinned to Glitnir {GLITNIR_TAG}")
     if manifest.get("decision_limits") != DECISION_LIMITS:
-        raise ReleaseError("decision limits differ from Glitnir v0.1.10 defaults")
+        raise ReleaseError(f"decision limits differ from Glitnir {GLITNIR_TAG} defaults")
     toolchain = (root / "lean-toolchain").read_text().strip()
     if toolchain != manifest.get("lean_toolchain"):
         raise ReleaseError("Lean toolchain differs from the release manifest")
