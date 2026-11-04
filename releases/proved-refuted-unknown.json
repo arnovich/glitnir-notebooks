@@ -102,7 +102,7 @@
       },
       "model": "ns-t3",
       "observation": "E",
-      "results_sha256": "61081c6d6ba2c2c9e7feb85c8234cf0e0cf5ab6ded668cbf0a5c80f6f707c507",
+      "results_sha256": "0059c8f0b0f0fb6e756c20702c281b1a97be5bfc833bb3ee55d51d144fcbce7f",
       "source": "examples/galerkin/NS_T3.lean",
       "source_sha256": "325c822be80a94b5b49ac31d6a7de92cf0829bb777b7d632ddc3fc8f5fda635f"
     }

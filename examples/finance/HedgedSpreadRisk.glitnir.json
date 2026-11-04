@@ -386,8 +386,8 @@
       "verification": null
     },
     "28689ca7f49f8d2b6dea7c3a62ed1a3538f4510b7fa491645e2def6ea46332b2": {
-      "created": "2026-10-20T23:00:18+00:00",
-      "fingerprint": "57af50da584b9306ae030f2f990d6bb6fe6ef555baf3fd0f6efad4f51ec798c1",
+      "created": "2026-11-04T01:09:22+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_expected_gauge\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n    ExpectedLe step compiled.initial law energy 256 (543/5000)\n\n/-- For independent, identically distributed shocks drawn from any centred law with variance 64, the expected energy V at mark 256 is at most 543/5000. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0). The stepped decider proved it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks variance 64 observe V expected <= 543/5000 at 256 -/\ntheorem expected_gauge :\n    \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n      ExpectedLe step compiled.initial law energy 256 (543/5000) := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    intro law h\n    have hq : \u0394 ^ 2 * 64 * geomSum 256 \u2264 543/5000 := by decide +kernel\n    have hr := Rat.cast_le (K := \u211d) |>.mpr hq\n    push_cast at hr\n    refine \u27e8h.prob, by norm_num, ?_\u27e9\n    rw [expected_energy_eq h, \u2190 geomSum_eq]\n    exact ENNReal.ofReal_le_ofReal hr\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_expected_gauge",
         "reason": "Found by the expected stage.",
@@ -411,7 +411,7 @@
         "status": "proven",
         "theorem": "expected_gauge"
       },
-      "prefix_sha256": "53a3c7590273f62b98526703b9dcddb38881e2ffe36a12caf05c1efce46c6a18",
+      "prefix_sha256": "41841ed2e0d78129eecacb693dbbafe8a5f26434c9d0abf8bcd9dad765e51b1a",
       "provider": "forseti",
       "verification": {
         "axioms": [
@@ -425,8 +425,8 @@
       }
     },
     "40aa379ebd947dd315c7be4e8ec67e104eaec1036f6762fdcd804c67e6de6dad": {
-      "created": "2026-10-20T22:53:27+00:00",
-      "fingerprint": "57af50da584b9306ae030f2f990d6bb6fe6ef555baf3fd0f6efad4f51ec798c1",
+      "created": "2026-11-04T00:54:32+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_year_breach_bound\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n    BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/4)\n\n/-- For independent, identically distributed shocks drawn from any centred law with variance 64, the probability that the exposure s breaches 1 within 256 marks is at most 1/4. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0); `exposureWithin 1` is the band |s| \u2264 1. The stepped decider proved it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks variance 64 within 256 observe s breach 1 probability <= 1/4 -/\ntheorem year_breach_bound :\n    \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n      BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/4) := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    exact fun law h => (breach_within h (by norm_num) 256).mono (by norm_num [\u0394])\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_year_breach_bound",
         "reason": "Found by the horizon stage.",
@@ -464,8 +464,8 @@
       }
     },
     "93f083cb2ea3b8afa2a16eaa5261447a5e41916e19c31c2f8cff05f33d7bc388": {
-      "created": "2026-10-22T17:07:03+00:00",
-      "fingerprint": "0e5883befdeb124ef1e3f406a6af2c78168e5a8ac10fb31378cc18258a799b4d",
+      "created": "2026-11-04T01:04:15+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_mark_on_any_date\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, SubGaussianLaw law 64 \u2192\n    AtEveryMark step compiled.initial law 256 (exposureWithin 1) (1/100)\n\n/-- For independent, identically distributed shocks drawn from any sub-Gaussian law with proxy 64, at each mark up to 256, taken separately, the probability that the exposure s breaches 1 is at most 1/100. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0); `exposureWithin 1` is the band |s| \u2264 1. The stepped decider proved it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks subgaussian 64 at every mark within 256 observe s breach 1 probability <= 1/100 -/\ntheorem mark_on_any_date :\n    \u2200 law : Measure \u211d, SubGaussianLaw law 64 \u2192\n      AtEveryMark step compiled.initial law 256 (exposureWithin 1) (1/100) := by\n  have root : forsetiClaim := by\n    unfold forsetiClaim\n    intro law h\n    have numeric : \u2200 c : \u211d, 0 < c \u2192 c \u2264 18251/200000 \u2192 2 * Real.exp (-1 ^ 2 / (2 * c)) \u2264 1/100 := by\n      intro c h0 h1\n      have hr : (100000/18251 : \u211d) \u2264 1 ^ 2 / (2 * c) := by\n        rw [le_div_iff\u2080 (by positivity)]\n        linarith\n      have hexp : Real.exp (-1 ^ 2 / (2 * c)) \u2264 Real.exp (-(100000/18251)) := by\n        rw [Real.exp_le_exp, neg_div]\n        exact neg_le_neg hr\n      have hE := exp_ge_floor_cubic 5 (r := 100000/18251) (by norm_num)\n      norm_num at hE\n      have hq : 2 * Real.exp (-(100000/18251)) \u2264 1/100 := by\n        rw [Real.exp_neg, \u2190 div_eq_mul_inv, div_le_iff\u2080 (Real.exp_pos _)]\n        linarith\n      linarith\n    intro n hn\n    rcases Nat.eq_zero_or_pos n with rfl | hn0\n    \u00b7 have hempty : {\u03c9 : \u2115 \u2192 \u211d | \u00ac exposureWithin 1 (run step compiled.initial \u03c9 0)} = \u2205 := by\n        ext \u03c9\n        simp only [run_zero]\n        norm_num [exposureWithin, initial_eq]\n      refine \u27e8h.prob, by norm_num, ?_\u27e9\n      rw [hempty, measure_empty]\n      exact zero_le\n    \u00b7 refine exceeds_at_proxy h (by norm_num) n ?_\n      have hc : proxy 64 256 \u2264 18251/200000 := by\n        rw [\u2190 proxyRec_eq]\n        decide +kernel\n      have hle : (proxy 64 n : \u211d) \u2264 18251/200000 := by\n        have := Rat.cast_le (K := \u211d) |>.mpr ((proxy_mono 64 (by norm_num) hn).trans hc)\n        push_cast at this\n        exact this\n      have hpos : (0 : \u211d) < proxy 64 n := by\n        have h1 : (0 : \u211a) < proxy 64 1 := by\n          rw [\u2190 proxyRec_eq]\n          decide +kernel\n        exact_mod_cast h1.trans_le (proxy_mono 64 (by norm_num) hn0)\n      exact numeric _ hpos hle\n  refine (fun (bridge : _ \u2194 forsetiClaim) => bridge.mpr root) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_mark_on_any_date",
         "reason": "Found by the fixed-date stage.",
@@ -503,8 +503,8 @@
       }
     },
     "df78b08e525298ed40275581145333ffb3f0c00828e53fa14615091e1e00e9a3": {
-      "created": "2026-10-20T22:55:42+00:00",
-      "fingerprint": "57af50da584b9306ae030f2f990d6bb6fe6ef555baf3fd0f6efad4f51ec798c1",
+      "created": "2026-11-04T00:59:17+00:00",
+      "fingerprint": "359a32414f5e0c006772a2c3ebed84c6b043751d5017b28256fe9d12a2d8ac50",
       "outcome": {
         "block": "namespace Decided_tight_limit\n\nopen MeasureTheory\nopen Gimle.Forseti.Stepped\nopen Gimle.Forseti.Examples.HedgedSpread\nopen Gimle.Forseti.Examples.HedgedSpreadContract\nopen Gimle.Forseti.Examples.HedgedSpreadStepped\n\ndef forsetiClaim : Prop :=\n  \u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n    BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/5)\n\n/-- For independent, identically distributed shocks drawn from any centred law with variance 64, the probability that the exposure s breaches 1 within 256 marks is at most 1/5. `step` is the model's step of size 1/256 with the shock in its driver slot, from `compiled.initial` = (0, 0); `exposureWithin 1` is the band |s| \u2264 1. The stepped decider refuted it. Goal (stepped): stepped hedged-spread from (0, 0) at 0 step 1/256 shocks variance 64 within 256 observe s breach 1 probability <= 1/5 -/\ntheorem tight_limit_refuted : \u00ac (\u2200 law : Measure \u211d, TwoMomentLaw law 64 \u2192\n      BreachWithin step compiled.initial law 256 (exposureWithin 1) (1/5)) := by\n  have refuted : \u00ac forsetiClaim := by\n    unfold forsetiClaim\n    intro h\n    have hq : (1/5 : \u211a) < 1 - (1 - 2 * (64 / (2 * 257 ^ 2) : \u211a)) ^ 256 := by decide +kernel\n    have hr := Rat.cast_lt (K := \u211d) |>.mpr hq\n    push_cast at hr\n    have hlaw := threePoint_twoMoment (\u03b5 := 64 / (2 * 257 ^ 2)) (L := 257) (by norm_num) (by norm_num)\n    rw [show 2 * (64 / (2 * 257 ^ 2) : \u211d) * 257 ^ 2 = 64 by norm_num] at hlaw\n    exact not_breachWithin_threePoint_exact (by norm_num) (by norm_num) step_zero_fixed (step_big_breaches 257 (by norm_num [\u0394])) (step_big_breaches (-257) (by norm_num [\u0394])) hr (h _ hlaw)\n  intro claim\n  refine (fun (bridge : _ \u2194 forsetiClaim) => refuted (bridge.mp claim)) ?_\n  constructor\n  \u00b7 intro claim\n    exact claim\n  \u00b7 intro lane\n    exact lane\n\nend Decided_tight_limit",
         "reason": "Found by the three-point stage.",
