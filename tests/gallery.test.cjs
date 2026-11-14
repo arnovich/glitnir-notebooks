@@ -58,6 +58,8 @@ test('notebook navigation preserves gallery and exact source links without chang
     addNotebookNavigation(dom.window.document, {source_url: source, snapshot: {file: 'A"B.lean'}});
     const links = dom.window.document.querySelectorAll('.app > .gallery-nav a');
     assert.equal(links.length, 2);
+    assert.equal(dom.window.document.documentElement.dataset.theme, 'light');
+    assert.equal(dom.window.document.documentElement.style.colorScheme, 'light');
     assert.equal(links[0].getAttribute('href'), '../index.html');
     assert.equal(links[1].getAttribute('href'), source);
     assert.equal(links[1].getAttribute('title'), 'View A"B.lean on GitHub');
@@ -195,5 +197,25 @@ test('the gallery index has no walkthrough section when none was exported', () =
     assert.equal(doc.querySelector('nav[aria-label="Topics"] a[href="#walkthroughs"]'), null);
     assert.ok(doc.querySelector('nav[aria-label="Topics"] a[href="#pdes"]'));
     assert.ok(!doc.documentElement.outerHTML.includes('{{'));
+  } finally { dom.window.close(); }
+});
+
+
+test('every published notebook has a description and every topic has navigation', () => {
+  const {readdirSync} = require('node:fs');
+  const entries = readdirSync(path.join(__dirname, '../examples'), {withFileTypes: true})
+    .filter(item => item.isDirectory()).flatMap(item =>
+      readdirSync(path.join(__dirname, '../examples', item.name))
+        .filter(file => file.endsWith('.lean'))
+        .map(file => ({html: `${item.name}/${file.replace('.lean', '.html')}`, title: file})));
+  const dom = new JSDOM(galleryIndex({repository: 'owner/examples', revision: 'abc'}, entries));
+  try {
+    const d = dom.window.document;
+    for (const item of d.querySelectorAll('.topic li')) {
+      assert.ok(item.querySelector('p')?.textContent.length > 30, item.textContent);
+    }
+    for (const topic of d.querySelectorAll('.topic')) {
+      assert.ok(d.querySelector(`.catalog nav a[href="#${topic.id}"]`), topic.id);
+    }
   } finally { dom.window.close(); }
 });

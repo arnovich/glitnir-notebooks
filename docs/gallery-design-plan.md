@@ -52,3 +52,16 @@ The export still uses Glitnir's canonical renderer and saved observations.
 
 Assets reuse the existing Gimle mark and Inter fonts from the Glitnir landing
 page; the Inter license is bundled in gallery/assets/LICENSE-Inter.txt.
+
+## November 14 polish
+
+Add a short reading description for each of the 19 example notebooks and the
+missing Biochemistry navigation link. Keep notebook HTML and generated maps
+light under a dark system preference. Fix the canonical Glitnir exporters too,
+and pin the map helper to the reviewed source. Preserve saved notebook results.
+
+Review caught and corrected the scope of ScalarDecay and HedgedSpread. All 21 pages from latest main, including RobustHedge and both walkthroughs,
+passed offline desktop/mobile browser checks under a dark system preference.
+All 14 JavaScript tests and 135 Python tests passed without skips; the 19
+notebook bundles and both walkthrough originals validated. The guide rewrite
+and shared exporter are in https://github.com/arnovich/glitnir/pull/108.
