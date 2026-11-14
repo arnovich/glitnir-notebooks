@@ -60,7 +60,8 @@ missing Biochemistry navigation link. Keep notebook HTML and generated maps
 light under a dark system preference. Fix the canonical Glitnir exporters too,
 and pin the map helper to the reviewed source. Preserve saved notebook results.
 
-Review caught and corrected the scope of ScalarDecay and HedgedSpread. The
-initial 20-page export passed offline desktop/mobile checks; repeat the build
-against latest main, including the newly merged RobustHedge notebook, before
-handoff. The guide rewrite and shared exporter live in the companion Glitnir PR.
+Review caught and corrected the scope of ScalarDecay and HedgedSpread. All 21 pages from latest main, including RobustHedge and both walkthroughs,
+passed offline desktop/mobile browser checks under a dark system preference.
+All 14 JavaScript tests and 135 Python tests passed without skips; the 19
+notebook bundles and both walkthrough originals validated. The guide rewrite
+and shared exporter are in https://github.com/arnovich/glitnir/pull/108.
