@@ -6,12 +6,12 @@ const {pathToFileURL} = require('node:url');
 const {chromium} = require('playwright');
 
 // A walkthrough's map is the helper's page, published as drawn: it runs a script
-// and loads KaTeX from cdnjs (without SRI; a known Glitnir follow-up). Load it
+// and loads KaTeX from cdnjs with Subresource Integrity. Load it
 // with scripts on and the network blocked, show one statement, and fail on any
 // script error or on a request to anything but that KaTeX.
 const MAP_KATEX = /^https:\/\/cdnjs\.cloudflare\.com\/ajax\/libs\/KaTeX\/0\.16\.9\//;
 async function checkMap(browser, file) {
-  const context = await browser.newContext({viewport: {width: 1100, height: 760}});
+  const context = await browser.newContext({colorScheme: 'dark', viewport: {width: 1100, height: 760}});
   const requests = [];
   const errors = [];
   await context.route(/^https?:/, route => { requests.push(route.request().url()); return route.abort(); });
@@ -19,6 +19,7 @@ async function checkMap(browser, file) {
     const page = await context.newPage();
     page.on('pageerror', error => errors.push(error));
     await page.goto(pathToFileURL(file).href);
+    assert.equal(await page.locator('body').evaluate(node => getComputedStyle(node).backgroundColor), 'rgb(246, 247, 249)', `Map must stay light: ${file}`);
     const box = page.locator('#map [data-id]').first();
     const id = await box.getAttribute('data-id');
     await box.click();
@@ -33,7 +34,7 @@ async function main() {
   const root = path.resolve(process.argv[2] || '_site');
   const manifest = JSON.parse(await fs.readFile(path.join(root, 'manifest.json'), 'utf8'));
   const browser = await chromium.launch({executablePath: process.env.GALLERY_CHROMIUM_EXECUTABLE || undefined});
-  const context = await browser.newContext({javaScriptEnabled: false, viewport: {width: 1100, height: 760}, deviceScaleFactor: 1});
+  const context = await browser.newContext({javaScriptEnabled: false, colorScheme: 'dark', viewport: {width: 1100, height: 760}, deviceScaleFactor: 1});
   const network = [];
   await context.route(/^https?:/, route => { network.push(route.request().url()); return route.abort(); });
   const page = await context.newPage();
@@ -42,6 +43,7 @@ async function main() {
     for (const entry of manifest.notebooks) {
       await page.goto(pathToFileURL(path.join(root, entry.html)).href);
       assert.equal(await page.locator('h1').first().textContent(), entry.title);
+      assert.equal(await page.locator('.app').evaluate(node => getComputedStyle(node).backgroundColor), 'rgb(255, 255, 255)', `Export must stay light with a dark system theme: ${entry.html}`);
       assert.equal(await page.locator('.view-cell').count(), entry.diagrams);
       const drawn = await page.locator('.view-cell').evaluateAll(views => views.filter(view => view.querySelector('svg.circuit-scene, .view-body img')).length);
       assert.equal(drawn, entry.diagrams - (entry.unavailable_diagrams || 0), `Undrawn diagrams: ${entry.html}`);

@@ -20,6 +20,28 @@ const TOPICS = {
   galerkin: ['Galerkin models', 'Finite-dimensional fluid models, energy and enstrophy.'],
   pdes: ['Partial differential equations', 'Stream contracts, formal expansions and analytic certificates.'],
 };
+// Short reading guides, keyed by the stable exported path rather than the title.
+const DESCRIPTIONS = {
+  'basics/ScalarDecay.html': 'Start with a damped variable: check its energy-rate calculation and see how an intentionally unfinished claim appears beside checked ones.',
+  'basics/ThreeState.html': 'Follow a three-state model from its circuit diagram and simulation to proofs of bounded energy and a counterexample to a tighter bound.',
+  'biochemistry/AntitheticFeedback.html': 'An antithetic molecular controller and its overshoot bound. Inspect one checked certificate cell and the cited full proof.',
+  'circuits/CircuitProofs.html': 'Follow assumptions and guarantees through a composed circuit, from conditions on its inputs to a contract for its output.',
+  'circuits/EnergyOptimization.html': 'Replace a circuit with an equivalent one while preserving its energy contract, then test the bound and a deliberately wrong replacement.',
+  'circuits/LinearCircuitFibonacci.html': 'Two different linear programs generate the same Fibonacci stream. See why checking a finite prefix can establish agreement at every step.',
+  'circuits/LinearCircuitJordan.html': 'Compare equivalent damped Jordan chains, with concrete initial states, finite checks and separate numerical controls.',
+  'dynamics/Lorenz.html': 'One Lorenz system, three questions: a proved bound, a refuted bound and an unresolved search. Separate the simulated butterfly from the certificates.',
+  'finance/HedgedSpread.html': 'Bound a hedged book under every shock in a specified band, using a continuous model and exact contracts.',
+  'finance/RobustHedge.html': 'Find a call hedge that covers every path within a daily-move band, then see how a hedge sized for the wrong band can fail despite reassuring simulations.',
+  'finance/HedgedSpreadRisk.html': 'Bound the probability that a hedged book hits its stop under random daily shocks, and compare the theorem with sampled paths.',
+  'galerkin/NS_Laminar.html': 'At higher viscosity, a three-mode fluid model approaches its laminar state. Follow the global attraction argument and its energy bounds.',
+  'galerkin/NS_T3.html': 'Derive energy and enstrophy bounds for a three-mode coefficient ODE, then compare proved, refuted and unresolved requests. No PDE claim is made.',
+  'galerkin/NS_K5.html': 'Five fluid modes stay inside an energy bound, then inside a tighter quartic tube below the laminar energy level.',
+  'galerkin/NS_B2.html': 'Extend the finite-model energy argument to twelve modes and twenty-two triads, with enstrophy and amplitude bounds.',
+  'pdes/Burgers.html': 'Move from a unique formal power series to a convergent Cole–Hopf front, with an explicit truncation error and certified bounds.',
+  'pdes/BurgersFronts.html': 'Compare two more Burgers fronts through convergence certificates, checked counterexamples and bounds the search leaves open.',
+  'pdes/Euler.html': 'Construct an exact time series for two-dimensional Euler flow, certify a short interval of convergence and examine how conservative that interval is.',
+  'pdes/NavierStokes.html': 'Build a typed mild circuit for two-dimensional viscous flow and follow its contracts through formal uniqueness, convergence and spectral dissipation.',
+};
 // Walkthroughs of other people's Lean projects, by folder under walkthroughs/: unchecked.
 const WALKTHROUGHS_TITLE = 'Walkthroughs of existing formalizations';
 const WALKTHROUGHS_INTRO = 'Guided readings of Lean projects that Glitnir cannot check. Unchecked: each claim is compared with the original only as text, and nothing here was compiled.';
@@ -100,6 +122,9 @@ function validateExport(html, entry) {
 }
 
 function addNotebookNavigation(doc, entry) {
+  // Keep galleries light even when built with a release predating light exports.
+  doc.documentElement.dataset.theme = 'light';
+  doc.documentElement.style.colorScheme = 'light';
   const app = doc.querySelector('.app');
   assert.ok(app, 'Missing notebook container');
   const nav = doc.createElement('nav');
@@ -208,7 +233,7 @@ async function renderNotebook(manifest, entry) {
 function galleryIndex(manifest, entries) {
   const groups = Object.entries(TOPICS).map(([topic, [title, description]]) => {
     const notebooks = entries.filter(entry => entry.html.startsWith(topic + '/'));
-    return `<section id="${topic}" class="topic"><header><h2>${title}</h2><p>${description}</p></header><ul>${notebooks.map(entry => `<li><a class="notebook-title" href="${escape(entry.html)}">${escape(entry.title)}</a></li>`).join('')}</ul></section>`;
+    return `<section id="${topic}" class="topic"><header><h2>${title}</h2><p>${description}</p></header><ul>${notebooks.map(entry => `<li><a class="notebook-title" href="${escape(entry.html)}">${escape(entry.title)}</a><p class="notebook-description">${escape(DESCRIPTIONS[entry.html] || '')}</p></li>`).join('')}</ul></section>`;
   }).join('\n');
   // Only an edition that exports walkthroughs lists them.
   const guided = entries.filter(entry => entry.walkthrough);
@@ -233,7 +258,10 @@ async function main(inputs, output) {
   await fs.mkdir(output, {recursive: true});
   for (const entry of manifest.notebooks) {
     if (entry.walkthrough) assert.ok(WALKTHROUGHS[entry.walkthrough.name], `Undescribed walkthrough: ${entry.html}`);
-    else assert.ok(TOPICS[entry.html.split('/')[0]], `Unknown gallery topic: ${entry.html}`);
+    else {
+      assert.ok(TOPICS[entry.html.split('/')[0]], `Unknown gallery topic: ${entry.html}`);
+      assert.ok(DESCRIPTIONS[entry.html], `Undescribed notebook: ${entry.html}`);
+    }
     const rendered = await renderNotebook(manifest, entry);
     const destination = path.join(output, entry.html);
     await fs.mkdir(path.dirname(destination), {recursive: true});

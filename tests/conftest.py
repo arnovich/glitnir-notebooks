@@ -130,8 +130,9 @@ def make_original(directory: Path) -> tuple[Path, str]:
     """Create a one-commit repository holding the Lean project ``proj``."""
     (directory / "proj").mkdir(parents=True)
     (directory / "proj/Main.lean").write_text(ORIGINAL_SOURCE)
+    (directory / "proj/lean-toolchain").write_text("leanprover/lean4:v4.33.1\n")
     git("init", "-q", str(directory))
-    git("-C", str(directory), "add", "proj/Main.lean")
+    git("-C", str(directory), "add", "proj/Main.lean", "proj/lean-toolchain")
     git("-C", str(directory), "commit", "-q", "-m", "original")
     return directory, git("-C", str(directory), "rev-parse", "HEAD")
 

@@ -2,5 +2,5 @@
 # at this commit of arnovich/glitnir. scripts/fetch_originals.py downloads it
 # and keeps it only with this SHA-256; scripts/check_walkthroughs.py verifies
 # the hash again before every run.
-commit e3fef9a6086fffadbacbea03879294a5cfa7c912
-sha256 774a6c24db94c0f133ba5fa97739b94c633077c97e4d650ab7fb69d53123ef35
+commit bd1826120eaa59e452502767bd799b254e803c4b
+sha256 5525c41611be61bd8857fdcc080ff58400018426555ceb0066e1cb9e4263427b

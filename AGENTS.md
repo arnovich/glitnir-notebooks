@@ -44,9 +44,9 @@ independent six-hour limits and no fail-fast cancellation. Each job uploads a
 `notebook-recheck-<name>` artifact. The workflow never pushes: it uploads the results, `recheck.patch` and a
 per-notebook report (`report.md`, also the job summary) that lists every claim
 whose status changed. Review the report, apply the patch and commit each file
-by its path. Results saved on one machine read as out of date in another
-checkout: Glitnir's environment fingerprint includes Lake traces that name
-each locally built module's absolute source path. The gallery and the bundle
+by its path. Saved results can remain current across checkouts and machines when their
+sources, dependencies and compiled artifacts are byte-identical. Glitnir's
+environment fingerprint does not include checkout paths. The gallery and the bundle
 check compare the saved source only, so they are unaffected.
 
 For Lean source or Lake configuration changes, also run `lake build`. Bundle
@@ -109,9 +109,8 @@ plain text), `*italic*` and `_italic_` (quote defined terms, use **bold** for
 emphasis and run-in labels), `*` and numbered lists (use `- `), and bold around
 mathematics or code. Mathematics in paragraphs renders.
 
-Known item: `map.html` loads KaTeX from cdnjs without Subresource Integrity.
-The maps must stay byte-identical to the helper's output, so this is a Glitnir
-follow-up. The gallery's browser check loads each map with scripts on and the
+The maps load KaTeX from cdnjs with Subresource Integrity and stay
+byte-identical to the pinned helper's output. The gallery's browser check loads each map with scripts on and the
 network blocked, and fails on a script error or on any other request.
 
 ## Certificate libraries
@@ -124,6 +123,10 @@ modules, prebuild that module's heavy imports one at a time in
 `tests/test_certificates.py` checks the CI list against the notebook's imports.
 
 ## Gallery maintenance
+
+Keep every example described in `DESCRIPTIONS` in `scripts/gallery/render.cjs`.
+Notebook exports and walkthrough maps always use light colors, independently of
+the editor and browser theme. The browser checks exercise a dark system preference.
 
 The canonical repository is `arnovich/glitnir-notebooks`; the public gallery is
 https://notebooks.gimlelabs.com/. Its custom domain is configured in GitHub Pages
