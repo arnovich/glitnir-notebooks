@@ -1,14 +1,11 @@
 # Glitnir notebooks
 
 Worked mathematical notebooks in Lean, presented with [Glitnir](https://glitnir.gimlelabs.com/).
-Explore circuits, dynamical systems, finance and partial differential equations
-through readable explanations, models and proofs. The collection includes Lean
-and Mathlib examples alongside notebooks using the
-[Forseti](https://github.com/arnovich/forseti-lean) proof libraries and
-[Asgard](https://github.com/arnovich/asgard-lean) circuit models.
+Explore dynamical systems, linear algebra, finance and partial differential
+equations through readable explanations and proofs.
 
 Each notebook is an ordinary `.lean` file, with Markdown prose in Lean comments.
-Read it in the gallery, or open it in Glitnir to inspect its source and check its
+Read it in the gallery, or open it in Glitnir to inspect its source and recorded
 claims. Saved observations are shown as recorded; simulations are evidence.
 
 In the [notebook gallery](https://notebooks.gimlelabs.com/) you can see rendered HTML snapshots of all the examples without installing Lean or Glitnir.
@@ -24,62 +21,33 @@ coefficient ODE, with its Navier–Stokes PDE nonclaim stated explicitly.
 
 ## Getting started
 
-The best experience is to use [Glitnir](https://github.com/arnovich/glitnir) with VS Code
-and Lean for VS Code, on local macOS or Linux. These steps use the
-[current Glitnir release](https://github.com/arnovich/glitnir/releases/latest).
+Start with the [notebook gallery](https://notebooks.gimlelabs.com/). Its HTML
+snapshots can be read without installing Lean or Glitnir. Saved results are
+shown as recorded; viewing a page does not run a new proof check.
 
-1. [Install VS Code](https://code.visualstudio.com/docs/getstarted/overview#install-vs-code),
-   Python 3.12 or newer and [uv](https://docs.astral.sh/uv/getting-started/installation/).
-2. [Install the Lean 4 extension](https://marketplace.visualstudio.com/items?itemName=leanprover.lean4)
-   and complete its setup guide, which installs elan and the Lean toolchain.
-3. Install **Glitnir — Lean Notebooks** from the
-   [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=gimle.glitnir):
-   search for it in the Extensions view, or run `code --install-extension gimle.glitnir`.
-4. Clone this repository and build its Lean project once, from the repository root:
+To read the source interactively, install
+[Glitnir — Lean Notebooks](https://marketplace.visualstudio.com/items?itemName=gimle.glitnir)
+and the Lean 4 extension in VS Code. See
+[Glitnir's guide](https://github.com/arnovich/glitnir/blob/main/docs/guide.md)
+for opening notebooks and understanding claim status.
 
-   ```sh
-   lake exe cache get && lake build
-   ```
+**Local builds are currently restricted.** Most examples depend on internal
+libraries that are no longer publicly available. This repository's current
+Lake configuration still requires those libraries, so a public checkout alone
+cannot rebuild the collection or reproduce all checks, diagrams and simulations.
+Even the Mathlib-only ScalarDecay example shares that project configuration.
 
-   The first command downloads the prebuilt Mathlib files; the second builds
-   Forseti, Asgard and the notebooks. With less than about 32 GB of memory,
-   first build the AntitheticFeedback notebook's certificate imports one at a
-   time, since Lake would start them together:
+We plan to move reusable mathematics into
+[Atlas-lean](https://github.com/arnovich/atlas-lean) and adapt suitable notebooks
+to public dependencies. That migration is not yet complete. Existing notebooks
+and their recorded results remain unchanged in the meantime.
 
-   ```sh
-   for module in AIFSafety.MeshGeometry AIFSafety.MeshBin{0..7} \
-       AIFSafety.CandidateMesh AIFSafety.Cell AIFSafety.Cells.Bin3.Slab100 \
-       Gimle.Forseti.Examples.AIFCertifiedCellData; do
-     lake build "$module"
-   done
-   ```
-5. Open the folder in VS Code and a Lean file in a trusted workspace. Run
-   **Glitnir: Set Up Environment → Set Up**, which downloads, verifies and installs
-   Glitnir's backend in one step.
-6. Install the Forseti plugin, which draws the diagrams and provides the
-   evidence and decision cards: run **Glitnir: Install Extension Package… →
-   Forseti → Download from this release**, and answer yes to `z3` if you want to
-   run decisions.
-7. Open [ScalarDecay.lean](examples/basics/ScalarDecay.lean), run
-   **Glitnir: Open in Glitnir**, then try [ThreeState](examples/basics/ThreeState.lean).
-   Each notebook's saved check results are in `<Notebook>.glitnir.json` beside it;
-   **Check saved file** checks it again.
+The two walkthroughs below use separate public formalizations. They are
+readable independently, but their Lean project templates remain untested and
+the walkthroughs are explicitly unchecked.
 
-For coding-agent assistance, run **Glitnir: Set Up Coding Agent**, select this
-workspace and your agent, and install the bundled `glitnir-notebooks` skill.
-Start a new agent session and ask it to use that skill. See
-[Glitnir's agent setup](https://github.com/arnovich/glitnir#coding-agents) for details.
-
-**Note:** Plan for several GB of free disk space: the Mathlib files and the
-project build take several GB, and Glitnir keeps copies of the toolchain and
-compiled imports it checks against in its own artifact store in your user cache
-(`glitnir/artifacts`; delete it at any time to free the space). Full builds and
-checks also need substantial memory; a measured K5 build used about 10 GB of RAM
-in one process, and AntitheticFeedback's imports include eight mesh modules of
-4.3 to 4.5 GB each, a mesh geometry module of about 5.9 GB and two certificate
-cells of about 7 GB. The first check of a
-notebook replays Mathlib and Forseti once, which takes about 18 minutes on a
-laptop; later checks take a few minutes.
+For coding-agent assistance, see
+[Glitnir's agent setup](https://github.com/arnovich/glitnir#coding-agents).
 
 ## Examples
 
@@ -96,11 +64,9 @@ laptop; later checks take a few minutes.
 
 The AntitheticFeedback notebook checks the circuit, the composition rule and one
 cell of a certified proof, and cites the rest. The full certificate (2,960 cells
-and the theorem they assemble into) is the opt-in `AIFSafety` library under
-[`certificates/`](certificates/). It is not a default target: `lake build
-AIFSafety` takes about 30 hours of processor time, and each cell needs over
-7 GB of memory, so build it in chunks, running no more modules at once than you
-have about 8 GB of memory for.
+and the theorem they assemble into) is the `AIFSafety` library under
+[`certificates/`](certificates/). Rebuilding it requires the internal dependencies described above and substantial
+computing resources. See its README for details.
 
 Each [gallery entry](https://notebooks.gimlelabs.com/) links
 to its rendered notebook and exact Lean source revision.

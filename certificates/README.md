@@ -1,7 +1,8 @@
 # AIFSafety: a certified safety proof for antithetic integral feedback
 
-`AIFSafety` proves, in Lean, that Asgard's antithetic integral feedback circuit
-(`Gimle.Asgard.Examples.AIF`) keeps its output in a safe range. For every fixed
+`AIFSafety` proves, in Lean, that the antithetic integral feedback circuit
+bound in `AIFSafety/CircuitSolution.lean` keeps its output in a safe range.
+For every fixed
 $\eta \in [8, 12]$, the circuit started at zero has exactly one behaviour, and
 that behaviour keeps the output within $0 \le x_2 \le 16/5$ for all $t \ge 0$,
 and within $x_2 \le 5/2$ from $t = 30$ on.
@@ -10,7 +11,7 @@ The main theorems are in `AIFSafety/CompleteSafety.lean`:
 
 - `forward_safety`: safety for all time, and that a behaviour exists;
 - `hundred_safety`: the same bound on $[0, 100]$;
-- `forward_contract`, `hundred_contract`: the same statements as Forseti
+- `forward_contract`, `hundred_contract`: the same statements as
   trajectory contracts;
 - `later_output`: $x_2 \le 5/2$ from $t = 30$ on;
 - `species_nonnegative`, `realization_unique`, `safe_behavior_exists`.
@@ -34,7 +35,8 @@ computed trajectory. The tube is cut into 8 bins of $\eta$ and 370 time slabs,
 2960 cells in all. Each cell is checked by kernel evaluation against the
 candidate mesh. The checks cover the drift inequality, with its square
 certificates; the tube's containment margin; and the output enclosure. A
-composition rule in Forseti Lean turns one checked cell per slab, and matching
+composition rule in the supporting proof library turns one checked cell per
+slab, and matching
 joins between neighbours, into a tube that no behaviour can leave. At $t = 30$, a
 quadratic Lyapunov function takes over and carries the bound to all later time.
 
@@ -58,6 +60,10 @@ without the generator. `Cell`, `NotebookStatements` and the root `AIFSafety`
 are written by hand.
 
 ## Building it
+
+This proof currently depends on internal libraries that are not publicly
+available. A public checkout alone cannot rebuild it. The commands below are
+for maintainers with access to the pinned dependencies.
 
 `AIFSafety` is not a default target of this project. To check all of it, run:
 
