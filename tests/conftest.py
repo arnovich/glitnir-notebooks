@@ -90,6 +90,20 @@ def make_corpus(root: Path) -> Path:
     return notebook
 
 
+def add_public_corpus(root: Path) -> Path:
+    """Add an independently pinned public notebook project to a corpus."""
+    public = root / "public"
+    notebook = make_corpus(public)
+    renamed = notebook.with_name("PublicExample.lean")
+    notebook.rename(renamed)
+    notebook.with_suffix(".glitnir.json").rename(renamed.with_suffix(".glitnir.json"))
+    config = public / "lakefile.toml"
+    config.write_text(config.read_text().replace('"Example"', '"PublicExample"'))
+    manifest = public / "lake-manifest.json"
+    manifest.write_text(manifest.read_text().replace('"forseti"', '"mathlib"'))
+    return renamed
+
+
 ORIGINAL_SOURCE = """namespace Proj
 
 /-- Multiplication commutes. -/

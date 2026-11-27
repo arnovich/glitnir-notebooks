@@ -1,6 +1,6 @@
 name = "forseti_examples"
 version = "0.1.0"
-defaultTargets = ["AntitheticFeedback", "Burgers", "BurgersFronts", "CircuitProofs", "EnergyOptimization", "Euler", "HedgedSpread", "HedgedSpreadRisk", "LinearCircuitFibonacci", "LinearCircuitJordan", "Lorenz", "NS_B2", "NS_K5", "NS_Laminar", "NS_T3", "NavierStokes", "RobustHedge", "ScalarDecay", "ThreeState"]
+defaultTargets = ["AntitheticFeedback", "Burgers", "BurgersFronts", "CircuitProofs", "EnergyOptimization", "Euler", "HedgedSpread", "HedgedSpreadRisk", "Lorenz", "NS_B2", "NS_K5", "NS_Laminar", "NS_T3", "NavierStokes", "RobustHedge", "ThreeState"]
 
 [[require]]
 name = "forseti"
@@ -43,14 +43,6 @@ name = "HedgedSpreadRisk"
 srcDir = "examples/finance"
 
 [[lean_lib]]
-name = "LinearCircuitFibonacci"
-srcDir = "examples/circuits"
-
-[[lean_lib]]
-name = "LinearCircuitJordan"
-srcDir = "examples/circuits"
-
-[[lean_lib]]
 name = "Lorenz"
 srcDir = "examples/dynamics"
 
@@ -77,10 +69,6 @@ srcDir = "examples/pdes"
 [[lean_lib]]
 name = "RobustHedge"
 srcDir = "examples/finance"
-
-[[lean_lib]]
-name = "ScalarDecay"
-srcDir = "examples/basics"
 
 [[lean_lib]]
 name = "ThreeState"

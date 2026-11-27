@@ -27,6 +27,8 @@ import tomllib
 from collections.abc import Iterable
 from pathlib import Path
 
+from scripts.check_bundles import notebook_project_roots
+
 ALL = "all"
 
 #: Changes that invalidate every notebook's saved results.
@@ -42,6 +44,7 @@ EVERYTHING = frozenset(
         "scripts/decision_refresh.py",
         "scripts/decision_source.lark",
         "scripts/select_recheck.py",
+        "scripts/check_bundles.py",
         ".github/workflows/recheck.yml",
     }
 )
@@ -51,12 +54,21 @@ _IMPORT = re.compile(r"^import\s+(.+)$")
 
 def notebook_sources(root: Path) -> dict[str, Path]:
     """Map each configured notebook's name to its source path, relative to ``root``."""
-    config = tomllib.loads((root / "lakefile.toml").read_text())
-    return {
-        library["name"]: Path(library.get("srcDir", ".")) / f"{library['name']}.lean"
-        for library in config["lean_lib"]
-        if library.get("srcDir") != "certificates"
-    }
+    sources: dict[str, Path] = {}
+    for project in notebook_project_roots(root):
+        config = tomllib.loads((project / "lakefile.toml").read_text())
+        for library in config["lean_lib"]:
+            if library.get("srcDir") == "certificates":
+                continue
+            name = library["name"]
+            if name in sources:
+                raise ValueError(f"Duplicate notebook name: {name}")
+            sources[name] = (
+                project.relative_to(root.resolve())
+                / library.get("srcDir", ".")
+                / f"{name}.lean"
+            )
+    return sources
 
 
 def imported_modules(text: str) -> set[str]:
@@ -102,12 +114,22 @@ def select_notebooks(changed: Iterable[str], root: Path) -> str | list[str]:
     sources = notebook_sources(root)
     by_path = {source.as_posix(): name for name, source in sources.items()}
     selected: set[str] = set()
+    public = {name for name, source in sources.items() if source.parts[0] == "public"}
+    pins = {"lean-toolchain", "lake-manifest.json", "lakefile.toml"}
     for path in changed:
         path = path.strip().removeprefix("./")
+        if path in {f"public/{pin}" for pin in pins}:
+            selected.update(public)
+            continue
+        if public and path in pins:
+            selected.update(set(sources) - public)
+            continue
         if path in EVERYTHING:
             return ALL
         if path in by_path:
             selected.add(by_path[path])
+        elif path.startswith("public/examples/") and path.endswith(".lean"):
+            selected.update(public)
         elif path.startswith("examples/") and path.endswith(".lean"):
             # A deleted, moved or helper source: no notebook to blame.
             return ALL
@@ -120,12 +142,17 @@ def select_notebooks(changed: Iterable[str], root: Path) -> str | list[str]:
     return sorted(selected)
 
 
-def recheck_matrix(selection: str, root: Path) -> dict[str, list[str]]:
+def recheck_matrix(
+    selection: str, root: Path, public_only: bool = False
+) -> dict[str, list[str]]:
     """Give each selected notebook its own bounded CI job, with no omissions."""
-    known = set(notebook_sources(root))
+    sources = notebook_sources(root)
+    known = set(sources)
     names = known if selection == ALL else set(selection.split())
     if unknown := names - known:
         raise ValueError(f"Unknown notebooks: {', '.join(sorted(unknown))}")
+    if public_only:
+        names = {name for name in names if sources[name].parts[0] == "public"}
     return {"notebook": sorted(names)}
 
 
@@ -133,11 +160,18 @@ def main() -> int:
     """Print the selection or expand an explicit selection into a CI matrix."""
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--matrix", action="store_true")
+    parser.add_argument("--project", metavar="NOTEBOOK")
+    parser.add_argument("--public-only", action="store_true")
     parser.add_argument("--only", default="")
     args = parser.parse_args()
-    if args.matrix:
+    if args.project:
+        sources = notebook_sources(Path.cwd())
+        if args.project not in sources:
+            parser.error(f"Unknown notebook: {args.project}")
+        print("public" if sources[args.project].parts[0] == "public" else ".")
+    elif args.matrix:
         try:
-            print(json.dumps(recheck_matrix(args.only, Path.cwd())))
+            print(json.dumps(recheck_matrix(args.only, Path.cwd(), args.public_only)))
         except ValueError as error:
             parser.error(str(error))
     else:

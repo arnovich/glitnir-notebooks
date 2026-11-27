@@ -4,7 +4,10 @@ For notebook authoring, use Glitnir's `glitnir-notebooks` skill. Install it with
 **Glitnir: Set Up Coding Agent**, as described in [getting started](README.md#getting-started).
 
 Keep notebook names unique and update the Lake configuration and README catalog
-when adding or moving examples.
+when adding or moving examples. The independent `public/` Lake project contains
+notebooks that require only public dependencies; never add private dependencies
+there. Inventory, recheck selection and gallery export cover both projects.
+Run public Lean builds from `public/`. Gallery URLs remain topic/name.html.
 
 Run the repository checks with Python 3.12 or newer:
 
@@ -30,7 +33,9 @@ lakefile's libraries). A change to `lean-toolchain`, `lake-manifest.json`,
 `scripts/decision_refresh.py`, `scripts/decision_source.lark`,
 `scripts/select_recheck.py` or the workflow rechecks all; results files and
 docs recheck nothing. The workflow paths filter includes these recheck inputs.
-When nothing is selected
+Public CI filters the selection to the independent `public/` project. Restricted
+notebooks retain their saved snapshots; use an authenticated maintainer environment
+for their rechecks. When nothing public is selected
 the job succeeds with a summary line and builds no Lean. Manual dispatch takes
 an optional `only` list (empty means all), on Linux with the gallery's pinned
 Glitnir. Because the diff is against the pull request's base, a results commit
@@ -147,9 +152,10 @@ guarantee; use the canonical gallery domain.
 The gallery uses the backend, renderer and Forseti view provider of the latest
 published Glitnir release, or of the tag a workflow dispatch names, resolved by
 `scripts/glitnir_release.py` and installed by hash from that release's SHA256SUMS. Use Python 3.12+,
-Node 22.22.2, Lean 4.35.0 and a working sandbox (bubblewrap on Linux). Diagrams are
-drawn in this project's own Lake environment, so first build the modules they
-import, from this checkout:
+Node 22.22.2, Lean 4.35.0 and a working sandbox (bubblewrap on Linux). The public gallery reuses the committed diagram snapshots without fetching
+private libraries. A missing or provider-incompatible drawing fails export; a
+maintainer must refresh it in the appropriate authenticated Lake project. For
+local diagram regeneration, first build the modules they import:
 
 ```sh
 python3.12 -m venv .venv

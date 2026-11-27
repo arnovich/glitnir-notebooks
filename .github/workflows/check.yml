@@ -1,5 +1,13 @@
 name: Notebook bundles
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      private_build:
+        description: Attempt the restricted editor build (requires private dependency access)
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -28,7 +36,29 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p test_walkthroughs.py -v
           python3 scripts/check_walkthroughs.py
+  public-editor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        working-directory: public
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Install pinned elan
+        run: |
+          curl -fsSL https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz -o "$RUNNER_TEMP/elan.tar.gz"
+          echo "42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63  $RUNNER_TEMP/elan.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP"
+          "$RUNNER_TEMP/elan-init" -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Build the public notebooks
+        run: |
+          lake exe cache get
+          lake build
   editor:
+    if: github.event_name == 'workflow_dispatch' && inputs.private_build
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:

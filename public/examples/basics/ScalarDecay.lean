@@ -1,4 +1,6 @@
-import Mathlib
+import Mathlib.Basic.Real.Basic
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.NormNum
 
 /-!
 # Does a damped scalar stay in its band?
@@ -80,7 +82,7 @@ refutes it. It is left unproved on purpose, so the notebook shows an open status
 beside the checked ones.
 
 Note what the status does *not* say. `open` means no proof has been checked, not
-that the claim is false; Forseti would only report it refuted once a proof of its
+that the claim is false; Glitnir would only report it refuted once a proof of its
 negation had itself been checked.
 -/
 

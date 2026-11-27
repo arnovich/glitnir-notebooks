@@ -27,7 +27,7 @@ const DESCRIPTIONS = {
   'biochemistry/AntitheticFeedback.html': 'An antithetic molecular controller and its overshoot bound. Inspect one checked certificate cell and the cited full proof.',
   'circuits/CircuitProofs.html': 'Follow assumptions and guarantees through a composed circuit, from conditions on its inputs to a contract for its output.',
   'circuits/EnergyOptimization.html': 'Replace a circuit with an equivalent one while preserving its energy contract, then test the bound and a deliberately wrong replacement.',
-  'circuits/LinearCircuitFibonacci.html': 'Two different linear programs generate the same Fibonacci stream. See why checking a finite prefix can establish agreement at every step.',
+  'circuits/LinearCircuitFibonacci.html': 'Two different linear systems generate the same Fibonacci stream. See why checking a finite prefix can establish agreement at every step.',
   'circuits/LinearCircuitJordan.html': 'Compare equivalent damped Jordan chains, with concrete initial states, finite checks and separate numerical controls.',
   'dynamics/Lorenz.html': 'One Lorenz system, three questions: a proved bound, a refuted bound and an unresolved search. Separate the simulated butterfly from the certificates.',
   'finance/HedgedSpread.html': 'Bound a hedged book under every shock in a specified band, using a continuous model and exact contracts.',

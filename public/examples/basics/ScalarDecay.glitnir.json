@@ -16,11 +16,11 @@
         }
       ],
       "declaration_sha256": "fe4ef9f7ef3257a1f6055f46ba589ec63904ce6a1d1104d96d77ff93ed81dbca",
-      "end_line": 39,
+      "end_line": 41,
       "name": "Notebook.ScalarDecay.k_pos",
-      "prefix_sha256": "1e04ee64eb7fd27e65ee0536f5122e5df773646c3401b247b16c673991f62f64",
-      "proposition_sha256": "44777a56c3430d2fe00e6f950192e818ce690ea8b2f5a0b5e1fb767b7e2b3f66",
-      "start_line": 36,
+      "prefix_sha256": "4fa361f3c68b1ee1669fd276db45fc47ccd6d95e464c388548048d757874849d",
+      "proposition_sha256": "2bce09d7c7403f1d9071062e78138d72aa3811d0c230cdbed3ddd344fea3c470",
+      "start_line": 38,
       "statement_expansion": {
         "kind": "definition",
         "text": "Real.instLT.1 0 Notebook.ScalarDecay.k",
@@ -47,11 +47,11 @@
         }
       ],
       "declaration_sha256": "ad7d4a1cade770603645dcbfc0199558433f35d9658be39f13a0500874308b0e",
-      "end_line": 53,
+      "end_line": 55,
       "name": "Notebook.ScalarDecay.energy_rate_nonpositive",
-      "prefix_sha256": "d57ba79ef2c77c26deb1ed0fcba46699f542e3dcf3d00a86600b46078640bfae",
-      "proposition_sha256": "dd1a5f755785e09a48e9f10921152d747082a419c8cdfd5507fc334dd66f506c",
-      "start_line": 50,
+      "prefix_sha256": "a78f7d0bb1b41e0419ad72eaf69d2dfe22b90fce3fd93b7b79fa171392ce82c2",
+      "proposition_sha256": "bdb46676997912c5e4f90b27ce2236ef1e66435dabe15e9a8bcce487596d78c1",
+      "start_line": 52,
       "statement_expansion": {
         "kind": "definition",
         "text": "\u2200 (x : Real),\n  Real.instLE.1 (instHMul.hMul (instHMul.hMul 2 x) (instHMul.hMul (Real.instNeg.neg Notebook.ScalarDecay.k) x)) 0",
@@ -84,11 +84,11 @@
         }
       ],
       "declaration_sha256": "29e95696111dd1f2987b9c159b32a8ac9edbd4a5960212ec04a8be7964f2bd17",
-      "end_line": 71,
+      "end_line": 73,
       "name": "Notebook.ScalarDecay.energy_nonneg",
-      "prefix_sha256": "883c19c3831a8f0c3e987b1d1984c4d56236c1469791eeb6a9b5c79bbca8e165",
-      "proposition_sha256": "97f490b6caac9cd53d297147cf0cd9851c5aa9c9aa75fa70dc027a152fc6545d",
-      "start_line": 69,
+      "prefix_sha256": "99bbc8bf673749c7723069325667a1358154e1e32772ba303ec3c4edc08f6df3",
+      "proposition_sha256": "75f52fdab620d9d35cfb12da585c80edac3327fbdef274cad245fab0ccb000c4",
+      "start_line": 71,
       "statement_expansion": {
         "kind": "definition",
         "text": "\u2200 (x : Real), Real.instLE.1 0 (instHPow.hPow x 2)",
@@ -119,11 +119,11 @@
         }
       ],
       "declaration_sha256": "fdae25388065aba6738a417f901db2d41f0f5eaba3e201ec89336e4c49c278f4",
-      "end_line": 89,
+      "end_line": 91,
       "name": "Notebook.ScalarDecay.energy_above_floor",
-      "prefix_sha256": "4ad24e07a478ee2000db7a559b7342303f6900cad3818549390b341b0d70aa39",
-      "proposition_sha256": "d79d051af6f4723033d5bb35c7c7a4b9c1fb22ac0451ea71f0341cc9e236e1aa",
-      "start_line": 87,
+      "prefix_sha256": "4a046ca2e0c484a730b2f7ef3db1e5965bd0cedf4645504ec764c648899086d2",
+      "proposition_sha256": "170a986dcfcabd9c9c72b0dc8da9fde55377eb7e89e62ac82e0538eb2c5b4c5a",
+      "start_line": 89,
       "statement_expansion": {
         "kind": "definition",
         "text": "\u2200 (x : Real), Real.instLE.1 (1 / 4) (instHPow.hPow x 2)",
@@ -136,10 +136,10 @@
     }
   ],
   "environment": {
-    "check": "e4635ea63c4bdddc6d32a3cabb9ac140475872c3ed5fad043ad0f9cc21655299",
-    "fingerprint": "9ed7d2b121c16d3777801e4839f6e21dcaad6615065bb70b4f76213bd440fc86"
+    "check": "e1a5f0471474c910b2735d22f2c9be325f30094744e7f90d3291ed8d78b62e92",
+    "fingerprint": "0ff33d36d0701054b879f04cbf98fc88f77f98ab77e45e33901f927eee7bf289"
   },
   "format": "glitnir.project-checks/v2",
-  "source_sha256": "cf86781b0596d24df074f03c1b8f54bb1e2de33e048bef973eb5b77f9190843c",
+  "source_sha256": "c0d6c51b2c623a59479d67f714a9f37d8526fcc64be54fffa42a4f85518cdc11",
   "withheld": null
 }

@@ -60,53 +60,15 @@ jobs:
           python scripts/fetch_originals.py
           python -m unittest discover -s tests -p test_walkthroughs.py -v
           python scripts/check_walkthroughs.py
-      - name: Install Lean and the Linux sandbox
-        run: |
-          # Disposable runner: these SDKs are unused by Python, Node and Lean.
-          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /usr/local/.ghcup
-          df -h "$RUNNER_TEMP"
-          sudo apt-get update -qq
-          sudo apt-get install --yes bubblewrap apparmor apparmor-profiles
-          sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict
-          curl -fsSL https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz -o "$RUNNER_TEMP/elan.tar.gz"
-          echo "42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63  $RUNNER_TEMP/elan.tar.gz" | sha256sum --check
-          tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP"
-          "$RUNNER_TEMP/elan-init" -y --default-toolchain none
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
-      - name: Restore the built diagram environment
-        id: lean-cache
-        uses: actions/cache/restore@v5
-        with:
-          path: .lake
-          key: gallery-lake-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-v2
-      - name: Build the modules the diagrams import
-        run: |
-          # Views are drawn in the notebooks' own Lake project, at its pins.
-          lake exe cache get
-          lake exe cache clean!
-          df -h "$RUNNER_TEMP"
-          available_kib=$(df -Pk "$RUNNER_TEMP" | awk 'NR == 2 {print $4}')
-          if [ "$available_kib" -lt 12582912 ]; then
-            echo "Need 12 GiB free for 8 GiB swap and build outputs." >&2
-            exit 1
-          fi
-          sudo fallocate -l 8G "$RUNNER_TEMP/lean.swap"
-          sudo chmod 600 "$RUNNER_TEMP/lean.swap"
-          sudo mkswap "$RUNNER_TEMP/lean.swap"
-          sudo swapon "$RUNNER_TEMP/lean.swap"
-          read -r -a modules <<< "$(python -m scripts.build_gallery --list-diagram-imports)"
-          lake build "${modules[@]}"
-      - name: Cache the prepared environment
-        if: steps.lean-cache.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v5
-        with:
-          path: .lake
-          key: gallery-lake-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-v2
+      # Every published diagram is recorded in its notebook bundle. Static
+      # export reuses those drawings only when source/provider hashes match.
+      # No private Lake dependencies are fetched by the public gallery job;
+      # missing/stale drawings fail export and need a maintainer refresh.
       - name: Restore unchanged diagrams
         uses: actions/cache@v5
         with:
           path: .gallery-cache
-          key: gallery-diagrams-${{ runner.os }}-${{ steps.glitnir.outputs.tag }}-${{ hashFiles('lake-manifest.json', 'examples/**/*.lean') }}
+          key: gallery-diagrams-${{ runner.os }}-${{ steps.glitnir.outputs.tag }}-${{ hashFiles('lake-manifest.json', 'public/lake-manifest.json', 'examples/**/*.lean', 'public/examples/**/*.lean') }}
           restore-keys: gallery-diagrams-${{ runner.os }}-
       - name: Export saved notebooks and results without checking claims
         env:
@@ -117,7 +79,7 @@ jobs:
       - name: Verify every exported page and create preview images
         run: npm run gallery:check -- _site
       - name: Ensure no source or metadata was changed
-        run: git diff --exit-code -- examples walkthroughs
+        run: git diff --exit-code -- examples public/examples walkthroughs
       - name: Upload browsable preview
         uses: actions/upload-artifact@v6
         with:

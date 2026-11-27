@@ -1,0 +1,159 @@
+{
+  "claims": [
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "fce8cfca2fea9dccb38aafd4bbcdd4153fedfa0b19195dbba6917623eb913843",
+      "end_line": 52,
+      "name": "Notebook.LinearCircuitFibonacci.fibonacci_scaled_prefix",
+      "prefix_sha256": "02008de5d7f59febb20ce30017393adaee394b3c0fc560bb617d9c64aef4afe9",
+      "proposition_sha256": "7a1135f2c9a944c09a4f0a1a530be78f2d5eee22c4c77f23f72fb32b39146c8e",
+      "start_line": 46,
+      "status": "checked",
+      "type": "\u2200 (r : Real) (n : Nat),\n  instLTNat.lt n (instHAdd.hAdd 2 3) \u2192\n    Eq\n      (Notebook.LinearCircuitFibonacci.fibonacci.observation (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))\n        (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) n)\n      (Notebook.LinearCircuitFibonacci.extendedFibonacci.observation\n        (Matrix.vecCons r (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty)))\n        (Matrix.vecCons 0 (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty))) n)",
+      "type_sha256": "fced6b8b048c8db42a0583188331ee1390d154d98bea88ab8bcd0afb6e3b5c17",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "c46ed88b256d2cf0ee1b81c5ebecc85f21ff1b0eaa4a7a49ff82dc7a20a534ea",
+      "end_line": 65,
+      "name": "Notebook.LinearCircuitFibonacci.fibonacci_scaled_equivalent",
+      "prefix_sha256": "68a7471054beb92ca09599400f1f5e996ca8dc4256f4d2348696d94c1b782ed5",
+      "proposition_sha256": "6f8b727716b49057fb5fb320efc1cc09d989e2eced85f6e337bcb7fb9751cde7",
+      "start_line": 61,
+      "status": "checked",
+      "type": "\u2200 (r : Real) (n : Nat),\n  Eq\n    (Notebook.LinearCircuitFibonacci.fibonacci.observation (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty))\n      (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) n)\n    (Notebook.LinearCircuitFibonacci.extendedFibonacci.observation\n      (Matrix.vecCons r (Matrix.vecCons 0 (Matrix.vecCons r Matrix.vecEmpty)))\n      (Matrix.vecCons 0 (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty))) n)",
+      "type_sha256": "a37250d3b4aaffc9bf5fc37fb238bf813edc6550c3f9145a28132a42a44a70b4",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "LinearCircuitFibonacci",
+          "name": "Notebook.LinearCircuitFibonacci.fibonacci_scaled_prefix"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "6fb9d78e8f303146f6255af3ac31fb0e33cd98616d6607635f03dee66d2fa2d0",
+      "end_line": 70,
+      "name": "Notebook.LinearCircuitFibonacci.fibonacci_equivalent",
+      "prefix_sha256": "d597dba21d795f7e20ebb866fb17fa3efdb5051a7f12f8b8c8e6b5912de2d017",
+      "proposition_sha256": "480e9811474a445da1f5beb440e943a390c721be0b268c75ebc9314c1d3abaff",
+      "start_line": 67,
+      "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Notebook.LinearCircuitFibonacci.fibonacci.observation (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n      (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) n)\n    (Notebook.LinearCircuitFibonacci.extendedFibonacci.observation\n      (Matrix.vecCons 1 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)))\n      (Matrix.vecCons 0 (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty))) n)",
+      "type_sha256": "72b3c8f253764a4243fa4871cfee24a6d87a893d0a784f9b1e8aa73c9ce62078",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "LinearCircuitFibonacci",
+          "name": "Notebook.LinearCircuitFibonacci.fibonacci_scaled_equivalent"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "c6558aad53153d2be0d3277a39cb4f4b162fe46949c946343fe074387adb7736",
+      "end_line": 85,
+      "name": "Notebook.LinearCircuitFibonacci.permutation_prefix",
+      "prefix_sha256": "b0a47164816fe14238963be6247d82d335eef5820b5dbdb7714a25b27ee51ff3",
+      "proposition_sha256": "a54acaa0c1942de63176690861f47307e2138f13fe117b03e302eeb79b7255c6",
+      "start_line": 79,
+      "status": "checked",
+      "type": "\u2200 (n : Nat),\n  instLTNat.lt n (instHAdd.hAdd 2 2) \u2192\n    Eq\n      (Notebook.LinearCircuitFibonacci.fibonacci.observation (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n        (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) n)\n      (Notebook.LinearCircuitFibonacci.permutedFibonacci.observation\n        (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)) n)",
+      "type_sha256": "b3c7db4ad397b717a6e908a8a7c412f7569b5f458117a8a3cf0b328b9a119fcd",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "a67d0564064c318508cb0de19f25765204f524c97201a145e980eb087e59a88c",
+      "end_line": 90,
+      "name": "Notebook.LinearCircuitFibonacci.permutation_equivalent",
+      "prefix_sha256": "0db5483c2fbcc03f3365de403dcfe495acc19a583585e6113d7a4d54cdb1b6f2",
+      "proposition_sha256": "d6b32a7a0cd9842352a621f69be52e87759bbbbf90bf6c453f753bdb5152bac2",
+      "start_line": 87,
+      "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Notebook.LinearCircuitFibonacci.fibonacci.observation (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))\n      (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty)) n)\n    (Notebook.LinearCircuitFibonacci.permutedFibonacci.observation (Matrix.vecCons 1 (Matrix.vecCons 0 Matrix.vecEmpty))\n      (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)) n)",
+      "type_sha256": "5acb1bb3a1c81bbb10144e71522c3b9b03720462c4d7bfe774daaf51b1276490",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "LinearCircuitFibonacci",
+          "name": "Notebook.LinearCircuitFibonacci.permutation_prefix"
+        }
+      ]
+    }
+  ],
+  "environment": {
+    "check": "98d1d70b5596dade76c15657128d8bb7eb461cff4dcf2f6678d405d0618b5613",
+    "fingerprint": "85ddde3cf75e8d22bfc3260462b487cd4a58c5587ceb24371d82a62e59f5e21c"
+  },
+  "format": "glitnir.project-checks/v2",
+  "source_sha256": "a8e50e98ae957f1d8ee61c2275b3bd27264a9bb21a6cec2210113a0132deac83",
+  "withheld": null
+}

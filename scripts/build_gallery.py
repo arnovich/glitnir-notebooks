@@ -7,8 +7,9 @@ checked and no results file is written. Glitnir shows saved results as
 recorded, compared only with the saved source; the bundle check also requires
 each results file to be for this exact source.
 
-Diagrams are drawn by the Forseti view provider in the notebook's own Lake
-project, so its imports must be built first (see ``--list-diagram-imports``).
+Diagrams recorded by the view provider are reused when source/provider hashes
+match. Missing drawings require a prepared local Lake project (see
+``--list-diagram-imports``); public gallery CI fetches no private dependencies.
 A diagram that cannot be drawn, or that Glitnir marks uncertain because a
 dependency's state could not be read, fails the build and is never cached.
 With ``--allow-diagram-errors`` the page shows a note in place of a missing
@@ -40,6 +41,7 @@ from scripts.check_bundles import (
     check_bundles,
     check_results,
     notebook_paths,
+    notebook_project_root,
     results_path,
 )
 from scripts.check_walkthroughs import walkthroughs
@@ -55,7 +57,7 @@ DRAWING_INPUTS = (
 )
 TOOLCHAIN_LIBRARIES = {"Init", "Std", "Lean", "Lake"}
 #: The folders of notebook inputs: sources, saved results, figures and maps.
-INPUTS = ("examples", "walkthroughs")
+INPUTS = ("examples", "public/examples", "walkthroughs")
 #: Fetched originals and the helper: inputs of the text check, not of export.
 FETCHED = "walkthroughs/_originals"
 
@@ -65,12 +67,13 @@ def inventory(root: Path, only: list[str] | None = None) -> list[Path]:
     count, _ = check_bundles(root, only)
     paths = sorted(
         path
-        for path in root.glob("examples/*/*.lean")
+        for path in notebook_paths(root)
+        if path.parent.parent == notebook_project_root(root, path) / "examples"
         if only is None or path.stem in only
     )
     if len(paths) != count:
         raise ValueError("Every gallery notebook must be under examples/<topic>/")
-    return paths
+    return [root / path.relative_to(root.resolve()) for path in paths]
 
 
 def walkthrough_inventory(root: Path, only: list[str] | None = None) -> list[Path]:
@@ -130,10 +133,15 @@ def drawing_tools() -> dict[str, str]:
     return versions
 
 
-def drawing_key(root: Path, text: str, view: dict[str, Any]) -> str:
+def drawing_key(
+    root: Path, text: str, view: dict[str, Any], project: Path | None = None
+) -> str:
     """Identify a drawing by everything Lean reads to draw it, and what draws it."""
+    project = root if project is None else project
     inputs = {
-        name: hashlib.sha256((root / name).read_bytes()).hexdigest()
+        name: hashlib.sha256(
+            ((root if name.startswith("scripts/") else project) / name).read_bytes()
+        ).hexdigest()
         for name in DRAWING_INPUTS
     }
     prefix = "".join(line + "\n" for line in text.split("\n")[: view["line"] - 1])
@@ -258,6 +266,7 @@ def prepare_notebook(
     path: Path, root: Path, cache: Path, allow_diagram_errors: bool = False
 ) -> dict[str, Any]:
     """Read saved results and draw diagrams through Glitnir's static export."""
+    project = notebook_project_root(root, path)
     with _saved_notebook(path) as notebook:
         snapshot = saved_snapshot(notebook, path)
         text = saved_text(path)
@@ -268,7 +277,7 @@ def prepare_notebook(
             if view["error"]:
                 drawing = {"error": view["error"]}
             else:
-                cached = cache / f"{drawing_key(root, text, view)}.json"
+                cached = cache / f"{drawing_key(root, text, view, project)}.json"
                 if cached.is_file():
                     drawing = json.loads(cached.read_text())
                 else:
@@ -294,7 +303,7 @@ def prepare_notebook(
         figures = _figures(notebook, snapshot, path)
         return {
             "path": path.relative_to(root).as_posix(),
-            "html": path.relative_to(root / "examples").with_suffix(".html").as_posix(),
+            "html": path.resolve().relative_to(project / "examples").with_suffix(".html").as_posix(),
             "snapshot": snapshot,
             "drawings": drawings,
             "diagram_errors": diagram_errors,
@@ -335,7 +344,7 @@ def main() -> None:
         paths = [
             path
             for path in notebook_paths(root)
-            if path.parent.parent == root / "examples"
+            if path.parent.parent == notebook_project_root(root, path) / "examples"
             and (args.only is None or path.stem in args.only)
         ]
         print(" ".join(diagram_imports(root, paths)))

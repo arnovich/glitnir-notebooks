@@ -10,16 +10,16 @@ name: Notebook recheck
 # A pull request rechecks only the notebooks whose .lean source changed plus the
 # notebooks importing them (scripts/select_recheck.py); a change to the Lake
 # pins, the requirements, the release resolver, scripts/recheck.py or this
-# workflow rechecks all. The
+# workflow selects all; public CI then filters to the public project. The
 # paths filter lists .lean files, not examples/**, so a pull request that
 # changes only recorded results or docs never starts this workflow. Manual
-# dispatch rechecks the named notebooks, or all when none are named.
+# dispatch rechecks the named public notebooks, or all public notebooks when none are named.
 
 on:
   workflow_dispatch:
     inputs:
       only:
-        description: Notebook names to recheck, space-separated (default all)
+        description: Public notebook names to recheck, space-separated (default all public notebooks)
         required: false
         default: ''
       force_decisions:
@@ -36,6 +36,11 @@ on:
       - lake-manifest.json
       - lakefile.toml
       - 'examples/**/*.lean'
+      - 'public/examples/**/*.lean'
+      - public/lean-toolchain
+      - public/lake-manifest.json
+      - public/lakefile.toml
+      - scripts/check_bundles.py
       - scripts/select_recheck.py
       - scripts/recheck.py
       - scripts/decision_refresh.py
@@ -87,7 +92,13 @@ jobs:
             echo "Notebook recheck: no notebook source changed; nothing to recheck." | tee -a "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
-          matrix=$(python -m scripts.select_recheck --matrix --only "$selection")
+          matrix=$(python -m scripts.select_recheck --matrix --only "$selection" --public-only)
+          echo "Public CI rechecks the independent public project only. Restricted snapshots require a maintainer's authenticated local environment." >> "$GITHUB_STEP_SUMMARY"
+          if [ "$matrix" = '{"notebook": []}' ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Only restricted snapshots were selected; no private dependencies fetched." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
           echo "run=true" >> "$GITHUB_OUTPUT"
           if [ "$selection" = all ]; then
@@ -150,15 +161,24 @@ jobs:
           tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP"
           "$RUNNER_TEMP/elan-init" -y --default-toolchain none
           echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - name: Locate the notebook's independent Lake project
+        id: project
+        env:
+          NOTEBOOK: ${{ matrix.notebook }}
+        run: echo "directory=$(python -m scripts.select_recheck --project "$NOTEBOOK")" >> "$GITHUB_OUTPUT"
       - name: Restore the Lake build
         id: lean-cache
         uses: actions/cache/restore@v5
         with:
-          path: .lake
-          # Shared with the gallery, which builds a subset of the same modules.
-          key: gallery-lake-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-v2
-      - name: Build every notebook and the modules Glitnir's providers import
+          path: ${{ steps.project.outputs.directory }}/.lake
+          # Independent cache for the selected notebook project.
+          key: notebook-lake-${{ runner.os }}-${{ steps.project.outputs.directory }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml', 'public/lean-toolchain', 'public/lake-manifest.json', 'public/lakefile.toml') }}-v3
+      - name: Build the selected notebook and its providers
+        env:
+          PROJECT: ${{ steps.project.outputs.directory }}
+          NOTEBOOK: ${{ matrix.notebook }}
         run: |
+          cd "$PROJECT"
           lake exe cache get
           lake exe cache clean!
           df -h "$RUNNER_TEMP"
@@ -171,8 +191,11 @@ jobs:
           sudo chmod 600 "$RUNNER_TEMP/lean.swap"
           sudo mkswap "$RUNNER_TEMP/lean.swap"
           sudo swapon "$RUNNER_TEMP/lean.swap"
-          lake build
-          read -r -a views <<< "$(python -m scripts.build_gallery --list-diagram-imports)"
+          lake build "$NOTEBOOK"
+          if [ "$PROJECT" = public ]; then
+            exit 0
+          fi
+          read -r -a views <<< "$(python -m scripts.build_gallery --list-diagram-imports --only "$NOTEBOOK")"
           read -r -a evidence <<< "$(python -c 'from glitnir_forseti.evidence_provider import IMPORTS; print(" ".join(IMPORTS))')"
           lake build "${views[@]}" "${evidence[@]}"
           df -h "$RUNNER_TEMP"
@@ -180,8 +203,8 @@ jobs:
         if: steps.lean-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@v5
         with:
-          path: .lake
-          key: gallery-lake-${{ runner.os }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml') }}-v2
+          path: ${{ steps.project.outputs.directory }}/.lake
+          key: notebook-lake-${{ runner.os }}-${{ steps.project.outputs.directory }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json', 'lakefile.toml', 'public/lean-toolchain', 'public/lake-manifest.json', 'public/lakefile.toml') }}-v3
       - name: Recheck the notebooks
         env:
           # Burgers and BurgersFronts' kernel replays need the 16 GB limit;
@@ -213,8 +236,8 @@ jobs:
             cat recheck-report/report.md >> "$GITHUB_STEP_SUMMARY"
           fi
           mkdir -p recheck-report
-          git diff --binary -- examples > recheck-report/recheck.patch
-          git status --short -- examples
+          git diff --binary -- examples public/examples > recheck-report/recheck.patch
+          git status --short -- examples public/examples
       - name: Upload the recorded results
         if: always()
         uses: actions/upload-artifact@v6
@@ -224,4 +247,6 @@ jobs:
             recheck-report
             examples/**/*.glitnir.json
             examples/**/*.lean
+            public/examples/**/*.glitnir.json
+            public/examples/**/*.lean
           retention-days: 14

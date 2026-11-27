@@ -1,0 +1,289 @@
+{
+  "claims": [
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "6d2cf6cfc7903902ce56a66860c64ad1d249f3a33d6c747c921d8b122bd2ffe5",
+      "end_line": 81,
+      "name": "Notebook.LinearCircuitJordan.jordan1_prefix",
+      "prefix_sha256": "ba7a53a5ed361ede3dd10014983b886a066429661538fe306cc927ee13cff798",
+      "proposition_sha256": "79d95110bdfdff0e42eafc192b19c35cdfc7eceff8c2c8652d270edf3e51df4e",
+      "start_line": 77,
+      "status": "checked",
+      "type": "\u2200 (n : Fin 2),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft1.observation Notebook.LinearCircuitJordan.initial1\n      (Matrix.vecCons 1 Matrix.vecEmpty) n.val)\n    (Notebook.LinearCircuitJordan.jordanRight1.observation Notebook.LinearCircuitJordan.initial1\n      (Matrix.vecCons 1 Matrix.vecEmpty) n.val)",
+      "type_sha256": "e1f66f91d40cc0a20bda0f64c33b5be9b2d61300414b4366522862a27f6a4565",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "696b133cddda3698fbf1b095e8eef714eee06f21a5ecc34fca52d81e28b7bc2a",
+      "end_line": 89,
+      "name": "Notebook.LinearCircuitJordan.jordan1_equivalent",
+      "prefix_sha256": "1316a67e43ab19641cb370a0c563d896ca9e816dabe42e8595fb9625262cf4b8",
+      "proposition_sha256": "cf466b844322fc47fd6a9f6556cd97faf09ad806209f3b3dbef4f197f658e38c",
+      "start_line": 83,
+      "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft1.observation Notebook.LinearCircuitJordan.initial1\n      (Matrix.vecCons 1 Matrix.vecEmpty) n)\n    (Notebook.LinearCircuitJordan.jordanRight1.observation Notebook.LinearCircuitJordan.initial1\n      (Matrix.vecCons 1 Matrix.vecEmpty) n)",
+      "type_sha256": "5868a9e4813a992cbb5c3479423d97fffed930128630edeff02bf30ca8323fa1",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "LinearCircuitJordan",
+          "name": "Notebook.LinearCircuitJordan.jordan1_prefix"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "8415d5323e03a64400ca7003e95569ed25e0fca8306b939cdfe81dc141e0504c",
+      "end_line": 95,
+      "name": "Notebook.LinearCircuitJordan.jordan2_prefix",
+      "prefix_sha256": "2498947b7ba2d5c6fdf30b934289070777eeeeaa027580e018ac26f1feb70a78",
+      "proposition_sha256": "29d8f5a467f0132df7cfbfc073d00cb82877acac78e2664b09a1778d5aabb932",
+      "start_line": 91,
+      "status": "checked",
+      "type": "\u2200 (n : Fin 4),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft2.observation Notebook.LinearCircuitJordan.initial2\n      (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)) n.val)\n    (Notebook.LinearCircuitJordan.jordanRight2.observation Notebook.LinearCircuitJordan.initial2\n      (Matrix.vecCons 0 (Matrix.vecCons (1 / 2) Matrix.vecEmpty)) n.val)",
+      "type_sha256": "9f67de35a76db6372f9c4ce6debd72e7487e8633f3dad3e41d353661e4f96c84",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "4d7bdb69eeeb32ff1f3a286a40b743d85f2ddd625f0b11b74ff6a2763840a0b8",
+      "end_line": 103,
+      "name": "Notebook.LinearCircuitJordan.jordan2_equivalent",
+      "prefix_sha256": "86a4c39e07f702995b82223e244110f1552179081d35416fbc5aed66f70cb524",
+      "proposition_sha256": "157987db7a6c0e29cddd5a53cdb1f46f8e28dda1cd2826ce59bf56464f30c3de",
+      "start_line": 97,
+      "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft2.observation Notebook.LinearCircuitJordan.initial2\n      (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)) n)\n    (Notebook.LinearCircuitJordan.jordanRight2.observation Notebook.LinearCircuitJordan.initial2\n      (Matrix.vecCons 0 (Matrix.vecCons (1 / 2) Matrix.vecEmpty)) n)",
+      "type_sha256": "da5f415c680e1448cf4c361a2169b39f062c18f164ba7746748bd5c0e5ca84bc",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "LinearCircuitJordan",
+          "name": "Notebook.LinearCircuitJordan.jordan2_prefix"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "3778e07aa840c2f048a22cdc858f6a833fd9f2da2c0fecf6e6c5807ede0ad146",
+      "end_line": 109,
+      "name": "Notebook.LinearCircuitJordan.jordan3_prefix",
+      "prefix_sha256": "d8f3d927474d17d0e78957e2713be3db533cbf5e138fc8debe6bf7d0d081b56d",
+      "proposition_sha256": "ffd0ae2848f1143619b790f290557358637df8f8f1da03c3a532dddfa58c90b9",
+      "start_line": 105,
+      "status": "checked",
+      "type": "\u2200 (n : Fin 6),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft3.observation Notebook.LinearCircuitJordan.initial3\n      (Matrix.vecCons 0 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))) n.val)\n    (Notebook.LinearCircuitJordan.jordanRight3.observation Notebook.LinearCircuitJordan.initial3\n      (Matrix.vecCons 0 (Matrix.vecCons 0 (Matrix.vecCons (1 / 4) Matrix.vecEmpty))) n.val)",
+      "type_sha256": "fbdbfe760146a9acaca424e14c76c3a83d7bfa4898948a11293ba707fa31087b",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "d4a911e37ce3a748a3a3ba9c9e7c61809a17463c7bd0276ad0ca00dadc0a8b6f",
+      "end_line": 117,
+      "name": "Notebook.LinearCircuitJordan.jordan3_equivalent",
+      "prefix_sha256": "a00a48a150c7e5a02c03045eb50e074d35f8261dde0ee3e2d538ebdd78b937bd",
+      "proposition_sha256": "a22e96c5af3a081cf345f72acb6ce8d0b39a96c3b6421003267ae4578ea1b37f",
+      "start_line": 111,
+      "status": "checked",
+      "type": "\u2200 (n : Nat),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft3.observation Notebook.LinearCircuitJordan.initial3\n      (Matrix.vecCons 0 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))) n)\n    (Notebook.LinearCircuitJordan.jordanRight3.observation Notebook.LinearCircuitJordan.initial3\n      (Matrix.vecCons 0 (Matrix.vecCons 0 (Matrix.vecCons (1 / 4) Matrix.vecEmpty))) n)",
+      "type_sha256": "f337d42d3a120f48d6b5db6f3e683685eae6328ab396b0e3e141649008c44a94",
+      "uses": [
+        {
+          "in_notebook": true,
+          "module": "LinearCircuitJordan",
+          "name": "Notebook.LinearCircuitJordan.jordan3_prefix"
+        }
+      ]
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "afefe455f500479bb41910575523e55d566c9ae11fa4c7a259c3c1427b41cda0",
+      "end_line": 130,
+      "name": "Notebook.LinearCircuitJordan.jordan2_expected",
+      "prefix_sha256": "a9e14f303cdca334496b456f031ad9f2b817184ac77011e8d75bae38343f5547",
+      "proposition_sha256": "b7440a51d142ef9b05cfa17ab15e5c62b9c39e25248262742b16d951394096d8",
+      "start_line": 126,
+      "status": "checked",
+      "type": "\u2200 (n : Fin 4),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft2.observation Notebook.LinearCircuitJordan.initial2\n      (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty)) n.val)\n    (Matrix.vecCons 0 (Matrix.vecCons (1 / 2) (Matrix.vecCons (1 / 2) (Matrix.vecCons (3 / 8) Matrix.vecEmpty))) n)",
+      "type_sha256": "824f39df171b17b74120ab459c3d7e31046887c41487fa224c4ccf1d3163aac6",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "a7514e5c5d8378bdffee531eeff51d915010f20ee3c7b0901085c5835130dfb4",
+      "end_line": 135,
+      "name": "Notebook.LinearCircuitJordan.jordan2_different_updates",
+      "prefix_sha256": "c9730fe89e783c583d3e6c010e8d6108f699dac9b15ddbaca4486c473d80dc10",
+      "proposition_sha256": "5bf2aef41cf909094f6d7ccb6bf6458f1abdff382b1b183684be30bdc877a1a8",
+      "start_line": 132,
+      "status": "checked",
+      "type": "Ne (Notebook.LinearCircuitJordan.jordanLeft2.mulVec Notebook.LinearCircuitJordan.initial2 1)\n  (Notebook.LinearCircuitJordan.jordanRight2.mulVec Notebook.LinearCircuitJordan.initial2 1)",
+      "type_sha256": "2d4c2a563411d9ac691202899cb31e4791a392fc4088d5db97eb76e97e4b1088",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "fce14bb3331bd08f196a8404d808ddfdc8b821b7ab5290d7675951648c1d5788",
+      "end_line": 141,
+      "name": "Notebook.LinearCircuitJordan.jordan3_expected",
+      "prefix_sha256": "81fef3b01a2b7c91f53f3eff9ff3cec2ee68e011a3c5be135cf67cae3b96a9bf",
+      "proposition_sha256": "71581e3b7804b99878e8955ee2cadf9c1db5e4df46bf70cb206e7431a0e3d8c2",
+      "start_line": 137,
+      "status": "checked",
+      "type": "\u2200 (n : Fin 6),\n  Eq\n    (Notebook.LinearCircuitJordan.jordanLeft3.observation Notebook.LinearCircuitJordan.initial3\n      (Matrix.vecCons 0 (Matrix.vecCons 0 (Matrix.vecCons 1 Matrix.vecEmpty))) n.val)\n    (Matrix.vecCons 0\n      (Matrix.vecCons 0\n        (Matrix.vecCons (1 / 4)\n          (Matrix.vecCons (3 / 8) (Matrix.vecCons (3 / 8) (Matrix.vecCons (5 / 16) Matrix.vecEmpty)))))\n      n)",
+      "type_sha256": "810836340d92a8383ecc97d3a60dc356d0401ff5f9137cbd7eb11822fef0f369",
+      "uses": []
+    },
+    {
+      "axioms": [
+        {
+          "module": "Init.Core",
+          "name": "propext"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Classical.choice"
+        },
+        {
+          "module": "Init.Prelude",
+          "name": "Quot.sound"
+        }
+      ],
+      "declaration_sha256": "9e0437ef06a1e7c4c018570dab610e5f58cfe003c35c8fdb631856d4bf59c326",
+      "end_line": 146,
+      "name": "Notebook.LinearCircuitJordan.jordan3_different_updates",
+      "prefix_sha256": "ec1370bfd370754b1fa4843f64bbe9b76d16b29672233a0489d6c2074b436301",
+      "proposition_sha256": "12a3fcd8c5cab22576228aeec94c9d553118ae83420cafdb2efcb53b4d424b5d",
+      "start_line": 143,
+      "status": "checked",
+      "type": "Ne (Notebook.LinearCircuitJordan.jordanLeft3.mulVec Notebook.LinearCircuitJordan.initial3 1)\n  (Notebook.LinearCircuitJordan.jordanRight3.mulVec Notebook.LinearCircuitJordan.initial3 1)",
+      "type_sha256": "a7c410420c1c1ac6e9277f663c23bcf6b8ae3098dead078d733531bd240dff1d",
+      "uses": []
+    }
+  ],
+  "environment": {
+    "check": "f53e4126c060a6df9db556a976c620146f67f09f66a8e1e89811842dd181aa69",
+    "fingerprint": "97909cb655684e4b5af0ca795354944696086ef8942b602ed43b1d6a9bca6363"
+  },
+  "format": "glitnir.project-checks/v2",
+  "source_sha256": "a8fb9f01fbe6152df0f9f7a622e6aa5b63f6e06bba58e3682db5a66ed23220f3",
+  "withheld": null
+}

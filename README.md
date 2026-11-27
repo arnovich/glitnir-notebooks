@@ -31,16 +31,20 @@ and the Lean 4 extension in VS Code. See
 [Glitnir's guide](https://github.com/arnovich/glitnir/blob/main/docs/guide.md)
 for opening notebooks and understanding claim status.
 
-**Local builds are currently restricted.** Most examples depend on internal
-libraries that are no longer publicly available. This repository's current
-Lake configuration still requires those libraries, so a public checkout alone
-cannot rebuild the collection or reproduce all checks, diagrams and simulations.
-Even the Mathlib-only ScalarDecay example shares that project configuration.
+**Three notebooks build with public dependencies.** ScalarDecay, Fibonacci and
+Jordan live in the independent [`public/`](public/) Lake project, pinned to
+[Atlas-lean](https://github.com/arnovich/atlas-lean). From that directory, run
+`lake exe cache get` and `lake build`, then use Glitnir's **Check saved file**.
+ScalarDecay intentionally includes one unproved claim. The Fibonacci and Jordan
+notebooks prove matrix observation results, not compiled-circuit contracts.
 
-We plan to move reusable mathematics into
-[Atlas-lean](https://github.com/arnovich/atlas-lean) and adapt suitable notebooks
-to public dependencies. That migration is not yet complete. Existing notebooks
-and their recorded results remain unchanged in the meantime.
+The other 16 notebooks retain their existing sources and recorded results.
+Their root Lake project still requires internal libraries, so a public checkout
+cannot rebuild their checks, diagrams or simulations. Reusable mathematics is
+being separated from those libraries before further migration to Atlas.
+Automated Lean builds and rechecks cover the public project. The restricted
+collection can be rechecked locally by a maintainer with access to its pinned
+libraries; bundle validation still covers every saved snapshot.
 
 The two walkthroughs below use separate public formalizations. They are
 readable independently, but their Lean project templates remain untested and
@@ -53,10 +57,10 @@ For coding-agent assistance, see
 
 | Notebooks | Explore |
 | --- | --- |
-| [ScalarDecay](examples/basics/ScalarDecay.lean), [ThreeState](examples/basics/ThreeState.lean) | Basic claims, decisions and simulation |
+| [ScalarDecay](public/examples/basics/ScalarDecay.lean), [ThreeState](examples/basics/ThreeState.lean) | Basic claims, decisions and simulation |
 | [AntitheticFeedback](examples/biochemistry/AntitheticFeedback.lean) | A biochemical controller that never overshoots by more than 60%: one certified cell checked, the full proof cited |
 | [CircuitProofs](examples/circuits/CircuitProofs.lean), [EnergyOptimization](examples/circuits/EnergyOptimization.lean) | Circuit contracts and rewrites |
-| [Fibonacci](examples/circuits/LinearCircuitFibonacci.lean), [Jordan](examples/circuits/LinearCircuitJordan.lean) | Discrete linear circuits |
+| [Fibonacci](public/examples/circuits/LinearCircuitFibonacci.lean), [Jordan](public/examples/circuits/LinearCircuitJordan.lean) | Linear observations using Atlas |
 | [Lorenz](examples/dynamics/Lorenz.lean) | Continuous trajectories and bounds |
 | [HedgedSpread](examples/finance/HedgedSpread.lean), [HedgedSpreadRisk](examples/finance/HedgedSpreadRisk.lean), [RobustHedge](examples/finance/RobustHedge.lean) | A hedged book under every shock in a band, bounds on the odds of its stop under random shocks marked daily, and an at-the-money call hedged on every path whose daily moves stay in a band |
 | [Laminar](examples/galerkin/NS_Laminar.lean), [T3](examples/galerkin/NS_T3.lean), [K5](examples/galerkin/NS_K5.lean), [B2](examples/galerkin/NS_B2.lean) | Finite-dimensional fluid models, energy and enstrophy |

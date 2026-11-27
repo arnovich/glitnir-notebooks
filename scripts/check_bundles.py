@@ -179,8 +179,26 @@ def check_results(notebook: Path, path: Path | None = None) -> dict[str, Any]:
     return records
 
 
-def notebook_paths(directory: Path) -> list[Path]:
-    """Validate the Lake inventory and pins; return the configured notebooks."""
+def notebook_project_roots(directory: Path) -> list[Path]:
+    """Return the legacy project and its optional independent public project."""
+    root = directory.resolve()
+    public = root / "public"
+    if public.is_symlink():
+        raise ValueError("Linked public notebook project")
+    return [root, public] if (public / "lakefile.toml").is_file() else [root]
+
+
+def notebook_project_root(root: Path, notebook: Path) -> Path:
+    """Find the project owning a canonical notebook, without crossing the repo."""
+    path = notebook.resolve()
+    for project in reversed(notebook_project_roots(root)):
+        if path.is_relative_to(project / "examples"):
+            return project
+    raise ValueError(f"Notebook outside configured example directories: {notebook}")
+
+
+def _project_notebook_paths(directory: Path) -> list[Path]:
+    """Validate one Lake project's complete inventory and portable pins."""
     root = directory.resolve()
     config = tomllib.loads((root / "lakefile.toml").read_text())
     for require in config.get("require", []):
@@ -215,7 +233,29 @@ def notebook_paths(directory: Path) -> list[Path]:
         for package in manifest["packages"]
     ):
         raise ValueError("Dependencies must use portable Git pins")
+    if root.name == "public":
+        for package in manifest["packages"]:
+            url = package.get("url", "").rstrip("/").removesuffix(".git")
+            if (
+                package["name"] in {"forseti", "asgard", "gimle_lean"}
+                or url.rsplit("/", 1)[-1]
+                in {"forseti-lean", "asgard-lean", "gimle-lean"}
+            ):
+                raise ValueError("Public notebooks cannot require private dependencies")
     return sorted(configured.values())
+
+
+def notebook_paths(directory: Path) -> list[Path]:
+    """Validate every notebook project, preserving globally unique names."""
+    paths = [
+        path
+        for project in notebook_project_roots(directory)
+        for path in _project_notebook_paths(project)
+    ]
+    names = [path.stem for path in paths]
+    if len(names) != len(set(names)):
+        raise ValueError("Duplicate notebook names across projects")
+    return sorted(paths)
 
 
 def check_bundles(
