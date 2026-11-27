@@ -38,7 +38,9 @@ Jordan live in the independent [`public/`](public/) Lake project, pinned to
 ScalarDecay intentionally includes one unproved claim. The Fibonacci and Jordan
 notebooks prove matrix observation results, not compiled-circuit contracts.
 
-The other 16 notebooks retain their existing sources and recorded results.
+The other 16 notebooks retain their existing sources and recorded results. Their
+[import migration notes](docs/private-import-migration.md) list the direct
+source changes needed when a maintainer repins and rechecks them.
 Their root Lake project still requires internal libraries, so a public checkout
 cannot rebuild their checks, diagrams or simulations. Reusable mathematics is
 being separated from those libraries before further migration to Atlas.
